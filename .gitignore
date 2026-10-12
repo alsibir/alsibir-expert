@@ -1,0 +1,65 @@
+# Синопсис: игнорируемые файлы окружения, служебные файлы и результаты сборки.
+# Расположение: корень репозитория alsibir-expert/.
+
+# 1. Локальные каталоги проекта (включая всё вложенное содержимое)
+/_DEV/
+/к/
+
+# 2. Служебные файлы описания каталогов (на любой глубине)
+DIRINFO.txt
+
+# 3. Astro: автоматически создаваемые файлы и каталог сборки
+/dist/
+.astro/
+
+# 4. Node.js и менеджеры пакетов
+node_modules/
+.pnpm-store/
+.npm/
+*.tsbuildinfo
+
+# 5. Локальная среда Python (сохранены существующие правила)
+/.venv/
+/__pycache__/
+*.py[cod]
+
+# 6. Переменные окружения и локальные секреты
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# 7. Кэш, отчёты и тестовые артефакты
+.cache/
+.turbo/
+.eslintcache
+.stylelintcache
+/coverage/
+/test-results/
+/playwright-report/
+
+# 8. Артефакты платформ размещения (если используются)
+.vercel/
+.netlify/
+.wrangler/
+.output/
+
+# 9. Журналы, временные файлы и резервные копии
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
+*~
+
+# 10. Служебные файлы ОС и редакторов
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.code-workspace
