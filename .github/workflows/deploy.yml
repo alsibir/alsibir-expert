@@ -1,0 +1,81 @@
+name: Build and publish Astro
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Validate output and local links
+        run: |
+          test -f dist/index.html
+          python3 scripts/audit.py
+          python3 scripts/audit-anchors.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: staging-static
+          path: dist/
+          include-hidden-files: true
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
+  publish:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: staging-static
+          path: dist
+      - name: Update gh-pages without rewriting history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            git fetch origin gh-pages
+            git worktree add /tmp/pages FETCH_HEAD
+          else
+            git worktree add --detach /tmp/pages HEAD
+            git -C /tmp/pages checkout --orphan pages-initial
+          fi
+          find /tmp/pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a dist/. /tmp/pages/
+          touch /tmp/pages/.nojekyll
+          git -C /tmp/pages add -A
+          if ! git -C /tmp/pages diff --cached --quiet; then
+            git -C /tmp/pages commit -m "Deploy ${GITHUB_SHA}"
+            git -C /tmp/pages push origin HEAD:gh-pages
+          fi
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

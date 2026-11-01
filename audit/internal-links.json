@@ -1,0 +1,668 @@
+[
+  [
+    "src/content/docs/404.md",
+    "Обзор сайта — архивный адрес 2",
+    "/alsibir-expert/wiki/pages/home-2/",
+    0.374
+  ],
+  [
+    "src/content/docs/404.md",
+    "Страница не найдена",
+    "/alsibir-expert/wiki/pages/404/",
+    0.256
+  ],
+  [
+    "src/content/docs/blog/ai/local-languagetool.md",
+    "Как развернуть собственный сервер LanguageTool на Windows и Linux: установка, настройка, использование и сравнение с Premium",
+    "/alsibir-expert/blog/tools/local-languagetool/",
+    0.267
+  ],
+  [
+    "src/content/docs/blog/analytics/project-discovery-ai.md",
+    "Документация программного обеспечения: классификация, состав и стандарты",
+    "/alsibir-expert/blog/documentation/software-documentation/",
+    0.25
+  ],
+  [
+    "src/content/docs/blog/analytics/project-discovery-ai.md",
+    "Как организовать разработку ИТ-проекта: этапы, роли и документация",
+    "/alsibir-expert/blog/kak-organizovat-razrabotku-it-proekta/",
+    0.229
+  ],
+  [
+    "src/content/docs/blog/api/07_openapi_contracts.md",
+    "Как документировать REST API: структура, примеры запросов и OpenAPI",
+    "/alsibir-expert/blog/dokumentaciya-rest-api-primery/",
+    0.286
+  ],
+  [
+    "src/content/docs/blog/automation/04_word_automation.md",
+    "Как оформить документ по СПДС в Microsoft Word",
+    "/alsibir-expert/blog/standards/spds-microsoft-word/",
+    0.224
+  ],
+  [
+    "src/content/docs/blog/automation/04_word_automation.md",
+    "Автоматизация сбора, нумерации и трассировки требований в Microsoft Word",
+    "/alsibir-expert/blog/automation/word-requirement-numbering/",
+    0.19
+  ],
+  [
+    "src/content/docs/blog/automation/document-workflows.md",
+    "Порядок подготовки комплекта документации",
+    "/alsibir-expert/guides/example/",
+    0.256
+  ],
+  [
+    "src/content/docs/blog/automation/document-workflows.md",
+    "Публикации",
+    "/alsibir-expert/wiki/pages/publication/",
+    0.217
+  ],
+  [
+    "src/content/docs/blog/automation/obsidian-automation.md",
+    "Автоматизированная систематизация базы знаний Obsidian: архитектура, метаданные, граф связей и безопасная миграция",
+    "/alsibir-expert/blog/automation/obsidian-knowledge-base/",
+    0.87
+  ],
+  [
+    "src/content/docs/blog/automation/obsidian-knowledge-base.md",
+    "Систематизация заметок Obsidian: план контролируемой миграции",
+    "/alsibir-expert/blog/automation/obsidian-automation/",
+    0.87
+  ],
+  [
+    "src/content/docs/blog/automation/word-requirement-numbering.md",
+    "Как оформить документ по СПДС в Microsoft Word",
+    "/alsibir-expert/blog/standards/spds-microsoft-word/",
+    0.257
+  ],
+  [
+    "src/content/docs/blog/automation/word-requirement-numbering.md",
+    "Автоматизированная проверка документации Microsoft Word: стили, поля, нумерация и перекрестные ссылки",
+    "/alsibir-expert/blog/automation/04_word_automation/",
+    0.19
+  ],
+  [
+    "src/content/docs/blog/career/01_python_junior_skills.md",
+    "Как стать Python-разработчиком: полное руководство по подготовке к первой работе",
+    "/alsibir-expert/blog/career/06_python_career_full_guide/",
+    0.394
+  ],
+  [
+    "src/content/docs/blog/career/02_junior_python_resume.md",
+    "Как стать Python-разработчиком: полное руководство по подготовке к первой работе",
+    "/alsibir-expert/blog/career/06_python_career_full_guide/",
+    0.378
+  ],
+  [
+    "src/content/docs/blog/career/02_junior_python_resume.md",
+    "РАНХиГС: образование и ключевые дисциплины для резюме",
+    "/alsibir-expert/blog/career/03_ranepa_education/",
+    0.23
+  ],
+  [
+    "src/content/docs/blog/career/03_ranepa_education.md",
+    "Как стать Python-разработчиком: полное руководство по подготовке к первой работе",
+    "/alsibir-expert/blog/career/06_python_career_full_guide/",
+    0.307
+  ],
+  [
+    "src/content/docs/blog/career/03_ranepa_education.md",
+    "Пример резюме выпускника для первой работы Python-разработчиком",
+    "/alsibir-expert/blog/career/02_junior_python_resume/",
+    0.23
+  ],
+  [
+    "src/content/docs/blog/career/04_practical_experience.md",
+    "Как стать Python-разработчиком: полное руководство по подготовке к первой работе",
+    "/alsibir-expert/blog/career/06_python_career_full_guide/",
+    0.288
+  ],
+  [
+    "src/content/docs/blog/career/04_practical_experience.md",
+    "Пример резюме выпускника для первой работы Python-разработчиком",
+    "/alsibir-expert/blog/career/02_junior_python_resume/",
+    0.22
+  ],
+  [
+    "src/content/docs/blog/career/06_python_career_full_guide.md",
+    "Какие знания необходимы начинающему Python-разработчику",
+    "/alsibir-expert/blog/career/01_python_junior_skills/",
+    0.394
+  ],
+  [
+    "src/content/docs/blog/career/06_python_career_full_guide.md",
+    "Пример резюме выпускника для первой работы Python-разработчиком",
+    "/alsibir-expert/blog/career/02_junior_python_resume/",
+    0.378
+  ],
+  [
+    "src/content/docs/blog/documentation/01_gost19_documents.md",
+    "Документация программного обеспечения: классификация, состав и стандарты",
+    "/alsibir-expert/blog/documentation/software-documentation/",
+    0.212
+  ],
+  [
+    "src/content/docs/blog/documentation/gost-documentation.md",
+    "Стандарты и нормативная база",
+    "/alsibir-expert/wiki/pages/standards/",
+    0.256
+  ],
+  [
+    "src/content/docs/blog/documentation/gost-documentation.md",
+    "Публикации",
+    "/alsibir-expert/wiki/pages/publication/",
+    0.201
+  ],
+  [
+    "src/content/docs/blog/documentation/software-documentation.md",
+    "Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации",
+    "/alsibir-expert/blog/analytics/project-discovery-ai/",
+    0.25
+  ],
+  [
+    "src/content/docs/blog/documentation/software-documentation.md",
+    "Методика проектирования комплекта программной документации по ЕСПД (ГОСТ 19)",
+    "/alsibir-expert/blog/documentation/01_gost19_documents/",
+    0.212
+  ],
+  [
+    "src/content/docs/blog/dokumentaciya-rest-api-primery.md",
+    "Проектирование API: OpenAPI, модели данных, ошибки и управление версиями",
+    "/alsibir-expert/blog/api/07_openapi_contracts/",
+    0.286
+  ],
+  [
+    "src/content/docs/blog/izvlech-kartinki-iz-docx.md",
+    "Как перевести PDF в Word: 4 способа и что делать со сканами",
+    "/alsibir-expert/blog/pdf-v-word-bez-poteri-formatirovaniya/",
+    0.253
+  ],
+  [
+    "src/content/docs/blog/kak-organizovat-razrabotku-it-proekta.md",
+    "Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации",
+    "/alsibir-expert/blog/analytics/project-discovery-ai/",
+    0.229
+  ],
+  [
+    "src/content/docs/blog/kak-organizovat-razrabotku-it-proekta.md",
+    "Документация программного обеспечения: классификация, состав и стандарты",
+    "/alsibir-expert/blog/documentation/software-documentation/",
+    0.184
+  ],
+  [
+    "src/content/docs/blog/modeling/08_bpmn_uml_plantuml.md",
+    "Линии и типы связей в UML: как правильно читать диаграммы",
+    "/alsibir-expert/blog/modeling/uml-relationships/",
+    0.214
+  ],
+  [
+    "src/content/docs/blog/modeling/uml-relationships.md",
+    "BPMN, UML и PlantUML: как системному аналитику выбирать и сопровождать диаграммы",
+    "/alsibir-expert/blog/modeling/08_bpmn_uml_plantuml/",
+    0.214
+  ],
+  [
+    "src/content/docs/blog/pdf-v-word-bez-poteri-formatirovaniya.md",
+    "Как извлечь картинки из файла DOCX без потери качества",
+    "/alsibir-expert/blog/izvlech-kartinki-iz-docx/",
+    0.253
+  ],
+  [
+    "src/content/docs/blog/registries/01_mincifry_registry_software.md",
+    "Образцы и шаблоны",
+    "/alsibir-expert/wiki/pages/worksamples/",
+    0.347
+  ],
+  [
+    "src/content/docs/blog/registries/01_mincifry_registry_software.md",
+    "Регистрационные досье: демонстрационный кейс",
+    "/alsibir-expert/wiki/portfolio/registration/software-registration/",
+    0.311
+  ],
+  [
+    "src/content/docs/blog/registries/02_minpromtorg_registry_industry.md",
+    "Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/",
+    0.42
+  ],
+  [
+    "src/content/docs/blog/registries/02_minpromtorg_registry_industry.md",
+    "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье",
+    "/alsibir-expert/blog/registries/01_mincifry_registry_software/",
+    0.302
+  ],
+  [
+    "src/content/docs/blog/security/01_anonymization_cycle.md",
+    "Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки",
+    "/alsibir-expert/blog/security/02_residual_disclosure_risks/",
+    0.37
+  ],
+  [
+    "src/content/docs/blog/security/01_anonymization_cycle.md",
+    "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания",
+    "/alsibir-expert/blog/security/03_anonimizer_engineering_article/",
+    0.334
+  ],
+  [
+    "src/content/docs/blog/security/02_residual_disclosure_risks.md",
+    "Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно",
+    "/alsibir-expert/blog/security/01_anonymization_cycle/",
+    0.37
+  ],
+  [
+    "src/content/docs/blog/security/02_residual_disclosure_risks.md",
+    "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания",
+    "/alsibir-expert/blog/security/03_anonimizer_engineering_article/",
+    0.272
+  ],
+  [
+    "src/content/docs/blog/security/03_anonimizer_engineering_article.md",
+    "Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно",
+    "/alsibir-expert/blog/security/01_anonymization_cycle/",
+    0.334
+  ],
+  [
+    "src/content/docs/blog/security/03_anonimizer_engineering_article.md",
+    "Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки",
+    "/alsibir-expert/blog/security/02_residual_disclosure_risks/",
+    0.272
+  ],
+  [
+    "src/content/docs/blog/security/09_ai_document_privacy.md",
+    "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания",
+    "/alsibir-expert/blog/security/03_anonimizer_engineering_article/",
+    0.212
+  ],
+  [
+    "src/content/docs/blog/security/09_ai_document_privacy.md",
+    "Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно",
+    "/alsibir-expert/blog/security/01_anonymization_cycle/",
+    0.2
+  ],
+  [
+    "src/content/docs/blog/security/ssh-key-access.md",
+    "Как создать SSH-ключ и подключиться к серверу без пароля",
+    "/alsibir-expert/blog/ssh-kluchi-linux-windows/",
+    0.53
+  ],
+  [
+    "src/content/docs/blog/ssh-kluchi-linux-windows.md",
+    "Настройка SSH-доступа по ключам в Linux и Windows: PuTTY, OpenSSH и журналирование подключений",
+    "/alsibir-expert/blog/security/ssh-key-access/",
+    0.53
+  ],
+  [
+    "src/content/docs/blog/standards/03_spds_gost21.md",
+    "Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц",
+    "/alsibir-expert/blog/standards/spds-shbv/",
+    0.293
+  ],
+  [
+    "src/content/docs/blog/standards/03_spds_gost21.md",
+    "Как оформить документ по СПДС в Microsoft Word",
+    "/alsibir-expert/blog/standards/spds-microsoft-word/",
+    0.252
+  ],
+  [
+    "src/content/docs/blog/standards/spds-microsoft-word.md",
+    "Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц",
+    "/alsibir-expert/blog/standards/spds-shbv/",
+    0.728
+  ],
+  [
+    "src/content/docs/blog/standards/spds-microsoft-word.md",
+    "Автоматизация сбора, нумерации и трассировки требований в Microsoft Word",
+    "/alsibir-expert/blog/automation/word-requirement-numbering/",
+    0.257
+  ],
+  [
+    "src/content/docs/blog/standards/spds-shbv.md",
+    "Как оформить документ по СПДС в Microsoft Word",
+    "/alsibir-expert/blog/standards/spds-microsoft-word/",
+    0.728
+  ],
+  [
+    "src/content/docs/blog/standards/spds-shbv.md",
+    "Оформление документов СПДС: комплект, тома, листы и согласованность по ГОСТ Р 21.101-2026",
+    "/alsibir-expert/blog/standards/03_spds_gost21/",
+    0.293
+  ],
+  [
+    "src/content/docs/blog/tools/local-languagetool.md",
+    "Локальная проверка русского текста с LanguageTool",
+    "/alsibir-expert/blog/ai/local-languagetool/",
+    0.267
+  ],
+  [
+    "src/content/docs/blog/welcome.md",
+    "Публикации",
+    "/alsibir-expert/wiki/pages/publication/",
+    0.24
+  ],
+  [
+    "src/content/docs/blog/welcome.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.199
+  ],
+  [
+    "src/content/docs/guides/example.md",
+    "Воспроизводимый процесс выпуска документации",
+    "/alsibir-expert/blog/automation/document-workflows/",
+    0.256
+  ],
+  [
+    "src/content/docs/index.mdx",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.375
+  ],
+  [
+    "src/content/docs/index.mdx",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.314
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/mincifry/00_v_Mincifru.md",
+    "Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/",
+    0.295
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/mincifry/00_v_Mincifru.md",
+    "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье",
+    "/alsibir-expert/blog/registries/01_mincifry_registry_software/",
+    0.29
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/mincifry/02_requirements_matrix.md",
+    "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье",
+    "/alsibir-expert/blog/registries/01_mincifry_registry_software/",
+    0.2
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/mincifry/07_readiness_opinion.md",
+    "Образец 7. Учебное заключение о готовности промышленного досье",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/07_readiness_opinion/",
+    0.196
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg.md",
+    "Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП",
+    "/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/",
+    0.42
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg.md",
+    "Как подготовить и проверить комплект документов для включения ПО в реестр российского программного обеспечения",
+    "/alsibir-expert/wiki/examples/registries/mincifry/00_v_Mincifru/",
+    0.295
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/01_product_card.md",
+    "Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП",
+    "/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/",
+    0.27
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/01_product_card.md",
+    "Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/",
+    0.258
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/05_localization_matrix.md",
+    "Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП",
+    "/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/",
+    0.221
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/05_localization_matrix.md",
+    "Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/",
+    0.202
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/07_readiness_opinion.md",
+    "Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов",
+    "/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/",
+    0.215
+  ],
+  [
+    "src/content/docs/wiki/examples/registries/minpromtorg/07_readiness_opinion.md",
+    "Образец 7. Заключение о готовности учебного досье ПО",
+    "/alsibir-expert/wiki/examples/registries/mincifry/07_readiness_opinion/",
+    0.196
+  ],
+  [
+    "src/content/docs/wiki/index.md",
+    "Проекты",
+    "/alsibir-expert/wiki/pages/projects/",
+    0.543
+  ],
+  [
+    "src/content/docs/wiki/index.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.432
+  ],
+  [
+    "src/content/docs/wiki/pages/404.md",
+    "Страница не найдена",
+    "/alsibir-expert/404/",
+    0.256
+  ],
+  [
+    "src/content/docs/wiki/pages/404.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.197
+  ],
+  [
+    "src/content/docs/wiki/pages/about.md",
+    "Профессиональное резюме",
+    "/alsibir-expert/wiki/pages/resume/",
+    0.181
+  ],
+  [
+    "src/content/docs/wiki/pages/ai.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.212
+  ],
+  [
+    "src/content/docs/wiki/pages/blog.md",
+    "Обзор сайта — архивный адрес 2",
+    "/alsibir-expert/wiki/pages/home-2/",
+    0.189
+  ],
+  [
+    "src/content/docs/wiki/pages/clients.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.277
+  ],
+  [
+    "src/content/docs/wiki/pages/clients.md",
+    "Обзор сайта — архивный адрес 1",
+    "/alsibir-expert/wiki/pages/home-1/",
+    0.214
+  ],
+  [
+    "src/content/docs/wiki/pages/contact.md",
+    "Конфиденциальность и обработка данных",
+    "/alsibir-expert/wiki/pages/pp/",
+    0.274
+  ],
+  [
+    "src/content/docs/wiki/pages/home-1.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.636
+  ],
+  [
+    "src/content/docs/wiki/pages/home-1.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.388
+  ],
+  [
+    "src/content/docs/wiki/pages/home-2.md",
+    "Страница не найдена",
+    "/alsibir-expert/404/",
+    0.374
+  ],
+  [
+    "src/content/docs/wiki/pages/home-2.md",
+    "Блог",
+    "/alsibir-expert/wiki/pages/blog/",
+    0.189
+  ],
+  [
+    "src/content/docs/wiki/pages/index.md",
+    "Обзор сайта — архивный адрес 1",
+    "/alsibir-expert/wiki/pages/home-1/",
+    0.636
+  ],
+  [
+    "src/content/docs/wiki/pages/index.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.517
+  ],
+  [
+    "src/content/docs/wiki/pages/portfolio.md",
+    "Образцы и шаблоны",
+    "/alsibir-expert/wiki/pages/worksamples/",
+    0.387
+  ],
+  [
+    "src/content/docs/wiki/pages/portfolio.md",
+    "Проекты",
+    "/alsibir-expert/wiki/pages/projects/",
+    0.382
+  ],
+  [
+    "src/content/docs/wiki/pages/pp.md",
+    "Контакты",
+    "/alsibir-expert/wiki/pages/contact/",
+    0.274
+  ],
+  [
+    "src/content/docs/wiki/pages/projects.md",
+    "База знаний",
+    "/alsibir-expert/wiki/index/",
+    0.543
+  ],
+  [
+    "src/content/docs/wiki/pages/projects.md",
+    "Портфолио и примеры работ",
+    "/alsibir-expert/wiki/pages/portfolio/",
+    0.382
+  ],
+  [
+    "src/content/docs/wiki/pages/publication.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.243
+  ],
+  [
+    "src/content/docs/wiki/pages/publication.md",
+    "О блоге AlSibir",
+    "/alsibir-expert/blog/welcome/",
+    0.24
+  ],
+  [
+    "src/content/docs/wiki/pages/resume.md",
+    "Навыки и инструменты",
+    "/alsibir-expert/wiki/pages/skills/",
+    0.188
+  ],
+  [
+    "src/content/docs/wiki/pages/resume.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.184
+  ],
+  [
+    "src/content/docs/wiki/pages/search.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.244
+  ],
+  [
+    "src/content/docs/wiki/pages/sitemap.md",
+    "Навигация по разделам",
+    "/alsibir-expert/wiki/pages/index/",
+    0.517
+  ],
+  [
+    "src/content/docs/wiki/pages/sitemap.md",
+    "Образцы и шаблоны",
+    "/alsibir-expert/wiki/pages/worksamples/",
+    0.476
+  ],
+  [
+    "src/content/docs/wiki/pages/skills.md",
+    "Профессиональное резюме",
+    "/alsibir-expert/wiki/pages/resume/",
+    0.188
+  ],
+  [
+    "src/content/docs/wiki/pages/standards.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.257
+  ],
+  [
+    "src/content/docs/wiki/pages/standards.md",
+    "Как применять ГОСТ к программной документации",
+    "/alsibir-expert/blog/documentation/gost-documentation/",
+    0.256
+  ],
+  [
+    "src/content/docs/wiki/pages/tools.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.346
+  ],
+  [
+    "src/content/docs/wiki/pages/tools.md",
+    "Автоматизация технических документов: демонстрационный кейс",
+    "/alsibir-expert/wiki/portfolio/ai/document-automation/",
+    0.187
+  ],
+  [
+    "src/content/docs/wiki/pages/worksamples.md",
+    "Карта сайта",
+    "/alsibir-expert/wiki/pages/sitemap/",
+    0.476
+  ],
+  [
+    "src/content/docs/wiki/pages/worksamples.md",
+    "Регистрационные досье: демонстрационный кейс",
+    "/alsibir-expert/wiki/portfolio/registration/software-registration/",
+    0.435
+  ],
+  [
+    "src/content/docs/wiki/portfolio/ai/document-automation.md",
+    "Инструменты технического писателя",
+    "/alsibir-expert/wiki/pages/tools/",
+    0.187
+  ],
+  [
+    "src/content/docs/wiki/portfolio/registration/software-registration.md",
+    "Образцы и шаблоны",
+    "/alsibir-expert/wiki/pages/worksamples/",
+    0.435
+  ],
+  [
+    "src/content/docs/wiki/portfolio/registration/software-registration.md",
+    "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье",
+    "/alsibir-expert/blog/registries/01_mincifry_registry_software/",
+    0.311
+  ]
+]

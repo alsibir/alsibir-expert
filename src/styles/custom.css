@@ -18,3 +18,26 @@
 .aps-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:25px 0}.aps-card{background:var(--aps-panel);padding:20px;border-radius:10px;min-width:0}.aps-card img{width:100%;height:auto;margin:0 0 14px!important;border-radius:5px}.aps-card h3{margin:10px 0;font-size:23px}.aps-card p{font-size:16px}.aps-competencies{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0}.aps-competencies a{display:flex;flex-direction:column;gap:14px;padding:20px;background:var(--aps-panel);text-decoration:none;font-weight:600;font-size:16px}.aps-competencies img{width:48px;height:48px;margin:0!important}.aps-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.aps-results>div{background:var(--aps-panel);padding:20px}.aps-results strong{font-size:42px;color:var(--sl-color-text-accent)}.aps-results p{font-size:16px}.aps-workflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:0!important;list-style:none}.aps-workflow li{background:var(--aps-panel);padding:16px;margin:0!important;font-size:14px}.aps-workflow b{display:block;color:var(--sl-color-text-accent);font-size:26px}
 @media(max-width:760px){:root{--sl-nav-height:8.5rem}.aps-brand{max-width:235px}.aps-top-nav{gap:15px}.aps-top-nav a{font-size:12px}.aps-top-nav .nav-icon{display:none}.map-label{display:none}.aps-mobile-theme{display:block}.aps-mobile-theme select{max-width:85px}.aps-hero{grid-template-columns:1fr;gap:24px}.aps-hero .theme-image{max-width:420px;order:-1;max-height:400px}.aps-hero .theme-image img{max-height:400px;object-fit:cover;object-position:50% 20%}.aps-grid,.aps-footer{grid-template-columns:1fr}.aps-competencies{grid-template-columns:repeat(2,minmax(0,1fr))}.aps-results,.aps-workflow{grid-template-columns:1fr}.aps-page-cover,.aps-page-cover img{max-height:220px}}
 @media print{.aps-top-nav,.aps-footer,.aps-page-cover,.aps-hero .theme-image{display:none}.theme-dark{display:none!important}.theme-light{display:block!important}}
+
+/* Палитра портрета 1.jpg; финальные переменные темы. */
+:root{--sl-color-accent-low:#eadbd2;--sl-color-accent:#80503b;--sl-color-accent-high:#4c3329;--aps-panel:#f5eee9;--aps-ink:#22212e;--sl-nav-height:8rem}
+:root[data-theme='dark']{--sl-color-accent-low:#49352d;--sl-color-accent:#e4b49a;--sl-color-accent-high:#f4dfd2;--aps-panel:#29252b;--aps-ink:#f5eee9}
+.aps-button{background:#80503b}
+.aps-menu>summary{display:none}
+.aps-menu .aps-top-nav{flex-wrap:nowrap;overflow:visible;gap:clamp(12px,2vw,26px)}
+.aps-menu .aps-top-nav a{font-size:15px;line-height:1.5;letter-spacing:0}
+.aps-top-nav a:focus-visible,.aps-menu summary:focus-visible{outline:3px solid var(--sl-color-accent);outline-offset:4px}
+@media(max-width:1100px){
+ .aps-menu{position:relative}
+ .aps-menu>summary{display:list-item;cursor:pointer;font-size:16px;padding:6px 0}
+ .aps-menu:not([open])>.aps-top-nav{display:none}
+ .aps-menu[open]>.aps-top-nav{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sl-color-bg);border:1px solid var(--sl-color-gray-5);padding:12px;max-height:70vh;overflow-y:auto;box-shadow:0 12px 28px #0003;z-index:50}
+ .aps-menu .aps-top-nav a{font-size:16px;padding:10px 12px}
+ .aps-menu .aps-top-nav .nav-icon{display:inline-flex}
+ .aps-menu .map-label{display:inline}
+ .aps-menu .aps-mobile-theme{display:block;margin:8px 12px}
+}
+@media(min-width:1101px){.aps-menu:not([open])>.aps-top-nav{display:flex}}
+
+:root{--sl-color-text-accent:#80503b}
+:root[data-theme='dark']{--sl-color-text-accent:#e4b49a}

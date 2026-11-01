@@ -40,3 +40,8 @@ draft: false
 - [Досье промышленного изделия](/alsibir-expert/wiki/examples/registries/minpromtorg/01_product_card/) — семь образцов на условное изделие.
 
 Другие исходные документы предоставляются с соблюдением договорных ограничений. [Контакты](/alsibir-expert/wiki/pages/contact/).
+
+
+## Источник сведений о проекте
+
+[Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).

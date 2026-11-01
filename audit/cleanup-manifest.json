@@ -1,0 +1,2207 @@
+[
+  {
+    "path": "404.html",
+    "sha256": "076409c9b26cd5377399b24e9f0851b6d788ae1dc56f16289151bb66604b5844",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "CV/alexander-sibiryakov-cv.pdf",
+    "sha256": "1677dd976ec39056e0e5cc8ec2aa075659ec35f02f9a78858347d2b1c79dc351",
+    "reason": "Побайтовый дубликат public/CV/alexander-sibiryakov-cv.pdf"
+  },
+  {
+    "path": "_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js",
+    "sha256": "bc57dccfe8dec8aaf9d9eeb8a1cfdf255d0cdf784cd79f606ed5a63eb4f08414",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/Search.astro_astro_type_script_index_0_lang.D5klt8WL.js",
+    "sha256": "8784b2c9b2654ce684b9646829aa7cd975bba17c52daafb3b575472b3b5a1fc4",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js",
+    "sha256": "b80a41c167d0d90fc2f38a27bb4772ec220613dbd07093bfe6b9c3d44f628b77",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/ec.0vx5m.js",
+    "sha256": "182e98b9acfcfd358ea486967bd17dcaddd5930b8d092bc0653fd26ddbb11e37",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/ec.w36nc.css",
+    "sha256": "1db272cd2e2bc5dfbc63c332f5d5f04bb4ba104065e894f951405e7bdddf5dcb",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/middleware.ZiiHsVqm.css",
+    "sha256": "ed8219960f11f28f224534ac634686ea43660efa29392f6e237e44d36aeb67c2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/page.cNngjUgL.js",
+    "sha256": "04c3f1b2cba171b387e6485f6b6dc6cf94cd91ae1278d6b9ed1fac7d8f14546f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/print.ehPL0gv-.css",
+    "sha256": "4d7d25c3d697e6d36e64afb9edef136e6d2e4c50f70a48000ca90f9b059e3622",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/starlight-toc.D4UDIxQL.js",
+    "sha256": "5d6d8e252d7fd83f14914b8164580f615e7e2a33a39ec87e31582dc12659f0db",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "_astro/ui-core.BDlJMSqc.js",
+    "sha256": "3b44154f557a0530a9338fead170e64491d4812eab844f8f6bbb263d581c1ed3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/2/index.html",
+    "sha256": "c8f8856773b1324a36ccf251b6c5b1ca44856d8cecd8eda5e88cca3808ad9127",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/3/index.html",
+    "sha256": "58e14b1d1860d99b6bca9e3322bc2155110cb3d81ffc848de6ed7baeb073e7ef",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/4/index.html",
+    "sha256": "7ac6ed10e4630cbc319fb02d044ab6b5e3316486bea57b26bb5089f586ed0078",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/5/index.html",
+    "sha256": "919b596f66589af281fdf0b03fb3d4161718219642a46e494bbda8b58838a1b6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/6/index.html",
+    "sha256": "149767763affcf205e2d91a46950627e426af3d8b195668160daa11098939e53",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/7/index.html",
+    "sha256": "d52bf895b780d3681ff8f6d95a156ecf07ba188e7291199a32910a929fdb9d3f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/8/index.html",
+    "sha256": "ce05613dd30df352cbfa79ad30b9af986e5d3f90a649a42c6684d4d21fd7da79",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/9/index.html",
+    "sha256": "9919dc56129559f790c30125f9eda9a7dc8a120e26583071a9ba859211e0cdb4",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/ai/deanonymization-risks/index.html",
+    "sha256": "02a328e9b51d0c163991607528b8a6999367ff126ac092450d7442662663727a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/ai/document-anonymization/index.html",
+    "sha256": "814d43feec95fa24b89b5f3fc17c85fda9541c0c8939e595090d37d872054b47",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/ai/local-languagetool/index.html",
+    "sha256": "fa48a843b0abdb8e473243cab69cc8ada68d396776d4200540b2fbb4091b62b8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/analytics/06_requirements_to_tests/index.html",
+    "sha256": "1e754584d87a6ba304ae8a6222920e223794663bf750ad0c4a1eea912e6acf83",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/analytics/project-discovery-ai/index.html",
+    "sha256": "f5b0319b93cc4b3ea424458ebed657c3d8b716218f52f4613ffbd54245e92680",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/api/07_openapi_contracts/index.html",
+    "sha256": "9ea03737e78cf03cb807d1eac968929ff6fa86fa10141e6c3092a7047f201d5b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/04_word_automation/index.html",
+    "sha256": "5746d8e7ba91ef02ecb2e2b3944ca020297ed4b3a13d2f9c81e524ee79a7810d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/document-workflows/index.html",
+    "sha256": "b3a744d900a7e2cf80a901ee8753f0cbc634176c6216ebd5fc2d42c7a7df716f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/filename-portability/index.html",
+    "sha256": "9e9017c5e22718d77d4ba78177b0ffdda0e89d45df041cec02453bccb5e7de61",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/obsidian-automation/index.html",
+    "sha256": "8f4ffd54de29bf99e6b5ae9bc97ae3dd710cc14e5a493d5c2a62739b39882fb0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/obsidian-knowledge-base/index.html",
+    "sha256": "da0ab2a02b33faf093855c9a4461484cb76d0e51ac366afa079b4e8ce677f88a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/automation/word-requirement-numbering/index.html",
+    "sha256": "700dc11272159ae4e38c51b2f0b08a5c1ad0d6c9c3a7c744be39287c1e6ec6c3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/01_python_junior_skills/index.html",
+    "sha256": "5134b17bf570360055290604c90b5be668cc5ff70138844344b913753cfc7e25",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/02_junior_python_resume/index.html",
+    "sha256": "d432793286600c76fa18d8c5e16086fa8e5916457aaaa83325cf3f582c503627",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/03_ranepa_education/index.html",
+    "sha256": "f9c2cd90333595752a40b5300288c91d0c357172c1d17d82ff778661f3263f4d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/04_practical_experience/index.html",
+    "sha256": "935a9e9fa196c4664223633b82bf5702f38f9d172b760fcbf06c35f1145d6d20",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/05_jira_confluence/index.html",
+    "sha256": "a4a8de43a31f2c396e931f39264f0aa9f8f4f5db9f4276b1390cecfe927d1b35",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/career/06_python_career_full_guide/index.html",
+    "sha256": "3c1521d543e277a8b252226ba7846f2b5d79a1924d0c4544c1dd03ccef8e80af",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/01_gost19_documents/index.html",
+    "sha256": "df71ad2db847ccc814afebf9e979fdbc5d79a58b2c6f816d73414a1e8f58ae7f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/02_gost34_traceability/index.html",
+    "sha256": "22d87ddfa8ff7aeff6382081d523729b092c4cfdd0149f35c4e599ef60308ed2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/05_document_quality/index.html",
+    "sha256": "f320b48d08f4b62ccb5ec441491bc08d51e709217d6ad941fb2f617dc3771ac2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/10_document_release/index.html",
+    "sha256": "ce7e1746c796efce04bd936ec8c4e864c97a3cbd2703fff00865a15893116528",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/clear-technical-specification/index.html",
+    "sha256": "c46cfe4957acbde07048f18c96bc4073700b65df36efe4b99fb8c321e465fb15",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/gost-documentation/index.html",
+    "sha256": "a89c25390fa018f9c5c308c207c7950bf1045ca7d2827b459191d6861600dc0a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/documentation/software-documentation/index.html",
+    "sha256": "1c8ff974dda8badddc18b058104910943decce1cf0af01498e4b939f8800bafd",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/index.html",
+    "sha256": "134f93c4f0f4af19cead4d33ad431cd53dfa40c35b18691019b6dad54da45cad",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/modeling/08_bpmn_uml_plantuml/index.html",
+    "sha256": "e42c47cd2fa58956db347d7bfe72775e52255c003ebe18bf5904082c6dbe4184",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/modeling/uml-relationships/index.html",
+    "sha256": "c80825deb5fb143455134d65a5d24b3058b6a5c7a3c0e15cb2ecd822e7991a35",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/registries/01_mincifry_registry_software/index.html",
+    "sha256": "3f783fbd1abdb139629888924a6dbd1b201c766d0cf49553733aa3bcf362756c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/registries/02_minpromtorg_registry_industry/index.html",
+    "sha256": "82d0aa42c8f3df7eee58d77c32ba077cebe29b65219f6f4fdb5ee922a311d9d8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2023-10.xml",
+    "sha256": "947a686589ef8f86b402ea194d9b63556f051a7769cfaf5f4cfb96c86146628c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2023-11.xml",
+    "sha256": "8ab0befd1b7f741e3dfbca1ccbb6b4f6fd7952a5a1fda7807ff7ce5654e1592e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2023-12.xml",
+    "sha256": "b66bc64d86e37ce0c6c381e37d5318902007d9ead2db2ec5cb54a975db59f817",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-01.xml",
+    "sha256": "a84be7aa952b21203062f5a38586fa28ef67d55c6c0603f19a0634da42563ee2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-02.xml",
+    "sha256": "3c342c639efe84ebed3fd261afc9e218e5fb5a91b258e82f61f43eaae0bafa44",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-03.xml",
+    "sha256": "8a9cbbf58f05ec126317e7430c9d9dd4906ff802951d0a43240c30e40a28c438",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-04.xml",
+    "sha256": "b885506bdbb795c3978ac3395403a88e2e3d28a6681119722cf4a842079917d6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-05.xml",
+    "sha256": "849ef3537922af096cea3fd3bdba5010198ae5b34d0fdeb6087f2db82ccfb788",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-06.xml",
+    "sha256": "4c2e4171e765a7a5542b2ddcf4d8e8475df32ef73261ef1553e7ea58ce489320",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-07.xml",
+    "sha256": "8039248d5fc3492d72b484bf8cd67c5b04caa342018a62187e8febb83037042a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-08.xml",
+    "sha256": "d527e977c2068ccf77c28d7c572c46939b9c3abc52ff9af13445c3e0651963e2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-09.xml",
+    "sha256": "74eed290f76dcbc4ed99d13468547e57682612960f924cf9ece50b8973632c17",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-10.xml",
+    "sha256": "6a64865e9a2b08ffc7b5142c3f83bdd3ff8d78db46a44bb86f5d5bac56aa1ca7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-11.xml",
+    "sha256": "94cfbfb5a85f07483d92ecf200513036a71deec4b103242af9b497cde00bfea6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2024-12.xml",
+    "sha256": "9a423c9627f0a330e2bad858d8a55bed47fb2c4c84f0ff5a7a46474286594fa8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-01.xml",
+    "sha256": "b1bc09f8c5ab9751ae9eb09b2128a4885d64fc4a26a8c92f5446a6e42efca745",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-02.xml",
+    "sha256": "ca1354bcb82c308ec6556c08912794c3be7b40e08217ba644cde97f691dc501c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-03.xml",
+    "sha256": "bdf9b70bb112268e26fb812e7b4f2d5df6a86e820a075150e7478f1523f4e149",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-04.xml",
+    "sha256": "339c38d8847d492676d748c15fc706f12081220587da41dd99d4946575b204d8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-05.xml",
+    "sha256": "e8c5a5ad473086c1791b5dd59363a6716fa1424b8a4c69f68f78ec3185f1b7d6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-07.xml",
+    "sha256": "591a94cf2cb8bb804734cefc67f932f26dd69138423eb1ded4c88b5dcbd256de",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-08.xml",
+    "sha256": "64694dc03417e7eb98cef2c3b6b739bbf3e077ed8e76e2fcb252ad5c0ba28634",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-09.xml",
+    "sha256": "694f48740ef800fe2422aac1327723fc6a34cd116410b8605f2aff1b5880671a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-10.xml",
+    "sha256": "600972a994cdbb04f6517e860b3e8e1861c1b50fa35e35f743fd26dcd573467c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-11.xml",
+    "sha256": "84e23667f9e02e114e2f61fb55b7b2c552776fbd11ab35bd32d7090b8ffa7878",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2025-12.xml",
+    "sha256": "2e00c035154907ea5e4ecd08d0273a19cd8b3bb8d39a05d486ea06e39a6a502e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-01.xml",
+    "sha256": "5fb65af906537865929bf3515e5a9931e261308325b3c3f8a26a8fad16f1afbc",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-02.xml",
+    "sha256": "782ec3bb2df443bfa3a1c912931d80efaa43b2ffda8c8ce2bacf32abf0ccdf94",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-03.xml",
+    "sha256": "89e449668104b4ca7e420787f4c55e8c280d6cd1d54dcf53f832da4190508f52",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-04.xml",
+    "sha256": "f7f2d69b45829ab2fc19030b45a232a313fbfa84368a86ea4a8ee50cbe954d58",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-05.xml",
+    "sha256": "26c8bfc07c6b0bf685a83bf3752a241af5328e3a89285df2a3989b2059b10c2e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-06.xml",
+    "sha256": "544255b4df34d746c71861a3a812a5c81be7957aef1eddf98f4ab198a695b81b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-07.xml",
+    "sha256": "493758e11cd03f404e627ae93aac63855e4cfcd360aeaee93fc4adb81f129980",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-08.xml",
+    "sha256": "56d9db57979a8f147b1e70c0aaee5b8695448f57fab95f40b7381af7272ff69e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss/2026-09.xml",
+    "sha256": "1cdde9cb43c699f86b583809d4269e72b9c909c68d033a3074314e0658484e24",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/rss.xml",
+    "sha256": "9cc74406d1956140ccf79bc6b6f58134b9d5d146e114baedf8180687bc9e0e17",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/security/01_anonymization_cycle/index.html",
+    "sha256": "02762ff4170a0713606c11ceb6987504dbedb692a210c095eed87196d0801214",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/security/02_residual_disclosure_risks/index.html",
+    "sha256": "0240ba6ffc6a3c5eb566c040a76d3d6d399fc2519121c9833aac4c671a8313ea",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/security/03_anonimizer_engineering_article/index.html",
+    "sha256": "eb9fb306f181e4a02b25cada97bdea6dccccc31194db23de8a7b1bc0f514f716",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/security/09_ai_document_privacy/index.html",
+    "sha256": "2e59b131597cf70ae86bbf5054dae169b8281855e70b47122c4b12242aae8e58",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/standards/03_spds_gost21/index.html",
+    "sha256": "2f44528134d819a5600e97fa34c5eb58089a90e5fc1568b943ed923c2f754fde",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/standards/gost-updates/index.html",
+    "sha256": "d8f68c1dc8312167926df6effbb5bd50369fc120ad0403cae3b6c8570d90a627",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/standards/spds-microsoft-word/index.html",
+    "sha256": "104c9dbd75c2512a0d8d8028b849dd50e38fc6fd6e6ec3f679b7f423f873aa3c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/standards/spds-shbv/index.html",
+    "sha256": "d44ada25f772007e202bc444c2ae0e8222593932e9f2440e8ea2a51d9482ac55",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/api/index.html",
+    "sha256": "f142a0f9f6d8af7a4d8f7ff90b1b8911ace75502df7053275caf758f100f4903",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/linux/index.html",
+    "sha256": "d2e93b7765651ba7df5281b91e3a7e4b84f1d1a79e01806e40065df4f75e07c0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/uml/index.html",
+    "sha256": "81b13102ef92e5b36507649e1a0897fa21b712f69118e73c27be7d07721cd7fc",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/ux/index.html",
+    "sha256": "43b9ae08811f3be542ba77a0b616f0305af02858b97ee5f372a8ff2d46f9f57d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/автоматизация/index.html",
+    "sha256": "8192a16c1ef3f7b41e6c258cbb2729cf98be8d6c5eca1fbe78c5bbb8b06d1998",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/безопасность/index.html",
+    "sha256": "334790dd55920b2762afab29358236fce24256a87a53ae01dcd6ecc924248f52",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/безопасность-данных/index.html",
+    "sha256": "b5c4113598e3179dced2945ad6b352521006c0b70f01b92f6565b3381b3a0fd8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/гост/index.html",
+    "sha256": "efa7160b89483a9ac39b05d0184b96ff894f2a79e883eac02cd50397f22dfede",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/документы/index.html",
+    "sha256": "efb4a0c120a3d1fcfa4c0a3c90f2447934559c3cdad92a8d6b940ce0f8b7ce15",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/ии/index.html",
+    "sha256": "456cf68ed41399e602a66537803bd4c5e7da211d8400c81961413f3ba17eb709",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/инструменты/index.html",
+    "sha256": "9297cddfe5b83cc2109364ad838cce1e191d921013725473723e96f4f31a6723",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/карьера/index.html",
+    "sha256": "7519315b734bad2839f077eb2d2071938bc3cc9a92cc97df09920a212da04927",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/моделирование/index.html",
+    "sha256": "73f7151f70470f0812100cf7667408006d483c8673e0220b3edea8c5a654e074",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/настройка/index.html",
+    "sha256": "14f54af948043e8166dcf323f610dc4a7754db71c68925f9d780dae614bd73ea",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/новости-сайта/index.html",
+    "sha256": "fd4cad21c365031602e250816dbda70a88d16629a2ca76bb8f8a5617e6dc6ab7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/обучение/index.html",
+    "sha256": "f0fdfd0cea9187a982d20538a45b10fa273781fd37179b0fa34ce00e3851fc13",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/оформление/index.html",
+    "sha256": "90d96115bac1ddac3ac4b25f7c268a305360c0caec36d42c82603ba3cd0174f0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/реестры/index.html",
+    "sha256": "66791b72789e2aef7bbcd91bf2489bdadd855fc2cb9a811c3914467c7515228c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/системный-анализ/index.html",
+    "sha256": "d8e9828043b4acafc220cdf48cdfb99f0d9bfebe54f35b1d708718d2bf5d6f4e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/стандарты/index.html",
+    "sha256": "90994c4d8b93ce7ea946bc47e9445c6557e191ad6b677f2157cfe39c7ed17ca7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/техническая-документация/index.html",
+    "sha256": "e3c8f974f9f2d3e37732db78f9e0ca65422708ec1d642ef0d48966e1ecb4b011",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/технический-текст/index.html",
+    "sha256": "4eed8f87b0d9ee094b1cd3f98def3f130248002d09eeceb61ee502aacd263cc7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tags/требования/index.html",
+    "sha256": "f692103458ce305cdd3b6ff0f8a02c5ef40ce86447972fef2c1246cb8289c874",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tools/local-languagetool/index.html",
+    "sha256": "d28f544d6c37e539e1653df2eda1a15cdac8752c00a0643453262fc931277865",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tools/my-commands-linux-mint/index.html",
+    "sha256": "13dbc475d5d9a91b1dec998251494b78deb9dc89639fd41e42975a7fb719989c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/tools/neovim-guide/index.html",
+    "sha256": "123468e534ed1475f542750d519609512dad72554754befac2614f518bf8e227",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/ux/ux-editing-guide/index.html",
+    "sha256": "33340d4623d493bfb6d0dfbd48b5561ecb96fae7037f2899e1ce862e9957de34",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/ux/ux-writing/index.html",
+    "sha256": "486a5735312428045e8544aef7c40ae79058911509d6078f941a43f55135ef83",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "blog/welcome/index.html",
+    "sha256": "f742e6c3bfde4cd537d1f29d9572017e30af475413ffe0c8da3286612a4ab3c5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "diagrams/0018c322a099e2a6.svg",
+    "sha256": "3f61e412897f3d0fc54893605f4ff340dcb906867844980734aed683deb12d98",
+    "reason": "Побайтовый дубликат public/diagrams/0018c322a099e2a6.svg"
+  },
+  {
+    "path": "diagrams/01_software_architecture.puml",
+    "sha256": "8113fbfaa1a27ba27d9dacf96ce601869fc6573c96843b498c01657776c15fde",
+    "reason": "Побайтовый дубликат public/diagrams/01_software_architecture.puml"
+  },
+  {
+    "path": "diagrams/02_software_submission_route.puml",
+    "sha256": "9ea62ce2dd6fce71e16da496378bd962bca1f6461d16a97048664880cb4e7a93",
+    "reason": "Побайтовый дубликат public/diagrams/02_software_submission_route.puml"
+  },
+  {
+    "path": "diagrams/03_industry_evidence_route.puml",
+    "sha256": "840b87c1654fbb6fc0a3d0dedbc590d984204559d98e5b935f8a8547b7d0b863",
+    "reason": "Побайтовый дубликат public/diagrams/03_industry_evidence_route.puml"
+  },
+  {
+    "path": "diagrams/07e6a2b8f966c3d9.svg",
+    "sha256": "21af9fc34c24b84f895f389dfa63eeca3bb3f1d0900ad8633b57e3085b04759d",
+    "reason": "Побайтовый дубликат public/diagrams/07e6a2b8f966c3d9.svg"
+  },
+  {
+    "path": "diagrams/1220baffee170198.svg",
+    "sha256": "d859f3f6d0786a128fd721d1532236578b1fb14c9fc6d617fe1434fc1af24ddb",
+    "reason": "Побайтовый дубликат public/diagrams/1220baffee170198.svg"
+  },
+  {
+    "path": "diagrams/35589f3bc9548269.svg",
+    "sha256": "5279fe61abfb0d50ebf2b3c480eebd23b8f6397df12db98775ecf50b61ccf1ba",
+    "reason": "Побайтовый дубликат public/diagrams/35589f3bc9548269.svg"
+  },
+  {
+    "path": "diagrams/430cce1ba69677bc.svg",
+    "sha256": "634175003f00e6478d6108b734783fc7c6a5d07e1ad5637bf6818e2d4e07a6ed",
+    "reason": "Побайтовый дубликат public/diagrams/430cce1ba69677bc.svg"
+  },
+  {
+    "path": "diagrams/5d5eb47d12a2905d.svg",
+    "sha256": "595784245aee06c0411ba699a7fcba48798a69c443eb08a81cdd306eeab44207",
+    "reason": "Побайтовый дубликат public/diagrams/5d5eb47d12a2905d.svg"
+  },
+  {
+    "path": "diagrams/65e9a86bb747b63d.svg",
+    "sha256": "4c8a9c1eb4c52d8856a7283da44527816e00665e10bd48a7ecb3fe7487aa44b6",
+    "reason": "Побайтовый дубликат public/diagrams/65e9a86bb747b63d.svg"
+  },
+  {
+    "path": "diagrams/841bb40ec6ccddba.svg",
+    "sha256": "9c577988044cb20a798aa3e4377fecd58a9e8fe886be3ac897eaa32b7f79a09e",
+    "reason": "Побайтовый дубликат public/diagrams/841bb40ec6ccddba.svg"
+  },
+  {
+    "path": "diagrams/8948bec6da543520.svg",
+    "sha256": "943d9dab23553eef52530eed1ec9016876bdae2ba73c2f9b8c89b5c54617cb3b",
+    "reason": "Побайтовый дубликат public/diagrams/8948bec6da543520.svg"
+  },
+  {
+    "path": "diagrams/8ab767dc81e73e56.svg",
+    "sha256": "f448c80e001a7b46d471637420a9d6fd298d987f5a2447a2f99b64dda2a6d1f7",
+    "reason": "Побайтовый дубликат public/diagrams/8ab767dc81e73e56.svg"
+  },
+  {
+    "path": "diagrams/97af9f95942ffc52.svg",
+    "sha256": "d33c089673c384d3dad089ac5db6395988f374e5ac5746152358ae88a834238b",
+    "reason": "Побайтовый дубликат public/diagrams/97af9f95942ffc52.svg"
+  },
+  {
+    "path": "diagrams/b1aa04b907461a33.svg",
+    "sha256": "03fd3e7aebcedf7221460622bde94d93522366b51d5d9dbfe9f102f576e17ec0",
+    "reason": "Побайтовый дубликат public/diagrams/b1aa04b907461a33.svg"
+  },
+  {
+    "path": "diagrams/bf4281d0d6120eb0.svg",
+    "sha256": "92d9eb80eb9fbf10e06644d6a3205fe3b6e52d5f61eea100b80b8ba9c6778201",
+    "reason": "Побайтовый дубликат public/diagrams/bf4281d0d6120eb0.svg"
+  },
+  {
+    "path": "diagrams/c1b67f131fddad03.svg",
+    "sha256": "f2c1f9f7ba5e89561c2b91ae8bbc65f1c38e93b1aa4a47a97530be638fddda37",
+    "reason": "Побайтовый дубликат public/diagrams/c1b67f131fddad03.svg"
+  },
+  {
+    "path": "diagrams/cefd4ce4921d163c.svg",
+    "sha256": "d93668a3165c253a5e60d57c467dc41b3a72ac21567a95b7091e5eceb2a55e29",
+    "reason": "Побайтовый дубликат public/diagrams/cefd4ce4921d163c.svg"
+  },
+  {
+    "path": "diagrams/e648e4b26705f169.svg",
+    "sha256": "80f0b05dd07c5be1330cc141a41bdc1e8244610297cf278cb1f21cbd261eae66",
+    "reason": "Побайтовый дубликат public/diagrams/e648e4b26705f169.svg"
+  },
+  {
+    "path": "diagrams/e8d5577cef315c96.svg",
+    "sha256": "14f730067b0b8ac737fe5f9067be835ca519746135359ca50a3b17d81c5bec48",
+    "reason": "Побайтовый дубликат public/diagrams/e8d5577cef315c96.svg"
+  },
+  {
+    "path": "diagrams/f0dbeae88e7f6b68.svg",
+    "sha256": "eba4cab9ceb10077e8149d834f9b953587fe3c6abcb18a6fe8147ae61ba7190b",
+    "reason": "Побайтовый дубликат public/diagrams/f0dbeae88e7f6b68.svg"
+  },
+  {
+    "path": "diagrams/f8f8e57c09325ee9.svg",
+    "sha256": "e1fe2389788ef5f121af8e7fc442ac5bbdac7ac32aeb5211cab0baf1a3a2a429",
+    "reason": "Побайтовый дубликат public/diagrams/f8f8e57c09325ee9.svg"
+  },
+  {
+    "path": "downloads/my-commands/my-commands-installation.md",
+    "sha256": "c552dcd54432777f748143549530d3c1538d6c90acd0bc9dd1dfb2cb18372e94",
+    "reason": "Побайтовый дубликат public/downloads/my-commands/my-commands-installation.md"
+  },
+  {
+    "path": "downloads/my-commands/my-commands-v3.0.0.tar.gz",
+    "sha256": "ebfe9324d974c00d0ade9220880e57fdc6d37e62bab519f3fb1b18a593253ce4",
+    "reason": "Побайтовый дубликат public/downloads/my-commands/my-commands-v3.0.0.tar.gz"
+  },
+  {
+    "path": "examples/api.pdf",
+    "sha256": "b46e2ed0d850a6bdbd1d7ec66d58c90ff1464f2f0ba99bd155ebfd577589b05e",
+    "reason": "Побайтовый дубликат public/examples/api.pdf"
+  },
+  {
+    "path": "examples/assistant.pdf",
+    "sha256": "5d8b61bfceabfea8f1c755a13136868e2a3f0d583394ff5f8d45fa0f5c412f42",
+    "reason": "Побайтовый дубликат public/examples/assistant.pdf"
+  },
+  {
+    "path": "examples/orfo.pdf",
+    "sha256": "dc2f038865870f221bb05bcb8c7069f284456e6ba2df8dff6a7318e978810a7d",
+    "reason": "Побайтовый дубликат public/examples/orfo.pdf"
+  },
+  {
+    "path": "examples/portfolio-samples.zip",
+    "sha256": "4efa7cb03f4036616d7a8ccc36f14582f3b236e40da090094efec127c419a0a2",
+    "reason": "Побайтовый дубликат public/examples/portfolio-samples.zip"
+  },
+  {
+    "path": "examples/puzzlelib.pdf",
+    "sha256": "088f4634ca4431c3de2a2491bb0a273a7cf4c10cecb47db40175e2d7c839744f",
+    "reason": "Побайтовый дубликат public/examples/puzzlelib.pdf"
+  },
+  {
+    "path": "examples/snezhinka.pdf",
+    "sha256": "073b1f9e1e84ce5979c03898759c621f9499b9a482b04017fe95b2817be24e59",
+    "reason": "Побайтовый дубликат public/examples/snezhinka.pdf"
+  },
+  {
+    "path": "guides/example/index.html",
+    "sha256": "358aba98dfcb8b075ee7d144d11f13cec2f6963d83f8e8502b4163cc2d9b3f16",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "images/404-art.svg",
+    "sha256": "57bc5f792e117211f887ca494eb3d7995e7d1eeca304a35674d949ef907df89c",
+    "reason": "Побайтовый дубликат public/images/404-art.svg"
+  },
+  {
+    "path": "images/ASSETS.md",
+    "sha256": "a2b51dd1e7c9210dee2c120df48398cc04be1a946088f2875b3fa863851189ee",
+    "reason": "Побайтовый дубликат public/images/ASSETS.md"
+  },
+  {
+    "path": "images/article-excerpt.svg",
+    "sha256": "ebeb530e14c68886f452a8061dae208cbafcaf95cdd1241786a20fa951704d67",
+    "reason": "Побайтовый дубликат public/images/article-excerpt.svg"
+  },
+  {
+    "path": "images/dark/about.webp",
+    "sha256": "48c0553c2bd468f909f9f01d5c0b8f7365f4373cd417be5abb7d147fd3ad161b",
+    "reason": "Побайтовый дубликат public/images/dark/about.webp"
+  },
+  {
+    "path": "images/dark/acceptance.webp",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "Побайтовый дубликат public/images/dark/acceptance.webp"
+  },
+  {
+    "path": "images/dark/ai.webp",
+    "sha256": "a4ab5c4309513468bdf1860b4d42f83ac199931fe7bfc1a321950fb48cd084c1",
+    "reason": "Побайтовый дубликат public/images/dark/ai.webp"
+  },
+  {
+    "path": "images/dark/api.webp",
+    "sha256": "7d16891c855929e34188f781ae0e6ee8ad967858bf669316973f983631e3662a",
+    "reason": "Побайтовый дубликат public/images/dark/api.webp"
+  },
+  {
+    "path": "images/dark/architecture.webp",
+    "sha256": "7fc0d36aba6d97dbdc45985ba656f521cd8141dcf07420f65931616ede1bd838",
+    "reason": "Побайтовый дубликат public/images/dark/architecture.webp"
+  },
+  {
+    "path": "images/dark/clear-tz.webp",
+    "sha256": "f209aec16127bc3bd92366541cc3df9b65dabb661094423ed5de6bd651b5353a",
+    "reason": "Побайтовый дубликат public/images/dark/clear-tz.webp"
+  },
+  {
+    "path": "images/dark/contact.webp",
+    "sha256": "141c3268c6bbbd24c369e6d9571a22a947ec3022ea82595a6ba56adbd2ca174a",
+    "reason": "Побайтовый дубликат public/images/dark/contact.webp"
+  },
+  {
+    "path": "images/dark/evolution.webp",
+    "sha256": "9db048bee1cc3dc2d30f4675e1c459b5155ba39bb667b2c0c585578ea308d70b",
+    "reason": "Побайтовый дубликат public/images/dark/evolution.webp"
+  },
+  {
+    "path": "images/dark/portrait.webp",
+    "sha256": "ab3a2f02ee4c5b1b711ecc80c65051dbc22f96bf27d352144673ab1751a8ff02",
+    "reason": "Побайтовый дубликат public/images/dark/portrait.webp"
+  },
+  {
+    "path": "images/dark/requirements.webp",
+    "sha256": "00ae8624c57721b57ffbddae553ea19181e0dcc0f05df4261621d0680acde082",
+    "reason": "Побайтовый дубликат public/images/dark/requirements.webp"
+  },
+  {
+    "path": "images/dark/testing.webp",
+    "sha256": "0a5f937d585493f2e2992f299473462c917f83a104c75d692a384b4b7f9abb52",
+    "reason": "Побайтовый дубликат public/images/dark/testing.webp"
+  },
+  {
+    "path": "images/download-resume.svg",
+    "sha256": "647fefcde6cdef6f6f4de9328267331424e8c536757556d957885c7f7ffb9063",
+    "reason": "Побайтовый дубликат public/images/download-resume.svg"
+  },
+  {
+    "path": "images/download-samples.svg",
+    "sha256": "727056f22465afc011bb142253ab6aa599993199423d958dfd147ea6c72af15e",
+    "reason": "Побайтовый дубликат public/images/download-samples.svg"
+  },
+  {
+    "path": "images/evidence/api-detail.webp",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "Побайтовый дубликат public/images/evidence/api-detail.webp"
+  },
+  {
+    "path": "images/evidence/api-project-card.png",
+    "sha256": "adbea9ecf89e8125421617709819a3eda2a296492fa7bcf3b45cda43f51bc568",
+    "reason": "Побайтовый дубликат public/images/evidence/api-project-card.png"
+  },
+  {
+    "path": "images/evidence/api-sequence.webp",
+    "sha256": "361286d0c2b85a674d2de77eb69631615bcd88ba480e6d5348425ee04a677261",
+    "reason": "Побайтовый дубликат public/images/evidence/api-sequence.webp"
+  },
+  {
+    "path": "images/evidence/api-title.webp",
+    "sha256": "ed758eb2b7c8b35ff51ea81e6b9e0c200943eecf6fa51c6b984459b99a0f3ece",
+    "reason": "Побайтовый дубликат public/images/evidence/api-title.webp"
+  },
+  {
+    "path": "images/evidence/assistant-architecture.webp",
+    "sha256": "8b8b9d505822513db7cf2d11683eb411f52f8e3e5a58e78e7fdb3b4a27293587",
+    "reason": "Побайтовый дубликат public/images/evidence/assistant-architecture.webp"
+  },
+  {
+    "path": "images/evidence/assistant-detail.webp",
+    "sha256": "38513d133a3cd604f52cb27eb2a719ea46ef98615c4cf2d7fc03f1be27e4e38d",
+    "reason": "Побайтовый дубликат public/images/evidence/assistant-detail.webp"
+  },
+  {
+    "path": "images/evidence/assistant-project-card.png",
+    "sha256": "09c6c7ea2638d2520ee3233fa903c02c67fb0d14262710614f18aa8bd861f02b",
+    "reason": "Побайтовый дубликат public/images/evidence/assistant-project-card.png"
+  },
+  {
+    "path": "images/evidence/assistant-title.webp",
+    "sha256": "8a572db89b4fd21f818964340e5a4339a2fd860d8960b4b1983eb0f9efb083a1",
+    "reason": "Побайтовый дубликат public/images/evidence/assistant-title.webp"
+  },
+  {
+    "path": "images/evidence/orfo-detail.webp",
+    "sha256": "bd8172569a45e127c992d3f4486d6107e56a3b9ba179a25d67658012794ff0ca",
+    "reason": "Побайтовый дубликат public/images/evidence/orfo-detail.webp"
+  },
+  {
+    "path": "images/evidence/orfo-project-card.png",
+    "sha256": "a7892377711150c8c98a332a84d38fe52f456ac8d4a71ead484b54a9ed1f52a5",
+    "reason": "Побайтовый дубликат public/images/evidence/orfo-project-card.png"
+  },
+  {
+    "path": "images/evidence/orfo-title.webp",
+    "sha256": "94f0c5b66a77b11bc6d26438e446c2a0b5837ba5e6544187e97aa1789b37382e",
+    "reason": "Побайтовый дубликат public/images/evidence/orfo-title.webp"
+  },
+  {
+    "path": "images/evidence/puzzlelib-detail.webp",
+    "sha256": "739af746101651cea84a63bf108228073544936dae66093404a684f6eac99bbc",
+    "reason": "Побайтовый дубликат public/images/evidence/puzzlelib-detail.webp"
+  },
+  {
+    "path": "images/evidence/puzzlelib-project-card.png",
+    "sha256": "40d17c61baa17fd050611e942da14481a3cad888cc455e3c9cd71607991b8598",
+    "reason": "Побайтовый дубликат public/images/evidence/puzzlelib-project-card.png"
+  },
+  {
+    "path": "images/evidence/puzzlelib-title.webp",
+    "sha256": "97bbbb11e8828c6c9836e24a7564723197c9e469561e30d7671c9b79ba9344c1",
+    "reason": "Побайтовый дубликат public/images/evidence/puzzlelib-title.webp"
+  },
+  {
+    "path": "images/evidence/snezhinka-detail.webp",
+    "sha256": "8659c0abcc6b4a07ca851190ffe2f41f0913292002a5db947645413d0aa1d335",
+    "reason": "Побайтовый дубликат public/images/evidence/snezhinka-detail.webp"
+  },
+  {
+    "path": "images/evidence/snezhinka-project-card.png",
+    "sha256": "3a540b5ae0f3dd03c9cf8dfb17b25a6c9a913c9ab7935999767351f1afb574a3",
+    "reason": "Побайтовый дубликат public/images/evidence/snezhinka-project-card.png"
+  },
+  {
+    "path": "images/evidence/snezhinka-title.webp",
+    "sha256": "a38f962607ae74c3aac7ba96841fd160bdc5156261d4dcdf8243dee04364c68e",
+    "reason": "Побайтовый дубликат public/images/evidence/snezhinka-title.webp"
+  },
+  {
+    "path": "images/light/about.webp",
+    "sha256": "48c0553c2bd468f909f9f01d5c0b8f7365f4373cd417be5abb7d147fd3ad161b",
+    "reason": "Побайтовый дубликат public/images/light/about.webp"
+  },
+  {
+    "path": "images/light/acceptance.webp",
+    "sha256": "e809c2f20a540047ef810794f896bdacb018d3bd11674e1b5d59dd301fec68ee",
+    "reason": "Побайтовый дубликат public/images/light/acceptance.webp"
+  },
+  {
+    "path": "images/light/ai.webp",
+    "sha256": "a4ab5c4309513468bdf1860b4d42f83ac199931fe7bfc1a321950fb48cd084c1",
+    "reason": "Побайтовый дубликат public/images/light/ai.webp"
+  },
+  {
+    "path": "images/light/api.webp",
+    "sha256": "7d16891c855929e34188f781ae0e6ee8ad967858bf669316973f983631e3662a",
+    "reason": "Побайтовый дубликат public/images/light/api.webp"
+  },
+  {
+    "path": "images/light/architecture.webp",
+    "sha256": "7fc0d36aba6d97dbdc45985ba656f521cd8141dcf07420f65931616ede1bd838",
+    "reason": "Побайтовый дубликат public/images/light/architecture.webp"
+  },
+  {
+    "path": "images/light/clear-tz.webp",
+    "sha256": "f209aec16127bc3bd92366541cc3df9b65dabb661094423ed5de6bd651b5353a",
+    "reason": "Побайтовый дубликат public/images/light/clear-tz.webp"
+  },
+  {
+    "path": "images/light/contact.webp",
+    "sha256": "141c3268c6bbbd24c369e6d9571a22a947ec3022ea82595a6ba56adbd2ca174a",
+    "reason": "Побайтовый дубликат public/images/light/contact.webp"
+  },
+  {
+    "path": "images/light/evolution.webp",
+    "sha256": "9db048bee1cc3dc2d30f4675e1c459b5155ba39bb667b2c0c585578ea308d70b",
+    "reason": "Побайтовый дубликат public/images/light/evolution.webp"
+  },
+  {
+    "path": "images/light/portrait.webp",
+    "sha256": "ab3a2f02ee4c5b1b711ecc80c65051dbc22f96bf27d352144673ab1751a8ff02",
+    "reason": "Побайтовый дубликат public/images/light/portrait.webp"
+  },
+  {
+    "path": "images/light/requirements.webp",
+    "sha256": "00ae8624c57721b57ffbddae553ea19181e0dcc0f05df4261621d0680acde082",
+    "reason": "Побайтовый дубликат public/images/light/requirements.webp"
+  },
+  {
+    "path": "images/light/testing.webp",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "Побайтовый дубликат public/images/light/testing.webp"
+  },
+  {
+    "path": "images/og-site.png",
+    "sha256": "72462e2a8290beb30e5502a1c647c19c1f7ff801592f6e895d62e4eba394fb1e",
+    "reason": "Побайтовый дубликат public/images/og-site.png"
+  },
+  {
+    "path": "images/results-from-cv.svg",
+    "sha256": "5274b7ba144f8824cb064876d5ae6cbe70d4f8091bbfe26e7d22148e7cf84aab",
+    "reason": "Побайтовый дубликат public/images/results-from-cv.svg"
+  },
+  {
+    "path": "images/site-map-reference.svg",
+    "sha256": "b5352b0b1a92ecd67c3b83c0e6f9dbde6fab09e70bdbdec376a23b33bef5aaf6",
+    "reason": "Побайтовый дубликат public/images/site-map-reference.svg"
+  },
+  {
+    "path": "images/workflow.svg",
+    "sha256": "515c3187a378d21d70497e3908e8e2756a58dc50f0172e3b2667b720538f6efe",
+    "reason": "Побайтовый дубликат public/images/workflow.svg"
+  },
+  {
+    "path": "img/analytics-dark.svg",
+    "sha256": "e8279b237b3c6b002193be5644680ec875b2eb4425c3ce628879c8bf653052b9",
+    "reason": "Побайтовый дубликат public/img/analytics-dark.svg"
+  },
+  {
+    "path": "img/analytics-light.svg",
+    "sha256": "e87f7446fe1b94172eb0e8370f3b8a762e0a5e6a9cdfb200e94bac281179c80f",
+    "reason": "Побайтовый дубликат public/img/analytics-light.svg"
+  },
+  {
+    "path": "img/arrow-dark.svg",
+    "sha256": "bda1f14048f517c4243c22d425dd246b500e22e2b88e6258a3505cc2ab5c8784",
+    "reason": "Побайтовый дубликат public/img/arrow-dark.svg"
+  },
+  {
+    "path": "img/arrow-light.svg",
+    "sha256": "a1281ed05dff9673e5920713bfc1ab5434a58f0a4f7edcde92a529881b67672e",
+    "reason": "Побайтовый дубликат public/img/arrow-light.svg"
+  },
+  {
+    "path": "img/back-dark.svg",
+    "sha256": "59a489457847f39ee04208744d8fe38435f214a4e777ec7cedee2dff26968a79",
+    "reason": "Побайтовый дубликат public/img/back-dark.svg"
+  },
+  {
+    "path": "img/back-light.svg",
+    "sha256": "69d92a03c87d4376f0e4a4383c63b94b1916f0b8f62690b105db04d7d33f7270",
+    "reason": "Побайтовый дубликат public/img/back-light.svg"
+  },
+  {
+    "path": "img/badge-api.svg",
+    "sha256": "bc29dba824e515093b5af8820b542492e2629a881b2ed02b046d5126404029b0",
+    "reason": "Побайтовый дубликат public/img/badge-api.svg"
+  },
+  {
+    "path": "img/badge-guide.svg",
+    "sha256": "d1528259a951802a8d1880f8fc08ab625d6383f91091e9f0ae051b032625acbe",
+    "reason": "Побайтовый дубликат public/img/badge-guide.svg"
+  },
+  {
+    "path": "img/badge-pmi.svg",
+    "sha256": "f512c15112d1b32d430cb5a80ba20cd4798f5a5bbe1782558d425bbbbdd48d19",
+    "reason": "Побайтовый дубликат public/img/badge-pmi.svg"
+  },
+  {
+    "path": "img/badge-scheme.svg",
+    "sha256": "9cdb812de0dd19e0753082a4b73a140bb8362870bd766b31efa410907f554d8f",
+    "reason": "Побайтовый дубликат public/img/badge-scheme.svg"
+  },
+  {
+    "path": "img/badge-script.svg",
+    "sha256": "8253b44e8ba9cb0d8e4700a45e0c524c93fb6fe5703ad8abf6f488475d13f1ab",
+    "reason": "Побайтовый дубликат public/img/badge-script.svg"
+  },
+  {
+    "path": "img/badge-tz.svg",
+    "sha256": "dddf746fcae4bbdaea44b72764e28cf4bb9347851b2172b648c03e5ca45c95f8",
+    "reason": "Побайтовый дубликат public/img/badge-tz.svg"
+  },
+  {
+    "path": "img/check-dark.svg",
+    "sha256": "00dc96a2682a7d4bdc9ae2f83acf28dc97e71cd2172082c336ab6b41fb4e6019",
+    "reason": "Побайтовый дубликат public/img/check-dark.svg"
+  },
+  {
+    "path": "img/check-light.svg",
+    "sha256": "96ef1e2e85124a16d61bb0f3b4e7bf17ba6af3b1cb63ac6c4305972ebc4531b2",
+    "reason": "Побайтовый дубликат public/img/check-light.svg"
+  },
+  {
+    "path": "img/close-dark.svg",
+    "sha256": "baa4aa9dd7ab651330d47dfba061d3efe30a7c33ec4f50f1ff05ca74009d1096",
+    "reason": "Побайтовый дубликат public/img/close-dark.svg"
+  },
+  {
+    "path": "img/close-light.svg",
+    "sha256": "ae45d60491a0b5132f6071d8c945693a7fef1765f90f8f79dada21e0a75cf069",
+    "reason": "Побайтовый дубликат public/img/close-light.svg"
+  },
+  {
+    "path": "img/copy-dark.svg",
+    "sha256": "5df6871b702b08ed1039fb2b1afd86b9df43be4f1e371372a3e33e35121df361",
+    "reason": "Побайтовый дубликат public/img/copy-dark.svg"
+  },
+  {
+    "path": "img/copy-light.svg",
+    "sha256": "f36351bb2a215f7be53df0232c03ee632344cdfba2ae27a153d67dbcf1f896dc",
+    "reason": "Побайтовый дубликат public/img/copy-light.svg"
+  },
+  {
+    "path": "img/documentation-dark.svg",
+    "sha256": "96b36c2499ff347cf34c1152f80c6ee12c5dc6f81684c178b13c3d49ffc4bdf1",
+    "reason": "Побайтовый дубликат public/img/documentation-dark.svg"
+  },
+  {
+    "path": "img/documentation-light.svg",
+    "sha256": "49886c58738bd6c3565d7097e528333a6f1ca77d3fc0857232b7a47d213275f8",
+    "reason": "Побайтовый дубликат public/img/documentation-light.svg"
+  },
+  {
+    "path": "img/download-dark.svg",
+    "sha256": "2bce65ec211f4d95a66df845d4d14a3d8425641ea49241d109a8bdd403a7f203",
+    "reason": "Побайтовый дубликат public/img/download-dark.svg"
+  },
+  {
+    "path": "img/download-light.svg",
+    "sha256": "12e9921ff02847774ea99761db8dd5718f49b0a714cd31e3125252e5de651a63",
+    "reason": "Побайтовый дубликат public/img/download-light.svg"
+  },
+  {
+    "path": "img/email-dark.svg",
+    "sha256": "64358dfcd037ac60868f35f80eca1151b5639e163d6ab300d6ad6e4a21d7c0e8",
+    "reason": "Побайтовый дубликат public/img/email-dark.svg"
+  },
+  {
+    "path": "img/email-light.svg",
+    "sha256": "3e9686aec2df513f2d19026ec120a70eaec409a305df092bd5ce750d9d311daa",
+    "reason": "Побайтовый дубликат public/img/email-light.svg"
+  },
+  {
+    "path": "img/external-dark.svg",
+    "sha256": "bfa8b733a21b9759933a5e7aa39b5dc790186714c65c9e03eb62cd010244e0b4",
+    "reason": "Побайтовый дубликат public/img/external-dark.svg"
+  },
+  {
+    "path": "img/external-light.svg",
+    "sha256": "4f4d4087440293e58cf71db7192bb94abd36388701f62548cb1abe648378403a",
+    "reason": "Побайтовый дубликат public/img/external-light.svg"
+  },
+  {
+    "path": "img/favicon.ico",
+    "sha256": "5c16e443db7b1f388cd82289bc931380e82b8a346bcc138e3871937c30219c25",
+    "reason": "Побайтовый дубликат public/img/favicon.ico"
+  },
+  {
+    "path": "img/favicon.png",
+    "sha256": "45f670af3187319f132cea02f86b1c2060d2e823d76bd0896c7dfc8b8a29d06f",
+    "reason": "Побайтовый дубликат public/img/favicon.png"
+  },
+  {
+    "path": "img/favicon.svg",
+    "sha256": "e25c2393aaa7a27ca93d352e07c9186f63f4666cb192ae14e0d7a085fa37c3e9",
+    "reason": "Побайтовый дубликат public/img/favicon.svg"
+  },
+  {
+    "path": "img/file-dark.svg",
+    "sha256": "302ac0868d19c5dd09d56efe19c5a5fa695e52abb6a2f7d76aab882b8561db06",
+    "reason": "Побайтовый дубликат public/img/file-dark.svg"
+  },
+  {
+    "path": "img/file-light.svg",
+    "sha256": "ca4bb098447fde72c2de170587c00b61d341be90793e3165db392b9ce8e24a5c",
+    "reason": "Побайтовый дубликат public/img/file-light.svg"
+  },
+  {
+    "path": "img/filter-dark.svg",
+    "sha256": "ea72b87fc35cea63950d3b6e179fc8224ae9d575632f6a0c79767a9757cca0b8",
+    "reason": "Побайтовый дубликат public/img/filter-dark.svg"
+  },
+  {
+    "path": "img/filter-light.svg",
+    "sha256": "26b6da8bb6c0b2bb082438c6aff2739dcfb78877cf1a73aa550d087a69d247b4",
+    "reason": "Побайтовый дубликат public/img/filter-light.svg"
+  },
+  {
+    "path": "img/icon-180.png",
+    "sha256": "1b29495d489efda67377bb78673e4dd81d1e1fc857cbcf484bd383cddda7a61a",
+    "reason": "Побайтовый дубликат public/img/icon-180.png"
+  },
+  {
+    "path": "img/icon-192.png",
+    "sha256": "15b6ac035dab331dda33827f31106b71b5d170e22a8a48b50be0ed5a551a65d3",
+    "reason": "Побайтовый дубликат public/img/icon-192.png"
+  },
+  {
+    "path": "img/icon-512.png",
+    "sha256": "5fd025055660b61e6fe9b3f648de743f5a06a85f335a18960d1c155e45e3d71a",
+    "reason": "Побайтовый дубликат public/img/icon-512.png"
+  },
+  {
+    "path": "img/logo-dark.png",
+    "sha256": "44b2d2d5d7bfdeb6bcf5f146f2df9313916ae5df1b226f3c5b46b8e19f62342a",
+    "reason": "Побайтовый дубликат public/img/logo-dark.png"
+  },
+  {
+    "path": "img/logo-dark.svg",
+    "sha256": "32edb9c4c1dee2e637942d105f3f574823b03c7db74f29b551fbd2ad9aa30f2c",
+    "reason": "Побайтовый дубликат public/img/logo-dark.svg"
+  },
+  {
+    "path": "img/logo-light.png",
+    "sha256": "c71038ed1f8e312c807743b224902afec58eec00c292147c09257338c47de170",
+    "reason": "Побайтовый дубликат public/img/logo-light.png"
+  },
+  {
+    "path": "img/logo-light.svg",
+    "sha256": "2621df87bf96b11da8f63a63558ecc6365e9eb6dbe4ceb906e857cfaf9d7ea99",
+    "reason": "Побайтовый дубликат public/img/logo-light.svg"
+  },
+  {
+    "path": "img/logo-mono.png",
+    "sha256": "2c4940622e6b036d26c69ce086b95cb15ca934cc9a7aa8caece95e02b9dfbd4b",
+    "reason": "Побайтовый дубликат public/img/logo-mono.png"
+  },
+  {
+    "path": "img/logo-mono.svg",
+    "sha256": "f70cb21ad6e7dd5b80ea8f0225102c585be7d371f92910f98a04cca7628a829e",
+    "reason": "Побайтовый дубликат public/img/logo-mono.svg"
+  },
+  {
+    "path": "img/mark-dark.png",
+    "sha256": "899f414d45669aaca1918f607139ebf647eae71b6dc1f37e2fbd9876237b97f1",
+    "reason": "Побайтовый дубликат public/img/mark-dark.png"
+  },
+  {
+    "path": "img/mark-dark.svg",
+    "sha256": "f5dbd7297ac0388a4be0f7790f0f613580c47a0d36adc13e4b0c9c51e0b74118",
+    "reason": "Побайтовый дубликат public/img/mark-dark.svg"
+  },
+  {
+    "path": "img/mark-light.png",
+    "sha256": "1d328dc4d3f52df3caec79217f4e9f3d948d2093752fb6dd91c71e58f0f6f647",
+    "reason": "Побайтовый дубликат public/img/mark-light.png"
+  },
+  {
+    "path": "img/mark-light.svg",
+    "sha256": "91747f79c650acfcde1d589d77fc13b85dbafeaa137addcc96fa6be9cf81a00a",
+    "reason": "Побайтовый дубликат public/img/mark-light.svg"
+  },
+  {
+    "path": "img/mark-mono.png",
+    "sha256": "e12ce25444eaa1f631b778d95e602149a626b5412ff807f43b0876032c0650b4",
+    "reason": "Побайтовый дубликат public/img/mark-mono.png"
+  },
+  {
+    "path": "img/mark-mono.svg",
+    "sha256": "4b0d21c571e6d3742d3a134058825584793b919bccb464dceaf21d443d01eb2f",
+    "reason": "Побайтовый дубликат public/img/mark-mono.svg"
+  },
+  {
+    "path": "img/menu-dark.svg",
+    "sha256": "ad2ea4f54a3c46a8ed7362ff870efb5411252ea912c0a8844981a2cc774aa27e",
+    "reason": "Побайтовый дубликат public/img/menu-dark.svg"
+  },
+  {
+    "path": "img/menu-light.svg",
+    "sha256": "7433d8ffd3362323697e1d30da519c4d79655bfd87c70070fdb19a01a78e5206",
+    "reason": "Побайтовый дубликат public/img/menu-light.svg"
+  },
+  {
+    "path": "img/requirements-dark.svg",
+    "sha256": "6bab34dbebcc3ec2332d59f0495dcf7463b387ed87e7e1404a52aed06c935f10",
+    "reason": "Побайтовый дубликат public/img/requirements-dark.svg"
+  },
+  {
+    "path": "img/requirements-light.svg",
+    "sha256": "0d00052430387ce8d0ce52bfb2e79de5641c1336dae550c94450158b0f8d3e92",
+    "reason": "Побайтовый дубликат public/img/requirements-light.svg"
+  },
+  {
+    "path": "img/search-dark.svg",
+    "sha256": "f873372d6d5e6ada32b03854818bb421972b642168f4cefa0713cece0f5a22c7",
+    "reason": "Побайтовый дубликат public/img/search-dark.svg"
+  },
+  {
+    "path": "img/search-light.svg",
+    "sha256": "f4fdc3c4eb0f0e0df2dbcbae3ea096df3fe5a87eba46301fcca646d90ecf9b16",
+    "reason": "Побайтовый дубликат public/img/search-light.svg"
+  },
+  {
+    "path": "img/site.webmanifest",
+    "sha256": "687eed57372b314b2a554d460ee75064d4ae63c88daccc7cfe6bc81aad56bbd9",
+    "reason": "Побайтовый дубликат public/img/site.webmanifest"
+  },
+  {
+    "path": "img/support-dark.svg",
+    "sha256": "13866f5ecff3f21dc5776837f4c5dcddf6224a8516e99bc4d85b65dfa38e8f8a",
+    "reason": "Побайтовый дубликат public/img/support-dark.svg"
+  },
+  {
+    "path": "img/support-light.svg",
+    "sha256": "d5d5c238ff96af682683eb83f98bd335c08d73d8e53adce0df3e0df192406d59",
+    "reason": "Побайтовый дубликат public/img/support-light.svg"
+  },
+  {
+    "path": "index.html",
+    "sha256": "d67a9086692e0a3b51a485b3a21bc92df169c74f6423231ce73a7eb0802d80f7",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "pagefind/fragment/ru_03f31dd.pf_fragment",
+    "sha256": "a01dab9166f86d9a0689187a54ede4a85f389d204c72ece6e5ca0619ca34a6d8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_17d1383.pf_fragment",
+    "sha256": "2acf22aa3c76ca3c223faee51e12dc79ce1002908f2c0d0bba44541f22d485de",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_1981bca.pf_fragment",
+    "sha256": "b89b0dde72cd7bd76f5bd11b31080febd6f3893da84f86a276ce9caf8557b497",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_1bc4988.pf_fragment",
+    "sha256": "0668bec84b88cdee97afed56eb93f26af69d831b1a851b22f585c7049235f3d6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_268577d.pf_fragment",
+    "sha256": "77ef7b9a655112f8b8c14fbaef30b21d02b009e7dcee0b533c8f70f770698526",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_289a74f.pf_fragment",
+    "sha256": "236ba16902a4a7c0ea0ac046b1f26d095bd5ac3cb8e1a59058f11c1ec614b86b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2a894a5.pf_fragment",
+    "sha256": "bc793f264e344fbf54bc4ed6bca3f1d77a95b76a7a618aad75c487ce7acde5cf",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2b3c0fb.pf_fragment",
+    "sha256": "36e6842d3b34c7b108c5379f6877bbbf878e36010fbbaceb2f207b5b20d1ded2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2b3f4fb.pf_fragment",
+    "sha256": "e095aecd85aaa6392b5f308684aea98f1ecedc3ae73c8000934bceb8101ec747",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2b469ed.pf_fragment",
+    "sha256": "b9d21bfc21ca22efa863e94d5605c3ea2bcfbc4fa408d9be1a07027cf737d099",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2da3622.pf_fragment",
+    "sha256": "782af67b7aec23d937711eff4b7f7ea678272e885203f68a9aec4b686cf215a9",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_2f77c8d.pf_fragment",
+    "sha256": "5f8b7953785dffb126e5dddd494741092d1bbe3f7f29b9017e565a02923f8fc5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_307c711.pf_fragment",
+    "sha256": "387d33ac94164f679b0de3850bc2ec7e26a56d1caa7a4a2df9b07931e8c202ba",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_34e160d.pf_fragment",
+    "sha256": "e9c2b8886d35d72d82dfbd8ddbe1f18d5bcd944cc4b7a8597f78fc3e6caf26c2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_3ac0a71.pf_fragment",
+    "sha256": "8223577a6c0fe137bfb16d6eeb0161543165c73dbaec579a381f71815366b799",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_3b805ea.pf_fragment",
+    "sha256": "9932a2acd37852dbce7d273af4229e77a8d06b75f9444f483154018e94ce5786",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_3c3c1a6.pf_fragment",
+    "sha256": "bc5bf9ec54fa681ba0607a8533e39861a9e6078b17deab26ff7a3c31fa59db55",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_3d2d533.pf_fragment",
+    "sha256": "f0e5588e2dd93d65831ee1e64022f4c5ed10d7c1bd16275d98471f652cffe713",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_417b7ee.pf_fragment",
+    "sha256": "9a96123df6f4a6b73f18372bea11ba596f422a95e88669d990af5ce2b706a3a6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_4316e8f.pf_fragment",
+    "sha256": "b24028a2198713f101d9ab6b6f0153ecee28643b5c43fd98d4b1a52f9c0fd6b7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_4352ae2.pf_fragment",
+    "sha256": "75f278268cec174f4e186a686611b3aed5773b61a497de6560cd01e129d200cf",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_43a4f61.pf_fragment",
+    "sha256": "2df002d04dfbe0aed020b11a9be6f69a04345d699f90bb299254cf8eaac14529",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_4412385.pf_fragment",
+    "sha256": "39d85a0e970ad068e5fcdce6027ef5ddc2face0a71f548b406b55ce4a9381c5d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_45dfea9.pf_fragment",
+    "sha256": "d4c3b0e7ff3f85ffd462161ff1c2d21fb790775b5af5c49fb8c7609c0e1b3f42",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_491b262.pf_fragment",
+    "sha256": "04026a1dda85375423a115daeb52bb7e80b92fa082e29645c83aee622acb8be6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_49551c5.pf_fragment",
+    "sha256": "98cf90f2875158a8d72f4ad498e5218ade10bb02d58f4b3dd4eabfe984f27c46",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_4cf9eb8.pf_fragment",
+    "sha256": "833eff64ea4f033216bad6189dda122c980e9460930112e57d6a594522d7a8cd",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_4eb566a.pf_fragment",
+    "sha256": "04236fde1bd6d42cbee4e80a8f381233901793065870170a90995c532e13b816",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_5065ce4.pf_fragment",
+    "sha256": "5ab386301edb1be6406b98c388bcc2dbb7b3f075367ccf8f7188a9509584864d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_52690f2.pf_fragment",
+    "sha256": "b6bfd96e07c9f7f438fe6429f893ba15aebd150f92bbf027d75c6230f65ef611",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_53e83e3.pf_fragment",
+    "sha256": "576462a12b46bf23ffb3ce6e58f76927e37afd9f44cb6fc6f7ea896321275fc2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_56b217b.pf_fragment",
+    "sha256": "4b163059c385fb136fb25019ab2250d3f7a8bdbe4eda2b7309ee99d98c9a5439",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_59f1a1b.pf_fragment",
+    "sha256": "9abf4f14451e809118f65dbd2c06e0d1c19bba4f405ecaabddaa5116f98076df",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_5b5d291.pf_fragment",
+    "sha256": "977a897a6fc6928d5444cc1772ccade6b3947c794ec4367d08df3425067bc369",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_6236ba5.pf_fragment",
+    "sha256": "8d83b6c70b6edd7fd638454249c8969498191733e7b96e56fd8521ab696b380c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_65911da.pf_fragment",
+    "sha256": "cad74e690a3929dd1c3037e3548ead127da09468c354a8a48a81cd71d527a7c5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_68f936d.pf_fragment",
+    "sha256": "70f6a96ef6e247c7ecf7877d868cbd1570d4ae50ed1dc12b975b4478c8426d16",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_6dd3121.pf_fragment",
+    "sha256": "3b57c4cc20a055104b23dee59dd1ef6d696971a061e03d1338ea2fe82f356630",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_6e9a9cc.pf_fragment",
+    "sha256": "a7e5d69dda102bc4a317c9eb700b537b1261bed1e2db3d3c1609941bc3d29a2c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_6f45841.pf_fragment",
+    "sha256": "88e90c3d94a16f6f6858970fed29e319e1f8d6584724347d877865a5c66c6a57",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_704f4ea.pf_fragment",
+    "sha256": "0c41d4dcc1d61102fab9c5c01fb70c5263cb4d2fbe194b7f2da8df119d320dd5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_7196dc1.pf_fragment",
+    "sha256": "8cf7304401b2a7e876f976a503a044ef8e57136ed0b639b6a459f9800b4db6b7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_726c35b.pf_fragment",
+    "sha256": "9988137354f481d2ca94bb7d6f649c0f4e2640783d7950883d1a1151bd09789f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_74d3aca.pf_fragment",
+    "sha256": "570e2681f11acc4698501094a0507886de4e2fc8a3661493be18777c2984a492",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_776c137.pf_fragment",
+    "sha256": "41bf7b66dcaa85b763134d984be17aa6d32dc8ca256fa89ebae124dcc6246627",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_793a323.pf_fragment",
+    "sha256": "57762454831b5dbfa76a1498967dbaa692d4aae95f69cd1a3638762229beaf9f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_7aed128.pf_fragment",
+    "sha256": "ea3730930b2f2442c55f23ff1d5be2f8749ae3d8388f0df345224502883bd249",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_7e27d50.pf_fragment",
+    "sha256": "bd54ec370ffe1e4f0aedbba41f8911704a3b71e4278cc1cb5a9223c7c4ddd505",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_805fd31.pf_fragment",
+    "sha256": "9c16af3e11aef4be6ec846d1d9157253d520c345e3bfe3349dad66fbdc5fd828",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_80bb91f.pf_fragment",
+    "sha256": "17c7eb642d1362163686d976afa22905276040f06d09dd427cb7db4b3b739880",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_811b1eb.pf_fragment",
+    "sha256": "728f9deaf88c8b5470724ebeaec40339089e75942400f9a8a515d550a3a76703",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_875ce9c.pf_fragment",
+    "sha256": "60f0ea16f12ac8e885932a59e7b42a33868041b83e08175487273d51a1aeb717",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_8978b26.pf_fragment",
+    "sha256": "f51c34f29218a5d903686d5741aca48aeb72b2ea55e0d35d0fa6ee1a8257d911",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_8abb522.pf_fragment",
+    "sha256": "f63991bf966923ddb051102f105ce021b8c06b563d3cf84dd1ac19b7ca294111",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_8dfcbf9.pf_fragment",
+    "sha256": "2e52adc9f8990b1fd0a0dcb072559256c0416d20c319434bcc80654c0dff09ac",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_8f8f34f.pf_fragment",
+    "sha256": "e97fa5baf786b4926e4a23b16c6f72e8ee0360dcbab2aad16a867bab88137ca4",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_90a3afe.pf_fragment",
+    "sha256": "d28ebba269a33d59394d0ad37ca33596c03ab7cff6d8d05897fb69a1a0a50e48",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_98a5f65.pf_fragment",
+    "sha256": "cb76b0631e97afc1d2c2a67125e81ed2359e064aa46274b1d788f70d465b4a26",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_994ddc8.pf_fragment",
+    "sha256": "e499f25b3da7ff5c89265c444d387f0fdd915d3194bd8746f414272282263270",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_9a7e745.pf_fragment",
+    "sha256": "871a4b3d2a1b86b90cd1b0f8f4d1d3b904824e0374ad0a3046c3ec4521c1c765",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_a013be9.pf_fragment",
+    "sha256": "fed717062eebb767911931ddda16ba2246da07670bbafa6aa2dbc45ce25c7aeb",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_a351bc6.pf_fragment",
+    "sha256": "1ac065f9cd120bb28eedb5e1c447a4d8495a417c0406fdd04e653cce04ccd04f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_a6f0a5c.pf_fragment",
+    "sha256": "a7c84fb7f350bb682b856e736a0a2f405c30fb3fe34423218a523419a7729092",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_a815284.pf_fragment",
+    "sha256": "ef559795c596993929c9059cbc8e35254a648ee735076d718b16043d3022c434",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_a982e35.pf_fragment",
+    "sha256": "3ade62d6f296f55ec37bcb163a9f0bf027dc1d92ebfdc2235bcba6d7ee9961d5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_ab35f23.pf_fragment",
+    "sha256": "597830d14103b49618d5314f3201c4df3201cb24430995b42576491d291b3271",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_b06acb9.pf_fragment",
+    "sha256": "a2518d589370ec8607df9273d7d541b1859fd8c16c3525e014744fd4d5eb05bc",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_b51f3e6.pf_fragment",
+    "sha256": "3d9ddfe6f3d9b3e3f8f1655ed1ca03fdda6ba12e1083df64090ecd05a722ef69",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_b5913de.pf_fragment",
+    "sha256": "28ee0d6376442ca0338a1c6f3f441f4c9bd98ff616b96b0b6077ca0dc6f60c2a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_b84a54f.pf_fragment",
+    "sha256": "3e41fb5690b495741b38c6bb2d9dff4dca83c75f10afc609a3ea2c8c74b9a965",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_b931152.pf_fragment",
+    "sha256": "01c58fe92055254a4813a1277d67b5db147a405fe8e0532cdfdd359ad897f3ee",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_bd819e7.pf_fragment",
+    "sha256": "ec83c9084e161209811cfa350b26e4eedbbdc4a7caadb9a5e3791488f2b8b97a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_c06157d.pf_fragment",
+    "sha256": "fa476df5b93dbf6446157530ffba06e96bbe5bcd30d47297cb7f7f9718d12096",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_c18a261.pf_fragment",
+    "sha256": "d49a73cbfeac596668770dd42cd29824dd9e25df00287aed06bc13c144dcc859",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_c1d4892.pf_fragment",
+    "sha256": "be058fb1ed115f8acc782316b52713b3cfb505604b3348d25f9f3ae768dda57e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_c5dfa68.pf_fragment",
+    "sha256": "086172aba5c781377d9e2ce2780aad24cb44cc8b46dc6ad24287a1fd1776b7ec",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_c8537d2.pf_fragment",
+    "sha256": "6ab5b10dd46b87c17538e509bd8d36d17000646fbb4c57044fcca65a760e345c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_cab2e2e.pf_fragment",
+    "sha256": "b977d066c90768298c5e9d205147e0854fd5f76a0c237a0ae1449907f70dfe60",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_cda2336.pf_fragment",
+    "sha256": "96cda3afaf003df5532b0bea4185d21f10cb963ccf6b1ce252af14a542f348e7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_d9bc37b.pf_fragment",
+    "sha256": "9ca54ef4c477cee8eb974e3cac7e5448bb4e7d6f23deea5b8be8d6404735080c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_d9df45e.pf_fragment",
+    "sha256": "cd322ce102b90bfe44b9334cf97f3c971766c01da0d581b1a6887965706035d8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_da83632.pf_fragment",
+    "sha256": "c124e984cae3d464e12a2d321828b9eb690be8b67918346239d6cf54eb24a189",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_defaeec.pf_fragment",
+    "sha256": "9d307c23a72d4b6c8e2e91cebc8a20ec89b1e76e0454c7a73ea4f04c25638de2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e090968.pf_fragment",
+    "sha256": "eb73d6bc1218b0eb0040ebf255c899f95fcdc24a9eeee3adf652bbd00882edf1",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e1104c6.pf_fragment",
+    "sha256": "6fbc970540dc3625866c9d8f1e5877ee7d7bb146a72e763d789c98992111b45e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e2fcefd.pf_fragment",
+    "sha256": "dc7edb9c3b1148589c55264e6652337da7e21376cd785ab72e97c415daf8700b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e630d08.pf_fragment",
+    "sha256": "0524c0dbe31c0dcf4b27c9ebee7815d862cff4e9075df07efa2c6abc225c87d6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e75f2ac.pf_fragment",
+    "sha256": "2b0009dda43c7fd7261a4cb994841bcf123a0e33e6b100d59c0d78022a3afa39",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_e84eb7e.pf_fragment",
+    "sha256": "7a0a5df8b2e633c62ad49e0780abe5a1f902d8e84d74b8d602c4dce3fdd18276",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_ec7b857.pf_fragment",
+    "sha256": "26dbdd9a885c8d0a79e8acab647781d96499985ee4b1e018aa8a27893096cdc6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_ede65c2.pf_fragment",
+    "sha256": "453e0cc84825eb08780a06fff6686f54c8b1af97e2f7c72620ea2263433ec85b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_ee43ab0.pf_fragment",
+    "sha256": "2a912e7c4830ad8614b37fd867abf8e7f1ea29c20d7cc74843fbdd3f31f3c2b0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_ee9183c.pf_fragment",
+    "sha256": "693fccec7ee56a50255ac4852ddae73e38633fd9e62cc8484567be3cf93da327",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f03bd0b.pf_fragment",
+    "sha256": "6eef75f260481a61e0c0c02c280f72cb80628595ab7be5f408fa283c0ce568fd",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f171828.pf_fragment",
+    "sha256": "e901d5a686b03d80b78ed5278aa438b61c030cf6e17c671975329dff6c43c92f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f26feda.pf_fragment",
+    "sha256": "a2ea1d43b8d5ca0c26aed8aa01ab13f669fea25e011036edafd578281f8009ab",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f2d6f84.pf_fragment",
+    "sha256": "3135a2febc4fce80f9f4696aef0164bd736002906ec130b06e0e5f8fe6cae843",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f48b8fc.pf_fragment",
+    "sha256": "6b925d935ac7270b54cb7c0fb0041714e07faa2aec3aedc2d4bb44e84a1ddc3b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f6d126d.pf_fragment",
+    "sha256": "e7b3b0ea5d2b1c76feb9993b7593580c9228a4f201fe39534a9833d53b56233c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_f6d4776.pf_fragment",
+    "sha256": "5d951a216c5c193d265e58f99fbcda499e255f02818642c34e1ed20fb9b9e812",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_fbae742.pf_fragment",
+    "sha256": "3b5a90f103de9af253ebf2e1ad28527322b188669dcae8d62783eea98a2899b4",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/fragment/ru_fe99a76.pf_fragment",
+    "sha256": "5632f16140f7a4cdab4cb075600dfc4ab04b936a86ca8d53fcedbd8d8e0d494d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_10f2d3d.pf_index",
+    "sha256": "aaf3dd0f17cf2c134927fe9c5a6c83d16295e563ee026d7fca80d5632c7d4612",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_4e685ec.pf_index",
+    "sha256": "f89daa03c21b8ebcaa4fc8656f45443c55434e9f7c8106c167017b7ae230dce3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_817d424.pf_index",
+    "sha256": "7bd93bb3fe8b33812750c97030ad58911aab119a1c6b53bbf982ff77a893593c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_a32e24f.pf_index",
+    "sha256": "5524cd3f1f889e56b2d057150de7a8ee942c36bcc3471e998436853cb32e7ff9",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_d53b50d.pf_index",
+    "sha256": "f7117c4a1a49547bf2ac24a92ec9230edf374e4fec15b657a2fba5d3e12bf0ad",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_ec6d96c.pf_index",
+    "sha256": "0e92c2311606057b0da66b1b0ea00203f3cbaaac2fb9daa3846bd26405c6a6ba",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/index/ru_ee932ec.pf_index",
+    "sha256": "f9663c0f67553cf581d554990fff6e005aa33343060a04ea79ed7fb437a8654e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-component-ui.css",
+    "sha256": "de389c7e5d87d6e2b10d65fb1e36e8989a12a2ad8dd6239b7e070d81fb5d8b0d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-component-ui.js",
+    "sha256": "958620129dd14bd851805daeb12ce708bd63b9287325d1d5ae6f73a04d1723f8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-entry.json",
+    "sha256": "0844491ccba0433608993d634ee9398e2e11fc8c1143481944d225212d359301",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-highlight.js",
+    "sha256": "04741266a86911636cefc41c8b407e380dda99b7d208724f700f94cdf57e37b5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-modular-ui.css",
+    "sha256": "653ab29e4de5629f6ddf5f6fcdf5d2b3eb539a8c07fff8a56b8ce2156a570788",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-modular-ui.js",
+    "sha256": "f3efa0f74b305ccab0bc9edc7c09ab69867180b4c43093d84bb9b508ac4ec32c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-ui.css",
+    "sha256": "e113b816110ed07b017613e901addfe635350f2a5b84990aa76c91a74b158084",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-ui.js",
+    "sha256": "2efa93f2e80a199ca742a69bd4cfffabc5c591ebe7763f64f7c655fd00d2209f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind-worker.js",
+    "sha256": "4ca50d25bcab9e1c3afbc00ab5f7761114e83c8fc1b83d38655af1558b650c2a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind.js",
+    "sha256": "252d272bd34d483d19a752060f6a065114d15ab12c42d8f905ca565e2768a009",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind.ru_c83a3fd66e.pf_meta",
+    "sha256": "d6c9eba0cb35cf363a8746fc307b157f2fae80dc5fa99de453f95cdbe252dd37",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/pagefind.ru_fb8d4888ea.pf_meta",
+    "sha256": "566b5e3192e9cee4dd6a55000f0e50e5962d56d5db783ecb6614b0aaecd7f199",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/wasm.ru.pagefind",
+    "sha256": "e0eb287c0c61f63aca25690f01af0160f042b4b8c6114e38e9414e20ec124b00",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "pagefind/wasm.unknown.pagefind",
+    "sha256": "3a74cefceacd066e8d3bc8c52e7bc1c869544ca3d9031b44a9b7136356d5d7f4",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "reference/example/index.html",
+    "sha256": "aa3bcd07945c0fd311b0f58c66e50184bd38d452480684809eb06b3d8a4f35a9",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "robots.txt",
+    "sha256": "960c1d41350f53218aac36b971c3d9ab8d7d650639020bd4bb30d963134aa0de",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "sitemap-0.xml",
+    "sha256": "68ef5cd6a5a1b88a1f71b254a054b29992f6531b1a43c2e4e33f43294125ee7e",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "sitemap-index.xml",
+    "sha256": "917122056af03c7c1dd938f64b0f5ab00703d5a199c9a87dff12a2b54b7c6852",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "sitemap-paths.json",
+    "sha256": "5eb61d3a6dd067e93da0255117a359a8fcabbdfc3f8420040d7be24ab1652cec",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "sitemap.xml",
+    "sha256": "f6a6e99facefbd6c39dee08e61eefaa386c7981dfa59acfca1c352b660472385",
+    "reason": "Генерируемый результат сборки"
+  },
+  {
+    "path": "src/content/desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "src/content/docs/blog/desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "src/content/docs/blog/tools/desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "src/content/docs/desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "src/desktop.ini",
+    "sha256": "7c72f90fc9069dc3abf04c1d7b3b28a2a616c9f3d98897080db6a51d67c4c994",
+    "reason": "Служебный файл Windows"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/01_product_card/index.html",
+    "sha256": "a338524334ddd353dc1ee8c54e63ce66b18de8d3b686237d730ce62bb6a12ec7",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/02_requirements_matrix/index.html",
+    "sha256": "3c9470652e15c9f69d8fb1561c7cc76ab5fb708976ace687e6d9433bb616cce2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/03_rights_and_licenses/index.html",
+    "sha256": "b1f1940b58f6f11807212b96002458f97afe38abb5280c30f3cb834c737d4e05",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/04_configuration_baseline/index.html",
+    "sha256": "2449e5cee38e0a241fd2618e3bdc2415a6915a2879f1e275eb40797cefcfc251",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/05_audit_log/index.html",
+    "sha256": "a19c9a854362f8ace05ffbb9b42e108a1885b8d056da2cb40fb905af82140018",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/06_test_cases/index.html",
+    "sha256": "8f9b629a610ecba327c0b073e3b0ef7b5dbe70f75746da897dfdc21f213ff941",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/mincifry/07_readiness_opinion/index.html",
+    "sha256": "71c633635b9aa93b1b05f0071ca1cf4ef07224531ad11678e18c45928da570bf",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/01_product_card/index.html",
+    "sha256": "026287fd938cba108203d514d6e593172c19e76f3c3e948d0d6e530db8bf2560",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/02_document_register/index.html",
+    "sha256": "2627851762c9bdd2b07ca13989cd66121d67a14e36c799255dd09c446924f7c3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/03_components_origin/index.html",
+    "sha256": "e76c882e6b76278f94037aadef8e05b1fbb2f2c50c5cb3d2c8de34cf48f3816b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/04_operations_map/index.html",
+    "sha256": "44190cb6d47b1a107f178d152d68c805ea5eff7730cf15b88d4bf5b5b2940e05",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/05_localization_matrix/index.html",
+    "sha256": "abbfe120205fe126f147abc3f9827368dceeb8fea92cbdea895dec8c599c219e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/06_audit_log/index.html",
+    "sha256": "f1a8caf2d044e1d7752495aa4c41c0028a37537b5ff5f3d8eb2db48b85448083",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/examples/registries/minpromtorg/07_readiness_opinion/index.html",
+    "sha256": "292cfcc6bb040786c092a1a06db4da2d6dd661e482dae5a20729c17f4a118ce2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/index.html",
+    "sha256": "8271506aedf98cea606a36a8357c8cecfb50a64c93df229f2e132f65e4542373",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/404/index.html",
+    "sha256": "7dd258f0a2a237d1d5b4f6a8f9c99bbf027f9a4dcb8fa15345e2eac1595133b9",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/about/index.html",
+    "sha256": "21c0e2068356f27922c605d08986177982e727599b604c8836f47db6852e743f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/ai/index.html",
+    "sha256": "6bd461b399117b3f5bdc3315056d98f135fb852331f39a25bda15fc9cf42f7f0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/blog/index.html",
+    "sha256": "f173f0abd14c7d85bbd58ae1fc325dd3b60d5840f2c04f1c47263e5f3328bfbd",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/clients/index.html",
+    "sha256": "23ccbf59aaa4359c6cb65d2e1d31b30e3ad290a33b98c1176f9b144d633d8f5e",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/contact/index.html",
+    "sha256": "4fb3bc814d69bc4fcb53c161007fdcbf1b621259df82871c8e8b001ec545b4f2",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/cookies/index.html",
+    "sha256": "94838015e8f7ef975c962652036f982b1bde85be3d1778ec3e440558afca2ab6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/education/index.html",
+    "sha256": "05c6ae745e84b1535a46e3d83be7cf584e9155ba989b9835910b91d0baef1167",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/experience/index.html",
+    "sha256": "831d42c97cc63df36c119105a11848f0d86283cb754567c8e044c10e12bc1b28",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/faq/index.html",
+    "sha256": "45d3a44277bb3e07e3a468685eaa6f7449c7ecb447d806ade5da3e7f66cc7405",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/home-1/index.html",
+    "sha256": "048791b57e1fec8ab50686cc0ed208d0b3f13a14912c62a3515ca3552b94d7de",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/home-2/index.html",
+    "sha256": "09bff137941e72f80e534894c64e57a1c778140ed614c1bfb3f83718e086dd47",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/index.html",
+    "sha256": "d388cf44c30f1e3fae5114bedd60fc84a7e70b1df7579b95017b734f219e1e93",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/portfolio/index.html",
+    "sha256": "307a964d6c10550261951db010539dabbe0c8ef8e4c51f849d1cab5a567edaeb",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/pp/index.html",
+    "sha256": "9e36744437e5d38e1e1dd48e62e3b3871bb41ac0ddd35cb968b93fb88d8e9c4b",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/project/index.html",
+    "sha256": "ee8fd55199347ae628fb26be66fb1098650faa773c4beff2ed2546d3c400c207",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/projects/index.html",
+    "sha256": "6cca6f9705ebc79cd640f9720b21626c853625b6f1431c63d8eb1b04cea2050c",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/publication/index.html",
+    "sha256": "a9ff0d60a794b92d26ac3211da2880d7bcdc83cae97ee23e11809c8cd8f177a3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/resume/index.html",
+    "sha256": "7bc37590276f561986a04e3a1688b31f34acd7d90bd9e85499f7b23df3477073",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/search/index.html",
+    "sha256": "6a8a2a0ba9a9f3bfca8ad8594aa575fed5b890f79bf72218c135520177b0c50d",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/services/index.html",
+    "sha256": "e68a86def6fb44a506c7a502e09617821848b19a1b1fb9af1da73932f81bb216",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/sitemap/index.html",
+    "sha256": "418c625324ce0cb44580210d5259f106250173475cf9fb39be75d5a4352b8fc5",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/skills/index.html",
+    "sha256": "0eb332478660beda1576a32095082226437172952225ef0646e32e591a53963f",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/standards/index.html",
+    "sha256": "6fc31042a0b36dfabe701918ad841d682e28987207cdda4cfdeb758f3afc44c0",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/tools/index.html",
+    "sha256": "6f8002c2932885ec3e8995c1746e5dc7a01bfb93fa51ef46dfeded4901e5dd1a",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/pages/worksamples/index.html",
+    "sha256": "6927fada1b63a4277a62946a259dae234dc7c1d64ff8029221a846017738b1b3",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/portfolio/ai/document-automation/index.html",
+    "sha256": "e452f9d1b5ef4646b047fee16568b20736b710444d98fd8f97e3f7aa0da8c7a8",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/portfolio/analytics/system-analysis/index.html",
+    "sha256": "dfd5f5f9ab2690a92fbe0880e2db30d365316ac5e8707b69c90eb07d9fa85310",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/portfolio/documentation/technical-documentation/index.html",
+    "sha256": "ec05b3bca61946a1ecb8d6a158badd8a52e223434fac453574319a622a51bdd6",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "wiki/portfolio/registration/software-registration/index.html",
+    "sha256": "28c5533a95366c17ab34c29f281ac2f4e72297ae0f7955868f5486c602758f06",
+    "reason": "Корневая копия результата сборки; исходники находятся в src"
+  },
+  {
+    "path": "public/examples/.assistant.pdf.RRfea8",
+    "sha256": "84866da441ba292a3923c77636fe1a86518ab009dd14c0dfaaf30089d78d7a40",
+    "reason": "Незавершённая временная копия PDF; точный префикс assistant.pdf"
+  }
+]

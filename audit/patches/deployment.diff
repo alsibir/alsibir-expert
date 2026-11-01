@@ -1,0 +1,147 @@
+diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+new file mode 100644
+index 0000000..72126bd
+--- /dev/null
++++ b/.github/workflows/deploy.yml
+@@ -0,0 +1,81 @@
++name: Build and publish Astro
++on:
++  push:
++    branches: [main]
++  pull_request:
++    branches: [main]
++  workflow_dispatch:
++permissions:
++  contents: read
++concurrency:
++  group: pages-${{ github.ref }}
++  cancel-in-progress: true
++jobs:
++  build:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-node@v4
++        with:
++          node-version: '24'
++          cache: npm
++      - run: npm ci
++      - run: npm run build
++      - name: Validate output and local links
++        run: |
++          test -f dist/index.html
++          python3 scripts/audit.py
++          python3 scripts/audit-anchors.py
++      - uses: actions/upload-artifact@v4
++        with:
++          name: staging-static
++          path: dist/
++          include-hidden-files: true
++      - uses: actions/upload-pages-artifact@v3
++        if: github.event_name != 'pull_request'
++        with:
++          path: dist
++  publish:
++    if: github.event_name != 'pull_request'
++    needs: build
++    runs-on: ubuntu-latest
++    permissions:
++      contents: write
++      pages: write
++      id-token: write
++    environment:
++      name: github-pages
++      url: ${{ steps.deployment.outputs.page_url }}
++    steps:
++      - uses: actions/checkout@v4
++        with:
++          fetch-depth: 0
++      - uses: actions/download-artifact@v4
++        with:
++          name: staging-static
++          path: dist
++      - name: Update gh-pages without rewriting history
++        env:
++          GH_TOKEN: ${{ github.token }}
++        run: |
++          set -euo pipefail
++          git config user.name 'github-actions[bot]'
++          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
++          if git ls-remote --exit-code --heads origin gh-pages; then
++            git fetch origin gh-pages
++            git worktree add /tmp/pages FETCH_HEAD
++          else
++            git worktree add --detach /tmp/pages HEAD
++            git -C /tmp/pages checkout --orphan pages-initial
++          fi
++          find /tmp/pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
++          cp -a dist/. /tmp/pages/
++          touch /tmp/pages/.nojekyll
++          git -C /tmp/pages add -A
++          if ! git -C /tmp/pages diff --cached --quiet; then
++            git -C /tmp/pages commit -m "Deploy ${GITHUB_SHA}"
++            git -C /tmp/pages push origin HEAD:gh-pages
++          fi
++      - name: Deploy Pages artifact
++        id: deployment
++        uses: actions/deploy-pages@v4
+diff --git a/.gitignore b/.gitignore
+old mode 100755
+new mode 100644
+index c74f934..edeed8f
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,27 +1,11 @@
+-# build output
++node_modules/
+ dist/
+-# generated types
++out/
+ .astro/
+-
+-# dependencies
+-node_modules/
+-
+-# logs
+-npm-debug.log*
+-yarn-debug.log*
+-yarn-error.log*
+-pnpm-debug.log*
+-
+-
+-# environment variables
+ .env
+-.env.production
+-
+-# macOS-specific files
++.env.*
++!.env.example
++*.log
+ .DS_Store
+-
+-# AlSibir migration and local working material
+-/_migration/
+-/node_modules/
+-/.astro/
+-/dist/
++desktop.ini
++**/СТОРОННЕЕ/
+diff --git a/astro.config.mjs b/astro.config.mjs
+index d309951..9d28f27 100755
+--- a/astro.config.mjs
++++ b/astro.config.mjs
+@@ -6,12 +6,13 @@ import starlightBlog from 'starlight-blog';
+ export default defineConfig({
+   site: "https://alsibir.github.io",
+   base: "/alsibir-expert/",
++  vite: { server: { allowedHosts: ['terminal.local'] } },
+   trailingSlash: 'always',
+   integrations: [
+     starlight({
+       title: 'AlSibir — документация и анализ',
+       description: 'Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы',
+-      favicon: '/alsibir-expert/favicon.svg',
++      favicon: '/favicon.svg',
+       components: { Header: './src/components/Header.astro', Footer: './src/components/Footer.astro', SiteTitle: './src/components/SiteTitle.astro', Head: './src/components/Head.astro', Hero: './src/components/Hero.astro', PageTitle: './src/components/PageTitle.astro' },
+       customCss: ['./src/styles/custom.css'],
+       locales: { root: { label: 'Русский', lang: 'ru' } },

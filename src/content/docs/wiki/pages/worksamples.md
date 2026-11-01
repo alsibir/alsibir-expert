@@ -28,3 +28,8 @@ draft: false
 
 
 <a href="/alsibir-expert/examples/portfolio-samples.zip"><img src="/alsibir-expert/images/download-samples.svg" alt="Комплект из пяти реальных примеров документации: скачать ZIP" width="270" height="360" loading="lazy"/></a>
+
+
+## Источник сведений о проекте
+
+[Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).

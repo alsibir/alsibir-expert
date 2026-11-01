@@ -1,0 +1,544 @@
+--- a/src/content/docs/404.md
++++ b/src/content/docs/404.md
+@@ -11,1 +11,5 @@
+ <img src="/alsibir-expert/images/404-art.svg" alt="" width="1200" height="800"/>
++
++## Связанные материалы
++
++- [Обзор сайта — архивный адрес 2](/alsibir-expert/wiki/pages/home-2/).
+--- a/src/content/docs/blog/ai/local-languagetool.md
++++ b/src/content/docs/blog/ai/local-languagetool.md
+@@ -24,1 +24,5 @@
+ **Ограничение:** автоматические правила не заменяют техническую вычитку терминологии и фактическую проверку. [Подробная инструкция для Windows и Linux](/alsibir-expert/blog/tools/local-languagetool/).
++
++## Связанные материалы
++
++- [Как развернуть собственный сервер LanguageTool на Windows и Linux: установка, настройка, использование и сравнение с Premium](/alsibir-expert/blog/tools/local-languagetool/).
+--- a/src/content/docs/blog/analytics/project-discovery-ai.md
++++ b/src/content/docs/blog/analytics/project-discovery-ai.md
+@@ -374,1 +374,5 @@
+ Представленный опросный лист может использоваться как программа установочной встречи, основа серии интервью и контрольный перечень перед разработкой технического задания.
++
++## Связанные материалы
++
++- [Документация программного обеспечения: классификация, состав и стандарты](/alsibir-expert/blog/documentation/software-documentation/).
+--- a/src/content/docs/blog/api/07_openapi_contracts.md
++++ b/src/content/docs/blog/api/07_openapi_contracts.md
+@@ -137,1 +137,5 @@
+ *Схема демонстрационная; для продукции необходимо дополнительное описание политик доступа и контрактных исключений.*
++
++## Связанные материалы
++
++- [Как документировать REST API: структура, примеры запросов и OpenAPI](/alsibir-expert/blog/dokumentaciya-rest-api-primery/).
+--- a/src/content/docs/blog/automation/04_word_automation.md
++++ b/src/content/docs/blog/automation/04_word_automation.md
+@@ -130,1 +130,5 @@
+ *Программный пример рассчитан на VBA Microsoft Word; перед использованием его следует проверить на целевой редакции Office и на копии документа.*
++
++## Связанные материалы
++
++- [Как оформить документ по СПДС в Microsoft Word](/alsibir-expert/blog/standards/spds-microsoft-word/).
+--- a/src/content/docs/blog/automation/document-workflows.md
++++ b/src/content/docs/blog/automation/document-workflows.md
+@@ -24,1 +24,5 @@
+ Автоматизировать целесообразно повторяемые операции, а не содержательные решения. См. [контроль качества](/alsibir-expert/blog/documentation/05_document_quality/) и [воспроизводимый выпуск](/alsibir-expert/blog/documentation/10_document_release/).
++
++## Связанные материалы
++
++- [Порядок подготовки комплекта документации](/alsibir-expert/guides/example/).
+--- a/src/content/docs/blog/automation/obsidian-automation.md
++++ b/src/content/docs/blog/automation/obsidian-automation.md
+@@ -320,1 +320,5 @@
+ Систематизация Obsidian на уровне тысячи заметок требует не столько ручной сортировки, сколько согласованной модели знаний и безопасного конвейера обработки. Применение системного анализа, Python, контролируемых метаданных и локального ИИ позволяет превратить разрозненные Markdown-файлы в управляемую информационную систему. Ключевой показатель профессионального качества такого решения — не количество автоматически перемещённых файлов, а **проверяемость каждого изменения, сохранность исходных данных и воспроизводимость результата**.
++
++## Связанные материалы
++
++- [Автоматизированная систематизация базы знаний Obsidian: архитектура, метаданные, граф связей и безопасная миграция](/alsibir-expert/blog/automation/obsidian-knowledge-base/).
+--- a/src/content/docs/blog/automation/obsidian-knowledge-base.md
++++ b/src/content/docs/blog/automation/obsidian-knowledge-base.md
+@@ -891,1 +891,5 @@
+ Систематизация Obsidian на уровне тысячи заметок требует не столько ручной сортировки, сколько согласованной модели знаний и безопасного конвейера обработки. Применение системного анализа, Python, контролируемых метаданных и локального ИИ позволяет превратить разрозненные Markdown-файлы в управляемую информационную систему. Ключевой показатель профессионального качества такого решения — не количество автоматически перемещённых файлов, а **проверяемость каждого изменения, сохранность исходных данных и воспроизводимость результата**.
++
++## Связанные материалы
++
++- [Систематизация заметок Obsidian: план контролируемой миграции](/alsibir-expert/blog/automation/obsidian-automation/).
+--- a/src/content/docs/blog/automation/word-requirement-numbering.md
++++ b/src/content/docs/blog/automation/word-requirement-numbering.md
+@@ -200,1 +200,5 @@
+ Такой подход позволяет постепенно превратить Word из средства редактирования текста в инструмент структурированного ведения требований: с проверкой целостности, трассируемостью, управлением изменениями и подготовкой данных для последующей автоматизированной обработки.
++
++## Связанные материалы
++
++- [Как оформить документ по СПДС в Microsoft Word](/alsibir-expert/blog/standards/spds-microsoft-word/).
+--- a/src/content/docs/blog/career/01_python_junior_skills.md
++++ b/src/content/docs/blog/career/01_python_junior_skills.md
+@@ -53,1 +53,5 @@
+ Кандидат способен самостоятельно разработать небольшое приложение, подключить базу данных, реализовать API, написать тесты, опубликовать исходный код в Git и объяснить архитектуру решения.
++
++## Связанные материалы
++
++- [Как стать Python-разработчиком: полное руководство по подготовке к первой работе](/alsibir-expert/blog/career/06_python_career_full_guide/).
+--- a/src/content/docs/blog/career/02_junior_python_resume.md
++++ b/src/content/docs/blog/career/02_junior_python_resume.md
+@@ -75,1 +75,5 @@
+ [Предпочтительный формат, готовность к стажировке, дата выхода.]
++
++## Связанные материалы
++
++- [Как стать Python-разработчиком: полное руководство по подготовке к первой работе](/alsibir-expert/blog/career/06_python_career_full_guide/).
+--- a/src/content/docs/blog/career/03_ranepa_education.md
++++ b/src/content/docs/blog/career/03_ranepa_education.md
+@@ -47,1 +47,5 @@
+ Подготовка по бизнес-информатике полезна при анализе требований, проектировании информационных систем, автоматизации бизнес-процессов и разработке прикладных решений на Python.
++
++## Связанные материалы
++
++- [Как стать Python-разработчиком: полное руководство по подготовке к первой работе](/alsibir-expert/blog/career/06_python_career_full_guide/).
+--- a/src/content/docs/blog/career/04_practical_experience.md
++++ b/src/content/docs/blog/career/04_practical_experience.md
+@@ -52,1 +52,5 @@
+ Для каждого подтверждённого проекта указать: название, задачу, личный вклад, технологии, измеримый или проверяемый результат и ссылку на исходный код. Не включать вымышленные компании и достижения.
++
++## Связанные материалы
++
++- [Как стать Python-разработчиком: полное руководство по подготовке к первой работе](/alsibir-expert/blog/career/06_python_career_full_guide/).
+--- a/src/content/docs/blog/career/06_python_career_full_guide.md
++++ b/src/content/docs/blog/career/06_python_career_full_guide.md
+@@ -109,1 +109,5 @@
+ Главный критерий готовности к трудоустройству — способность создать, протестировать, документировать и представить работающее программное решение. Профильное образование в области бизнес-информатики дополнительно помогает понимать бизнес-задачи и требования к информационным системам.
++
++## Связанные материалы
++
++- [Какие знания необходимы начинающему Python-разработчику](/alsibir-expert/blog/career/01_python_junior_skills/).
+--- a/src/content/docs/blog/documentation/01_gost19_documents.md
++++ b/src/content/docs/blog/documentation/01_gost19_documents.md
+@@ -109,1 +109,5 @@
+ *Примечание: примеры специально созданы для демонстрации методики и не являются документами реального заказчика.*
++
++## Связанные материалы
++
++- [Документация программного обеспечения: классификация, состав и стандарты](/alsibir-expert/blog/documentation/software-documentation/).
+--- a/src/content/docs/blog/documentation/gost-documentation.md
++++ b/src/content/docs/blog/documentation/gost-documentation.md
+@@ -24,1 +24,5 @@
+ Шаблон может помочь с оформлением, но не подтверждает достаточность технических сведений. Для конкретных примеров см. [комплект по ГОСТ 19](/alsibir-expert/blog/documentation/01_gost19_documents/) и [ГОСТ 34](/alsibir-expert/blog/documentation/02_gost34_traceability/).
++
++## Связанные материалы
++
++- [Стандарты и нормативная база](/alsibir-expert/wiki/pages/standards/).
+--- a/src/content/docs/blog/documentation/software-documentation.md
++++ b/src/content/docs/blog/documentation/software-documentation.md
+@@ -165,1 +165,5 @@
+ *Материал предназначен для методического применения. Конкретные наименования, состав и обязательность документов устанавливаются по применимым нормативным требованиям и условиям проекта.*
++
++## Связанные материалы
++
++- [Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации](/alsibir-expert/blog/analytics/project-discovery-ai/).
+--- a/src/content/docs/blog/dokumentaciya-rest-api-primery.md
++++ b/src/content/docs/blog/dokumentaciya-rest-api-primery.md
+@@ -166,1 +166,5 @@
+ **Основа материала:** [обсуждение на Хабр Q&A](https://qna.habr.com/q/696017), в котором рассматривались ручная документация в Google Docs и использование OpenAPI, Postman и генераторов справочников. Техническая справка: [OpenAPI Initiative](https://www.openapis.org/faq).
++
++## Связанные материалы
++
++- [Проектирование API: OpenAPI, модели данных, ошибки и управление версиями](/alsibir-expert/blog/api/07_openapi_contracts/).
+--- a/src/content/docs/blog/izvlech-kartinki-iz-docx.md
++++ b/src/content/docs/blog/izvlech-kartinki-iz-docx.md
+@@ -88,1 +88,5 @@
+ **Основа материала:** заметка «Документ MS Word формата docx — это ZIP-архив» из предоставленного архива. Процедура извлечения дополнена практическими шагами для Windows и Linux.
++
++## Связанные материалы
++
++- [Как перевести PDF в Word: 4 способа и что делать со сканами](/alsibir-expert/blog/pdf-v-word-bez-poteri-formatirovaniya/).
+--- a/src/content/docs/blog/kak-organizovat-razrabotku-it-proekta.md
++++ b/src/content/docs/blog/kak-organizovat-razrabotku-it-proekta.md
+@@ -123,1 +123,5 @@
+ **Основа материала:** обсуждение разделения ролей при запуске ИТ-проекта на [Хабр Q&A](https://qna.habr.com/q/245867). Таблицы, последовательность действий и рекомендации по документированию подготовлены в рамках редакционной переработки.
++
++## Связанные материалы
++
++- [Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации](/alsibir-expert/blog/analytics/project-discovery-ai/).
+--- a/src/content/docs/blog/modeling/08_bpmn_uml_plantuml.md
++++ b/src/content/docs/blog/modeling/08_bpmn_uml_plantuml.md
+@@ -128,1 +128,5 @@
+ *Приведенные примеры представляют демонстрационную систему, не связанную с действующими заказчиками.*
++
++## Связанные материалы
++
++- [Линии и типы связей в UML: как правильно читать диаграммы](/alsibir-expert/blog/modeling/uml-relationships/).
+--- a/src/content/docs/blog/modeling/uml-relationships.md
++++ b/src/content/docs/blog/modeling/uml-relationships.md
+@@ -489,1 +489,5 @@
+ **Примечание о примерах:** все имена классов, систем, протоколов, кратности и сценарии в статье имеют демонстрационный характер и не описывают реальную инфраструктуру заказчика. При применении в проекте модель должна уточняться по исходным требованиям и результатам анализа.
++
++## Связанные материалы
++
++- [BPMN, UML и PlantUML: как системному аналитику выбирать и сопровождать диаграммы](/alsibir-expert/blog/modeling/08_bpmn_uml_plantuml/).
+--- a/src/content/docs/blog/pdf-v-word-bez-poteri-formatirovaniya.md
++++ b/src/content/docs/blog/pdf-v-word-bez-poteri-formatirovaniya.md
+@@ -105,1 +105,5 @@
+ **Основа материала:** статья «Как перевести файл PDF в Word» из предоставленного архива. Техническая проверка способа открытия выполнена по [документации Microsoft](https://support.microsoft.com/en-us/word/opening-pdfs-in-word).
++
++## Связанные материалы
++
++- [Как извлечь картинки из файла DOCX без потери качества](/alsibir-expert/blog/izvlech-kartinki-iz-docx/).
+--- a/src/content/docs/blog/registries/01_mincifry_registry_software.md
++++ b/src/content/docs/blog/registries/01_mincifry_registry_software.md
+@@ -215,1 +215,5 @@
+ **Приложения к статье:** [карточка ПО](/alsibir-expert/wiki/examples/registries/mincifry/01_product_card/), [матрица требований](/alsibir-expert/wiki/examples/registries/mincifry/02_requirements_matrix/), [матрица правообладания](/alsibir-expert/wiki/examples/registries/mincifry/03_rights_and_licenses/), [паспорт конфигурации](/alsibir-expert/wiki/examples/registries/mincifry/04_configuration_baseline/), [журнал замечаний](/alsibir-expert/wiki/examples/registries/mincifry/05_audit_log/), [сценарии испытаний](/alsibir-expert/wiki/examples/registries/mincifry/06_test_cases/), [заключение](/alsibir-expert/wiki/examples/registries/mincifry/07_readiness_opinion/). Все приложения учебные.
++
++## Связанные материалы
++
++- [Образцы и шаблоны](/alsibir-expert/wiki/pages/worksamples/).
+--- a/src/content/docs/blog/registries/02_minpromtorg_registry_industry.md
++++ b/src/content/docs/blog/registries/02_minpromtorg_registry_industry.md
+@@ -232,1 +232,5 @@
+ **Приложения к статье:** [карточка изделия](/alsibir-expert/wiki/examples/registries/minpromtorg/01_product_card/), [ведомость документов](/alsibir-expert/wiki/examples/registries/minpromtorg/02_document_register/), [реестр компонентов](/alsibir-expert/wiki/examples/registries/minpromtorg/03_components_origin/), [технологическая карта](/alsibir-expert/wiki/examples/registries/minpromtorg/04_operations_map/), [матрица локализации](/alsibir-expert/wiki/examples/registries/minpromtorg/05_localization_matrix/), [журнал замечаний](/alsibir-expert/wiki/examples/registries/minpromtorg/06_audit_log/), [заключение](/alsibir-expert/wiki/examples/registries/minpromtorg/07_readiness_opinion/). Все приложения учебные.
++
++## Связанные материалы
++
++- [Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов](/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/).
+--- a/src/content/docs/blog/security/01_anonymization_cycle.md
++++ b/src/content/docs/blog/security/01_anonymization_cycle.md
+@@ -286,1 +286,5 @@
+ *Дата подготовки редакции — 09.10.2026. Ссылки на источники требуют обычной заключительной проверки перед размещением на публичном сайте.*
++
++## Связанные материалы
++
++- [Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки](/alsibir-expert/blog/security/02_residual_disclosure_risks/).
+--- a/src/content/docs/blog/security/02_residual_disclosure_risks.md
++++ b/src/content/docs/blog/security/02_residual_disclosure_risks.md
+@@ -346,1 +346,5 @@
+ *Дата подготовки редакции — 09.10.2026. Публикация не содержит реальных идентификационных исследований и не доказывает безопасность определённого ИИ-сервиса.*
++
++## Связанные материалы
++
++- [Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно](/alsibir-expert/blog/security/01_anonymization_cycle/).
+--- a/src/content/docs/blog/security/03_anonimizer_engineering_article.md
++++ b/src/content/docs/blog/security/03_anonimizer_engineering_article.md
+@@ -457,1 +457,5 @@
+ - [ ] Страница проверена на настольном компьютере и Android.
++
++## Связанные материалы
++
++- [Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно](/alsibir-expert/blog/security/01_anonymization_cycle/).
+--- a/src/content/docs/blog/security/09_ai_document_privacy.md
++++ b/src/content/docs/blog/security/09_ai_document_privacy.md
+@@ -114,1 +114,5 @@
+ *Все сведения в примерах вымышлены. Материал не является заключением о соответствии конкретной системы требованиям законодательства об информации или персональных данных.*
++
++## Связанные материалы
++
++- [Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания](/alsibir-expert/blog/security/03_anonimizer_engineering_article/).
+--- a/src/content/docs/blog/security/ssh-key-access.md
++++ b/src/content/docs/blog/security/ssh-key-access.md
+@@ -324,1 +324,5 @@
+ - [OpenSSH: руководство `ssh-keygen`](https://man.openbsd.org/ssh-keygen).
++
++## Связанные материалы
++
++- [Как создать SSH-ключ и подключиться к серверу без пароля](/alsibir-expert/blog/ssh-kluchi-linux-windows/).
+--- a/src/content/docs/blog/ssh-kluchi-linux-windows.md
++++ b/src/content/docs/blog/ssh-kluchi-linux-windows.md
+@@ -158,1 +158,5 @@
+ **Основа материала:** инструкция о создании SSH-ключей из предоставленного архива. Актуальный порядок генерации и работы с агентом дополнительно сверяется с [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
++
++## Связанные материалы
++
++- [Настройка SSH-доступа по ключам в Linux и Windows: PuTTY, OpenSSH и журналирование подключений](/alsibir-expert/blog/security/ssh-key-access/).
+--- a/src/content/docs/blog/standards/03_spds_gost21.md
++++ b/src/content/docs/blog/standards/03_spds_gost21.md
+@@ -101,1 +101,5 @@
+ *Обозначения комплекта `DEMO-01` условные, не представляют нормативного образца шифрования.*
++
++## Связанные материалы
++
++- [Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц](/alsibir-expert/blog/standards/spds-shbv/).
+--- a/src/content/docs/blog/standards/spds-microsoft-word.md
++++ b/src/content/docs/blog/standards/spds-microsoft-word.md
+@@ -1053,1 +1053,5 @@
+ Такой подход позволяет использовать Microsoft Word как полноценную среду подготовки структурированной документации СПДС, сохраняя управляемость документа даже при сложной компоновке тома.
++
++## Связанные материалы
++
++- [Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц](/alsibir-expert/blog/standards/spds-shbv/).
+--- a/src/content/docs/blog/standards/spds-shbv.md
++++ b/src/content/docs/blog/standards/spds-shbv.md
+@@ -623,1 +623,5 @@
+ В архиве ШБВ 7.11.3 автоматизированные формы СПДС в руководстве описаны со ссылкой на **ГОСТ Р 21.1101**.
++
++## Связанные материалы
++
++- [Как оформить документ по СПДС в Microsoft Word](/alsibir-expert/blog/standards/spds-microsoft-word/).
+--- a/src/content/docs/blog/tools/local-languagetool.md
++++ b/src/content/docs/blog/tools/local-languagetool.md
+@@ -857,1 +857,5 @@
+ *Дата актуализации: 11 октября 2026 года. Приведенные команды основаны на опубликованной документации; фактическое выполнение установки на Windows и Linux в рамках подготовки статьи не проводилось. Перед производственным внедрением требуется проверка совместимости выбранных версий.*
++
++## Связанные материалы
++
++- [Локальная проверка русского текста с LanguageTool](/alsibir-expert/blog/ai/local-languagetool/).
+--- a/src/content/docs/blog/welcome.md
++++ b/src/content/docs/blog/welcome.md
+@@ -18,1 +18,5 @@
+ **Редакционное примечание.** Часть материалов перенесена из предыдущей версии сайта. Для демонстрации архива некоторым статьям назначены условные даты за 2023–2026 годы, что прямо отмечено в тексте таких публикаций. Условные примеры не следует принимать за результаты реальных заявок, испытаний или внедрений.
++
++## Связанные материалы
++
++- [Публикации](/alsibir-expert/wiki/pages/publication/).
+--- a/src/content/docs/guides/example.md
++++ b/src/content/docs/guides/example.md
+@@ -14,1 +14,5 @@
+ [Читать статью о выпуске](/alsibir-expert/blog/documentation/10_document_release/) и [обзор контрольных проверок](/alsibir-expert/blog/documentation/05_document_quality/).
++
++## Связанные материалы
++
++- [Воспроизводимый процесс выпуска документации](/alsibir-expert/blog/automation/document-workflows/).
+--- a/src/content/docs/index.mdx
++++ b/src/content/docs/index.mdx
+@@ -70,1 +70,5 @@
+ [Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).
++
++## Связанные материалы
++
++- [Навигация по разделам](/alsibir-expert/wiki/pages/index/).
+--- a/src/content/docs/wiki/examples/registries/mincifry/00_v_Mincifru.md
++++ b/src/content/docs/wiki/examples/registries/mincifry/00_v_Mincifru.md
+@@ -255,1 +255,5 @@
+ Заявление и материалы подаются через [официальный сайт реестра](https://reestr.digital.gov.ru/); заявление подписывается квалифицированной электронной подписью. После отправки сохраните сведения о поданном комплекте и присвоенный заявлению номер.
++
++## Связанные материалы
++
++- [Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов](/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/).
+--- a/src/content/docs/wiki/examples/registries/mincifry/02_requirements_matrix.md
++++ b/src/content/docs/wiki/examples/registries/mincifry/02_requirements_matrix.md
+@@ -25,1 +25,5 @@
+ Статус «Подтверждено» допускается только при наличии первоисточника, проверки его применимости, правильной версии и фиксированного ответственного. Отсутствие данных фиксируется явно.
++
++## Связанные материалы
++
++- [Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье](/alsibir-expert/blog/registries/01_mincifry_registry_software/).
+--- a/src/content/docs/wiki/examples/registries/mincifry/07_readiness_opinion.md
++++ b/src/content/docs/wiki/examples/registries/mincifry/07_readiness_opinion.md
+@@ -29,1 +29,5 @@
+ **Ответственные роли при реальной работе:** правообладатель, юрист, разработчик, испытатель, специалист по ИБ, технический писатель-аналитик.
++
++## Связанные материалы
++
++- [Образец 7. Учебное заключение о готовности промышленного досье](/alsibir-expert/wiki/examples/registries/minpromtorg/07_readiness_opinion/).
+--- a/src/content/docs/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg.md
++++ b/src/content/docs/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg.md
+@@ -228,1 +228,5 @@
+ Конкретные нормативные критерии, состав приложений и условия расчёта необходимо сверять для реального изделия на дату подготовки заявки. Приведённые образцы помогают организовать эту проверку, но не устанавливают её положительный результат.
++
++## Связанные материалы
++
++- [Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП](/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/).
+--- a/src/content/docs/wiki/examples/registries/minpromtorg/01_product_card.md
++++ b/src/content/docs/wiki/examples/registries/minpromtorg/01_product_card.md
+@@ -33,1 +33,5 @@
+ Без подтверждения этих пунктов нельзя утверждать выполнение критериев происхождения.
++
++## Связанные материалы
++
++- [Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП](/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/).
+--- a/src/content/docs/wiki/examples/registries/minpromtorg/05_localization_matrix.md
++++ b/src/content/docs/wiki/examples/registries/minpromtorg/05_localization_matrix.md
+@@ -28,1 +28,5 @@
+ Нет оснований приписывать УМ-100.01 определённый нормативный балл до установления позиции.
++
++## Связанные материалы
++
++- [Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП](/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/).
+--- a/src/content/docs/wiki/examples/registries/minpromtorg/07_readiness_opinion.md
++++ b/src/content/docs/wiki/examples/registries/minpromtorg/07_readiness_opinion.md
+@@ -31,1 +31,5 @@
+ **Заключение:** комплект пригоден только для демонстрации принципов проектирования КД/ЭД и методики подготовки доказательственного досье. Любое утверждение о включении изделия в реестр было бы недостоверным.
++
++## Связанные материалы
++
++- [Как подготовить и проверить документы для подтверждения российского производства: семь практических образцов](/alsibir-expert/wiki/examples/registries/minpromtorg/00_Kak_v_Minpromtorg/).
+--- a/src/content/docs/wiki/index.md
++++ b/src/content/docs/wiki/index.md
+@@ -22,1 +22,5 @@
+ **Примечание:** часть примеров синтезирована для обучения. Они не являются реальными заявками, протоколами испытаний, отзывами заказчиков либо доказательством соответствия продукта требованиям законодательства.
++
++## Связанные материалы
++
++- [Проекты](/alsibir-expert/wiki/pages/projects/).
+--- a/src/content/docs/wiki/pages/404.md
++++ b/src/content/docs/wiki/pages/404.md
+@@ -9,1 +9,5 @@
+ <img src="/alsibir-expert/images/404-art.svg" alt="" width="1200" height="800"/>
++
++## Связанные материалы
++
++- [Страница не найдена](/alsibir-expert/404/).
+--- a/src/content/docs/wiki/pages/about.md
++++ b/src/content/docs/wiki/pages/about.md
+@@ -31,1 +31,5 @@
+ По сведениям автора в предоставленном резюме, стр. 1.
++
++## Связанные материалы
++
++- [Профессиональное резюме](/alsibir-expert/wiki/pages/resume/).
+--- a/src/content/docs/wiki/pages/ai.md
++++ b/src/content/docs/wiki/pages/ai.md
+@@ -13,1 +13,5 @@
+ Закрытые сведения нельзя передавать внешним сервисам без установленных организационных и правовых оснований.
++
++## Связанные материалы
++
++- [Карта сайта](/alsibir-expert/wiki/pages/sitemap/).
+--- a/src/content/docs/wiki/pages/blog.md
++++ b/src/content/docs/wiki/pages/blog.md
+@@ -10,1 +10,5 @@
+ Для систематизированных примеров перейдите в [базу знаний](/alsibir-expert/wiki/).
++
++## Связанные материалы
++
++- [Обзор сайта — архивный адрес 2](/alsibir-expert/wiki/pages/home-2/).
+--- a/src/content/docs/wiki/pages/clients.md
++++ b/src/content/docs/wiki/pages/clients.md
+@@ -6,1 +6,5 @@
+ Работы в ИТ, НИОКР, документировании программных продуктов и государственных информационных системах могут требовать соблюдения договорной конфиденциальности. Имена заказчиков, отзывы и измеримые результаты не публикуются без подтверждения и разрешения. Посмотрите [типовые задачи](/alsibir-expert/wiki/pages/services/) и [демонстрационные кейсы](/alsibir-expert/wiki/pages/portfolio/).
++
++## Связанные материалы
++
++- [Навигация по разделам](/alsibir-expert/wiki/pages/index/).
+--- a/src/content/docs/wiki/pages/contact.md
++++ b/src/content/docs/wiki/pages/contact.md
+@@ -14,1 +14,5 @@
+ **О персональных данных.** На этом сайте нет действующей веб-формы отправки данных. Письма отправляются через выбранный пользователем почтовый сервис. Не пересылайте закрытые документы и персональные данные третьих лиц до согласования безопасного канала обмена. [Информация о конфиденциальности](/alsibir-expert/wiki/pages/pp/).
++
++## Связанные материалы
++
++- [Конфиденциальность и обработка данных](/alsibir-expert/wiki/pages/pp/).
+--- a/src/content/docs/wiki/pages/home-1.md
++++ b/src/content/docs/wiki/pages/home-1.md
+@@ -6,1 +6,5 @@
+ Это сохранённый адрес прежней структуры сайта. Актуальная точка входа — [главная страница](/alsibir-expert/). Основные разделы: [о специалисте](/alsibir-expert/wiki/pages/about/), [услуги](/alsibir-expert/wiki/pages/services/), [портфолио](/alsibir-expert/wiki/pages/portfolio/), [блог](/alsibir-expert/blog/).
++
++## Связанные материалы
++
++- [Навигация по разделам](/alsibir-expert/wiki/pages/index/).
+--- a/src/content/docs/wiki/pages/home-2.md
++++ b/src/content/docs/wiki/pages/home-2.md
+@@ -6,1 +6,5 @@
+ Адрес оставлен для совместимости с историческими ссылками. Перейдите на [главную страницу](/alsibir-expert/) или в [базу знаний](/alsibir-expert/wiki/).
++
++## Связанные материалы
++
++- [Страница не найдена](/alsibir-expert/404/).
+--- a/src/content/docs/wiki/pages/index.md
++++ b/src/content/docs/wiki/pages/index.md
+@@ -6,1 +6,5 @@
+ Основные разделы: [главная](/alsibir-expert/), [база знаний](/alsibir-expert/wiki/), [публикации](/alsibir-expert/blog/), [услуги](/alsibir-expert/wiki/pages/services/), [примеры работ](/alsibir-expert/wiki/pages/portfolio/), [контакты](/alsibir-expert/wiki/pages/contact/).
++
++## Связанные материалы
++
++- [Обзор сайта — архивный адрес 1](/alsibir-expert/wiki/pages/home-1/).
+--- a/src/content/docs/wiki/pages/portfolio.md
++++ b/src/content/docs/wiki/pages/portfolio.md
+@@ -47,1 +47,5 @@
+ [Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).
++
++## Связанные материалы
++
++- [Образцы и шаблоны](/alsibir-expert/wiki/pages/worksamples/).
+--- a/src/content/docs/wiki/pages/pp.md
++++ b/src/content/docs/wiki/pages/pp.md
+@@ -22,1 +22,5 @@
+ По вопросам сведений, полученных при переписке, можно написать на [wordmaster@textpro-1.ru](mailto:wordmaster@textpro-1.ru). Окончательная правовая редакция этой страницы зависит от выбранного хостинга, оператора данных и используемых сервисов и должна быть согласована перед публичным запуском.
++
++## Связанные материалы
++
++- [Контакты](/alsibir-expert/wiki/pages/contact/).
+--- a/src/content/docs/wiki/pages/projects.md
++++ b/src/content/docs/wiki/pages/projects.md
+@@ -6,1 +6,5 @@
+ Здесь собраны направления и учебные кейсы: [документация](/alsibir-expert/wiki/portfolio/documentation/technical-documentation/), [системный анализ](/alsibir-expert/wiki/portfolio/analytics/system-analysis/), [автоматизация](/alsibir-expert/wiki/portfolio/ai/document-automation/), [регистрационное досье](/alsibir-expert/wiki/portfolio/registration/software-registration/).
++
++## Связанные материалы
++
++- [База знаний](/alsibir-expert/wiki/index/).
+--- a/src/content/docs/wiki/pages/publication.md
++++ b/src/content/docs/wiki/pages/publication.md
+@@ -13,1 +13,5 @@
+ В части архивных материалов использована **условная хронология за 2023–2026 годы**. Такая дата помечается непосредственно в статье и не подтверждает реальную дату её написания или публикации.
++
++## Связанные материалы
++
++- [Карта сайта](/alsibir-expert/wiki/pages/sitemap/).
+--- a/src/content/docs/wiki/pages/resume.md
++++ b/src/content/docs/wiki/pages/resume.md
+@@ -17,1 +17,5 @@
+ [Открыть резюме PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf).
++
++## Связанные материалы
++
++- [Навыки и инструменты](/alsibir-expert/wiki/pages/skills/).
+--- a/src/content/docs/wiki/pages/search.md
++++ b/src/content/docs/wiki/pages/search.md
+@@ -6,1 +6,5 @@
+ Поиск по публичным материалам встроен в интерфейс Starlight (значок поиска в верхней части страниц). Также доступны [база знаний](/alsibir-expert/wiki/) и [полный список тематик](/alsibir-expert/wiki/pages/sitemap/).
++
++## Связанные материалы
++
++- [Навигация по разделам](/alsibir-expert/wiki/pages/index/).
+--- a/src/content/docs/wiki/pages/sitemap.md
++++ b/src/content/docs/wiki/pages/sitemap.md
+@@ -117,1 +117,5 @@
+ - [Примеры работ ZIP](/alsibir-expert/examples/portfolio-samples.zip)
++
++## Связанные материалы
++
++- [Навигация по разделам](/alsibir-expert/wiki/pages/index/).
+--- a/src/content/docs/wiki/pages/skills.md
++++ b/src/content/docs/wiki/pages/skills.md
+@@ -20,1 +20,5 @@
+ Технический документ — результат анализа и проверки, а не механической генерации текста. Автоматизация помогает выполнять повторяемые проверки, но утверждение фактов, достаточности требований и применимости стандартов остаётся задачей специалиста.
++
++## Связанные материалы
++
++- [Профессиональное резюме](/alsibir-expert/wiki/pages/resume/).
+--- a/src/content/docs/wiki/pages/standards.md
++++ b/src/content/docs/wiki/pages/standards.md
+@@ -13,1 +13,5 @@
+ **Важно:** стандарты изменяются. Перед практическим использованием необходимо сверить номер документа, редакцию, дату введения, область применения и обязательность требований с официальными источниками.
++
++## Связанные материалы
++
++- [Карта сайта](/alsibir-expert/wiki/pages/sitemap/).
+--- a/src/content/docs/wiki/pages/tools.md
++++ b/src/content/docs/wiki/pages/tools.md
+@@ -14,1 +14,5 @@
+ Выбор инструмента должен учитывать режим работы с данными, форматы обмена, переносимость и воспроизводимость результата.
++
++## Связанные материалы
++
++- [Карта сайта](/alsibir-expert/wiki/pages/sitemap/).
+--- a/src/content/docs/wiki/pages/worksamples.md
++++ b/src/content/docs/wiki/pages/worksamples.md
+@@ -35,1 +35,5 @@
+ [Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).
++
++## Связанные материалы
++
++- [Карта сайта](/alsibir-expert/wiki/pages/sitemap/).
+--- a/src/content/docs/wiki/portfolio/ai/document-automation.md
++++ b/src/content/docs/wiki/portfolio/ai/document-automation.md
+@@ -24,1 +24,5 @@
+ [Статья об автоматизации Word](/alsibir-expert/blog/automation/04_word_automation/).
++
++## Связанные материалы
++
++- [Инструменты технического писателя](/alsibir-expert/wiki/pages/tools/).
+--- a/src/content/docs/wiki/portfolio/registration/software-registration.md
++++ b/src/content/docs/wiki/portfolio/registration/software-registration.md
+@@ -18,1 +18,5 @@
+ **Внимание:** примеры не являются поданными заявками и не гарантируют включения в реестр.
++
++## Связанные материалы
++
++- [Образцы и шаблоны](/alsibir-expert/wiki/pages/worksamples/).
