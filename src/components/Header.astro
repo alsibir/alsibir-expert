@@ -1,0 +1,6 @@
+---
+import DefaultHeader from '@astrojs/starlight/components/Header.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import NavIcon from './NavIcon.astro';
+---
+<div class="aps-header"><DefaultHeader/><nav class="aps-top-nav" aria-label="Основная навигация"><a href="/alsibir-expert/wiki/pages/services/"><NavIcon name="requirements"/>Компетенции</a><a href="/alsibir-expert/wiki/pages/portfolio/"><NavIcon name="documentation"/>Работы</a><a href="/alsibir-expert/blog/"><NavIcon name="file"/>Блог</a><a href="/alsibir-expert/wiki/"><NavIcon name="documentation"/>База знаний</a><a href="/alsibir-expert/wiki/pages/contact/"><NavIcon name="email"/>Контакты</a><a href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><NavIcon name="menu"/><span class="map-label">Карта сайта</span></a><div class="aps-mobile-theme"><ThemeSelect/></div></nav></div>

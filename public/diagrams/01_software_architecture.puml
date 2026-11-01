@@ -1,0 +1,13 @@
+@startuml
+' Учебная схема. Компоненты и связи условны.
+title Демонстрационная архитектура программного продукта
+actor "Пользователь" as User
+component "Веб-интерфейс" as UI
+component "Сервер приложений" as API
+database "База данных" as DB
+component "Журнал событий" as Log
+User --> UI
+UI --> API : HTTPS
+API --> DB : запросы
+API --> Log : запись событий
+@enduml

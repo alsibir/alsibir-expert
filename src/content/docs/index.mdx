@@ -1,0 +1,65 @@
+---
+title: 'AlSibir — технический писатель и системный аналитик'
+description: 'Техническая документация, системный анализ, ГОСТ 19 и ГОСТ 34, примеры и методические материалы.'
+template: splash
+draft: false
+hero:
+  title: 'Техническая документация и системный анализ'
+  tagline: 'От требований и архитектуры до испытаний и понятных документов. Методики, инструменты, примеры и профессиональное портфолио.'
+  actions:
+    - text: 'Услуги и компетенции'
+      link: /wiki/pages/services/
+      icon: right-arrow
+    - text: 'Примеры работ'
+      link: /wiki/pages/portfolio/
+      variant: minimal
+    - text: 'Блог'
+      link: /blog/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import AssetImage from '../../components/AssetImage.astro';
+
+## Чем я занимаюсь
+
+<div className="aps-competencies"><a href="/alsibir-expert/wiki/pages/services/#системный-анализ"><img className="theme-light" src="/alsibir-expert/img/requirements-light.svg" alt=""/><img className="theme-dark" src="/alsibir-expert/img/requirements-dark.svg" alt=""/>Анализ требований</a><a href="/alsibir-expert/wiki/pages/services/#техническая-документация"><img className="theme-light" src="/alsibir-expert/img/documentation-light.svg" alt=""/><img className="theme-dark" src="/alsibir-expert/img/documentation-dark.svg" alt=""/>Документация</a><a href="/alsibir-expert/wiki/pages/services/#системный-анализ"><img className="theme-light" src="/alsibir-expert/img/analytics-light.svg" alt=""/><img className="theme-dark" src="/alsibir-expert/img/analytics-dark.svg" alt=""/>Аналитика</a><a href="/alsibir-expert/wiki/pages/services/#автоматизация"><img className="theme-light" src="/alsibir-expert/img/support-light.svg" alt=""/><img className="theme-dark" src="/alsibir-expert/img/support-dark.svg" alt=""/>Сопровождение</a></div>
+
+<CardGrid>
+  <Card title="Техническая документация" icon="document">
+    Технические задания, программы и методики испытаний, пояснительные записки, эксплуатационные документы и комплекты по ГОСТ 19/34. [Подробнее](/alsibir-expert/wiki/pages/services/).
+  </Card>
+  <Card title="Системный анализ" icon="setting">
+    Требования, бизнес-процессы, UML/BPMN, API-контракты, модели данных и трассируемость решений. [Материалы](/alsibir-expert/blog/analytics/06_requirements_to_tests/).
+  </Card>
+  <Card title="Практические образцы" icon="open-book">
+    Демонстрационные документы, реестры требований, матрицы связей и контрольные ведомости. [Открыть базу знаний](/alsibir-expert/wiki/).
+  </Card>
+  <Card title="Инструменты и автоматизация" icon="setting">
+    Microsoft Word, Markdown, PlantUML, Obsidian, Git и локальные средства контроля документации. [Читать блог](/alsibir-expert/blog/).
+  </Card>
+</CardGrid>
+
+## О проекте
+
+**AlSibir** — профессиональный сайт технического писателя и аналитика Александра Сибирякова. Здесь собраны описания направлений работы, справочные статьи и образцы структуры инженерных документов. Материалы могут быть полезны разработчикам, аналитикам, техническим писателям и руководителям проектов.
+
+- [О специалисте](/alsibir-expert/wiki/pages/about/) — опыт и подход к работе.
+- [Портфолио](/alsibir-expert/wiki/pages/portfolio/) — направления проектов и демонстрационные кейсы.
+- [База знаний](/alsibir-expert/wiki/) — документы, методы и примеры.
+- [Контакты](/alsibir-expert/wiki/pages/contact/) — связь по вопросам сотрудничества.
+
+> **О примерах и датах.** Демонстрационные организации, изделия, результаты и часть дат в учебных статьях являются условными. Такие сведения помечены в самих материалах; их нельзя использовать как подтверждение реально выполненных проектов, испытаний или публикаций.
+
+
+## Избранные работы
+
+<div className="aps-grid">
+<article className="aps-card"><AssetImage name="requirements" alt="Карточки требований объединяются в структурированный документ"/><h3><a href="/alsibir-expert/wiki/pages/portfolio/#puzzlelib">PuzzleLib</a></h3><p>Техническое задание · 16 стр.</p></article>
+<article className="aps-card"><AssetImage name="testing" alt="Матрица испытаний и проверяемые компоненты системы"/><h3><a href="/alsibir-expert/wiki/pages/portfolio/#snezhinka">Снежинка</a></h3><p>Техническое задание · 21 стр.</p></article>
+<article className="aps-card"><AssetImage name="api" alt="Программный интерфейс связан с панелью документации"/><h3><a href="/alsibir-expert/wiki/pages/portfolio/#api">OK Service API</a></h3><p>Описание API · 30 стр.</p></article>
+<article className="aps-card"><AssetImage name="ai" alt="Документация и взаимосвязанные модули системы искусственного интеллекта"/><h3><a href="/alsibir-expert/wiki/pages/portfolio/#assistant">ИИ Жириновский</a></h3><p>Руководство оператора · 30 стр.</p></article>
+<article className="aps-card"><AssetImage name="clear-tz" alt="Структурированное техническое задание упорядочивает сложные связи"/><h3><a href="/alsibir-expert/wiki/pages/portfolio/#orfo">ОРФО AI</a></h3><p>Техническое задание · 18 стр.</p></article>
+</div>
+
+[Скачать резюме PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf) · [Открыть реальные примеры работ](/alsibir-expert/wiki/pages/portfolio/)
