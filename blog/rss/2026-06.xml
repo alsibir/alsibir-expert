@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:fh="http://purl.org/syndication/history/1.0"><channel><title>AlSibir — документация и анализ | Блог</title><description>Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы</description><link>https://alsibir.github.io/</link><language>ru</language><fh:archive/><atom:link rel="current" href="https://alsibir.github.io/alsibir-expert/blog/rss.xml"/><atom:link rel="self" href="https://alsibir.github.io/alsibir-expert/blog/rss/2026-06.xml"/><atom:link rel="prev-archive" href="https://alsibir.github.io/alsibir-expert/blog/rss/2026-05.xml"/><atom:link rel="next-archive" href="https://alsibir.github.io/alsibir-expert/blog/rss/2026-07.xml"/><item><title>Как готовить документы к обработке ИИ</title><link>https://alsibir.github.io/alsibir-expert/blog/ai/document-anonymization/</link><guid isPermaLink="true">https://alsibir.github.io/alsibir-expert/blog/ai/document-anonymization/</guid><description>Перед использованием внешнего сервиса необходимо определить режим доступа к исходным документам, полномочия на передачу данных и разрешённые инструменты. Простая замена фамилий и…</description><pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;!-- SYNTHETIC_DATE_FOR_DEMO --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Условная дата:&lt;/strong&gt; хронология этой статьи синтезирована для демонстрации сайта. Не подтверждает фактическую дату написания или публикации.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Перед использованием внешнего сервиса необходимо определить режим доступа к исходным документам, полномочия на передачу данных и разрешённые инструменты. Простая замена фамилий и названий не гарантирует конфиденциальности.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;минимальный-процесс&quot;&gt;Минимальный процесс&lt;/h2&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Классифицировать документы и согласовать допустимый сценарий обработки.&lt;/li&gt;
+&lt;li&gt;Отделить факты и структуры, необходимые модели, от защищаемых сведений.&lt;/li&gt;
+&lt;li&gt;Выполнить преобразование и проверить остаточные идентификаторы.&lt;/li&gt;
+&lt;li&gt;Обработать только разрешённый фрагмент.&lt;/li&gt;
+&lt;li&gt;Проверить полученный текст по оригиналу и сохранить журнал изменений.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Для обратимых замен используется защищённая локальная таблица соответствий. Её нельзя передавать модели вместе с псевдонимизированным текстом. Подробнее: &lt;a href=&quot;https://alsibir.github.io/alsibir-expert/blog/security/01_anonymization_cycle/&quot;&gt;учебный цикл анонимизации&lt;/a&gt;.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</content:encoded><category>ИИ</category><category>Безопасность данных</category></item></channel></rss>

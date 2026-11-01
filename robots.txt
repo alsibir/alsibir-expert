@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /alsibir-expert/
+Sitemap: https://alsibir.github.io/alsibir-expert/sitemap.xml

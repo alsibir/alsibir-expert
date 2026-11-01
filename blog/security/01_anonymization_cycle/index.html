@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="ru" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-g5ptsecz"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно | AlSibir — документация и анализ</title><link rel="canonical" href="https://alsibir.github.io/alsibir-expert/blog/security/01_anonymization_cycle/"/><link rel="sitemap" href="/alsibir-expert/sitemap-index.xml"/><link href="https://alsibir.github.io/alsibir-expert/blog/rss.xml" rel="alternate" title="Блог" type="application/rss+xml"/><link rel="shortcut icon" href="/alsibir-expert/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.3.8"/><meta name="generator" content="Starlight v0.42.6"/><meta property="og:title" content="Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно"/><meta property="og:type" content="article"/><meta property="og:url" content="https://alsibir.github.io/alsibir-expert/blog/security/01_anonymization_cycle/"/><meta property="og:locale" content="ru"/><meta property="og:description" content="Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы"/><meta property="og:site_name" content="AlSibir — документация и анализ"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","datePublished":"2026-10-09T00:00:00.000Z","headline":"Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно","inLanguage":"ru","isPartOf":{"@id":"https://alsibir.github.io/alsibir-expert/blog/#blog","@type":"Blog","name":"Блог","url":"https://alsibir.github.io/alsibir-expert/blog/"},"mainEntityOfPage":"https://alsibir.github.io/alsibir-expert/blog/security/01_anonymization_cycle/","url":"https://alsibir.github.io/alsibir-expert/blog/security/01_anonymization_cycle/","description":"При работе с техническим заданием, договором, программой и методикой испытаний или эксплуатационной документацией возникает практическая задача: использовать возможности искусственного…","keywords":["Безопасность","ИИ"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Блог","item":"https://alsibir.github.io/alsibir-expert/blog/"},{"@type":"ListItem","position":2,"name":"Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно"}]}]}</script><link rel="icon" href="/alsibir-expert/img/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/alsibir-expert/img/icon-180.png"><link rel="manifest" href="/alsibir-expert/img/site.webmanifest"><meta property="og:image" content="https://alsibir.github.io/alsibir-expert/images/og-site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Александр Сибиряков — технический писатель и аналитик"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://alsibir.github.io/alsibir-expert/images/og-site.png"><meta name="theme-color" content="#151515"><!-- Yandex.Metrika counter --><script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113951982', 'ym');
+
+        ym(113951982, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script><!-- /Yandex.Metrika counter --><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/alsibir-expert/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/alsibir-expert/_astro/middleware.BHAD6eiC.css"><style>@layer starlight.components{svg:where(.astro-hkc32dio){color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em;overflow:visible}.card-grid:where(.astro-7qmvx3iy){grid-template-columns:100%;gap:1rem;display:grid}.card-grid:where(.astro-7qmvx3iy)>*{margin-top:0!important}@media (width>=50rem){.card-grid:where(.astro-7qmvx3iy){grid-template-columns:1fr 1fr;gap:1.5rem}.stagger:where(.astro-7qmvx3iy){--stagger-height:5rem;padding-bottom:var(--stagger-height)}.stagger:where(.astro-7qmvx3iy)>:nth-child(2n){transform:translateY(var(--stagger-height))}}}
+@layer starlight.components{.card:where(.astro-oag6qnet){--sl-card-border:var(--sl-color-purple);--sl-card-bg:var(--sl-color-purple-low);border:1px solid var(--sl-color-gray-5);background-color:var(--sl-color-black);flex-direction:column;gap:clamp(.5rem,.125rem + 1vw,1rem);padding:clamp(1rem,.125rem + 3vw,2.5rem)}.card:where(.astro-oag6qnet):nth-child(4n+1){--sl-card-border:var(--sl-color-orange);--sl-card-bg:var(--sl-color-orange-low)}.card:where(.astro-oag6qnet):nth-child(4n+3){--sl-card-border:var(--sl-color-green);--sl-card-bg:var(--sl-color-green-low)}.card:where(.astro-oag6qnet):nth-child(4n+4){--sl-card-border:var(--sl-color-red);--sl-card-bg:var(--sl-color-red-low)}.card:where(.astro-oag6qnet):nth-child(4n+5){--sl-card-border:var(--sl-color-blue);--sl-card-bg:var(--sl-color-blue-low)}.title:where(.astro-oag6qnet){font-weight:600;font-size:var(--sl-text-h4);color:var(--sl-color-white);line-height:var(--sl-line-height-headings);align-items:center;gap:1rem}.card:where(.astro-oag6qnet) .icon:where(.astro-oag6qnet){border:1px solid var(--sl-card-border);background-color:var(--sl-card-bg);border-radius:.25rem;flex-shrink:0;padding:.2em}.card:where(.astro-oag6qnet) .body:where(.astro-oag6qnet){font-size:clamp(var(--sl-text-sm), calc(.5rem + 1vw), var(--sl-text-body));margin:0}}
+</style><script type="module" src="/alsibir-expert/_astro/page.cNngjUgL.js"></script></head><body class="astro-g5ptsecz"><a class="sl-skip-link astro-qb7clj6f" href="#_top">Перейти к содержимому</a><div class="page sl-flex astro-yntsjkba"><header class="header astro-yntsjkba"><div class="aps-header"><div class="header astro-by6fddyj"><div class="title-wrapper sl-flex astro-by6fddyj"><a class="aps-brand" href="/alsibir-expert/" aria-label="AlSibir — на главную"><img class="theme-light" src="/alsibir-expert/img/logo-light.svg" width="320" height="66" alt="AlSibir — технический писатель и аналитик"><img class="theme-dark" src="/alsibir-expert/img/logo-dark.svg" width="320" height="66" alt="AlSibir — технический писатель и аналитик"></a></div><div class="sl-flex print:hidden astro-by6fddyj"><site-search class="astro-by6fddyj astro-b5kgnn7o" data-translations="{&quot;placeholder&quot;:&quot;Поиск&quot;}"><button data-open-modal disabled aria-label="Поиск" aria-keyshortcuts="Control+K" class="astro-b5kgnn7o"><svg aria-hidden="true" class="astro-b5kgnn7o astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-b5kgnn7o" aria-hidden="true">Поиск</span><kbd class="sl-hidden md:sl-flex astro-b5kgnn7o" style="display: none;"><kbd class="astro-b5kgnn7o">Ctrl</kbd><kbd class="astro-b5kgnn7o">K</kbd></kbd></button><dialog style="padding:0" aria-label="Поиск" class="astro-b5kgnn7o"><div class="dialog-frame sl-flex astro-b5kgnn7o"><button data-close-modal class="sl-flex md:sl-hidden astro-b5kgnn7o">Отменить</button><div class="search-container astro-b5kgnn7o"><div id="starlight__search" class="astro-b5kgnn7o"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/alsibir-expert/_astro/Search.astro_astro_type_script_index_0_lang.D5klt8WL.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-by6fddyj"><div class="sl-flex social-icons astro-by6fddyj"><a href="https://alsibir.github.io/alsibir-expert/blog/rss.xml" rel="me" class="sl-flex astro-n2mnl6yq"><span class="sr-only astro-n2mnl6yq">RSS</span><svg aria-hidden="true" class="astro-n2mnl6yq astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M2.88 16.88a3 3 0 0 0 0 4.24 3 3 0 0 0 4.24 0 3 3 0 0 0-4.24-4.24Zm2.83 2.83a1 1 0 0 1-1.42-1.42 1 1 0 0 1 1.42 0 1 1 0 0 1 0 1.42ZM5 12a1 1 0 0 0 0 2 5 5 0 0 1 5 5 1 1 0 0 0 2 0 7 7 0 0 0-7-7Zm0-4a1 1 0 0 0 0 2 9 9 0 0 1 9 9 1 1 0 0 0 2 0 11.08 11.08 0 0 0-3.22-7.78A11.08 11.08 0 0 0 5 8Zm10.61.39A15.11 15.11 0 0 0 5 4a1 1 0 0 0 0 2 13 13 0 0 1 13 13 1 1 0 0 0 2 0 15.11 15.11 0 0 0-4.39-10.61Z"/></svg></a></div><div class="sl-blog-header-links astro-2zgbb2in"><a class="sl-blog-header-link astro-2zgbb2in" href="/alsibir-expert/blog/">Блог</a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Выберите тему</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Тёмная</option><option value="light" class="astro-2z5xp7gb">Светлая</option><option value="auto" selected class="astro-2z5xp7gb">Авто</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div><details class="aps-menu" open><summary>Меню</summary><nav class="aps-top-nav" aria-label="Основная навигация"><a href="/alsibir-expert/wiki/pages/services/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/requirements-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/requirements-dark.svg" width="24" height="24" alt=""></span>Услуги</a><a href="/alsibir-expert/wiki/pages/portfolio/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/documentation-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/documentation-dark.svg" width="24" height="24" alt=""></span>Работы</a><a href="/alsibir-expert/blog/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/file-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/file-dark.svg" width="24" height="24" alt=""></span>Блог</a><a href="/alsibir-expert/wiki/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/documentation-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/documentation-dark.svg" width="24" height="24" alt=""></span>Знания</a><a href="/alsibir-expert/wiki/pages/contact/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/email-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/email-dark.svg" width="24" height="24" alt=""></span>Контакты</a><a href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/menu-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/menu-dark.svg" width="24" height="24" alt=""></span><span class="map-label">Карта сайта</span></a><div class="aps-mobile-theme"><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Выберите тему</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Тёмная</option><option value="light" class="astro-2z5xp7gb">Светлая</option><option value="auto" selected class="astro-2z5xp7gb">Авто</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></nav></details></div><script type="module">function e(){let e=document.querySelector(`.aps-menu`);if(!e||e.dataset.ready)return;e.dataset.ready=`true`;let t=matchMedia(`(max-width: 1100px)`),n=()=>{e.open=!t.matches};n(),t.addEventListener(`change`,n),e.addEventListener(`keydown`,n=>{n.key===`Escape`&&t.matches&&(e.open=!1,e.querySelector(`summary`)?.focus())})}e(),document.addEventListener(`astro:page-load`,e);</script></header><nav class="sidebar print:hidden astro-yntsjkba" aria-label="Основное"><button popovertarget="starlight__sidebar" class="sl-menu-button sl-flex md:sl-hidden print:hidden astro-r2osgdlg"><svg aria-hidden="true" class="open-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg><span class="sr-only astro-r2osgdlg">Меню</span></button><script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-yntsjkba"><div class="sidebar-content sl-flex astro-yntsjkba"><sl-sidebar-state-persist data-hash="12ethdq" class="astro-ipdry5cl"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/" class="large astro-rmhv4bp6"><span class="astro-rmhv4bp6">Все публикации</span></a></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Недавние публикации</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/oformlenie-skrinshotov/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как оформлять скриншоты для инструкций и технической документации</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/portableapps-polnyy-obzor-programm/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">PortableApps.com: каталог переносимых программ, сравнение аналогов и оптимальный набор для технического писателя</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/dokumentaciya-rest-api-primery/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как документировать REST API: структура, примеры запросов и OpenAPI</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/wsl-graficheskie-prilozheniya-windows/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как запускать графические программы Linux в Windows 10 и 11 через WSL</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/izvlech-kartinki-iz-docx/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как извлечь картинки из файла DOCX без потери качества</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/kak-organizovat-razrabotku-it-proekta/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как организовать разработку ИТ-проекта: этапы, роли и документация</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/pdf-v-word-bez-poteri-formatirovaniya/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как перевести PDF в Word: 4 способа и что делать со сканами</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/windows/microsoft-edge-reset-and-removal/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как сбросить, восстановить или удалить Microsoft Edge в Windows 10</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/ssh-kluchi-linux-windows/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как создать SSH-ключ и подключиться к серверу без пароля</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tools/aps_chatgpt_figma_design_guide/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Как улучшить дизайн сайта АПС в ChatGPT с плагином Figma</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Темы</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/инструменты/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Инструменты (11)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/техническая-документация/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">техническая документация (8)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/автоматизация/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Автоматизация (7)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/безопасность/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">безопасность (7)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/гост/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">ГОСТ (7)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ии/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">ИИ (7)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/карьера/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Карьера (6)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/обучение/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Обучение (6)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/linux/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Linux (5)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/windows/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Windows (4)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/оформление/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Оформление (4)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/системный-анализ/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">системный анализ (4)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/стандарты/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Стандарты (4)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/безопасность-данных/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Безопасность данных (3)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/docx/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">DOCX (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/openssh/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">OpenSSH (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/pdf/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">PDF (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ssh/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">SSH (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/uml/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">UML (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ux/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">UX (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/word/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Word (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/документация/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Документация (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/документы/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Документы (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/моделирование/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Моделирование (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/настройка/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Настройка (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/реестры/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Реестры (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/технический-текст/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Технический текст (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/требования/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Требования (2)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/7-zip/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">7-Zip (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/api/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">API (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ed25519/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Ed25519 (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/http/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">HTTP (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/json/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">JSON (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/markdown/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Markdown (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/networkmanager/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">NetworkManager (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/nmcli/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">nmcli (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ocr/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">OCR (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/openapi/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">OpenAPI (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/portable/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">portable (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/portableapps/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">PortableApps (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/putty/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">PuTTY (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/rest-api/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">REST API (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/total-commander/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Total Commander (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/ubuntu/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Ubuntu (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/usb/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">USB (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/wi-fi/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Wi-Fi (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/windows-10/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Windows 10 (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/windows-11/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Windows 11 (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/wsl/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">WSL (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/wsl-2/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">WSL 2 (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/wslg/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">WSLg (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/zip/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">ZIP (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/архитектура/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">архитектура (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/драйверы/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">драйверы (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/изображения/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">изображения (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/конвертация/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">конвертация (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/новости-сайта/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Новости сайта (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/облачное-хранилище/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">облачное хранилище (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/плагины/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">плагины (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/работа-с-файлами/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">работа с файлами (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/разработка-по/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">разработка ПО (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/резервное-копирование/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">резервное копирование (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/синхронизация/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">синхронизация (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/системное-администрирование/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">системное администрирование (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/системный-аналитик/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">системный аналитик (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/технический-писатель/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">технический писатель (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/техническое-задание/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">техническое задание (1)</span></a></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/tags/файлы/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">файлы (1)</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><a href="/alsibir-expert/blog/rss.xml" class="large astro-rmhv4bp6"><span class="astro-rmhv4bp6">RSS-лента</span></a></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-p4azlveh"><div class="social-icons astro-p4azlveh"><a href="https://alsibir.github.io/alsibir-expert/blog/rss.xml" rel="me" class="sl-flex astro-n2mnl6yq"><span class="sr-only astro-n2mnl6yq">RSS</span><svg aria-hidden="true" class="astro-n2mnl6yq astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M2.88 16.88a3 3 0 0 0 0 4.24 3 3 0 0 0 4.24 0 3 3 0 0 0-4.24-4.24Zm2.83 2.83a1 1 0 0 1-1.42-1.42 1 1 0 0 1 1.42 0 1 1 0 0 1 0 1.42ZM5 12a1 1 0 0 0 0 2 5 5 0 0 1 5 5 1 1 0 0 0 2 0 7 7 0 0 0-7-7Zm0-4a1 1 0 0 0 0 2 9 9 0 0 1 9 9 1 1 0 0 0 2 0 11.08 11.08 0 0 0-3.22-7.78A11.08 11.08 0 0 0 5 8Zm10.61.39A15.11 15.11 0 0 0 5 4a1 1 0 0 0 0 2 13 13 0 0 1 13 13 1 1 0 0 0 2 0 15.11 15.11 0 0 0-4.39-10.61Z"/></svg></a></div><div class="sl-blog-header-links astro-2zgbb2in"><a class="sl-blog-header-link astro-2zgbb2in" href="/alsibir-expert/blog/">Блог</a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Выберите тему</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Тёмная</option><option value="light" class="astro-2z5xp7gb">Светлая</option><option value="auto" selected class="astro-2z5xp7gb">Авто</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script></div></div></div></sl-sidebar-pane></nav><div class="main-frame astro-yntsjkba"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-lrzkfocr"><aside class="right-sidebar-container print:hidden astro-lrzkfocr"><div class="right-sidebar astro-lrzkfocr"><div class="lg:sl-hidden astro-qok35upx"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-66cqc7ze"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-66cqc7ze"><details id="starlight__mobile-toc" class="astro-66cqc7ze"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-66cqc7ze"><span class="toggle sl-flex astro-66cqc7ze">На этой странице<svg aria-hidden="true" class="caret astro-66cqc7ze astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-66cqc7ze"></span></summary><div class="dropdown astro-66cqc7ze"><ul class="isMobile astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Обзор</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#аннотация" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Аннотация</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#1-задача-и-ограничения" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">1. Задача и ограничения</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#2-демонстрационный-проект-единый-сюжет-для-связанных-документов" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">2. Демонстрационный проект: единый сюжет для связанных документов</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#21-фрагмент-договора" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.1. Фрагмент договора</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#22-фрагмент-технического-задания" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.2. Фрагмент технического задания</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#23-фрагмент-программы-и-методики-испытаний" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.3. Фрагмент программы и методики испытаний</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#24-сопутствующие-документы" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.4. Сопутствующие документы</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#3-как-определяется-состав-подлежащих-защите-данных" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">3. Как определяется состав подлежащих защите данных</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#4-внутренняя-таблица-соответствий" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">4. Внутренняя таблица соответствий</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#5-полный-цикл-оригинал--замена--ии--восстановление" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">5. Полный цикл «оригинал — замена — ИИ — восстановление»</span></a><ul class="isMobile astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#51-четыре-состояния-одного-фрагмента" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.1. Четыре состояния одного фрагмента</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#52-пример-учебного-запроса" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.2. Пример учебного запроса</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#53-проверка-целостности" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.3. Проверка целостности</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#6-почему-нельзя-ограничиться-заменой-текста-в-абзацах" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">6. Почему нельзя ограничиться заменой текста в абзацах</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#7-какие-проверки-подтверждают-работу-приложения" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">7. Какие проверки подтверждают работу приложения</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#8-остаточные-риски-которые-сохраняются-после-замены" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">8. Остаточные риски, которые сохраняются после замены</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#9-практический-сценарий-демонстрации-заказчику" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">9. Практический сценарий демонстрации заказчику</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#10-принципы-проектирования-локального-интеллектуального-анонимизатора" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">10. Принципы проектирования локального интеллектуального анонимизатора</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#11-вывод" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">11. Вывод</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#использованные-источники" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Использованные источники</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/alsibir-expert/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-qok35upx"><div class="sl-container astro-qok35upx"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">На этой странице</h2><ul class="astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Обзор</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#аннотация" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Аннотация</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#1-задача-и-ограничения" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">1. Задача и ограничения</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#2-демонстрационный-проект-единый-сюжет-для-связанных-документов" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">2. Демонстрационный проект: единый сюжет для связанных документов</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#21-фрагмент-договора" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.1. Фрагмент договора</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#22-фрагмент-технического-задания" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.2. Фрагмент технического задания</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#23-фрагмент-программы-и-методики-испытаний" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.3. Фрагмент программы и методики испытаний</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#24-сопутствующие-документы" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">2.4. Сопутствующие документы</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#3-как-определяется-состав-подлежащих-защите-данных" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">3. Как определяется состав подлежащих защите данных</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#4-внутренняя-таблица-соответствий" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">4. Внутренняя таблица соответствий</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#5-полный-цикл-оригинал--замена--ии--восстановление" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">5. Полный цикл «оригинал — замена — ИИ — восстановление»</span></a><ul class="astro-jugkfwgx" style="--depth: 1;"><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#51-четыре-состояния-одного-фрагмента" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.1. Четыре состояния одного фрагмента</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#52-пример-учебного-запроса" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.2. Пример учебного запроса</span></a></li><li style="--depth: 1;" class="astro-jugkfwgx"><a href="#53-проверка-целостности" style="--depth: 1;" class="astro-jugkfwgx"><span style="--depth: 1;" class="astro-jugkfwgx">5.3. Проверка целостности</span></a></li></ul></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#6-почему-нельзя-ограничиться-заменой-текста-в-абзацах" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">6. Почему нельзя ограничиться заменой текста в абзацах</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#7-какие-проверки-подтверждают-работу-приложения" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">7. Какие проверки подтверждают работу приложения</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#8-остаточные-риски-которые-сохраняются-после-замены" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">8. Остаточные риски, которые сохраняются после замены</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#9-практический-сценарий-демонстрации-заказчику" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">9. Практический сценарий демонстрации заказчику</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#10-принципы-проектирования-локального-интеллектуального-анонимизатора" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">10. Принципы проектирования локального интеллектуального анонимизатора</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#11-вывод" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">11. Вывод</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#использованные-источники" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Использованные источники</span></a></li></ul></nav></starlight-toc><script type="module" src="/alsibir-expert/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js"></script></div></div></div></aside><div class="main-pane astro-lrzkfocr"><main data-pagefind-body class="astro-g5ptsecz" lang="ru" dir="ltr"><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><h1 id="_top" class="astro-bebwqqxs">Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно</h1><span class="theme-image aps-page-cover"><img class="theme-light" src="/alsibir-expert/images/light/evolution.webp" alt="От бумажного руководства к цифровой документации" loading="lazy" decoding="async" width="1536" height="1024"><img class="theme-dark" src="/alsibir-expert/images/dark/evolution.webp" alt="От бумажного руководства к цифровой документации" loading="lazy" decoding="async" width="1536" height="1024"></span></div></div><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><div class="sl-markdown-content"><div class="sl-blog-metadata not-content astro-zrjirpgi"><div class="sl-blog-metadata-items astro-zrjirpgi"><time class="sl-blog-metadata-date astro-zrjirpgi" datetime="2026-10-09T00:00:00.000Z">Дата публикации</time></div></div><p><em>Сквозной учебный пример обратимой псевдонимизации, обработки текста и контроля результата</em></p>
+<p><strong>Статус примера:</strong> УЧЕБНАЯ ИМИТАЦИЯ. ВЫМЫШЛЕННЫЕ ДАННЫЕ. НЕ ЯВЛЯЕТСЯ СЕКРЕТНЫМ ДОКУМЕНТОМ.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="аннотация">Аннотация</h2><a class="sl-anchor-link" href="#аннотация"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Аннотация»</span></a></div>
+<p>При работе с техническим заданием, договором, программой и методикой испытаний или эксплуатационной документацией возникает практическая задача: использовать возможности искусственного интеллекта для редакционной и аналитической обработки текста, не раскрывая организации, участников, изделия и другие защищаемые сведения. Простая замена названий на «XXX» не решает эту задачу. Необходимо сохранить связи между документами, предусмотреть обратное восстановление обозначений и оценить, какие сведения продолжают раскрываться через содержание, структуру и метаданные.</p>
+<p>В статье приведён <strong>полностью синтетический</strong> сквозной пример: подготовка нескольких связанных документов, локальная замена идентификаторов, формирование безопасного для выбранной модели обработки текста, пример результата ИИ, восстановление исходных обозначений и контроль ошибок. Демонстрируется <strong>проектная логика</strong> локального анонимизатора, а не результаты испытаний конкретной программы: исходный код и протоколы запуска реального приложения для данной публикации не предоставлены.</p>
+<p>Основной вывод: <strong>обратимая замена имён является псевдонимизацией, а не гарантированным устранением конфиденциальности документа</strong>. Передача даже такого текста во внешний сервис допустима только после оценки содержания и при наличии правового и организационного основания.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="1-задача-и-ограничения">1. Задача и ограничения</h2><a class="sl-anchor-link" href="#1-задача-и-ограничения"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «1. Задача и ограничения»</span></a></div>
+<p>В обычной практике техническому писателю требуется проверить однозначность требований, построить матрицу трассировки, нормализовать терминологию и обнаружить противоречия между ТЗ и ПМИ. Искусственный интеллект может существенно ускорить эту работу, но исходный документ часто содержит сведения, которые не должны попадать за пределы контролируемой среды.</p>
+<p>Следует различать три действия:</p>
+<table>
+<thead>
+<tr>
+<th>Действие</th>
+<th>Суть</th>
+<th>Возможно ли восстановление</th>
+<th>Что означает для безопасности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Маскирование</td>
+<td>Замена выбранного фрагмента на условное обозначение</td>
+<td>Зависит от механизма</td>
+<td>Другие идентификаторы и контекст могут сохраняться</td>
+</tr>
+<tr>
+<td>Псевдонимизация</td>
+<td>Замена сущностей устойчивыми токенами, при которой отдельная дополнительная информация позволяет восстановить соответствие</td>
+<td>Да, при наличии защищённого словаря</td>
+<td>Сохраняются связи и часть риска повторной идентификации</td>
+</tr>
+<tr>
+<td>Анонимизация в строгом смысле</td>
+<td>Преобразование, после которого повторная идентификация практически исключена в установленной модели угроз</td>
+<td>Не предполагается</td>
+<td>Требует самостоятельной оценки остаточного риска, а не только замены имён</td>
+</tr>
+<tr>
+<td>Редактирование с удалением</td>
+<td>Исключение выбранных сведений или их обобщение</td>
+<td>Как правило, нет</td>
+<td>Уменьшает информативность; может ухудшить работу ИИ</td>
+</tr>
+<tr>
+<td>Рассекречивание</td>
+<td>Юридически установленная процедура изменения режима охраны сведений</td>
+<td>Не относится к подстановке токенов</td>
+<td><strong>Никакой скрипт замены сам по себе не снимает режим секретности</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Термин «псевдонимизация» в статье применяется как техническое описание обратимого преобразования, в том числе к сведениям об организациях и изделиях; определение применительно к персональным данным приведено в п. 5 ст. 4 GDPR [2]. Подход к оценке остаточного риска соответствует общим принципам NIST SP 800-188 [1].</p>
+<p><strong>Юридическое ограничение.</strong> Для документов, содержащих сведения, составляющие государственную тайну, использование внешнего ИИ нельзя обосновывать одним фактом замены названий. Режим доступа и порядок рассекречивания регулируются законодательством о государственной тайне [3]. Аналогично оцениваются ограничения по коммерческой тайне, персональным данным и договорным обязательствам. В данной публикации исходники заведомо вымышленные и не содержат сведений ограниченного доступа.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="2-демонстрационный-проект-единый-сюжет-для-связанных-документов">2. Демонстрационный проект: единый сюжет для связанных документов</h2><a class="sl-anchor-link" href="#2-демонстрационный-проект-единый-сюжет-для-связанных-документов"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «2. Демонстрационный проект: единый сюжет для связанных документов»</span></a></div>
+<p>Используются вымышленные организации и изделие:</p>
+<ul>
+<li><strong>Заказчик:</strong> НПО «Кромешные секреты».</li>
+<li><strong>Исполнитель:</strong> ПО «Абсолютно секретно».</li>
+<li><strong>Изделие:</strong> учебная система «Лабиринт-7», регистрирующая состояние макета климатической установки.</li>
+<li><strong>Договор:</strong> № КС-АС/26-017 от 15.06.2026.</li>
+<li><strong>Предмет работ:</strong> поставка демонстрационного программного комплекса и проведение приёмочных испытаний.</li>
+<li><strong>Объём:</strong> 12 учебных каналов измерений.</li>
+<li><strong>Срок завершения:</strong> 30.09.2026.</li>
+<li><strong>Стоимость:</strong> 4 800 000 условных рублей; суммы не связаны ни с какой реальной сделкой.</li>
+<li><strong>Условный ответственный за испытания:</strong> Ирина Полынцева, персонаж учебного досье.</li>
+</ul>
+<p>Параметры специально подобраны так, чтобы показать как прямые, так и косвенные утечки. В реальном проекте даже сочетание срока, количества каналов, стоимости и назначения может иметь охраняемый характер.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="21-фрагмент-договора">2.1. Фрагмент договора</h3><a class="sl-anchor-link" href="#21-фрагмент-договора"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «2.1. Фрагмент договора»</span></a></div>
+<blockquote>
+<p><strong>УЧЕБНАЯ ИМИТАЦИЯ.</strong> НПО «Кромешные секреты» поручает ПО «Абсолютно секретно» поставку системы «Лабиринт-7» в составе 12 каналов измерений в соответствии с ТЗ-01. Стоимость работ по договору № КС-АС/26-017 составляет 4 800 000 условных рублей. Передача результата и завершение испытаний выполняются не позднее 30.09.2026.</p>
+</blockquote>
+<p>Для демонстрации достаточно этого фрагмента. Он содержит названия сторон, обозначение изделия, реквизит договора, количество, срок и сумму. Замена только наименований организаций оставит существенные сведения о проекте в открытом виде.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="22-фрагмент-технического-задания">2.2. Фрагмент технического задания</h3><a class="sl-anchor-link" href="#22-фрагмент-технического-задания"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «2.2. Фрагмент технического задания»</span></a></div>
+<blockquote>
+<p><strong>ТЗ-01, требование R-01.</strong> Система «Лабиринт-7» должна принимать сообщения от 12 учебных каналов измерений и регистрировать результаты в журнале событий.</p>
+<p><strong>ТЗ-01, требование R-02.</strong> Время отображения принятого сообщения в интерфейсе оператора не должно превышать 250 мс в условиях испытаний, определённых ПМИ-01.</p>
+<p><strong>ТЗ-01, требование R-03.</strong> При разрыве соединения должна выполняться локальная буферизация событий с последующей синхронизацией.</p>
+</blockquote>
+<p>Здесь появляются технические параметры и информация об архитектуре. Следовательно, правило «заменить только имена собственные» недостаточно.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="23-фрагмент-программы-и-методики-испытаний">2.3. Фрагмент программы и методики испытаний</h3><a class="sl-anchor-link" href="#23-фрагмент-программы-и-методики-испытаний"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «2.3. Фрагмент программы и методики испытаний»</span></a></div>
+<blockquote>
+<p><strong>ПМИ-01, испытание T-01, проверка R-01.</strong> Подать на 12 входных каналов последовательность учебных сигналов. Проверить наличие записи для каждого канала.</p>
+<p><strong>ПМИ-01, испытание T-02, проверка R-02.</strong> Сформировать 100 тестовых событий; подтвердить, что время отображения каждого события не превышает 250 мс.</p>
+<p><strong>ПМИ-01, испытание T-03, проверка R-03.</strong> Прервать соединение на 60 с и подтвердить сохранность сообщений после возобновления обмена.</p>
+</blockquote>
+<div class="sl-heading-wrapper level-h3"><h3 id="24-сопутствующие-документы">2.4. Сопутствующие документы</h3><a class="sl-anchor-link" href="#24-сопутствующие-документы"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «2.4. Сопутствующие документы»</span></a></div>
+<table>
+<thead>
+<tr>
+<th>Документ</th>
+<th>Учебное содержание</th>
+<th>Особенность обезличивания</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Протокол ПР-01</td>
+<td>Результаты T-01—T-03, номера дефектов</td>
+<td>Не оставлять реальные диагностические строки или внутренние пути</td>
+</tr>
+<tr>
+<td>Спецификация СП-01</td>
+<td>12 каналов, модуль сбора, сервер, АРМ</td>
+<td>Комбинация компонентов может указывать на назначение</td>
+</tr>
+<tr>
+<td>Акт АК-01</td>
+<td>Стороны, основание, дата приёмки</td>
+<td>Сохранять юридическую роль сторон, не реальные реквизиты</td>
+</tr>
+<tr>
+<td>Служебная записка СЗ-01</td>
+<td>Замечания к требованиям R-02, R-03</td>
+<td>В тексте могут сохраняться сведения о недостатках</td>
+</tr>
+<tr>
+<td>Письмо ПС-01</td>
+<td>Адресат, отправитель, название изделия</td>
+<td>Контролировать подписи, вложения и цепочку ответов</td>
+</tr>
+<tr>
+<td>Ведомость ВД-01</td>
+<td>Комплект и номера редакций</td>
+<td>Выявлять избыточную детализацию состава поставки</td>
+</tr>
+</tbody>
+</table>
+<p>Формальные обозначения здесь учебные; приведённые фрагменты не объявляются комплектом документов, прошедшим нормоконтроль по конкретному ГОСТ. Для рабочего комплекта применимая система стандартов и полнота обязательных разделов устанавливаются отдельно.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="3-как-определяется-состав-подлежащих-защите-данных">3. Как определяется состав подлежащих защите данных</h2><a class="sl-anchor-link" href="#3-как-определяется-состав-подлежащих-защите-данных"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «3. Как определяется состав подлежащих защите данных»</span></a></div>
+<p>Детектор должен анализировать не только фамилии и названия, но и <strong>классы содержания</strong>. Предварительное решение об обработке принимается на основании политики допуска.</p>
+<table>
+<thead>
+<tr>
+<th>Класс</th>
+<th>Пример</th>
+<th>Предлагаемый режим</th>
+<th>Причина</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Организация</td>
+<td>НПО «Кромешные секреты»</td>
+<td>Устойчивый токен в рамках согласованного комплекта</td>
+<td>Сохраняются договорные роли</td>
+</tr>
+<tr>
+<td>Изделие</td>
+<td>«Лабиринт-7»</td>
+<td>Устойчивый токен</td>
+<td>Сохраняются ссылки ТЗ—ПМИ</td>
+</tr>
+<tr>
+<td>Физическое лицо</td>
+<td>Ирина Полынцева</td>
+<td>Токен или удаление</td>
+<td>Личность не нужна для языковой правки</td>
+</tr>
+<tr>
+<td>Номер договора</td>
+<td>КС-АС/26-017</td>
+<td>Токен</td>
+<td>Исключается прямое сопоставление с внешними записями</td>
+</tr>
+<tr>
+<td>Дата</td>
+<td>30.09.2026</td>
+<td>Токен либо обобщение «конец квартала»</td>
+<td>Дата может быть уникальным признаком</td>
+</tr>
+<tr>
+<td>Сумма</td>
+<td>4 800 000</td>
+<td>Токен или диапазон</td>
+<td>Стоимость раскрывает масштаб</td>
+</tr>
+<tr>
+<td>Количество</td>
+<td>12 каналов</td>
+<td>Токен либо «несколько каналов»</td>
+<td>Количество характеризует конструкцию</td>
+</tr>
+<tr>
+<td>Порог</td>
+<td>250 мс</td>
+<td>Токен или допустимый условный параметр</td>
+<td>Число может раскрыть свойства системы</td>
+</tr>
+<tr>
+<td>Архитектура</td>
+<td>Локальная буферизация</td>
+<td>Редактирование по политике</td>
+<td>Даже без имён раскрывается функциональная особенность</td>
+</tr>
+<tr>
+<td>Трассировка</td>
+<td>R-02 ↔ T-02</td>
+<td>Сохранить или переобозначить единым образом</td>
+<td>Требуется для контроля испытаний</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Важно:</strong> сохранение точных чисел, дат, топологии или необычных сочетаний разрешается только при наличии отдельного решения об их допустимости. Замена одного имени не делает оставшийся абзац безопасным для внешнего сервиса.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="4-внутренняя-таблица-соответствий">4. Внутренняя таблица соответствий</h2><a class="sl-anchor-link" href="#4-внутренняя-таблица-соответствий"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «4. Внутренняя таблица соответствий»</span></a></div>
+<p>При обратимой обработке создаётся словарь «исходное значение — токен». Он должен храниться <strong>локально</strong> и быть отделён от текста, передаваемого на внешнюю обработку.</p>
+<p><strong>Таблица 1 — Пример соответствий (только вымышленные данные)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Исходное значение</th>
+<th>Класс</th>
+<th>Токен</th>
+<th>Правило</th>
+<th>Обратимо</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>НПО «Кромешные секреты»</td>
+<td>Организация</td>
+<td><code dir="auto">[ОРГ_001]</code></td>
+<td>Стабильность в рамках учебного досье</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>ПО «Абсолютно секретно»</td>
+<td>Организация</td>
+<td><code dir="auto">[ОРГ_002]</code></td>
+<td>Стабильность в рамках учебного досье</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>«Лабиринт-7»</td>
+<td>Изделие</td>
+<td><code dir="auto">[ИЗДЕЛИЕ_001]</code></td>
+<td>Сохранять ссылки между файлами</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>КС-АС/26-017</td>
+<td>Договор</td>
+<td><code dir="auto">[ДОГОВОР_001]</code></td>
+<td>Не подменять номера других договоров</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Ирина Полынцева</td>
+<td>Лицо</td>
+<td><code dir="auto">[ЛИЦО_001]</code></td>
+<td>Обрабатывать падежные формы</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>30.09.2026</td>
+<td>Дата</td>
+<td><code dir="auto">[ДАТА_001]</code></td>
+<td>Не оставлять дату в имени файла</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>4 800 000 условных рублей</td>
+<td>Сумма</td>
+<td><code dir="auto">[СУММА_001]</code></td>
+<td>Обрабатывать варианты записи числа</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>12 учебных каналов</td>
+<td>Количество</td>
+<td><code dir="auto">[КОЛ_001]</code></td>
+<td>Согласовывать склонение в предложении</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>250 мс</td>
+<td>Параметр</td>
+<td><code dir="auto">[ПАРАМЕТР_001]</code></td>
+<td>Не раскрывать порог через другие таблицы</td>
+<td>Да</td>
+</tr>
+<tr>
+<td>Сведения о конкретной топологии</td>
+<td>Содержание</td>
+<td><code dir="auto">[ФРАГМЕНТ_УДАЛЕН]</code></td>
+<td>Необратимое редакционное удаление</td>
+<td>Нет</td>
+</tr>
+</tbody>
+</table>
+<p>В промышленном варианте у каждой записи целесообразно предусмотреть идентификатор набора, версию словаря, тип сущности, диапазон применения и контроль согласованности. Токен не должен содержать реальное имя, узнаваемый фрагмент обозначения, контрольную сумму исходной строки, позволяющую выполнять простое словарное угадывание, или иные подсказки. При передаче разных материалов во внешний сервис необходимо отдельно оценивать риск корреляции, создаваемый устойчивыми токенами.</p>
+<p><strong>Техническое требование:</strong> словарь соответствий, криптографические ключи и исходные защищаемые файлы не передаются модели и не включаются в системный запрос. Для реального решения необходимы шифрование словаря в состоянии хранения, управление ключами, ограничение доступа, контроль резервных копий и безопасная обработка сбоев. Наличие этих функций в конкретном приложении требует подтверждения испытаниями.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="5-полный-цикл-оригинал--замена--ии--восстановление">5. Полный цикл «оригинал — замена — ИИ — восстановление»</h2><a class="sl-anchor-link" href="#5-полный-цикл-оригинал--замена--ии--восстановление"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «5. Полный цикл «оригинал — замена — ИИ — восстановление»»</span></a></div>
+<p>Рассматриваются <strong>две разные архитектуры</strong>.</p>
+<ol>
+<li><strong>Полностью локальная обработка:</strong> исходный документ, обнаружение сущностей, словарь и локальная языковая модель находятся в установленной доверенной среде. Отсутствие внешнего ИИ не освобождает от проверки телеметрии, сторонних служб и журналов.</li>
+<li><strong>Обработка с внешним ИИ:</strong> исходный документ и словарь остаются локально; за границу доверия передаётся только специально подготовленный <strong>разрешённый</strong> фрагмент. Передача прекращается, если правила допуска не выполнены.</li>
+</ol>
+<p><strong>Рисунок 1 — Условная последовательность обработки</strong></p>
+<div class="expressive-code"><link rel="stylesheet" href="/alsibir-expert/_astro/ec.w36nc.css"><script type="module" src="/alsibir-expert/_astro/ec.0vx5m.js"></script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="mermaid"><code><div class="ec-line"><div class="code"><span style="--0:#C792EA;--1:#8844AE">flowchart</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">TD</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">A</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Синтетический исходный документ</span><span style="--0:#C792EA;--1:#8844AE">]</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">B</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Локальный анализ и классификация</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">B </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">C</span><span style="--0:#C792EA;--1:#8844AE">{</span><span style="--0:#ECC48D;--1:#3B61B0">Все существенные сведения обработаны?</span><span style="--0:#C792EA;--1:#8844AE">}</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">C </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Нет </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">X</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Остановка и ручная проверка</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">C </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Да </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">D</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Псевдонимизированная копия</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">B </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">K</span><span style="--0:#C792EA;--1:#8844AE">[(</span><span style="--0:#ECC48D;--1:#3B61B0">Локальный защищённый словарь</span><span style="--0:#C792EA;--1:#8844AE">)]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">D </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">E</span><span style="--0:#C792EA;--1:#8844AE">{</span><span style="--0:#ECC48D;--1:#3B61B0">Разрешена внешняя передача?</span><span style="--0:#C792EA;--1:#8844AE">}</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">E </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Нет </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">L</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Только локальная обработка</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">E </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Да </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">F</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Внешний ИИ: только допустимый текст</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">F </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">G</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Контроль результата и токенов</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">L </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">G</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">G </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">H</span><span style="--0:#C792EA;--1:#8844AE">{</span><span style="--0:#ECC48D;--1:#3B61B0">Ответ принят?</span><span style="--0:#C792EA;--1:#8844AE">}</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">H </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Нет </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">X</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">H </span><span style="--0:#C792EA;--1:#8844AE">--</span><span style="--0:#ECC48D;--1:#3B61B0"> Да </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">I</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Локальное восстановление</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">K </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">I</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#C5E478;--1:#3B61B0">I </span><span style="--0:#C792EA;--1:#8844AE">--&gt;</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">J</span><span style="--0:#C792EA;--1:#8844AE">[</span><span style="--0:#ECC48D;--1:#3B61B0">Смысловая и документная проверка</span><span style="--0:#C792EA;--1:#8844AE">]</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Копировать" data-copied="Скопировано!" data-code="flowchart TD    A[Синтетический исходный документ] --> B[Локальный анализ и классификация]    B --> C{Все существенные сведения обработаны?}    C -- Нет --> X[Остановка и ручная проверка]    C -- Да --> D[Псевдонимизированная копия]    B --> K[(Локальный защищённый словарь)]    D --> E{Разрешена внешняя передача?}    E -- Нет --> L[Только локальная обработка]    E -- Да --> F[Внешний ИИ: только допустимый текст]    F --> G[Контроль результата и токенов]    L --> G    G --> H{Ответ принят?}    H -- Нет --> X    H -- Да --> I[Локальное восстановление]    K --> I    I --> J[Смысловая и документная проверка]"><div></div></button></div></figure></div>
+<p>Схема отражает желаемое поведение разрабатываемого решения; существование перечисленных механизмов в конкретном скрипте не подтверждалось. Исходные данные, ключи и локальный словарь не должны пересекать границу доверия внешнего сервиса.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="51-четыре-состояния-одного-фрагмента">5.1. Четыре состояния одного фрагмента</h3><a class="sl-anchor-link" href="#51-четыре-состояния-одного-фрагмента"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «5.1. Четыре состояния одного фрагмента»</span></a></div>
+<p><strong>Таблица 2 — Основная сравнительная таблица</strong></p>
+<table>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Текст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Исходный учебный текст</td>
+<td>«Система „Лабиринт-7“ должна принимать сообщения от 12 учебных каналов измерений. Испытание выполняет Ирина Полынцева».</td>
+</tr>
+<tr>
+<td>2. После локальной замены</td>
+<td>«Система <code dir="auto">[ИЗДЕЛИЕ_001]</code> должна принимать сообщения от <code dir="auto">[КОЛ_001]</code>. Испытание выполняет <code dir="auto">[ЛИЦО_001]</code>».</td>
+</tr>
+<tr>
+<td>3. Иллюстративный результат ИИ</td>
+<td>«Система <code dir="auto">[ИЗДЕЛИЕ_001]</code> должна обеспечивать приём сообщений от <code dir="auto">[КОЛ_001]</code>. Проверку выполнения требования проводит <code dir="auto">[ЛИЦО_001]</code>».</td>
+</tr>
+<tr>
+<td>4. После локального восстановления</td>
+<td>«Система „Лабиринт-7“ должна обеспечивать приём сообщений от 12 учебных каналов измерений. Проверку выполнения требования проводит Ирина Полынцева».</td>
+</tr>
+</tbody>
+</table>
+<p>В третьей строке приведён <strong>вручную подготовленный иллюстративный вариант ответа</strong>, а не зарегистрированный ответ внешнего ИИ. Цель таблицы — пояснить принцип восстановления.</p>
+<p>Отдельного контроля требует изменение глагола «принимать» на «обеспечивать приём»: оно может быть редакционно допустимым, но решение должно приниматься с учётом спецификации требования. Автоматическое восстановление токенов не доказывает смысловую корректность переработанного текста.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="52-пример-учебного-запроса">5.2. Пример учебного запроса</h3><a class="sl-anchor-link" href="#52-пример-учебного-запроса"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «5.2. Пример учебного запроса»</span></a></div>
+<blockquote>
+<p>Выполнить редакционную проверку требования R-01. Сохранить токены <code dir="auto">[ИЗДЕЛИЕ_001]</code> и <code dir="auto">[КОЛ_001]</code> <strong>без изменений</strong>, не добавлять новые токены, не угадывать исходные наименования. Предложить одну формулировку требования и отдельно перечислить неоднозначности. Исходный фрагмент: «Система <code dir="auto">[ИЗДЕЛИЕ_001]</code> должна принимать сообщения от <code dir="auto">[КОЛ_001]</code>».</p>
+</blockquote>
+<p>Рекомендуемая структура ответа: исправленный текст, пояснение правок, перечень обнаруженных неоднозначностей и признак отсутствия исходных данных для количественной проверки. Даже при таком запросе ответ нельзя принимать без локальной валидации: языковая модель может изменить, пропустить или выдумать маркер.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="53-проверка-целостности">5.3. Проверка целостности</h3><a class="sl-anchor-link" href="#53-проверка-целостности"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «5.3. Проверка целостности»</span></a></div>
+<p>Перед восстановлением необходимо проверить:</p>
+<ul>
+<li>каждый обнаруженный маркер принадлежит текущему набору и имеет запись в словаре;</li>
+<li>написание маркеров соответствует точному формату, например <code dir="auto">[ИЗДЕЛИЕ_001]</code>, а не <code dir="auto">[ИЗДЕЛИЕ-001]</code>;</li>
+<li>отсутствуют новые неожиданные обозначения и фрагменты исходных конфиденциальных данных;</li>
+<li>сохранена допустимая связь R-01—T-01, R-02—T-02, R-03—T-03;</li>
+<li>даты, единицы измерения, роли сторон и ссылки не изменены без согласованного основания;</li>
+<li>в выходных файлах отсутствуют необработанные метаданные, комментарии, встроенные объекты и другие скрытые носители информации.</li>
+</ul>
+<p><strong>Политика отказа:</strong> неизвестный токен, повреждение словаря, расхождение идентификаторов или неподтверждённое содержание приводят к отказу от автоматического выпуска, а не к «приблизительному восстановлению по догадке».</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="6-почему-нельзя-ограничиться-заменой-текста-в-абзацах">6. Почему нельзя ограничиться заменой текста в абзацах</h2><a class="sl-anchor-link" href="#6-почему-нельзя-ограничиться-заменой-текста-в-абзацах"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «6. Почему нельзя ограничиться заменой текста в абзацах»</span></a></div>
+<p>Документ — не только последовательность видимых символов. При работе с DOCX, PDF, TXT и MD необходимо отдельно контролировать следующие области.</p>
+<p><strong>Таблица 3 — Области проверки форматов</strong></p>
+<table>
+<thead>
+<tr>
+<th>Формат</th>
+<th>Что проверять</th>
+<th>Типовая опасность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOCX</td>
+<td>Основной текст, таблицы, колонтитулы, сноски, комментарии, отслеживаемые изменения, поля, свойства, скрытый текст, встроенные объекты</td>
+<td>Видимый текст изменён, но исходное значение осталось в XML-пакете, комментарии или изображении</td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>Текстовый слой, изображения, аннотации, вложения, закладки, свойства файла, скрытые слои</td>
+<td>Внешне закрытый участок текста продолжает извлекаться программно; скан не обработан</td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>Кодировка, управляющие символы, переносы, содержимое и имя файла</td>
+<td>Появляются пропуски из-за разных вариантов написания</td>
+</tr>
+<tr>
+<td>MD</td>
+<td>Текст, YAML-шапка, комментарии, изображения, ссылки, адреса, фрагменты кода, имена вложений</td>
+<td>Наименование или адрес остался в URL, пути или блоке метаданных</td>
+</tr>
+</tbody>
+</table>
+<p>Использование OCR допускается только после определения состава сканов и анализа его точности. Если в изображении может находиться защищаемый текст, а средство не гарантирует его выявление, передача такого файла блокируется до ручной проверки.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="7-какие-проверки-подтверждают-работу-приложения">7. Какие проверки подтверждают работу приложения</h2><a class="sl-anchor-link" href="#7-какие-проверки-подтверждают-работу-приложения"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «7. Какие проверки подтверждают работу приложения»</span></a></div>
+<p>Достоверный рассказ о реальном скрипте должен включать протокол испытаний. Для рассматриваемого проекта такие протоколы <strong>не предоставлены</strong>, поэтому значения производительности, точности обнаружения, отсутствия сетевых обращений или корректности поддержки форматов не приводятся.</p>
+<p><strong>Таблица 4 — Обязательная программа испытаний (план; не результаты)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Идентификатор</th>
+<th>Испытание</th>
+<th>Ожидаемый критерий</th>
+<th>Статус</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AT-01</td>
+<td>Повторяющиеся названия в договоре, ТЗ и ПМИ</td>
+<td>Один токен в заданной области обработки</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-02</td>
+<td>Склонения и сокращения</td>
+<td>Нет пропущенных форм без регистрации исключений</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-03</td>
+<td>Похожие обозначения</td>
+<td>Отсутствуют коллизии и неверные подстановки</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-04</td>
+<td>DOCX со сноской и комментариями</td>
+<td>Защищаемые сведения удалены из всех проверяемых частей</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-05</td>
+<td>PDF со сканированным листом</td>
+<td>Файл отклонён либо изображение надёжно обработано</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-06</td>
+<td>MD с YAML и ссылками</td>
+<td>Прямые идентификаторы отсутствуют в метаданных и адресах</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-07</td>
+<td>Неизвестный или испорченный токен</td>
+<td>Восстановление блокируется с диагностикой</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-08</td>
+<td>Отсутствие ключа, сбой шифрования</td>
+<td>Безопасный отказ без выпуска некорректного файла</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-09</td>
+<td>Разрыв процесса, повторный запуск</td>
+<td>Нет частично выпущенных файлов; состояние согласовано</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-10</td>
+<td>Локальный режим без сети</td>
+<td>При наблюдении не выявлено запрещённых сетевых передач</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-11</td>
+<td>Журналы, кэш, резервные копии</td>
+<td>Исходные значения не появляются вне разрешённых хранилищ</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-12</td>
+<td>Изменение ИИ идентификатора R-02</td>
+<td>Результат отклонён или отправлен на ручное согласование</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-13</td>
+<td>Число скрыто, но раскрыто формулой</td>
+<td>Не проходит контроль косвенного раскрытия</td>
+<td>Не проводилось</td>
+</tr>
+<tr>
+<td>AT-14</td>
+<td>Обратное восстановление</td>
+<td>Все восстанавливаемые значения совпадают с эталоном</td>
+<td>Не проводилось</td>
+</tr>
+</tbody>
+</table>
+<p>Измеряемые показатели: полнота обнаружения, доля ложных обнаружений, доля пропусков по типам носителей, целостность токенов, сохранность трассировки, число ручных исправлений, количество нарушений политики допуска и время работы. До проведения испытаний не следует заявлять «100 % точности» либо «гарантированное отсутствие утечек».</p>
+<p>Для режима без сети отдельно проверяются соединения приложения и зависимостей, активные сетевые интерфейсы, телеметрия операционной системы и сторонние плагины. Отсутствие сетевого пакета в ограниченном эксперименте подтверждает только <strong>границы данного эксперимента</strong>, а не математическую невозможность передачи при иных условиях.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="8-остаточные-риски-которые-сохраняются-после-замены">8. Остаточные риски, которые сохраняются после замены</h2><a class="sl-anchor-link" href="#8-остаточные-риски-которые-сохраняются-после-замены"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «8. Остаточные риски, которые сохраняются после замены»</span></a></div>
+<p>Оставленный документ может продолжать сообщать постороннему наблюдателю о классе системы, количестве каналов, графике испытаний, функциональных ограничениях и отношениях между сторонами. Устойчивые токены сохраняют граф связей между материалами. Наконец, свойства документа, имена файлов и история запросов способны раскрыть дополнительный контекст.</p>
+<p>Для снижения риска следует применять минимизацию содержимого по задаче: для редакционной проверки грамматики не требуется отправлять стоимость, состав поставки или сведения об архитектуре. Для построения матрицы трассировки может потребоваться сохранять идентификаторы R-01 и T-01, но не реальные наименования изделий. Если нужный результат достижим только посредством раскрытия защищаемых признаков, внешняя обработка исключается.</p>
+<p>Подробная систематизация этих рисков приведена в связанной публикации <a href="/alsibir-expert/blog/security/02_residual_disclosure_risks/">«Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки»</a>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="9-практический-сценарий-демонстрации-заказчику">9. Практический сценарий демонстрации заказчику</h2><a class="sl-anchor-link" href="#9-практический-сценарий-демонстрации-заказчику"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «9. Практический сценарий демонстрации заказчику»</span></a></div>
+<ol>
+<li><strong>Подготовить комплект:</strong> договор, ТЗ, ПМИ, протокол, акт, спецификацию и дополнительные учебные файлы. Каждый пометить как синтетический.</li>
+<li><strong>Зафиксировать конфигурацию:</strong> ОС, версию приложения, перечень зависимостей, режим сети, контрольные суммы файлов и политику допустимых классов данных.</li>
+<li><strong>Выполнить предварительное обнаружение:</strong> показать список объектов и принять решения по неопределённым находкам. Не переписывать исходники.</li>
+<li><strong>Создать копию и словарь:</strong> сформировать токены и локальную таблицу соответствий с контролем повторяемости сущностей.</li>
+<li><strong>Проверить полноту:</strong> просмотреть текст, метаданные, скрытые объекты, таблицы, вложения и имена файлов. Выявленные неопределённости устранить до передачи.</li>
+<li><strong>Проверить допустимость:</strong> определить, разрешён ли выбранный обезличенный фрагмент для внешней обработки. При отказе использовать согласованную локальную модель либо ручную работу.</li>
+<li><strong>Показать запрос и ответ:</strong> на исключительно учебном содержании продемонстрировать правку требования или построение матрицы R—T.</li>
+<li><strong>Проверить токены:</strong> обнаружить удаления, изменения, чужие маркеры, вымышленные требования и смысловые искажения.</li>
+<li><strong>Выполнить локальное восстановление:</strong> подставить исходные значения только по защищённому словарю.</li>
+<li><strong>Провести финальную проверку:</strong> сравнить исходные и итоговые документы; отдельно зафиксировать сделанные ИИ редакционные изменения.</li>
+</ol>
+<p><strong>Критерий успешного показа:</strong> заказчик получает не утверждение об «абсолютной безопасности», а проверяемую цепочку файлов, протоколов контроля, выявленных ограничений и обоснований допустимости. Если реальные результаты проверки скрипта отсутствуют, демонстрация должна называться концептуальной.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="10-принципы-проектирования-локального-интеллектуального-анонимизатора">10. Принципы проектирования локального интеллектуального анонимизатора</h2><a class="sl-anchor-link" href="#10-принципы-проектирования-локального-интеллектуального-анонимизатора"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «10. Принципы проектирования локального интеллектуального анонимизатора»</span></a></div>
+<p>Продукт, предназначенный для обработки технических документов, целесообразно строить из независимых компонентов: извлечение данных и инвентаризация содержимого; выявление именованных и предметных сущностей; правила классификации; контекстно-зависимое преобразование; защищённое хранение соответствий; контроль остаточных сведений; шлюз допуска; валидация ответа; обратное восстановление; аудит действий. Для каждого компонента требуется своя спецификация и набор испытаний.</p>
+<p>Интеллектуальный классификатор может помогать выявлять нестандартные обозначения, вложенные наименования и смысловые признаки. Однако его решение не следует считать окончательным для документов с высокой ценой утечки. Предварительный просмотр, ручное подтверждение сомнительных случаев и политика запрета на выпуск при ошибке необходимы независимо от выбранного алгоритма.</p>
+<p>Возможность запуска через контекстное меню файлового менеджера повышает удобство, но не заменяет функции защиты. В частности, интерфейс не должен автоматически отправлять файлы в облако, записывать исходный текст в диагностические журналы либо хранить ключ дешифрования в одном открытом каталоге со словарём.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="11-вывод">11. Вывод</h2><a class="sl-anchor-link" href="#11-вывод"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «11. Вывод»</span></a></div>
+<p>Безопасная редакционная работа с ИИ начинается не с подстановки маркеров, а с установления границы доверия и допустимого содержания запроса. Обратимая псевдонимизация удобна: она сохраняет обозначения объектов и помогает переносить результат обработки обратно в технический документ. Но она не отменяет требований по защите исходной информации и не устраняет косвенное раскрытие через числовые, временные, структурные и технические особенности.</p>
+<p><strong>Профессионально обоснованное решение</strong> должно показывать четыре состояния текста, защищённый механизм соответствий, правила допуска, автоматические проверки, обработку ошибок и фактические протоколы испытаний. Пока испытания конкретного анонимизатора не выполнены, допустимо демонстрировать только проектную схему и учебные данные, не приписывая скрипту неподтверждённые свойства.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="использованные-источники">Использованные источники</h2><a class="sl-anchor-link" href="#использованные-источники"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Заголовок раздела «Использованные источники»</span></a></div>
+<ol>
+<li>NIST SP 800-188. <em>De-Identifying Government Datasets: Techniques and Governance</em>. 2023. <a href="https://csrc.nist.gov/pubs/sp/800/188/final">https://csrc.nist.gov/pubs/sp/800/188/final</a>.</li>
+<li>Regulation (EU) 2016/679 (GDPR), Article 4(5): definition of pseudonymisation. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679">https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679</a>.</li>
+<li>Закон РФ от 21.07.1993 № 5485-1 «О государственной тайне», в частности положения о порядке рассекречивания. <a href="https://www.consultant.ru/document/cons_doc_LAW_2481/">https://www.consultant.ru/document/cons_doc_LAW_2481/</a>.</li>
+<li>OWASP. <em>LLM02:2025 Sensitive Information Disclosure</em>. <a href="https://owasp.github.io/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM02_SensitiveInformationDisclosure.html">https://owasp.github.io/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM02_SensitiveInformationDisclosure.html</a>.</li>
+</ol>
+<p><em>Дата подготовки редакции — 09.10.2026. Ссылки на источники требуют обычной заключительной проверки перед размещением на публичном сайте.</em></p>
+<div class="sl-blog-post-footer astro-gx5dlkfr"><div class="sl-blog-tags astro-xesoswnh"><b class="sl-blog-tags-label astro-xesoswnh">Темы публикации</b><ul class="sl-blog-tags-list astro-xesoswnh"><li class="astro-xesoswnh"><a class="sl-blog-tag astro-xesoswnh" href="/alsibir-expert/blog/tags/безопасность/">Безопасность</a></li><li class="astro-xesoswnh"><a class="sl-blog-tag astro-xesoswnh" href="/alsibir-expert/blog/tags/ии/">ИИ</a></li></ul></div><div class="sl-blog-pagination astro-nhmjxwsg" data-pagefind-ignore><div class="card-grid astro-7qmvx3iy"><div class="sl-link-card astro-zaaezwya"><span class="sl-flex stack astro-zaaezwya"><a href="/alsibir-expert/blog/standards/gost-updates/" rel="prev" class="astro-nhmjxwsg astro-zaaezwya"><span class="title astro-zaaezwya">Как отслеживать изменения технических стандартов</span></a></span><svg aria-hidden="true" class="icon rtl:flip astro-zaaezwya astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg></div><div class="sl-link-card astro-zaaezwya"><span class="sl-flex stack astro-zaaezwya"><a href="/alsibir-expert/blog/security/02_residual_disclosure_risks/" rel="next" class="astro-nhmjxwsg astro-zaaezwya"><span class="title astro-zaaezwya">Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки</span></a></span><svg aria-hidden="true" class="icon rtl:flip astro-zaaezwya astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.333em;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg></div></div></div></div></div><!-- Yandex.Metrika counter (noscript) --><noscript><div><img src="https://mc.yandex.ru/watch/113951982" style="position:absolute; left:-9999px;" alt=""></div></noscript><!-- /Yandex.Metrika counter (noscript) --><footer class="sl-flex astro-ddtxxk7k"><div class="meta sl-flex astro-ddtxxk7k"></div><div class="pagination-links print:hidden astro-b5raizh3" dir="ltr"></div></footer><div class="aps-footer"><div><a class="aps-brand" href="/alsibir-expert/" aria-label="AlSibir — на главную"><img class="theme-light" src="/alsibir-expert/img/logo-light.svg" width="320" height="66" alt="AlSibir — технический писатель и аналитик"><img class="theme-dark" src="/alsibir-expert/img/logo-dark.svg" width="320" height="66" alt="AlSibir — технический писатель и аналитик"></a><p>Александр Сибиряков<br>Техническая документация и системный анализ</p></div><nav aria-label="Навигация в подвале"><a href="/alsibir-expert/wiki/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/documentation-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/documentation-dark.svg" width="24" height="24" alt=""></span>База знаний</a><a href="/alsibir-expert/wiki/pages/about/">О специалисте</a><a href="/alsibir-expert/wiki/pages/portfolio/">Портфолио</a><a href="/alsibir-expert/wiki/pages/sitemap/"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/menu-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/menu-dark.svg" width="24" height="24" alt=""></span>Карта сайта</a><a href="/alsibir-expert/wiki/pages/pp/">Конфиденциальность</a></nav><div class="aps-footer-links"><a href="/alsibir-expert/CV/alexander-sibiryakov-cv.pdf"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/download-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/download-dark.svg" width="24" height="24" alt=""></span>Резюме PDF</a><a href="/alsibir-expert/examples/portfolio-samples.zip"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/download-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/download-dark.svg" width="24" height="24" alt=""></span>Примеры работ</a><a href="mailto:wordmaster@textpro-1.ru"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/email-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/email-dark.svg" width="24" height="24" alt=""></span>Написать</a><a href="#_top"><span class="nav-icon" aria-hidden="true"><img class="theme-light" src="/alsibir-expert/img/back-light.svg" width="24" height="24" alt=""><img class="theme-dark" src="/alsibir-expert/img/back-dark.svg" width="24" height="24" alt=""></span>К началу страницы</a></div></div></div></div></main></div></div></div></div></body></html>

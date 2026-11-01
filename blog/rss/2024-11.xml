@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:fh="http://purl.org/syndication/history/1.0"><channel><title>AlSibir — документация и анализ | Блог</title><description>Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы</description><link>https://alsibir.github.io/</link><language>ru</language><fh:archive/><atom:link rel="current" href="https://alsibir.github.io/alsibir-expert/blog/rss.xml"/><atom:link rel="self" href="https://alsibir.github.io/alsibir-expert/blog/rss/2024-11.xml"/><atom:link rel="prev-archive" href="https://alsibir.github.io/alsibir-expert/blog/rss/2024-10.xml"/><atom:link rel="next-archive" href="https://alsibir.github.io/alsibir-expert/blog/rss/2024-12.xml"/><item><title>Имена файлов, совместимые с Windows и Linux</title><link>https://alsibir.github.io/alsibir-expert/blog/automation/filename-portability/</link><guid isPermaLink="true">https://alsibir.github.io/alsibir-expert/blog/automation/filename-portability/</guid><description>В проектах, которые перемещаются между Windows, Linux и USB-носителями, имена файлов влияют на надёжность сборки и ссылок.</description><pubDate>Mon, 25 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;!-- SYNTHETIC_DATE_FOR_DEMO --&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Условная дата:&lt;/strong&gt; хронология этой статьи синтезирована для демонстрации сайта. Не подтверждает фактическую дату написания или публикации.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;В проектах, которые перемещаются между Windows, Linux и USB-носителями, имена файлов влияют на надёжность сборки и ссылок.&lt;/p&gt;
+&lt;div&gt;&lt;h2 id=&quot;практические-правила&quot;&gt;Практические правила&lt;/h2&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Для технических идентификаторов использовать строчные латинские буквы, цифры и дефисы.&lt;/li&gt;
+&lt;li&gt;Не создавать имена, различающиеся только регистром символов.&lt;/li&gt;
+&lt;li&gt;Избегать специальных символов &lt;code dir=&quot;auto&quot;&gt;&amp;#x3C;&gt;:&quot;/\|?*&lt;/code&gt;, пробелов в конце имени и зарезервированных имён Windows.&lt;/li&gt;
+&lt;li&gt;Не использовать слишком длинные пути и нестабильные временные имена.&lt;/li&gt;
+&lt;li&gt;Для URL выбирать предсказуемые slug, независимые от отображаемого русского заголовка.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt; &lt;code dir=&quot;auto&quot;&gt;requirements-traceability.md&lt;/code&gt; надёжнее, чем файл со случайными пробелами и смешанным регистром. После переименования обязательно проверять ссылки и выполнять сборку проекта.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</content:encoded><category>Автоматизация</category><category>Инструменты</category></item></channel></rss>
