@@ -27,5 +27,6 @@ for f in (root/'images').rglob('*'):
   b=f.read_bytes()
   valid=(b.startswith(b'RIFF') and b[8:12]==b'WEBP') if f.suffix.lower()=='.webp' else (b.startswith(b'\x89PNG\r\n\x1a\n') if f.suffix.lower()=='.png' else b.startswith(b'\xff\xd8'))
   if not valid:errors.append([str(f.relative_to(root)),'','invalid image signature'])
+for quarantine in root.rglob('СТОРОННЕЕ'):errors.append([str(quarantine.relative_to(root)),'','quarantine in output'])
 report={'checked_urls':count,'errors':errors}
 (r/'audit/link-check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));sys.exit(bool(errors))

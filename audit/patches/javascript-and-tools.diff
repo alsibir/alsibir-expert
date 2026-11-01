@@ -33,10 +33,10 @@ index 0000000..f8052bb
 +raise SystemExit(bool(bad))
 diff --git a/scripts/audit.py b/scripts/audit.py
 new file mode 100644
-index 0000000..8cee725
+index 0000000..7e25c22
 --- /dev/null
 +++ b/scripts/audit.py
-@@ -0,0 +1,31 @@
+@@ -0,0 +1,32 @@
 +"""Проверка локальных URL и изображений готовой сборки. Без сетевых запросов."""
 +from pathlib import Path
 +from html.parser import HTMLParser
@@ -66,6 +66,7 @@ index 0000000..8cee725
 +  b=f.read_bytes()
 +  valid=(b.startswith(b'RIFF') and b[8:12]==b'WEBP') if f.suffix.lower()=='.webp' else (b.startswith(b'\x89PNG\r\n\x1a\n') if f.suffix.lower()=='.png' else b.startswith(b'\xff\xd8'))
 +  if not valid:errors.append([str(f.relative_to(root)),'','invalid image signature'])
++for quarantine in root.rglob('СТОРОННЕЕ'):errors.append([str(quarantine.relative_to(root)),'','quarantine in output'])
 +report={'checked_urls':count,'errors':errors}
 +(r/'audit/link-check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));sys.exit(bool(errors))
 diff --git a/scripts/cleanup.py b/scripts/cleanup.py
@@ -98,16 +99,22 @@ index 0000000..1413796
 +  dst.parent.mkdir(exist_ok=True);src.rename(dst)
 diff --git a/scripts/package-samples.py b/scripts/package-samples.py
 new file mode 100644
-index 0000000..36b5dd4
+index 0000000..c399869
 --- /dev/null
 +++ b/scripts/package-samples.py
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,12 @@
 +from pathlib import Path
 +from zipfile import ZipFile, ZIP_DEFLATED
 +r=Path(__file__).resolve().parents[1]
 +with ZipFile(r/'dist/examples/portfolio-samples.zip','w',ZIP_DEFLATED) as z:
 + for name in ['puzzlelib','snezhinka','api','assistant','orfo']:
 +  z.write(r/'public/examples'/f'{name}.pdf',f'{name}.pdf')
++
++# Quarantine is local-only, never publish it with public assets.
++import shutil
++for directory in list((r/'dist').rglob('СТОРОННЕЕ')):
++ if directory.is_symlink():directory.unlink()
++ elif directory.is_dir():shutil.rmtree(directory)
 diff --git a/scripts/postbuild.mjs b/scripts/postbuild.mjs
 index 033fa1a..adf71c0 100755
 --- a/scripts/postbuild.mjs
