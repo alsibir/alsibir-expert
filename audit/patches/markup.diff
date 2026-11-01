@@ -1,0 +1,86 @@
+diff --git a/src/components/Header.astro b/src/components/Header.astro
+index f2b684b..5e0af4d 100755
+--- a/src/components/Header.astro
++++ b/src/components/Header.astro
+@@ -3,4 +3,16 @@ import DefaultHeader from '@astrojs/starlight/components/Header.astro';
+ import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+ import NavIcon from './NavIcon.astro';
+ ---
+-<div class="aps-header"><DefaultHeader/><nav class="aps-top-nav" aria-label="Основная навигация"><a href="/alsibir-expert/wiki/pages/services/"><NavIcon name="requirements"/>Компетенции</a><a href="/alsibir-expert/wiki/pages/portfolio/"><NavIcon name="documentation"/>Работы</a><a href="/alsibir-expert/blog/"><NavIcon name="file"/>Блог</a><a href="/alsibir-expert/wiki/"><NavIcon name="documentation"/>База знаний</a><a href="/alsibir-expert/wiki/pages/contact/"><NavIcon name="email"/>Контакты</a><a href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><NavIcon name="menu"/><span class="map-label">Карта сайта</span></a><div class="aps-mobile-theme"><ThemeSelect/></div></nav></div>
+\ No newline at end of file
++<div class="aps-header"><DefaultHeader/><details class="aps-menu" open><summary>Меню</summary><nav class="aps-top-nav" aria-label="Основная навигация"><a href="/alsibir-expert/wiki/pages/services/"><NavIcon name="requirements"/>Услуги</a><a href="/alsibir-expert/wiki/pages/portfolio/"><NavIcon name="documentation"/>Работы</a><a href="/alsibir-expert/blog/"><NavIcon name="file"/>Блог</a><a href="/alsibir-expert/wiki/"><NavIcon name="documentation"/>Знания</a><a href="/alsibir-expert/wiki/pages/contact/"><NavIcon name="email"/>Контакты</a><a href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><NavIcon name="menu"/><span class="map-label">Карта сайта</span></a><div class="aps-mobile-theme"><ThemeSelect/></div></nav></details></div>
++<script>
++ function initMenu() {
++  const menu = document.querySelector<HTMLDetailsElement>('.aps-menu');
++  if (!menu || menu.dataset.ready) return;
++  menu.dataset.ready = 'true';
++  const media = matchMedia('(max-width: 1100px)');
++  const sync = () => { menu.open = !media.matches; };
++  sync(); media.addEventListener('change', sync);
++  menu.addEventListener('keydown', e => { if (e.key === 'Escape' && media.matches) { menu.open = false; menu.querySelector('summary')?.focus(); } });
++ }
++ initMenu(); document.addEventListener('astro:page-load', initMenu);
++</script>
+diff --git a/src/content/docs/blog/desktop.ini b/src/content/docs/blog/desktop.ini
+deleted file mode 100755
+index 2f72996..0000000
+--- a/src/content/docs/blog/desktop.ini
++++ /dev/null
+@@ -1,2 +0,0 @@
+-[.ShellClassInfo]
+-IconResource=C:\WINDOWS\System32\SHELL32.dll,41
+diff --git a/src/content/docs/blog/tools/desktop.ini b/src/content/docs/blog/tools/desktop.ini
+deleted file mode 100755
+index 2f72996..0000000
+--- a/src/content/docs/blog/tools/desktop.ini
++++ /dev/null
+@@ -1,2 +0,0 @@
+-[.ShellClassInfo]
+-IconResource=C:\WINDOWS\System32\SHELL32.dll,41
+diff --git a/src/content/docs/desktop.ini b/src/content/docs/desktop.ini
+deleted file mode 100755
+index 2f72996..0000000
+--- a/src/content/docs/desktop.ini
++++ /dev/null
+@@ -1,2 +0,0 @@
+-[.ShellClassInfo]
+-IconResource=C:\WINDOWS\System32\SHELL32.dll,41
+diff --git a/src/content/docs/index.mdx b/src/content/docs/index.mdx
+index e7fe351..0ebb83d 100755
+--- a/src/content/docs/index.mdx
++++ b/src/content/docs/index.mdx
+@@ -63,3 +63,8 @@ import AssetImage from '../../components/AssetImage.astro';
+ </div>
+ 
+ [Скачать резюме PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf) · [Открыть реальные примеры работ](/alsibir-expert/wiki/pages/portfolio/)
++
++
++## Источник сведений о проекте
++
++[Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).
+diff --git a/src/content/docs/wiki/pages/portfolio.md b/src/content/docs/wiki/pages/portfolio.md
+index b6ffcff..0bfbe47 100755
+--- a/src/content/docs/wiki/pages/portfolio.md
++++ b/src/content/docs/wiki/pages/portfolio.md
+@@ -40,3 +40,8 @@ draft: false
+ - [Досье промышленного изделия](/alsibir-expert/wiki/examples/registries/minpromtorg/01_product_card/) — семь образцов на условное изделие.
+ 
+ Другие исходные документы предоставляются с соблюдением договорных ограничений. [Контакты](/alsibir-expert/wiki/pages/contact/).
++
++
++## Источник сведений о проекте
++
++[Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).
+diff --git a/src/content/docs/wiki/pages/worksamples.md b/src/content/docs/wiki/pages/worksamples.md
+index 7b399f7..f506807 100755
+--- a/src/content/docs/wiki/pages/worksamples.md
++++ b/src/content/docs/wiki/pages/worksamples.md
+@@ -28,3 +28,8 @@ draft: false
+ 
+ 
+ <a href="/alsibir-expert/examples/portfolio-samples.zip"><img src="/alsibir-expert/images/download-samples.svg" alt="Комплект из пяти реальных примеров документации: скачать ZIP" width="270" height="360" loading="lazy"/></a>
++
++
++## Источник сведений о проекте
++
++[Проект «Снежинка» — «Наносемантика»](https://nanosemantics.ai/customers/20).

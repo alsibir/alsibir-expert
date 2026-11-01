@@ -1,0 +1,37 @@
+{
+    "name":  "plantuml",
+    "scopeName":  "source.plantuml",
+    "fileTypes":  [
+                      "puml",
+                      "plantuml"
+                  ],
+    "patterns":  [
+                     {
+                         "match":  "^\\s*\u0027.*$",
+                         "name":  "comment.line.apostrophe.plantuml"
+                     },
+                     {
+                         "match":  "(?i)@(?:startuml|enduml|startmindmap|endmindmap|startwbs|endwbs)\\b",
+                         "name":  "keyword.control.directive.plantuml"
+                     },
+                     {
+                         "match":  "\\b(?:actor|participant|boundary|control|entity|database|collections|queue|class|interface|abstract|enum|package|component|node|folder|rectangle|cloud|note|end|group|alt|else|opt|loop|par|break|activate|deactivate|destroy|skinparam|left|right|top|bottom|as|of|over|while|if|then|endif|start|stop|fork|repeat|return)\\b",
+                         "name":  "keyword.control.plantuml"
+                     },
+                     {
+                         "patterns":  [
+                                          {
+                                              "match":  "\\\\.",
+                                              "name":  "constant.character.escape.plantuml"
+                                          }
+                                      ],
+                         "end":  "\"",
+                         "name":  "string.quoted.double.plantuml",
+                         "begin":  "\""
+                     },
+                     {
+                         "match":  "(?:--\u003e|\u003c--|-\u003e|\u003c-|\\.\\.\u003e|\\*--|\\*-\u003e)",
+                         "name":  "keyword.operator.plantuml"
+                     }
+                 ]
+}

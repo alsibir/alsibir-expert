@@ -1,0 +1,366 @@
+[
+  {
+    "path": "/",
+    "title": "AlSibir — технический писатель и системный аналитик"
+  },
+  {
+    "path": "/guides/example/",
+    "title": "Порядок подготовки комплекта документации"
+  },
+  {
+    "path": "/wiki/",
+    "title": "База знаний"
+  },
+  {
+    "path": "/blog/welcome/",
+    "title": "О блоге AlSibir"
+  },
+  {
+    "path": "/reference/example/",
+    "title": "Термины и обозначения"
+  },
+  {
+    "path": "/wiki/pages/education/",
+    "title": "Образование и профессиональное развитие"
+  },
+  {
+    "path": "/wiki/pages/",
+    "title": "Навигация по разделам"
+  },
+  {
+    "path": "/wiki/pages/services/",
+    "title": "Услуги и компетенции"
+  },
+  {
+    "path": "/wiki/pages/sitemap/",
+    "title": "Карта разделов"
+  },
+  {
+    "path": "/wiki/pages/clients/",
+    "title": "Заказчики и сферы проектов"
+  },
+  {
+    "path": "/wiki/pages/portfolio/",
+    "title": "Портфолио и примеры работ"
+  },
+  {
+    "path": "/wiki/pages/project/",
+    "title": "Как устроен технический проект"
+  },
+  {
+    "path": "/wiki/pages/publication/",
+    "title": "Публикации"
+  },
+  {
+    "path": "/wiki/pages/projects/",
+    "title": "Проекты"
+  },
+  {
+    "path": "/wiki/pages/faq/",
+    "title": "Частые вопросы"
+  },
+  {
+    "path": "/wiki/pages/cookies/",
+    "title": "Использование cookies"
+  },
+  {
+    "path": "/wiki/pages/blog/",
+    "title": "Блог"
+  },
+  {
+    "path": "/wiki/pages/home-2/",
+    "title": "Обзор сайта — архивный адрес 2"
+  },
+  {
+    "path": "/wiki/pages/skills/",
+    "title": "Навыки и инструменты"
+  },
+  {
+    "path": "/wiki/pages/search/",
+    "title": "Поиск по сайту"
+  },
+  {
+    "path": "/wiki/pages/contact/",
+    "title": "Контакты"
+  },
+  {
+    "path": "/wiki/pages/pp/",
+    "title": "Конфиденциальность и обработка данных"
+  },
+  {
+    "path": "/wiki/pages/worksamples/",
+    "title": "Образцы и шаблоны"
+  },
+  {
+    "path": "/wiki/pages/about/",
+    "title": "О специалисте"
+  },
+  {
+    "path": "/wiki/pages/standards/",
+    "title": "Стандарты и нормативная база"
+  },
+  {
+    "path": "/wiki/pages/home-1/",
+    "title": "Обзор сайта — архивный адрес 1"
+  },
+  {
+    "path": "/wiki/pages/ai/",
+    "title": "ИИ в документации"
+  },
+  {
+    "path": "/wiki/pages/404/",
+    "title": "Страница не найдена"
+  },
+  {
+    "path": "/wiki/pages/tools/",
+    "title": "Инструменты технического писателя"
+  },
+  {
+    "path": "/wiki/pages/experience/",
+    "title": "Профессиональный опыт"
+  },
+  {
+    "path": "/wiki/pages/resume/",
+    "title": "Профессиональное резюме"
+  },
+  {
+    "path": "/wiki/portfolio/registration/software-registration/",
+    "title": "Регистрационные досье: демонстрационный кейс"
+  },
+  {
+    "path": "/wiki/portfolio/ai/document-automation/",
+    "title": "Автоматизация технических документов: демонстрационный кейс"
+  },
+  {
+    "path": "/wiki/portfolio/documentation/technical-documentation/",
+    "title": "Техническая документация: демонстрационный комплект"
+  },
+  {
+    "path": "/wiki/portfolio/analytics/system-analysis/",
+    "title": "Системный анализ: демонстрационный кейс"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/03_components_origin/",
+    "title": "Образец 3. Реестр происхождения компонентной базы"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/02_document_register/",
+    "title": "Образец 2. Ведомость учебного комплекта документации изделия"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/05_localization_matrix/",
+    "title": "Образец 5. Матрица локализации и нормативных критериев"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/06_audit_log/",
+    "title": "Образец 6. Журнал замечаний по промышленному досье"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/07_readiness_opinion/",
+    "title": "Образец 7. Учебное заключение о готовности промышленного досье"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/04_operations_map/",
+    "title": "Образец 4. Карта технологических операций и доказательств"
+  },
+  {
+    "path": "/wiki/examples/registries/minpromtorg/01_product_card/",
+    "title": "Образец 1. Карточка условного промышленного изделия"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/02_requirements_matrix/",
+    "title": "Образец 2. Матрица требований к регистрационному досье ПО"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/05_audit_log/",
+    "title": "Образец 5. Журнал междокументных замечаний ПО"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/04_configuration_baseline/",
+    "title": "Образец 4. Паспорт контролируемой конфигурации ПО"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/07_readiness_opinion/",
+    "title": "Образец 7. Заключение о готовности учебного досье ПО"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/06_test_cases/",
+    "title": "Образец 6. Фрагмент программы и методики испытаний ПО"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/03_rights_and_licenses/",
+    "title": "Образец 3. Цепочка исключительных прав и учёт лицензий"
+  },
+  {
+    "path": "/wiki/examples/registries/mincifry/01_product_card/",
+    "title": "Образец 1. Карточка демонстрационного программного продукта"
+  },
+  {
+    "path": "/blog/career/05_jira_confluence/",
+    "title": "К какому классу программ относятся Jira и Confluence"
+  },
+  {
+    "path": "/blog/career/01_python_junior_skills/",
+    "title": "Какие знания необходимы начинающему Python-разработчику"
+  },
+  {
+    "path": "/blog/career/04_practical_experience/",
+    "title": "Практический опыт выпускника без коммерческого стажа"
+  },
+  {
+    "path": "/blog/career/02_junior_python_resume/",
+    "title": "Пример резюме выпускника для первой работы Python-разработчиком"
+  },
+  {
+    "path": "/blog/career/03_ranepa_education/",
+    "title": "РАНХиГС: образование и ключевые дисциплины для резюме"
+  },
+  {
+    "path": "/blog/career/06_python_career_full_guide/",
+    "title": "Как стать Python-разработчиком: полное руководство по подготовке к первой работе"
+  },
+  {
+    "path": "/blog/ai/local-languagetool/",
+    "title": "Локальная проверка русского текста с LanguageTool"
+  },
+  {
+    "path": "/blog/ai/document-anonymization/",
+    "title": "Как готовить документы к обработке ИИ"
+  },
+  {
+    "path": "/blog/ai/deanonymization-risks/",
+    "title": "Косвенные признаки и повторная идентификация данных"
+  },
+  {
+    "path": "/blog/api/07_openapi_contracts/",
+    "title": "Проектирование API: OpenAPI, модели данных, ошибки и управление версиями"
+  },
+  {
+    "path": "/blog/ux/ux-editing-guide/",
+    "title": "UX-редактура: практическое руководство"
+  },
+  {
+    "path": "/blog/ux/ux-writing/",
+    "title": "UX-тексты для технических интерфейсов"
+  },
+  {
+    "path": "/blog/standards/spds-microsoft-word/",
+    "title": "Как оформить документ по СПДС в Microsoft Word"
+  },
+  {
+    "path": "/blog/standards/gost-updates/",
+    "title": "Как отслеживать изменения технических стандартов"
+  },
+  {
+    "path": "/blog/standards/03_spds_gost21/",
+    "title": "Оформление документов СПДС: комплект, тома, листы и согласованность по ГОСТ Р 21.101-2026"
+  },
+  {
+    "path": "/blog/standards/spds-shbv/",
+    "title": "Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц"
+  },
+  {
+    "path": "/blog/tools/local-languagetool/",
+    "title": "Как развернуть собственный сервер LanguageTool на Windows и Linux: установка, настройка, использование и сравнение с Premium"
+  },
+  {
+    "path": "/blog/tools/my-commands-linux-mint/",
+    "title": "Мои команды: графическое меню для повседневных задач в Linux Mint"
+  },
+  {
+    "path": "/blog/tools/neovim-guide/",
+    "title": "Neovim: настройка удобного редактора для кода и технической документации"
+  },
+  {
+    "path": "/blog/automation/word-requirement-numbering/",
+    "title": "Автоматизация сбора, нумерации и трассировки требований в Microsoft Word"
+  },
+  {
+    "path": "/blog/automation/document-workflows/",
+    "title": "Воспроизводимый процесс выпуска документации"
+  },
+  {
+    "path": "/blog/automation/04_word_automation/",
+    "title": "Автоматизированная проверка документации Microsoft Word: стили, поля, нумерация и перекрестные ссылки"
+  },
+  {
+    "path": "/blog/automation/filename-portability/",
+    "title": "Имена файлов, совместимые с Windows и Linux"
+  },
+  {
+    "path": "/blog/automation/obsidian-knowledge-base/",
+    "title": "Автоматизированная систематизация базы знаний Obsidian: архитектура, метаданные, граф связей и безопасная миграция"
+  },
+  {
+    "path": "/blog/automation/obsidian-automation/",
+    "title": "Систематизация заметок Obsidian: план контролируемой миграции"
+  },
+  {
+    "path": "/blog/registries/02_minpromtorg_registry_industry/",
+    "title": "Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП"
+  },
+  {
+    "path": "/blog/registries/01_mincifry_registry_software/",
+    "title": "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье"
+  },
+  {
+    "path": "/blog/documentation/01_gost19_documents/",
+    "title": "Методика проектирования комплекта программной документации по ЕСПД (ГОСТ 19)"
+  },
+  {
+    "path": "/blog/documentation/05_document_quality/",
+    "title": "Контроль качества технической документации: таблица замечаний и регрессионная проверка"
+  },
+  {
+    "path": "/blog/documentation/software-documentation/",
+    "title": "Документация программного обеспечения: классификация, состав и стандарты"
+  },
+  {
+    "path": "/blog/documentation/clear-technical-specification/",
+    "title": "Как написать однозначное техническое задание"
+  },
+  {
+    "path": "/blog/documentation/02_gost34_traceability/",
+    "title": "Документация по ГОСТ 34: техническое задание, программа и методика испытаний, связь требований"
+  },
+  {
+    "path": "/blog/documentation/gost-documentation/",
+    "title": "Как применять ГОСТ к программной документации"
+  },
+  {
+    "path": "/blog/documentation/10_document_release/",
+    "title": "Управление файлами, версиями и воспроизводимой сборкой технической документации"
+  },
+  {
+    "path": "/blog/analytics/project-discovery-ai/",
+    "title": "Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации"
+  },
+  {
+    "path": "/blog/analytics/06_requirements_to_tests/",
+    "title": "Трассируемость требований: от бизнес-процесса и архитектуры до испытаний"
+  },
+  {
+    "path": "/blog/security/03_anonimizer_engineering_article/",
+    "title": "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания"
+  },
+  {
+    "path": "/blog/security/02_residual_disclosure_risks/",
+    "title": "Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки"
+  },
+  {
+    "path": "/blog/security/01_anonymization_cycle/",
+    "title": "Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно"
+  },
+  {
+    "path": "/blog/security/09_ai_document_privacy/",
+    "title": "Применение искусственного интеллекта в техническом документировании: обезличивание и контроль утечек"
+  },
+  {
+    "path": "/blog/modeling/08_bpmn_uml_plantuml/",
+    "title": "BPMN, UML и PlantUML: как системному аналитику выбирать и сопровождать диаграммы"
+  },
+  {
+    "path": "/blog/modeling/uml-relationships/",
+    "title": "Линии и типы связей в UML: как правильно читать диаграммы"
+  }
+]
