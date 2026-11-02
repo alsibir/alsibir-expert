@@ -1,5 +1,21 @@
 ---
 import DefaultHero from '@astrojs/starlight/components/Hero.astro';
 import AssetImage from './AssetImage.astro';
+const isHome = Astro.url.pathname.replace(/^\/alsibir-expert/, '') === '/';
 ---
-{Astro.url.pathname.replace(/^\/alsibir-expert/, '')==='/' ? <section class="aps-hero"><div><p class="aps-eyebrow">АЛЕКСАНДР СИБИРЯКОВ / AlSibir</p><h1 id="_top">Сложное —<br/><em>ясно.</em><br/>По делу.</h1><p class="aps-lead">Техническая документация и системный анализ. От требований и архитектуры до испытаний и понятных руководств.</p><div class="aps-actions"><a class="aps-button" href="/alsibir-expert/wiki/pages/portfolio/">Смотреть работы ↗</a><a class="aps-button secondary" href="/alsibir-expert/wiki/pages/contact/">Обсудить проект</a></div><p class="aps-tags">ГОСТ 19 / 34 · API / SDK · UML / BPMN · ИИ / НИОКР</p></div><AssetImage name="portrait" alt="Александр Сибиряков — технический писатель и аналитик" eager/></section> : <DefaultHero/>}
+{isHome ? (
+  <section class="aps-home-hero" aria-labelledby="_top">
+    <div>
+      <p class="aps-home-eyebrow">Технический писатель · Системный аналитик</p>
+      <h1 id="_top"><span>Александр</span><span>Сибиряков</span></h1>
+      <p class="aps-home-intro">Разрабатываю техническую документацию и требования к программным системам. От технического задания до испытаний и руководства пользователя.</p>
+      <p class="aps-home-motto">Сложное — ясно. По делу.</p>
+      <div class="aps-home-actions">
+        <a class="aps-button" href="#real-work">Примеры работ</a>
+        <a class="aps-button secondary" href="/alsibir-expert/CV/alexander-sibiryakov-cv.pdf">Резюме PDF</a>
+        <a class="aps-home-contact" href="/alsibir-expert/wiki/pages/contact/">Обсудить задачу →</a>
+      </div>
+    </div>
+    <AssetImage name="portrait" alt="Александр Сибиряков — технический писатель и системный аналитик" class="aps-home-portrait" eager/>
+  </section>
+) : <DefaultHero/>}

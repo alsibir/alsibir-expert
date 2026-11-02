@@ -1,0 +1,58 @@
+---
+const projects = [
+  { id: 'puzzlelib', title: 'PuzzleLib', type: 'Техническое задание · 16 страниц', task: 'Требования к развитию нейросетевой библиотеки.', detail: 'Пример формализации требований к программному продукту.', image: 'puzzlelib-project-card.png', pdf: 'puzzlelib.pdf' },
+  { id: 'snezhinka', title: 'Снежинка', type: 'Техническое задание · 21 страница', task: 'Требования к виртуальному ассистенту мультимедийного стенда.', detail: 'Пример описания функциональности и взаимодействия с пользователем.', image: 'snezhinka-project-card.png', pdf: 'snezhinka.pdf' },
+  { id: 'api', title: 'OK Service API', type: 'Описание API · 30 страниц', task: 'Подключение и взаимодействие с программным интерфейсом.', detail: 'Пример документации для разработчиков и интеграторов.', image: 'api-project-card.png', pdf: 'api.pdf' },
+];
+---
+<div class="aps-home-content">
+  <div class="aps-home-proof" aria-label="Основные направления опыта">
+    <div><strong>ИТ и НИОКР</strong><span>Программные системы и исследовательские проекты</span></div>
+    <div><strong>ГОСТ 19 / 34</strong><span>Требования, документация и испытания</span></div>
+    <div><strong>API и ИИ</strong><span>Интерфейсы, нейросети и виртуальные ассистенты</span></div>
+  </div>
+
+  <section id="real-work" aria-labelledby="real-work-title">
+    <div class="aps-home-section-heading"><div><p class="aps-home-eyebrow">Профессиональное портфолио</p><h2 id="real-work-title">Реальные работы</h2></div><a href="/alsibir-expert/wiki/pages/portfolio/">Все примеры →</a></div>
+    <p class="aps-home-section-lead">Фрагменты подготовленных документов. Каждый пример можно открыть целиком в PDF.</p>
+    <div class="aps-home-projects">
+      {projects.map(project => (
+        <article class="aps-home-project">
+          <a href={`/alsibir-expert/examples/${project.pdf}`} aria-label={`${project.title} — открыть документ PDF`}><img src={`/alsibir-expert/images/evidence/${project.image}`} alt={`${project.title}: титульный лист и фрагмент документа`} width="1600" height="1100" loading="lazy" decoding="async"/></a>
+          <div class="aps-home-project-body"><p class="aps-home-document-type">{project.type}</p><h3>{project.title}</h3><p>{project.task}</p><p class="aps-home-project-detail">{project.detail}</p>
+            <div class="aps-home-project-links"><a href={`/alsibir-expert/examples/${project.pdf}`}>Открыть PDF →</a><a href={`/alsibir-expert/wiki/pages/portfolio/#${project.id}`}>Подробнее</a></div>
+            {project.id === 'snezhinka' && <p class="aps-home-source">О проекте: <a href="https://nanosemantics.ai/customers/20">«Наносемантика»</a></p>}
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="aps-home-more-work"><p>Другие документы: <a href="/alsibir-expert/examples/orfo.pdf">Техническое задание ОРФО AI</a> · <a href="/alsibir-expert/examples/assistant.pdf">Руководство оператора «ИИ Жириновский»</a></p><a href="/alsibir-expert/examples/portfolio-samples.zip">Скачать все пять примеров ZIP</a></div>
+  </section>
+
+  <section aria-labelledby="experience-title">
+    <p class="aps-home-eyebrow">Опыт и профессиональный контекст</p><h2 id="experience-title">Документация для технологических проектов</h2>
+    <div class="aps-home-experience">
+      <article><h3>«Наносемантика»</h3><p>Работа ведущим техническим писателем-аналитиком. Документация на программные продукты и решения в области искусственного интеллекта.</p></article>
+      <article><h3>МГУ и МФТИ</h3><p>Документирование решений для университетских и исследовательских проектов, включая голосовые технологии и робототехнику.</p></article>
+      <article><h3>Инженерный подход</h3><p>Техническое образование, анализ исходных данных, согласование требований и проверка связей между документами.</p></article>
+    </div>
+    <p class="aps-home-source">Сведения об опыте приведены по <a href="/alsibir-expert/CV/alexander-sibiryakov-cv.pdf">опубликованному резюме</a>. <a href="/alsibir-expert/wiki/pages/about/">Подробнее о специалисте →</a></p>
+  </section>
+
+  <section aria-labelledby="services-title">
+    <p class="aps-home-eyebrow">Задачи, с которыми можно обратиться</p><h2 id="services-title">Чем могу быть полезен</h2>
+    <div class="aps-home-services">
+      <article><span class="aps-home-number" aria-hidden="true">01</span><h3>Техническая документация</h3><p>ТЗ, ПМИ, пояснительные записки, руководства и комплекты документов по ГОСТ.</p></article>
+      <article><span class="aps-home-number" aria-hidden="true">02</span><h3>Системный анализ</h3><p>Сбор и согласование требований, сценарии, модели процессов и трассируемость.</p></article>
+      <article><span class="aps-home-number" aria-hidden="true">03</span><h3>Документация API</h3><p>Описание интерфейсов и взаимодействий, материалы для разработчиков и интеграторов.</p></article>
+      <article><span class="aps-home-number" aria-hidden="true">04</span><h3>Аудит и автоматизация</h3><p>Выявление противоречий, проверка комплектности, шаблоны и средства обработки документов.</p></article>
+    </div><p><a href="/alsibir-expert/wiki/pages/services/">Услуги и порядок работы →</a></p>
+  </section>
+
+  <section class="aps-home-library" aria-labelledby="library-title">
+    <div><p class="aps-home-eyebrow">Отдельный раздел сайта</p><h2 id="library-title">Статьи и база знаний</h2><p>Практические инструкции по документации, стандартам и инструментам. Учебные комплекты вынесены отдельно от реальных работ.</p><p class="aps-home-source">Учебные примеры содержат условные данные и не подтверждают выполнение реальных заказов. Их статус указан в самих материалах.</p></div>
+    <nav aria-label="Статьи и учебные материалы"><a href="/alsibir-expert/blog/">Читать статьи →</a><a href="/alsibir-expert/wiki/">Открыть базу знаний →</a><a href="/alsibir-expert/wiki/portfolio/documentation/technical-documentation/">Посмотреть учебный комплект →</a></nav>
+  </section>
+
+  <section class="aps-home-cta" aria-labelledby="contact-title"><div><p class="aps-home-eyebrow">Следующий шаг</p><h2 id="contact-title">Обсудить задачу</h2><p>Для начала достаточно описания системы, назначения документов и имеющихся исходных материалов.</p></div><div class="aps-home-actions"><a class="aps-button" href="/alsibir-expert/wiki/pages/contact/">Контакты</a><a class="aps-home-contact" href="mailto:wordmaster@textpro-1.ru">Написать по электронной почте →</a></div></section>
+</div>
