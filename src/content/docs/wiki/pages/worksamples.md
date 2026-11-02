@@ -17,12 +17,12 @@ draft: false
 
 В разделе размещены **учебные** материалы для понимания структуры комплектов документации.
 
-1. [Карточка программного продукта](/alsibir-expert/wiki/examples/registries/mincifry/01_product_card/).
-2. [Матрица требований к регистрационному досье](/alsibir-expert/wiki/examples/registries/mincifry/02_requirements_matrix/).
-3. [Журнал замечаний к комплекту](/alsibir-expert/wiki/examples/registries/mincifry/05_audit_log/).
-4. [Фрагмент методики испытаний](/alsibir-expert/wiki/examples/registries/mincifry/06_test_cases/).
-5. [Реестр происхождения компонентов](/alsibir-expert/wiki/examples/registries/minpromtorg/03_components_origin/).
-6. [Матрица локализации](/alsibir-expert/wiki/examples/registries/minpromtorg/05_localization_matrix/).
+1. [Карточка программного продукта](/alsibir-expert/dosies/mincifry_dossier.pdf).
+2. [Матрица требований к регистрационному досье](/alsibir-expert/dosies/mincifry_dossier.pdf).
+3. [Журнал замечаний к комплекту](/alsibir-expert/dosies/mincifry_dossier.pdf).
+4. [Фрагмент методики испытаний](/alsibir-expert/dosies/mincifry_dossier.pdf).
+5. [Реестр происхождения компонентов](/alsibir-expert/dosies/minpromtorg_dossier.pdf).
+6. [Матрица локализации](/alsibir-expert/dosies/minpromtorg_dossier.pdf).
 
 Имена, версии и количественные показатели учебных примеров условны. Они не являются доказательством производства, тестирования или регистрации.
 

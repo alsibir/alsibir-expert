@@ -36,8 +36,8 @@ draft: false
 
 ### Учебные комплекты
 
-- [Досье ПО для реестра Минцифры](/alsibir-expert/wiki/examples/registries/mincifry/01_product_card/) — семь образцов на условный продукт.
-- [Досье промышленного изделия](/alsibir-expert/wiki/examples/registries/minpromtorg/01_product_card/) — семь образцов на условное изделие.
+- [Досье ПО для реестра Минцифры](/alsibir-expert/dosies/mincifry_dossier.pdf) — семь образцов на условный продукт, PDF. [Скачать DOCX](/alsibir-expert/dosies/mincifry_dossier.docx).
+- [Досье промышленного изделия](/alsibir-expert/dosies/minpromtorg_dossier.pdf) — семь образцов на условное изделие, PDF. [Скачать DOCX](/alsibir-expert/dosies/minpromtorg_dossier.docx).
 
 Другие исходные документы предоставляются с соблюдением договорных ограничений. [Контакты](/alsibir-expert/wiki/pages/contact/).
 

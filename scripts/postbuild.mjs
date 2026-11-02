@@ -1,6 +1,13 @@
-import {readdir,readFile,writeFile,rm} from 'node:fs/promises';
+import {readdir,readFile,writeFile,rm,mkdir,copyFile} from 'node:fs/promises';
 import path from 'node:path';
 const root=path.resolve('dist');
+// Publish the downloadable dossiers stored alongside their source content.
+const dossiersSource=path.resolve('src/content/docs/wiki/dosies');
+const dossiersTarget=path.join(root,'dosies');
+await mkdir(dossiersTarget,{recursive:true});
+for(const name of await readdir(dossiersSource)){
+  if(/\.(docx|pdf)$/i.test(name)) await copyFile(path.join(dossiersSource,name),path.join(dossiersTarget,name));
+}
 const origin='https://alsibir.github.io';
 const base='/alsibir-expert';
 const prefix=u=>u.startsWith('/')&&!u.startsWith('//')&&u!==base&&!u.startsWith(base+'/') ? base+u : u;

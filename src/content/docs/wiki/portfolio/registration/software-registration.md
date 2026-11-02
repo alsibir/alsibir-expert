@@ -13,6 +13,6 @@ draft: false
 4. Сверить требования реестра и фактические доказательства.
 5. Подготовить связанный комплект приложений и контрольную ведомость.
 
-[Учебная карточка программного продукта](/alsibir-expert/wiki/examples/registries/mincifry/01_product_card/) и [матрица требований](/alsibir-expert/wiki/examples/registries/mincifry/02_requirements_matrix/) показывают форму артефактов.
+[Учебная карточка программного продукта](/alsibir-expert/dosies/mincifry_dossier.pdf) и [матрица требований](/alsibir-expert/dosies/mincifry_dossier.pdf) показывают форму артефактов.
 
 **Внимание:** примеры не являются поданными заявками и не гарантируют включения в реестр.

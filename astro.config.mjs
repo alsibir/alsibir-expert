@@ -38,7 +38,10 @@ export default defineConfig({
           { label: 'Подготовка комплекта', slug: 'guides/example' },
         ] },
         { label: 'Учебное портфолио', items: [{ autogenerate: { directory: 'wiki/portfolio' } }] },
-        { label: 'Учебные комплекты реестров', items: [{ autogenerate: { directory: 'wiki/examples' } }] },
+        { label: 'Учебные комплекты реестров', items: [
+          { label: 'Досье ПО для реестра Минцифры (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/mincifry_dossier.pdf' },
+          { label: 'Досье промышленного изделия (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/minpromtorg_dossier.pdf' },
+        ] },
         { label: 'Дополнительные страницы', items: [
           { label: 'Вопросы и ответы', slug: 'wiki/pages/faq' },
           { label: 'Карта сайта', slug: 'wiki/pages/sitemap' },
