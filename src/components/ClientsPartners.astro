@@ -1,0 +1,100 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const rows = [
+  { direction: 'left', label: 'Верхний ряд', logos: [
+    ['MFTI_logo', 'МФТИ'],
+    ['Leroy_Merlin_logo', 'Leroy Merlin'],
+    ['Sber_logo', 'Сбер'],
+    ['Jones_Lang_LaSaalle_logo', 'Jones Lang LaSalle'],
+    ['VTB_logo', 'ВТБ'],
+    ['RFRIT_logo', 'РФРИТ'],
+    ['Energo_Sbyt_logo', 'Энергосбыт'],
+    ['Metro_CC_logo', 'METRO Cash & Carry'],
+    ['Gazprom_neft_logo', 'Газпром нефть'],
+  ] },
+  { direction: 'right', label: 'Нижний ряд', logos: [
+    ['HH_logo', 'HeadHunter'],
+    ['Rus-Gidro_logo', 'РусГидро'],
+    ['VSHA_logo', 'Высшая школа экономики'],
+    ['Ros_sety_MR_logo', 'Россети Московский регион'],
+    ['Ros_sety_logo', 'Россети'],
+    ['Mincsifty_logo', 'Минцифры России'],
+    ['Bee_Line_logo', 'Билайн'],
+  ] },
+];
+---
+<section class="aps-partners" id="clients-partners" aria-labelledby="clients-partners-title" data-partners>
+  <div class="aps-partners-heading">
+    <h2 id="clients-partners-title">Клиенты и партнеры</h2>
+    <button class="aps-partners-pause" type="button" aria-pressed="false" aria-controls="clients-partners-rows" hidden>Приостановить движение</button>
+  </div>
+  <div class="aps-partners-panel" id="clients-partners-rows">
+    {rows.map(row => (
+      <div class:list={['aps-partners-row', `aps-partners-row-${row.direction}`]} style={`--duration: ${row.logos.length * 8}s`}>
+        <div class="aps-partners-track">
+          {[false, true].map(duplicate => (
+            <ul class="aps-partners-group" aria-label={duplicate ? undefined : row.label} aria-hidden={duplicate ? 'true' : undefined} role="list">
+              {row.logos.map(([file, name]) => (
+                <li class="aps-partners-cell">
+                  <img src={`${base}/images/partners/${file}.png`} alt={duplicate ? '' : name} width="640" height="240" loading="eager" decoding="async" />
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .aps-partners { --partner-pitch: 280px; }
+  .aps-partners-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 32px; }
+  .aps-partners-heading h2 { margin: 0; }
+  .aps-partners-pause { border: 1px solid var(--aps-line); border-radius: 6px; padding: 6px 12px; background: var(--aps-surface); color: var(--aps-ink); font: inherit; font-size: 13px; cursor: pointer; }
+  .aps-partners-pause:hover { border-color: var(--aps-accent); }
+  .aps-partners-pause:focus-visible { outline: 2px solid var(--aps-accent); outline-offset: 4px; }
+  .aps-partners-pause[hidden] { display: none; }
+  .aps-partners-panel { display: grid; gap: 96px; padding: 32px 0; overflow: hidden; background: #fff; color-scheme: light; border: 1px solid #e4e8ed; border-radius: 8px; }
+  .aps-partners-row { min-width: 0; overflow: hidden; }
+  .aps-partners-track { display: flex; width: max-content; animation: aps-partners-scroll var(--duration) linear infinite; }
+  .aps-partners-row-right .aps-partners-track { animation-direction: reverse; }
+  .aps-partners-panel .aps-partners-group { display: flex; flex: 0 0 auto; align-items: center; gap: 0; list-style: none; padding: 0; margin: 0; }
+  .aps-partners-panel .aps-partners-cell { display: flex; flex: 0 0 var(--partner-pitch); align-items: center; justify-content: center; width: var(--partner-pitch); height: 120px; padding: 0; margin: 0; }
+  .aps-partners-panel img { display: block; width: 256px; max-width: 100%; height: 96px; object-fit: contain; border: 0; border-radius: 0; margin: 0; filter: none; mix-blend-mode: normal; }
+  .aps-partners-panel:hover .aps-partners-track,
+  .aps-partners[data-paused] .aps-partners-track { animation-play-state: paused; }
+  @keyframes aps-partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (max-width: 640px) {
+    .aps-partners { --partner-pitch: 200px; }
+    .aps-partners-heading { margin-bottom: 24px; }
+    .aps-partners-panel { gap: 40px; padding: 24px 0; }
+    .aps-partners-panel .aps-partners-cell { height: 90px; }
+    .aps-partners-panel img { width: 192px; height: 72px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .aps-partners-track { animation: none; transform: none; width: auto; }
+    .aps-partners-panel .aps-partners-group { flex-wrap: wrap; justify-content: center; width: 100%; }
+    .aps-partners-group[aria-hidden='true'] { display: none; }
+    .aps-partners-pause { display: none; }
+    .aps-partners-panel { gap: 24px; }
+  }
+</style>
+
+<script>
+  const initializePartners = () => {
+    document.querySelectorAll<HTMLElement>('[data-partners]').forEach(section => {
+      const button = section.querySelector<HTMLButtonElement>('.aps-partners-pause');
+      if (!button || button.dataset.initialized) return;
+      button.dataset.initialized = 'true';
+      button.hidden = false;
+      button.addEventListener('click', () => {
+        const paused = section.toggleAttribute('data-paused');
+        button.setAttribute('aria-pressed', String(paused));
+        button.textContent = paused ? 'Продолжить движение' : 'Приостановить движение';
+      });
+    });
+  };
+  initializePartners();
+  document.addEventListener('astro:page-load', initializePartners);
+</script>
