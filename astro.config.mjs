@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'AlSibir — документация и анализ',
-      description: 'Техническая документация, системный анализ, ГОСТ 19/34, портфолио и практические материалы',
+      description: 'Техническая документация, системный анализ, ГОСТ 19/34/21, портфолио и практические материалы',
       favicon: '/favicon.svg',
       components: { Header: './src/components/Header.astro', Footer: './src/components/Footer.astro', SiteTitle: './src/components/SiteTitle.astro', Head: './src/components/Head.astro', Hero: './src/components/Hero.astro', PageTitle: './src/components/PageTitle.astro' },
       customCss: ['./src/styles/custom.css'],
