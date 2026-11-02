@@ -1,18 +1,7 @@
 ---
 import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
 import AssetImage from './AssetImage.astro';
-const path=Astro.url.pathname;
-let name='';let alt='';
-if(path.includes('/about/')){name='about';alt='Рабочая среда технического писателя: документы и схемы';}
-else if(path.includes('/contact/')){name='contact';alt='Блокнот и карточки для обсуждения новой задачи';}
-else if(path.includes('/services/')){name='requirements';alt='Требования объединяются в структурированный документ';}
-else if(path.includes('/skills/')||path.includes('/modeling/')){name='architecture';alt='Многоуровневая модель компонентов системы';}
-else if(path.includes('/blog/')){
- if(path.includes('/api/')){name='api';alt='Программный интерфейс и документация';}
- else if(path.includes('tests')||path.includes('test')){name='acceptance';alt='Приёмочные проверки и матрица соответствия';}
- else if(path.includes('specification')||path.includes('/analytics/')){name='clear-tz';alt='Техническое задание упорядочивает сложные связи';}
- else if(path.includes('/ai/')||path.includes('/automation/')||path.includes('/tools/')){name='ai';alt='Документация и модули интеллектуальной системы';}
- else {name='evolution';alt='От бумажного руководства к цифровой документации';}
-}
+const isAbout = Astro.url.pathname.replace(/\/+$/, '').endsWith('/wiki/pages/about');
 ---
-<DefaultPageTitle/>{name && <AssetImage name={name} alt={alt} class="aps-page-cover"/>}
+<DefaultPageTitle/>
+{isAbout && <AssetImage name="portrait" alt="Александр Сибиряков — аналитик и технический писатель" class="aps-author-portrait"/>}
