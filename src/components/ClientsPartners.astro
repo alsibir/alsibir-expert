@@ -30,7 +30,7 @@ const rows = [
   </div>
   <div class="aps-partners-panel" id="clients-partners-rows">
     {rows.map(row => (
-      <div class:list={['aps-partners-row', `aps-partners-row-${row.direction}`]} style={`--duration: ${row.logos.length * 8 / 1.5}s`}>
+      <div class:list={['aps-partners-row', `aps-partners-row-${row.direction}`]} style={`--duration: ${row.logos.length * 268 / 52.5}s; --duration-mobile: ${row.logos.length * 196 / 37.5}s`}>
         <div class="aps-partners-track">
           {[false, true].map(duplicate => (
             <ul class="aps-partners-group" aria-label={duplicate ? undefined : row.label} aria-hidden={duplicate ? 'true' : undefined} role="list">
@@ -67,6 +67,7 @@ const rows = [
   @keyframes aps-partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (max-width: 640px) {
     .aps-partners { --partner-pitch: 196px; }
+    .aps-partners-track { animation-duration: var(--duration-mobile); }
     .aps-partners-heading { margin-bottom: 24px; }
     .aps-partners-panel { gap: 29px; padding: 24px 0; }
     .aps-partners-panel .aps-partners-cell { height: 72px; }
