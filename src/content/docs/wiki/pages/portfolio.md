@@ -5,7 +5,7 @@ draft: false
 
 Реальные предоставленные примеры документации: три технических задания, описание API и руководство оператора. Ниже сохранены отдельные учебные кейсы.
 
-[Скачать все пять примеров ZIP](/alsibir-expert/examples/portfolio-samples.zip) · [Резюме PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf)
+[Скачать все пять примеров ZIP](/alsibir-expert/examples/portfolio-samples.zip) · [Запросить резюме](/alsibir-expert/wiki/pages/resume/)
 
 <div class="aps-grid">
 <article class="aps-card" id="puzzlelib"><a href="/alsibir-expert/examples/puzzlelib.pdf"><img src="/alsibir-expert/images/evidence/puzzlelib-project-card.png" alt="PuzzleLib: титульный лист и фрагмент реального документа" loading="lazy" width="1600" height="1100"/></a><h3>PuzzleLib</h3><p>Техническое задание, 16 стр. Требования к развитию нейросетевой библиотеки.</p><p><a href="/alsibir-expert/examples/puzzlelib.pdf">Открыть PDF</a> · <a href="/alsibir-expert/images/evidence/puzzlelib-detail.webp">Увеличить фрагмент, стр. 7</a></p></article>

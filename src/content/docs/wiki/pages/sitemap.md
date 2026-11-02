@@ -44,7 +44,7 @@ draft: false
 - [Как устроен технический проект](/alsibir-expert/wiki/pages/project/)
 - [Проекты](/alsibir-expert/wiki/pages/projects/)
 - [Публикации](/alsibir-expert/wiki/pages/publication/)
-- [Профессиональное резюме](/alsibir-expert/wiki/pages/resume/)
+- [Запросить резюме аналитика или технического писателя](/alsibir-expert/wiki/pages/resume/)
 - [Поиск по сайту](/alsibir-expert/wiki/pages/search/)
 - [Услуги и компетенции](/alsibir-expert/wiki/pages/services/)
 - [Карта разделов](/alsibir-expert/wiki/pages/sitemap/)
@@ -113,5 +113,4 @@ draft: false
 
 ## Скачать
 
-- [Резюме PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf)
 - [Примеры работ ZIP](/alsibir-expert/examples/portfolio-samples.zip)

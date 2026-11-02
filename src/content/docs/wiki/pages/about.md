@@ -24,8 +24,8 @@ draft: false
 
 ## Резюме и результаты
 
-[Скачать резюме Александра Сибирякова, PDF](/alsibir-expert/CV/alexander-sibiryakov-cv.pdf).
+[Запросить резюме аналитика или технического писателя](/alsibir-expert/wiki/pages/resume/).
 
 <div class="aps-results"><div><strong>87 %</strong><p>Приёмка с первого раза</p></div><div><strong>+26 %</strong><p>Охват функциональности сверх плана</p></div><div><strong>×1,7</strong><p>Ускорение выпуска документации</p></div></div>
 
-По сведениям автора в предоставленном резюме, стр. 1.
+Результаты приведены по сведениям автора.
