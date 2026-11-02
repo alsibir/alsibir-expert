@@ -1,1 +1,53 @@
-<a class="aps-brand" href="/alsibir-expert/" aria-label="AlSibir — на главную"><img class="theme-light" src="/alsibir-expert/img/logo-light.svg" width="320" height="66" alt="AlSibir — аналитик и технический писатель"/><img class="theme-dark" src="/alsibir-expert/img/logo-dark.svg" width="320" height="66" alt="AlSibir — аналитик и технический писатель"/></a>
+<a
+  class="aps-brand aps-brand-caption"
+  href="/alsibir-expert/"
+  aria-label="Сайт аналитика и технического писателя Сибирякова А.П. — на главную"
+>
+  <span>Сайт аналитика</span>
+  <span>и технического писателя</span>
+  <strong>Сибирякова А.П.</strong>
+</a>
+
+<style>
+  .aps-brand-caption {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+    width: 320px;
+    max-width: 100%;
+    min-height: 66px;
+    padding: 7px 12px;
+    background: var(--aps-panel);
+    color: var(--aps-ink);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  .aps-brand-caption span,
+  .aps-brand-caption strong {
+    display: block;
+    margin: 0;
+  }
+  .aps-brand-caption strong {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .aps-brand-caption:hover { text-decoration: none; }
+  .aps-brand-caption:focus-visible {
+    outline: 3px solid var(--sl-color-accent);
+    outline-offset: 3px;
+  }
+  @media (max-width: 760px) {
+    .aps-brand-caption {
+      width: 235px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .aps-brand-caption strong { font-size: 15px; }
+  }
+</style>
