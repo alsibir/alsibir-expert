@@ -1,4 +1,5 @@
 ---
+import ClientsPartners from './ClientsPartners.astro';
 const projects = [
   { id: 'puzzlelib', title: 'PuzzleLib', type: 'Техническое задание · 16 страниц', task: 'Требования к развитию нейросетевой библиотеки.', detail: 'Пример формализации требований к программному продукту.', image: 'puzzlelib-project-card.png', pdf: 'puzzlelib.pdf' },
   { id: 'snezhinka', title: 'Снежинка', type: 'Техническое задание · 21 страница', task: 'Требования к виртуальному ассистенту мультимедийного стенда.', detail: 'Пример описания функциональности и взаимодействия с пользователем.', image: 'snezhinka-project-card.png', pdf: 'snezhinka.pdf' },
@@ -11,6 +12,8 @@ const projects = [
     <div><strong>ГОСТ 19 / 34 / 21</strong><span>Требования, документация и испытания</span></div>
     <div><strong>API и ИИ</strong><span>Интерфейсы, нейросети и виртуальные ассистенты</span></div>
   </div>
+
+  <ClientsPartners />
 
   <section id="real-work" aria-labelledby="real-work-title">
     <div class="aps-home-section-heading"><div><p class="aps-home-eyebrow">Профессиональное портфолио</p><h2 id="real-work-title">Реальные работы</h2></div><a href="/alsibir-expert/wiki/pages/portfolio/">Все примеры →</a></div>
