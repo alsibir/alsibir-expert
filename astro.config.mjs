@@ -23,8 +23,10 @@ export default defineConfig({
       },
       plugins: [starlightBlog({ title: 'Блог', navigation: 'none' })],
       sidebar: [
+        { label: 'Публикации', slug: 'publications' },
+        { label: 'Знания', items: [
         { label: 'Начало', items: [
-          { label: 'База знаний', slug: 'wiki' },
+          { label: 'Обзор знаний', slug: 'wiki' },
           { label: 'О специалисте', slug: 'wiki/pages/about' },
           { label: 'Услуги', slug: 'wiki/pages/services' },
           { label: 'Портфолио', slug: 'wiki/pages/portfolio' },
@@ -46,6 +48,11 @@ export default defineConfig({
           { label: 'Вопросы и ответы', slug: 'wiki/pages/faq' },
           { label: 'Карта сайта', slug: 'wiki/pages/sitemap' },
           { label: 'Политика конфиденциальности', slug: 'wiki/pages/pp' },
+        ] },
+        ] },
+        { label: 'Блог', items: [
+          { label: 'Все статьи по дате', link: 'https://alsibir.github.io/alsibir-expert/blog/' },
+          { autogenerate: { directory: 'blog' } },
         ] },
       ],
     }),
