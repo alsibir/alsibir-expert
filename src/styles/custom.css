@@ -263,6 +263,11 @@ a:hover { text-decoration-thickness: 2px; }
   display: block;
   width: 10em;
   max-width: 100%;
+  color-scheme: only light;
+  background-color: #ffffff;
+  color: #172536;
+  border: 1px solid var(--aps-line);
+  border-radius: 6px;
 }
 .aps-header starlight-theme-select select {
   box-sizing: border-box;
@@ -270,13 +275,20 @@ a:hover { text-decoration-thickness: 2px; }
   min-width: 0;
   max-width: 100%;
   white-space: nowrap;
-  background-color: var(--aps-surface);
-  color: var(--aps-ink);
+  /* Android может игнорировать фон option: поле и системный список используют одну светлую схему. */
+  color-scheme: only light;
+  background-color: #ffffff;
+  color: #172536;
+  -webkit-text-fill-color: #172536;
+  margin-inline: 0;
 }
 .aps-header starlight-theme-select option {
-  background-color: var(--aps-surface);
-  color: var(--aps-ink);
+  color-scheme: only light;
+  background-color: #ffffff;
+  color: #172536;
+  -webkit-text-fill-color: #172536;
 }
+.aps-header starlight-theme-select label:hover { color: #172536; }
 @media (max-width: 1100px) {
   .aps-menu .aps-mobile-theme { min-width: 0; }
   .aps-mobile-theme starlight-theme-select,
