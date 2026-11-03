@@ -7,8 +7,8 @@ draft: false
 
 ## Документация и реестры
 
-- [Образцы регистрационного досье программного обеспечения](/alsibir-expert/dosies/mincifry_dossier.pdf) — учебный комплект из семи взаимосвязанных документов. [Скачать DOCX](/alsibir-expert/dosies/mincifry_dossier.docx).
-- [Образцы промышленного досье](/alsibir-expert/dosies/minpromtorg_dossier.pdf) — семь учебных образцов для анализа происхождения компонентов и операций. [Скачать DOCX](/alsibir-expert/dosies/minpromtorg_dossier.docx).
+- [Образцы регистрационного досье программного обеспечения](/alsibir-expert/dosies/mincifry_dossier.pdf) — учебный комплект из семи взаимосвязанных документов.
+- [Образцы промышленного досье](/alsibir-expert/dosies/minpromtorg_dossier.pdf) — учебный комплект документов для анализа происхождения компонентов и операций.
 - [Примеры портфолио](/alsibir-expert/wiki/pages/portfolio/) — методические кейсы и результаты, которые возможно демонстрировать без закрытых исходных данных.
 
 ## Основные разделы
