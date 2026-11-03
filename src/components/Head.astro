@@ -1,9 +1,25 @@
 ---
-import DefaultHead from '@astrojs/starlight/components/Head.astro';
+// Keep one authoritative set of sharing metadata on every Starlight route.
+const description = 'Техническая документация, системный анализ, ГОСТ 19/34/21, портфолио и практические материалы';
+const siteName = 'А.Сибиряков — Аналитик и технический писатель';
+const managedProperties = new Set(['og:title', 'og:description', 'og:site_name', 'og:image', 'og:image:width', 'og:image:height', 'og:image:alt', 'og:image:type']);
+const managedNames = new Set(['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt']);
+const head = Astro.locals.starlightRoute.head.filter(({ attrs }) =>
+  !managedProperties.has(String(attrs?.property ?? '')) &&
+  !managedNames.has(String(attrs?.name ?? ''))
+);
 const title=Astro.locals.starlightRoute.entry.data.title;
-const image='https://alsibir.github.io/alsibir-expert/images/og-site.png';
+const image='https://alsibir.github.io/alsibir-expert/images/og-site.png?v=20261103';
 ---
-<DefaultHead/><link rel="apple-touch-icon" href="/alsibir-expert/img/icon-180.png"/><link rel="manifest" href="/alsibir-expert/img/site.webmanifest"/><meta property="og:image" content={image}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="Александр Сибиряков — аналитик и технический писатель"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content={image}/><meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)"/><meta name="theme-color" content="#111923" media="(prefers-color-scheme: dark)"/>
+{head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+<meta property="og:title" content={title}/>
+<meta property="og:description" content={description}/>
+<meta property="og:site_name" content={siteName}/>
+<meta property="og:image:type" content="image/png"/>
+<meta name="twitter:title" content={title}/>
+<meta name="twitter:description" content={description}/>
+<meta name="twitter:image:alt" content="Александр Сибиряков — аналитик и технический писатель"/>
+<link rel="apple-touch-icon" href="/alsibir-expert/img/icon-180.png"/><link rel="manifest" href="/alsibir-expert/img/site.webmanifest"/><meta property="og:image" content={image}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="Александр Сибиряков — аналитик и технический писатель"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:image" content={image}/><meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)"/><meta name="theme-color" content="#111923" media="(prefers-color-scheme: dark)"/>
 <!-- Yandex.Metrika counter -->
     <script is:inline type="text/javascript">
         (function(m,e,t,r,i,k,a){
