@@ -1,0 +1,22 @@
+<dialog class="download-confirmation" id="download-confirmation" aria-labelledby="download-title" aria-describedby="download-description download-file">
+  <form method="dialog">
+    <h2 id="download-title">Подтверждение скачивания</h2>
+    <p id="download-description">Разрешить скачивание этого файла? В зависимости от настроек браузера документ будет открыт или сохранён на устройстве.</p>
+    <p id="download-file" class="download-file"></p>
+    <div class="download-actions"><button value="cancel" autofocus>Отказаться</button><button value="allow" class="download-allow">Разрешить скачивание</button></div>
+  </form>
+</dialog>
+<style>
+  .download-confirmation { width:min(90vw,520px); max-height:85vh; overflow:auto; border:1px solid var(--aps-line); border-radius:14px; padding:clamp(1rem,4vw,1.75rem); background:var(--aps-surface); color:var(--aps-ink); box-shadow:0 16px 60px #0005; }
+  .download-confirmation::backdrop { background:#07152699; }
+  h2 { margin:0 0 1rem; font-size:1.35rem; line-height:1.3; }
+  p { line-height:1.6; }
+  .download-file { background:var(--aps-accent-soft); padding:.7rem; border-radius:6px; overflow-wrap:anywhere; font-weight:600; }
+  .download-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.65rem; margin-top:1.5rem; }
+  button { min-height:44px; padding:.65rem 1rem; border:1px solid var(--aps-line); border-radius:7px; background:var(--aps-surface); color:var(--aps-ink); cursor:pointer; font:inherit; }
+  .download-allow { background:var(--aps-accent); color:var(--aps-button-ink); border-color:var(--aps-accent); }
+  button:focus-visible { outline:2px solid var(--aps-accent); outline-offset:3px; }
+</style>
+<script>
+  import '../scripts/download-confirmation';
+</script>

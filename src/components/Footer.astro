@@ -1,10 +1,12 @@
 ---
+import DownloadConfirmation from './DownloadConfirmation.astro';
 import TagCloud from './TagCloud.astro';
 import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
 import SiteTitle from './SiteTitle.astro';
 import NavIcon from './NavIcon.astro';
 const isHome = Astro.url.pathname.replace(/\/+$/, '') === import.meta.env.BASE_URL.replace(/\/+$/, '');
 ---
+<DownloadConfirmation/>
 <!-- Yandex.Metrika counter (noscript) -->
     <noscript><div><img src="https://mc.yandex.ru/watch/113951982" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter (noscript) -->
