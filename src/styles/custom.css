@@ -258,8 +258,9 @@ a:hover { text-decoration-thickness: 2px; }
 .aps-header starlight-theme-select label { --sl-select-width: 9em !important; max-width: 100%; }
 .aps-header starlight-theme-select { flex-shrink: 0; }
 .aps-header starlight-theme-select select {
-  width: 100%;
-  min-width: 0;
+  width: 10em;
+  min-width: 10em;
+  max-width: 100%;
   white-space: nowrap;
   text-overflow: clip;
 }
