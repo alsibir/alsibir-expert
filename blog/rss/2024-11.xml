@@ -8,4 +8,4 @@
 &lt;li&gt;Для URL выбирать предсказуемые slug, независимые от отображаемого русского заголовка.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt; &lt;code dir=&quot;auto&quot;&gt;requirements-traceability.md&lt;/code&gt; надёжнее, чем файл со случайными пробелами и смешанным регистром. После переименования обязательно проверять ссылки и выполнять сборку проекта.&lt;/p&gt;
-</content:encoded><category>Имена файлов</category><category>Windows</category><category>Linux</category></item></channel></rss>
+</content:encoded><category>Управление файлами</category><category>Windows</category><category>Linux</category></item></channel></rss>
