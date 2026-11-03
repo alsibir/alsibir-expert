@@ -11,5 +11,6 @@
   "starlightBlog.post.featured": "Избранное",
   "starlightBlog.post.tags": "Темы публикации",
   "starlightBlog.pagination.prev": "Предыдущая страница",
-  "starlightBlog.pagination.next": "Следующая страница"
+  "starlightBlog.pagination.next": "Следующая страница",
+  "starlightBlog.tags.count": "Все публикации по этой теме:"
 }
