@@ -312,3 +312,10 @@ a:hover { text-decoration-thickness: 2px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Нативный список тем использует согласованные цвета текста и фона. */
+.aps-header starlight-theme-select select,
+.aps-header starlight-theme-select option {
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
+}
