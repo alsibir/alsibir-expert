@@ -1,11 +1,19 @@
 ---
 import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
 import topics from '../data/publications.json';
-import AssetImage from './AssetImage.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const category = Astro.locals.starlightRoute.entry.data.category;
 const topic = topics.find(item => item.title === category);
 const isAbout = Astro.url.pathname.replace(/\/+$/, '').endsWith('/wiki/pages/about');
 ---
 {topic && <nav class="publication-path" aria-label="Путь публикации"><a href="/alsibir-expert/publications/">Публикации</a><span aria-hidden="true"> / </span><a href={`/alsibir-expert/publications/#${topic.id}`}>{topic.title}</a></nav>}
 <DefaultPageTitle/>
-{isAbout && <AssetImage name="portrait" alt="Александр Сибиряков — аналитик и технический писатель" class="aps-author-portrait"/>}
+{isAbout && <picture class="aps-author-portrait">
+  <img
+    src={`${base}images/about-author-720.webp`}
+    srcset={`${base}images/about-author-360.webp 360w, ${base}images/about-author-720.webp 720w, ${base}images/about-author-1097.webp 1097w`}
+    sizes="(max-width: 400px) calc(100vw - 48px), 360px"
+    alt="Александр Сибиряков за работой с ноутбуком"
+    width="1097" height="1536" loading="eager" fetchpriority="high" decoding="async"
+  />
+</picture>}
