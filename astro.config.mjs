@@ -40,7 +40,9 @@ export default defineConfig({
         { label: 'Учебное портфолио', items: [{ autogenerate: { directory: 'wiki/portfolio' } }] },
         { label: 'Учебные комплекты реестров', items: [
           { label: 'Досье ПО для реестра Минцифры (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/mincifry_dossier.pdf' },
+          { label: 'Досье ПО для реестра Минцифры (DOCX)', link: 'https://alsibir.github.io/alsibir-expert/dosies/mincifry_dossier.docx' },
           { label: 'Досье промышленного изделия (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/minpromtorg_dossier.pdf' },
+          { label: 'Досье промышленного изделия (DOCX)', link: 'https://alsibir.github.io/alsibir-expert/dosies/minpromtorg_dossier.docx' },
         ] },
         { label: 'Дополнительные страницы', items: [
           { label: 'Вопросы и ответы', slug: 'wiki/pages/faq' },
