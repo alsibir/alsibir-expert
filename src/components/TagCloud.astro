@@ -1,0 +1,124 @@
+---
+import { getCollection } from 'astro:content';
+import { slug } from 'github-slugger';
+const entries = await getCollection('docs', entry => !entry.data.draft && !!entry.filePath?.replaceAll('\\', '/').includes('/docs/blog/') && !!entry.data.date);
+const counts = new Map<string, { label: string; count: number }>();
+for (const entry of entries) {
+  for (const key of new Set((entry.data.tags ?? []).map(tag => slug(tag)))) {
+    const label = entry.data.tags!.find(tag => slug(tag) === key)!;
+    const current = counts.get(key);
+    counts.set(key, { label: current?.label ?? label, count: (current?.count ?? 0) + 1 });
+  }
+}
+const tags = [...counts].map(([key, item]) => ({ ...item, href: `${import.meta.env.BASE_URL}blog/tags/${key}/` })).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'ru'));
+const max = Math.max(1, ...tags.map(tag => tag.count));
+const size = (count: number) => 14 + 16 * Math.log1p(count) / Math.log1p(max);
+const sphereTags = tags.slice(0, 40);
+---
+<section class="tag-cloud" aria-labelledby="tag-cloud-title" data-tag-cloud>
+  <div class="cloud-heading"><div><p class="cloud-eyebrow">Навигация по интересам</p><h2 id="tag-cloud-title">Темы публикаций</h2></div><a href={`${import.meta.env.BASE_URL}blog/tags/`}>Все теги</a></div>
+  <p class="cloud-intro">Чем крупнее тег, тем больше статей. Выберите тему, чтобы открыть публикации.</p>
+  <div class="cloud-controls" hidden data-controls>
+    <div class="cloud-modes" role="group" aria-label="Вид облака тегов"><button type="button" data-mode="flat" aria-pressed="true">Облако</button><button type="button" data-mode="sphere" aria-pressed="false">Сфера</button></div>
+    <div class="sphere-controls" hidden data-sphere-controls><button type="button" data-pause aria-pressed="false">Остановить</button><button type="button" data-zoom="-1" aria-label="Уменьшить сферу">−</button><button type="button" data-zoom="1" aria-label="Увеличить сферу">+</button></div>
+  </div>
+  <ul class="flat-cloud" data-flat aria-label="Теги и количество статей">
+    {tags.map(tag => <li><a href={tag.href} style={`--tag-size:${size(tag.count).toFixed(2)}px`}><span>{tag.label}</span><small aria-label={`Статей: ${tag.count}`}>{tag.count}</small></a></li>)}
+  </ul>
+  <div data-sphere-panel hidden>
+    <p class="sphere-help" id="sphere-help">40 наиболее частых тегов. Движение мыши вращает сферу; наведение останавливает тег. Для масштаба используйте кнопки или колесо после щелчка по полю. Все теги доступны в режиме «Облако».</p>
+    <div class="sphere" data-sphere tabindex="0" role="group" aria-label="Вращающееся облако тегов" aria-describedby="sphere-help">
+      {sphereTags.map(tag => <a href={tag.href} style={`--tag-size:${size(tag.count).toFixed(2)}px`}><span>{tag.label}</span><small aria-label={`Статей: ${tag.count}`}>{tag.count}</small></a>)}
+    </div>
+  </div>
+</section>
+<style>
+  .tag-cloud { margin-block: 2.5rem 1rem; padding: clamp(1rem,3vw,2rem); border: 1px solid var(--aps-line); border-radius: 16px; background: var(--aps-surface); color: var(--aps-ink); min-width: 0; }
+  .cloud-heading { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .cloud-heading h2 { margin:0; font-size:clamp(1.5rem,3vw,2rem); }
+  .cloud-eyebrow { margin:0 0 .3rem; color:var(--aps-muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; }
+  .cloud-intro,.sphere-help { color:var(--aps-muted); font-size:.95rem; }
+  .cloud-controls,.sphere-controls,.cloud-modes { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+  .cloud-controls { justify-content:space-between; margin-block:1.2rem; }
+  button { border:1px solid var(--aps-line); background:var(--aps-surface); color:var(--aps-ink); border-radius:8px; padding:.55rem .9rem; font:inherit; cursor:pointer; min-height:44px; }
+  button[aria-pressed="true"],button:hover { background:var(--aps-accent-soft); color:var(--aps-accent); border-color:var(--aps-accent); }
+  .flat-cloud { list-style:none; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.45rem 1rem; padding:1rem 0; margin:0; }
+  .flat-cloud li { padding:0; margin:0; max-width:100%; }
+  .tag-cloud a { color:var(--aps-accent); text-decoration:none; }
+  .flat-cloud a,.sphere a { display:inline-flex; align-items:baseline; gap:.3em; font-size:var(--tag-size); font-weight:550; line-height:1.4; border-radius:6px; padding:.15em .25em; transition:color .18s,background .18s; }
+  .flat-cloud a { min-height:44px; align-items:center; overflow-wrap:anywhere; }
+  .flat-cloud a:hover { transform:scale(1.06); background:var(--aps-accent-soft); }
+  small { font-size:.55em; color:var(--aps-muted); font-weight:400; }
+  a:focus-visible,button:focus-visible,.sphere:focus-visible { outline:2px solid var(--aps-accent); outline-offset:3px; }
+  .sphere { position:relative; height:clamp(320px,55vw,520px); overflow:hidden; isolation:isolate; border-radius:12px; background:radial-gradient(ellipse at center,var(--aps-accent-soft),transparent 70%); touch-action:pan-y; }
+  .sphere a { position:absolute; top:50%; left:50%; white-space:nowrap; will-change:transform; }
+  .sphere a:hover,.sphere a:focus-visible { background:var(--aps-surface); color:var(--aps-ink); opacity:1!important; z-index:1000!important; }
+  [hidden] { display:none!important; }
+  @media(max-width:600px) { .flat-cloud { gap:.4rem; } .flat-cloud a { font-size:min(var(--tag-size),24px); } }
+  @media(prefers-reduced-motion:reduce) { .flat-cloud a:hover { transform:none; } }
+</style>
+<script>
+  function initClouds() {
+    document.querySelectorAll<HTMLElement>('[data-tag-cloud]').forEach(root => {
+      if (root.dataset.ready) return;
+      root.dataset.ready = 'true';
+      const flat = root.querySelector<HTMLElement>('[data-flat]')!;
+      const panel = root.querySelector<HTMLElement>('[data-sphere-panel]')!;
+      const field = root.querySelector<HTMLElement>('[data-sphere]')!;
+      const controls = root.querySelector<HTMLElement>('[data-sphere-controls]')!;
+      const pause = root.querySelector<HTMLButtonElement>('[data-pause]')!;
+      const links = [...field.querySelectorAll<HTMLAnchorElement>('a')];
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+      let mode = 'flat', paused = reduce.matches, visible = false, hovered = false;
+      let ax = 0, ay = 0, vx = .001, vy = .002, zoom = 1, frame = 0, last = 0;
+      const points = links.map((_, i) => { const y = 1 - 2 * (i + .5) / links.length; const r = Math.sqrt(1-y*y); const angle = i * Math.PI * (3-Math.sqrt(5)); return { x:r*Math.cos(angle), y, z:r*Math.sin(angle) }; });
+      function render() {
+        const width = field.clientWidth, height = field.clientHeight;
+        const radius = Math.max(65, Math.min(width * .32, height * .37)) * zoom;
+        points.forEach((p, i) => {
+          const x = p.x*Math.cos(ay)+p.z*Math.sin(ay), z0 = p.z*Math.cos(ay)-p.x*Math.sin(ay);
+          const y = p.y*Math.cos(ax)-z0*Math.sin(ax), z = p.y*Math.sin(ax)+z0*Math.cos(ax);
+          const perspective = 2.8/(2.8-z);
+          const active = links[i].matches(':hover, :focus-visible');
+          const scale = perspective*(active?1.12:1)*Math.min(1,width/520);
+          links[i].style.transform = `translate(-50%,-50%) translate(${x*radius*perspective}px,${y*radius*perspective}px) scale(${scale})`;
+          links[i].style.opacity = String(.45+.55*(z+1)/2);
+          links[i].style.zIndex = String(Math.round((z+1)*100));
+        });
+      }
+      function tick(time: number) {
+        frame = 0;
+        if (mode !== 'sphere' || !visible || document.hidden) return;
+        const dt = Math.min(2, (time-(last||time))/16.67); last = time;
+        if (!paused && !hovered && !field.contains(document.activeElement)) { ax += vx*dt; ay += vy*dt; }
+        render();
+        if (!paused && !hovered && !field.contains(document.activeElement)) frame=requestAnimationFrame(tick);
+      }
+      function start() { last=0; if (!frame && mode==='sphere' && visible && !document.hidden) frame=requestAnimationFrame(tick); }
+      function stop() { cancelAnimationFrame(frame); frame=0; }
+      function pauseLabel() { pause.textContent=paused?'Продолжить':'Остановить';pause.setAttribute('aria-pressed',String(paused)); }
+      root.querySelector<HTMLElement>('[data-controls]')!.hidden=false;
+      root.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach(button => button.addEventListener('click', () => {
+        mode=button.dataset.mode!; flat.hidden=mode!=='flat'; panel.hidden=mode!=='sphere';controls.hidden=mode!=='sphere';
+        root.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String((b as HTMLElement).dataset.mode===mode)));
+        if(mode==='sphere'){render();start();}else stop();
+      }));
+      field.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const b=field.getBoundingClientRect();vy=(e.clientX-b.left-b.width/2)/b.width*.018;vx=-(e.clientY-b.top-b.height/2)/b.height*.014;});
+      field.addEventListener('pointerover',e=>{hovered=!!(e.target as HTMLElement).closest('a');if(hovered){stop();render();}else start();});
+      field.addEventListener('pointerleave',()=>{hovered=false;vx=.001;vy=.002;start();});
+      field.addEventListener('focusin',()=>{stop();render();});
+      field.addEventListener('focusout',()=>queueMicrotask(()=>{render();start();}));
+      function changeZoom(delta:number){zoom=Math.max(.65,Math.min(1.3,zoom+delta));render();}
+      root.querySelectorAll<HTMLButtonElement>('[data-zoom]').forEach(b=>b.addEventListener('click',()=>changeZoom(Number(b.dataset.zoom)*.1)));
+      field.addEventListener('wheel',e=>{if(document.activeElement!==field)return;e.preventDefault();changeZoom(-Math.sign(e.deltaY)*.06);},{passive:false});
+      pause.addEventListener('click',()=>{paused=!paused;pauseLabel();if(paused)stop();else start();});
+      reduce.addEventListener('change',()=>{paused=reduce.matches;pauseLabel();if(paused)stop();else start();});
+      const observer=new IntersectionObserver(items=>{visible=items[0].isIntersecting;if(visible)start();else stop();});observer.observe(field);
+      document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start();});
+      window.addEventListener('resize',()=>{if(mode==='sphere')render();});
+      document.addEventListener('astro:before-swap',()=>{stop();observer.disconnect();},{once:true});
+      pauseLabel();
+    });
+  }
+  initClouds();document.addEventListener('astro:page-load',initClouds);
+</script>
