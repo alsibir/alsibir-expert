@@ -5,16 +5,55 @@ import NavIcon from './NavIcon.astro';
 const currentPath = Astro.url.pathname.replace(/\/+$/, '');
 const isCurrent = (path: string) => currentPath === path.replace(/\/+$/, '') || (path.endsWith('/blog/') && currentPath.startsWith(path));
 ---
-<div class:list={["aps-header", {"aps-home-header": Astro.url.pathname.replace(/^\/alsibir-expert/, "") === "/"}]}><DefaultHeader/><details class="aps-menu" open><summary>Меню</summary><nav class="aps-top-nav" aria-label="Основная навигация"><a aria-current={isCurrent('/alsibir-expert/wiki/pages/services/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/services/"><NavIcon name="requirements"/>Услуги</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/portfolio/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/portfolio/"><NavIcon name="documentation"/>Работы</a><a aria-current={currentPath === '/alsibir-expert/publications' || currentPath.startsWith('/alsibir-expert/blog') || currentPath === '/alsibir-expert/wiki' || currentPath.startsWith('/alsibir-expert/wiki/portfolio/') ? 'page' : undefined} href="/alsibir-expert/publications/"><NavIcon name="file"/>Публикации</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/contact/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/contact/"><NavIcon name="email"/>Контакты</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/sitemap/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><NavIcon name="menu"/><span class="map-label">Карта сайта</span></a><div class="aps-mobile-theme"><ThemeSelect/></div></nav></details></div>
+<div class:list={["aps-header", {"aps-home-header": Astro.url.pathname.replace(/^\/alsibir-expert/, "") === "/"}]}><DefaultHeader/><details class="aps-menu"><summary>Меню</summary><nav class="aps-top-nav" aria-label="Основная навигация"><div class="aps-mobile-theme"><span class="aps-theme-label">Тема</span><ThemeSelect/></div><a aria-current={isCurrent('/alsibir-expert/wiki/pages/services/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/services/"><NavIcon name="requirements"/>Услуги</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/portfolio/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/portfolio/"><NavIcon name="documentation"/>Работы</a><a aria-current={currentPath === '/alsibir-expert/publications' || currentPath.startsWith('/alsibir-expert/blog') || currentPath === '/alsibir-expert/wiki' || currentPath.startsWith('/alsibir-expert/wiki/portfolio/') ? 'page' : undefined} href="/alsibir-expert/publications/"><NavIcon name="file"/>Публикации</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/contact/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/contact/"><NavIcon name="email"/>Контакты</a><a aria-current={isCurrent('/alsibir-expert/wiki/pages/sitemap/') ? 'page' : undefined} href="/alsibir-expert/wiki/pages/sitemap/" aria-label="Карта сайта"><NavIcon name="menu"/><span class="map-label">Карта сайта</span></a></nav></details></div>
 <script>
  function initMenu() {
-  const menu = document.querySelector<HTMLDetailsElement>('.aps-menu');
-  if (!menu || menu.dataset.ready) return;
-  menu.dataset.ready = 'true';
-  const media = matchMedia('(max-width: 1100px)');
-  const sync = () => { menu.open = !media.matches; };
+  const header = document.querySelector<HTMLElement>('.aps-header');
+  const menu = header?.querySelector<HTMLDetailsElement>('.aps-menu');
+  if (!header || !menu || header.dataset.ready) return;
+  header.dataset.ready = 'true';
+  const root = document.documentElement;
+  const frameHeader = header.closest<HTMLElement>('header');
+  const media = matchMedia('(max-width: 1100px), (max-height: 500px) and (max-width: 1400px)');
+  let previousY = Math.max(0, window.scrollY);
+  let distance = 0;
+  let scheduled = false;
+  const show = () => {
+   root.classList.remove('aps-header-hidden');
+   if (frameHeader) frameHeader.inert = false;
+  };
+  const isBusy = () => menu.open || document.querySelector('#starlight__sidebar:popover-open, dialog[open], #starlight__mobile-toc[open]') || frameHeader?.contains(document.activeElement);
+  const sync = () => { menu.open = !media.matches; show(); distance = 0; previousY = Math.max(0, window.scrollY); };
   sync(); media.addEventListener('change', sync);
-  menu.addEventListener('keydown', e => { if (e.key === 'Escape' && media.matches) { menu.open = false; menu.querySelector('summary')?.focus(); } });
+  const onScroll = () => {
+   scheduled = false;
+   const y = Math.max(0, window.scrollY);
+   const delta = y - previousY;
+   previousY = y;
+   if (!media.matches || y < 64 || isBusy()) { show(); distance = 0; return; }
+   if ((delta > 0 && distance < 0) || (delta < 0 && distance > 0)) distance = 0;
+   distance += delta;
+   if (distance < -8) { show(); distance = 0; }
+   else if (distance > 16) {
+    root.classList.add('aps-header-hidden');
+    if (frameHeader) frameHeader.inert = true;
+    distance = 0;
+   }
+  };
+  window.addEventListener('scroll', () => {
+   if (!scheduled) { scheduled = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  menu.addEventListener('toggle', show);
+  document.querySelector('#starlight__sidebar')?.addEventListener('toggle', show);
+  document.querySelector('#starlight__mobile-toc')?.addEventListener('toggle', show);
+  document.addEventListener('focusin', show);
+  menu.addEventListener('keydown', e => {
+   if (e.key === 'Escape' && media.matches) { menu.open = false; menu.querySelector('summary')?.focus(); }
+  });
+  document.addEventListener('click', e => {
+   if (media.matches && menu.open && e.target instanceof Node && !menu.contains(e.target)) menu.open = false;
+  });
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { if (media.matches) menu.open = false; }));
  }
  initMenu(); document.addEventListener('astro:page-load', initMenu);
 </script>
