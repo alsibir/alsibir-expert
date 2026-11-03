@@ -167,7 +167,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* Главная: персональный профиль и документальные примеры. */
 .aps-home-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .8fr); gap: clamp(28px, 5vw, 64px); align-items: center; padding: 42px 0 38px; }
 .aps-home-eyebrow { font-size: 13px; line-height: 1.6; color: var(--aps-accent); margin: 0 0 14px !important; font-weight: 500; }
-.aps-home-hero h1 { font-size: clamp(38px, 5.2vw, 66px); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 22px !important; font-weight: 650; max-width: none; }
+.aps-home-hero h1 { font-size: clamp(25.333px, 3.467vw, 44px); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 22px !important; font-weight: 650; max-width: none; }
 .aps-home-hero h1 span { display: block; }
 .aps-home-intro { font-size: 19px; line-height: 1.7; max-width: 48ch; color: var(--aps-muted); margin: 0 0 14px !important; }
 .aps-home-motto { font-size: 17px; color: var(--aps-ink); margin: 0 !important; }
@@ -236,7 +236,7 @@ a:hover { text-decoration-thickness: 2px; }
 @media (max-width: 600px) {
   .aps-home-hero { grid-template-columns: 1fr; gap: 28px; padding: 28px 0; }
   .aps-home-portrait { justify-self: start; max-width: 230px; }
-  .aps-home-hero h1 { font-size: 40px; }
+  .aps-home-hero h1 { font-size: 26.667px; }
   .aps-home-proof { grid-template-columns: 1fr; gap: 16px; }
   .aps-home-proof > div { border-inline-start: 2px solid var(--aps-accent); padding-inline-start: 14px; }
   .aps-home-project { display: flex; }
@@ -318,4 +318,24 @@ a:hover { text-decoration-thickness: 2px; }
 .aps-header starlight-theme-select option {
   background-color: var(--aps-surface);
   color: var(--aps-ink);
+}
+
+/* Имя, разделитель до фотографии и профессиональная подпись. */
+.aps-home-hero h1 { margin-bottom: 18px !important; }
+.aps-home-divider {
+  width: calc(100% + clamp(28px, 5vw, 64px));
+  border-top: 1px solid var(--aps-line);
+  margin-bottom: 16px;
+}
+.aps-home-role {
+  font-family: 'Manrope Variable', 'Segoe UI', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--aps-ink);
+  margin: 0 0 22px !important;
+}
+@media (max-width: 600px) {
+  .aps-home-divider { width: 100%; }
+  .aps-home-role { font-size: 18px; }
 }

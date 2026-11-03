@@ -6,8 +6,9 @@ const isHome = Astro.url.pathname.replace(/^\/alsibir-expert/, '') === '/';
 {isHome ? (
   <section class="aps-home-hero" aria-labelledby="_top">
     <div>
-      <p class="aps-home-eyebrow">Аналитик · Технический писатель</p>
       <h1 id="_top"><span>Александр</span>{" "}<span>Сибиряков</span></h1>
+      <div class="aps-home-divider" aria-hidden="true"></div>
+      <p class="aps-home-role">аналитик и технический писатель</p>
       <p class="aps-home-intro">Анализ требований, моделирование процессов и разработка технической документации по ГОСТ 19, 34 и 21.</p>
       <p class="aps-home-motto">От описания системы до испытаний и руководства пользователя.</p>
       <div class="aps-home-actions">
