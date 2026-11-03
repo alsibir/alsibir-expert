@@ -27,7 +27,7 @@ const ending = `
 ## Другие способы поиска
 
 - [Все публикации по дате](/alsibir-expert/blog/).
-- [Все теги статей](/alsibir-expert/blog/tags/) — сквозные признаки: технологии, стандарты, инструменты и виды материалов.
+- [Все теги статей](/alsibir-expert/tags/) — сквозные признаки: технологии, стандарты, инструменты и виды материалов.
 - [Портфолио и учебные примеры](/alsibir-expert/wiki/pages/portfolio/).
 - [О специалисте](/alsibir-expert/wiki/pages/about/), [услуги](/alsibir-expert/wiki/pages/services/) и [контакты](/alsibir-expert/wiki/pages/contact/).
 

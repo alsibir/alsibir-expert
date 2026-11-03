@@ -1,22 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
-import { slug } from 'github-slugger';
-const entries = await getCollection('docs', entry => !entry.data.draft && !!entry.filePath?.replaceAll('\\', '/').includes('/docs/blog/') && !!entry.data.date);
-const counts = new Map<string, { label: string; count: number }>();
-for (const entry of entries) {
-  for (const key of new Set((entry.data.tags ?? []).map(tag => slug(tag)))) {
-    const label = entry.data.tags!.find(tag => slug(tag) === key)!;
-    const current = counts.get(key);
-    counts.set(key, { label: current?.label ?? label, count: (current?.count ?? 0) + 1 });
-  }
-}
-const tags = [...counts].map(([key, item]) => ({ ...item, href: `${import.meta.env.BASE_URL}blog/tags/${key}/` })).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'ru'));
+import { getPublicationTags } from '../lib/publication-tags';
+const tags = (await getPublicationTags()).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'ru'));
 const max = Math.max(1, ...tags.map(tag => tag.count));
 const size = (count: number) => 14 + 16 * Math.log1p(count) / Math.log1p(max);
 const sphereTags = tags.slice(0, 40);
 ---
 <section class="tag-cloud" aria-labelledby="tag-cloud-title" data-tag-cloud>
-  <div class="cloud-heading"><div><p class="cloud-eyebrow">Навигация по интересам</p><h2 id="tag-cloud-title">Темы публикаций</h2></div><a href={`${import.meta.env.BASE_URL}blog/tags/`}>Все теги</a></div>
+  <div class="cloud-heading"><div><p class="cloud-eyebrow">Навигация по интересам</p><h2 id="tag-cloud-title">Темы публикаций</h2></div><a href={`${import.meta.env.BASE_URL}tags/`}>Все теги</a></div>
   <p class="cloud-intro">Чем крупнее тег, тем больше статей. Выберите тему, чтобы открыть публикации.</p>
   <div class="cloud-controls" hidden data-controls>
     <div class="cloud-modes" role="group" aria-label="Вид облака тегов"><button type="button" data-mode="flat" aria-pressed="true">Облако</button><button type="button" data-mode="sphere" aria-pressed="false">Сфера</button></div>

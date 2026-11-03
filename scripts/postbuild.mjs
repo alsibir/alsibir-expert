@@ -12,6 +12,9 @@ const origin='https://alsibir.github.io';
 const base='/alsibir-expert';
 const prefix=u=>u.startsWith('/')&&!u.startsWith('//')&&u!==base&&!u.startsWith(base+'/') ? base+u : u;
 async function walk(dir){let out=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory()){if(e.name==='СТОРОННЕЕ'){await rm(p,{recursive:true,force:true});continue;}out.push(...await walk(p));}else out.push(p);}return out;}
+// Keep the former tag-directory URL usable without routing it as a blog post.
+await mkdir(path.join(root, 'blog/tags'), { recursive: true });
+await writeFile(path.join(root, 'blog/tags/index.html'), `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=${base}/tags/"><link rel="canonical" href="${origin}${base}/tags/"><meta name="robots" content="noindex"><title>Все теги</title></head><body><a href="${base}/tags/">Открыть все теги</a></body></html>`);
 // Retain URLs of tags removed by terminology normalization.
 const { slug: tagSlug } = await import('github-slugger');
 const legacyTags = JSON.parse(await readFile('src/data/legacy-tags.json', 'utf8'));

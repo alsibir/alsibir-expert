@@ -1,0 +1,71 @@
+---
+import { getPublicationTags } from '../lib/publication-tags';
+const tags = (await getPublicationTags()).sort((a, b) => a.label.localeCompare(b.label, 'ru'));
+const initial = (label: string) => /^\d/.test(label) ? '0–9' : label[0].toLocaleUpperCase('ru');
+const initials = [...new Set(tags.map(tag => initial(tag.label)))].sort((a,b)=>a.localeCompare(b,'ru'));
+const countLabel = (count: number) => `${count} ${count % 10 === 1 && count % 100 !== 11 ? 'публикация' : count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 12 || count % 100 > 14) ? 'публикации' : 'публикаций'}`;
+---
+<div class="tag-directory" data-tag-directory>
+  <p>Выберите тег, чтобы открыть статьи по теме. Рядом указано количество публикаций.</p>
+  <p><a href={`${import.meta.env.BASE_URL}publications/`}>Тематический каталог</a> · <a href={`${import.meta.env.BASE_URL}blog/`}>Публикации по дате</a></p>
+  <div class="tag-filters" data-tag-filters hidden>
+    <div class="tag-fields"><label>Поиск тега<input type="search" placeholder="Например: Word, ГОСТ, Linux" autocomplete="off" data-search /></label><label>Порядок<select data-sort><option value="name">По алфавиту</option><option value="count">По количеству статей</option></select></label></div>
+    <div class="tag-alphabet" role="group" aria-label="Фильтр по первой букве">
+      <button type="button" data-letter="" aria-pressed="true">Все</button>
+      {initials.map(letter => <button type="button" data-letter={letter} aria-pressed="false">{letter}</button>)}
+    </div>
+    <button type="button" class="tag-reset" data-reset>Сбросить фильтры</button>
+  </div>
+  <p class="tag-status" role="status" aria-live="polite" data-status>Всего тегов: {tags.length}.</p>
+  <ul class="tag-list" data-tag-list aria-label="Все теги публикаций">
+    {tags.map(tag => <li data-label={tag.label} data-count={tag.count} data-initial={initial(tag.label)}><a href={tag.href}><span>{tag.label}</span><small>{countLabel(tag.count)}</small></a></li>)}
+  </ul>
+  <p data-empty hidden>Подходящие теги не найдены. Измените запрос или сбросьте фильтры.</p>
+</div>
+<style>
+  .tag-directory { min-width:0; }
+  .tag-filters { border:1px solid var(--aps-line); border-radius:12px; padding:1rem; background:var(--aps-surface); margin-block:1.5rem; }
+  .tag-fields { display:grid; grid-template-columns:2fr 1fr; gap:1rem; }
+  label { display:grid; gap:.4rem; font-weight:600; color:var(--aps-ink); }
+  input,select { width:100%; min-width:0; min-height:44px; border:1px solid var(--aps-line); border-radius:6px; padding:.6rem; font:inherit; background:var(--aps-bg); color:var(--aps-ink); }
+  .tag-alphabet { display:flex; flex-wrap:wrap; gap:.3rem; margin-block:1rem; }
+  button { min-width:44px; min-height:44px; border:1px solid var(--aps-line); border-radius:6px; background:var(--aps-surface); color:var(--aps-ink); font:inherit; cursor:pointer; padding:.4rem .6rem; }
+  button[aria-pressed="true"],button:hover { background:var(--aps-accent-soft); color:var(--aps-accent); border-color:var(--aps-accent); }
+  .tag-reset { font-size:.9rem; }
+  .tag-status { color:var(--aps-muted); }
+  .tag-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:.65rem; list-style:none; padding:0; }
+  .tag-list li { margin:0; min-width:0; }
+  .tag-list a { display:flex; flex-direction:column; gap:.3rem; height:100%; padding:.9rem 1rem; border:1px solid var(--aps-line); border-radius:9px; background:var(--aps-surface); text-decoration:none; color:var(--aps-accent); overflow-wrap:anywhere; }
+  .tag-list a:hover { border-color:var(--aps-accent); background:var(--aps-accent-soft); }
+  .tag-list small { color:var(--aps-muted); font-size:.8rem; }
+  :is(a,button,input,select):focus-visible { outline:2px solid var(--aps-accent); outline-offset:3px; }
+  [hidden] { display:none!important; }
+  @media(max-width:600px) { .tag-fields { grid-template-columns:1fr; } }
+</style>
+<script>
+  function initDirectories() {
+    document.querySelectorAll<HTMLElement>('[data-tag-directory]').forEach(root => {
+      if(root.dataset.ready)return;root.dataset.ready='true';
+      const search=root.querySelector<HTMLInputElement>('[data-search]')!;
+      const order=root.querySelector<HTMLSelectElement>('[data-sort]')!;
+      const list=root.querySelector<HTMLElement>('[data-tag-list]')!;
+      const items=[...list.querySelectorAll<HTMLElement>('li')];
+      const buttons=[...root.querySelectorAll<HTMLButtonElement>('[data-letter]')];
+      let letter='';
+      const normalize=(value:string)=>value.toLocaleLowerCase('ru').replaceAll('ё','е').trim();
+      function update(){
+        const query=normalize(search.value);let found=0;
+        const sorted=[...items].sort((a,b)=>order.value==='count' ? Number(b.dataset.count)-Number(a.dataset.count)||a.dataset.label!.localeCompare(b.dataset.label!,'ru') : a.dataset.label!.localeCompare(b.dataset.label!,'ru'));
+        for(const item of sorted){item.hidden=!(normalize(item.dataset.label!).includes(query)&&(!letter||item.dataset.initial===letter));if(!item.hidden)found++;list.append(item);}
+        buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.letter===letter)));
+        root.querySelector<HTMLElement>('[data-status]')!.textContent=`Показано тегов: ${found} из ${items.length}.`;
+        root.querySelector<HTMLElement>('[data-empty]')!.hidden=found!==0;
+      }
+      search.addEventListener('input',update);order.addEventListener('change',update);
+      buttons.forEach(button=>button.addEventListener('click',()=>{letter=button.dataset.letter!;update();}));
+      root.querySelector('[data-reset]')!.addEventListener('click',()=>{search.value='';letter='';order.value='name';update();search.focus();});
+      root.querySelector<HTMLElement>('[data-tag-filters]')!.hidden=false;update();
+    });
+  }
+  initDirectories();document.addEventListener('astro:page-load',initDirectories);
+</script>

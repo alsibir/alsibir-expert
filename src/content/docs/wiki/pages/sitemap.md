@@ -13,7 +13,7 @@ draft: false
 
 - [Каталог публикаций](/alsibir-expert/publications/)
 - [Путеводитель](/alsibir-expert/wiki/)
-- [Все теги статей](/alsibir-expert/blog/tags/)
+- [Все теги статей](/alsibir-expert/tags/)
 - [Досье ПО для реестра Минцифры — PDF](/alsibir-expert/dosies/mincifry_dossier.pdf)
 - [Досье промышленного изделия — PDF](/alsibir-expert/dosies/minpromtorg_dossier.pdf)
 - [Навигация по разделам](/alsibir-expert/wiki/pages/)

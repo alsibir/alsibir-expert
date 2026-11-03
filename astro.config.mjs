@@ -29,7 +29,7 @@ export default defineConfig({
           { label: 'Каталог и маршруты чтения', slug: 'publications' },
           ...publicationTopics.map(topic => ({ label: topic.title, collapsed: true, items: topic.items.map(item => item.link ? { ...item, link: new URL(item.link, 'https://alsibir.github.io').href } : item) })),
           { label: 'Все публикации по дате', link: 'https://alsibir.github.io/alsibir-expert/blog/' },
-          { label: 'Все теги', link: 'https://alsibir.github.io/alsibir-expert/blog/tags/' },
+          { label: 'Все теги', link: 'https://alsibir.github.io/alsibir-expert/tags/' },
         ] },
         { label: 'О специалисте', collapsed: true, items: [
           { label: 'О специалисте', slug: 'wiki/pages/about' },
