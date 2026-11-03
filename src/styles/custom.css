@@ -32,6 +32,7 @@
   --aps-accent: #235ac6;
   --aps-accent-soft: #e8effc;
   --aps-button-ink: #ffffff;
+  --aps-accent-hover: #194594;
   --aps-panel: var(--aps-surface);
   --sl-color-white: #172536;
   --sl-color-gray-1: #27384b;
@@ -69,6 +70,7 @@
   --aps-accent: #92b8ff;
   --aps-accent-soft: #223653;
   --aps-button-ink: #102039;
+  --aps-accent-hover: #c4d8ff;
   --sl-color-white: #e8eef5;
   --sl-color-gray-1: #d6e1ed;
   --sl-color-gray-2: #afbed0;
@@ -140,7 +142,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* Общие элементы портфолио и внутренних страниц. */
 .aps-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: var(--aps-accent); color: var(--aps-button-ink) !important; border: 1px solid var(--aps-accent); border-radius: 6px; padding: 11px 18px; font-size: 15px; font-weight: 550; text-decoration: none; }
-.aps-button:hover { background: var(--sl-color-accent-high); text-decoration: none; }
+.aps-button:hover { background: var(--aps-accent-hover); text-decoration: none; }
 .aps-button.secondary { background: var(--aps-surface); color: var(--aps-ink) !important; border-color: var(--aps-line); }
 .aps-button.secondary:hover { background: var(--aps-accent-soft); border-color: var(--aps-accent); }
 .aps-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 26px 0; }
@@ -252,11 +254,60 @@ a:hover { text-decoration-thickness: 2px; }
   .theme-light { display: block !important; }
 }
 
-/* Полные названия тем: ширина увеличена в 2,5 раза. */
+/* Переключатель темы не выходит за границы мобильного меню. */
+.aps-header starlight-theme-select label { --sl-select-width: 9em !important; max-width: 100%; }
 .aps-header starlight-theme-select { flex-shrink: 0; }
 .aps-header starlight-theme-select select {
-  width: calc(15.625em + 1rem);
-  min-width: calc(15.625em + 1rem);
+  width: 100%;
+  min-width: 0;
   white-space: nowrap;
   text-overflow: clip;
+}
+
+/* Название сайта занимает собственную сжимаемую колонку. */
+.aps-header > .header {
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr) auto;
+}
+.aps-header .title-wrapper { min-width: 0; }
+@media (max-width: 1100px) {
+  .aps-header > .header { grid-template-columns: minmax(0, 1fr) auto; }
+  .aps-header > .header > .right-group { display: none; }
+}
+
+/* Общая типографика длинных технических материалов. */
+.sl-markdown-content {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.sl-markdown-content :where(ul, ol) { max-width: 76ch; }
+.sl-markdown-content :where(h1, h2, h3, h4, h5, h6) { line-height: 1.3; }
+.sl-markdown-content :where(a:not(.aps-button)) { text-decoration-thickness: 1px; }
+.sl-markdown-content :where(.starlight-aside) {
+  border-radius: 6px;
+  border-inline-start-width: 3px;
+  background: var(--aps-surface);
+  color: var(--aps-ink);
+}
+.sl-markdown-content .starlight-aside--note {
+  --sl-color-asides-text-accent: var(--aps-accent);
+  border-color: var(--aps-accent);
+}
+.sl-markdown-content .starlight-aside__title { font-family: inherit; }
+.sl-markdown-content pre {
+  font-size: .875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+.sl-markdown-content :where(pre, code) {
+  font-family: ui-monospace, 'Cascadia Code', 'DejaVu Sans Mono', monospace;
+}
+.sl-markdown-content .expressive-code { min-width: 0; max-width: 100%; }
+.aps-card :where(h2, h3), .aps-home-project :where(h2, h3) { color: var(--aps-ink); }
+@media (max-width: 600px) {
+  .sl-markdown-content :where(th, td) { padding: .6em .75em; }
+  .aps-competencies { grid-template-columns: 1fr; }
+  .aps-card { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

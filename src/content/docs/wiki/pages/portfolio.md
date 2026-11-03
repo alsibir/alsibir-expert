@@ -36,8 +36,12 @@ draft: false
 
 ### Учебные комплекты
 
-- [Досье ПО для реестра Минцифры](/alsibir-expert/dosies/mincifry_dossier.pdf) — семь образцов на условный продукт, PDF. [Скачать DOCX](/alsibir-expert/dosies/mincifry_dossier.docx).
-- [Досье промышленного изделия](/alsibir-expert/dosies/minpromtorg_dossier.pdf) — семь образцов на условное изделие, PDF. [Скачать DOCX](/alsibir-expert/dosies/minpromtorg_dossier.docx).
+Оба комплекта являются учебными образцами для вымышленных объектов.
+
+| Комплект | Состав | DOCX | PDF |
+|---|---|---|---|
+| Досье ПО для реестра Минцифры | Семь образцов на условный программный продукт | [Скачать DOCX](/alsibir-expert/dosies/mincifry_dossier.docx) | [Открыть PDF](/alsibir-expert/dosies/mincifry_dossier.pdf) |
+| Досье промышленного изделия | Семь образцов на условное изделие | [Скачать DOCX](/alsibir-expert/dosies/minpromtorg_dossier.docx) | [Открыть PDF](/alsibir-expert/dosies/minpromtorg_dossier.pdf) |
 
 Другие исходные документы предоставляются с соблюдением договорных ограничений. [Контакты](/alsibir-expert/wiki/pages/contact/).
 
