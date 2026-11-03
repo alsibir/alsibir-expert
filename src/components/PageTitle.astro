@@ -1,7 +1,11 @@
 ---
 import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
+import topics from '../data/publications.json';
 import AssetImage from './AssetImage.astro';
+const category = Astro.locals.starlightRoute.entry.data.category;
+const topic = topics.find(item => item.title === category);
 const isAbout = Astro.url.pathname.replace(/\/+$/, '').endsWith('/wiki/pages/about');
 ---
+{topic && <nav class="publication-path" aria-label="Путь публикации"><a href="/alsibir-expert/publications/">Публикации</a><span aria-hidden="true"> / </span><a href={`/alsibir-expert/publications/#${topic.id}`}>{topic.title}</a></nav>}
 <DefaultPageTitle/>
 {isAbout && <AssetImage name="portrait" alt="Александр Сибиряков — аналитик и технический писатель" class="aps-author-portrait"/>}

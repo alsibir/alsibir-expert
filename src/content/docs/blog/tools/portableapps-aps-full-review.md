@@ -5,19 +5,10 @@ date: 2026-10-26
 pubDate: 2026-10-26
 updatedDate: 2026-10-26
 author: "АПС"
-category: "Программное обеспечение"
-tags:
-  - PortableApps
-  - portable
-  - технический писатель
-  - системный аналитик
-  - Windows
-  - инструменты
-  - Markdown
-  - PDF
-  - USB
+tags: ["PortableApps", "portable", "технический писатель", "системный аналитик", "Windows", "инструменты", "Markdown", "PDF", "USB"]
 draft: false
 slug: "blog/portableapps-polnyy-obzor-programm"
+category: "Инструменты и автоматизация"
 ---
 
 **Актуальность обзора:** 26 октября 2026 года. **Источник:** [официальный каталог PortableApps.com](https://portableapps.com/apps). **Аудитория:** технические писатели, системные аналитики, разработчики документации и пользователи переносимых рабочих сред Windows.

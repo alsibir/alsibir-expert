@@ -4,14 +4,8 @@ description: "Пошаговая настройка SSH-аутентификац
 excerpt: "Как настроить SSH-доступ без передачи пароля при каждом подключении, проверить права доступа и определить по журналам, каким ключом выполнен вход."
 date: 2026-10-26
 draft: false
-tags:
-  - SSH
-  - OpenSSH
-  - PuTTY
-  - Linux
-  - Windows
-  - безопасность
-  - системное администрирование
+tags: ["SSH", "OpenSSH", "PuTTY", "Linux", "Windows", "Защита данных", "системное администрирование"]
+category: "Рабочая среда: Windows и Linux"
 ---
 
 SSH позволяет администрировать удалённый сервер через защищённое соединение. При обычном входе пользователь вводит пароль учётной записи. Альтернативный вариант — **аутентификация по паре криптографических ключей**: открытый ключ размещается на сервере, а закрытый остаётся у пользователя.
@@ -322,3 +316,8 @@ PermitRootLogin no
 - [PuTTY: настройка закрытого ключа в разделе Credentials](https://the.earth.li/~sgtatham/putty/0.81/htmldoc/Chapter4.html).
 - [OpenSSH: описание параметров `sshd_config`](https://man.openbsd.org/sshd_config).
 - [OpenSSH: руководство `ssh-keygen`](https://man.openbsd.org/ssh-keygen).
+
+
+## Связанные публикации
+
+- [Настройка OpenSSH и ключей Ed25519](/alsibir-expert/blog/ssh-kluchi-linux-windows/)

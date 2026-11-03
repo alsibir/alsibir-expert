@@ -12,6 +12,18 @@ const origin='https://alsibir.github.io';
 const base='/alsibir-expert';
 const prefix=u=>u.startsWith('/')&&!u.startsWith('//')&&u!==base&&!u.startsWith(base+'/') ? base+u : u;
 async function walk(dir){let out=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory()){if(e.name==='СТОРОННЕЕ'){await rm(p,{recursive:true,force:true});continue;}out.push(...await walk(p));}else out.push(p);}return out;}
+// Retain URLs of tags removed by terminology normalization.
+const { slug: tagSlug } = await import('github-slugger');
+const legacyTags = JSON.parse(await readFile('src/data/legacy-tags.json', 'utf8'));
+const tagAliases = { 'Документация': 'Техническая документация', 'Безопасность': 'Защита данных', 'Безопасность данных': 'Защита данных', 'безопасность': 'Защита данных' };
+for (const label of legacyTags) {
+  const target = path.join(root, 'blog/tags', tagSlug(label));
+  try { await readFile(path.join(target, 'index.html')); continue; } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  const next = tagAliases[label];
+  const url = base + '/blog/tags/' + (next ? tagSlug(next) + '/' : '');
+  await mkdir(target, { recursive: true });
+  await writeFile(path.join(target, 'index.html'), `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=${url}"><link rel="canonical" href="${origin}${url}"><meta name="robots" content="noindex"><title>Теги публикаций</title></head><body><p><a href="${url}">Перейти к тегам публикаций</a></p></body></html>`);
+}
 const all=await walk(root);const files=all.filter(p=>p.endsWith('.html'));
 for(const p of all){if(p.endsWith('.html')){let s=await readFile(p,'utf8');s=s.replace(/\b(href|src|action|poster)=(['"])(\/[^'"<>]*?)\2/g,(_,a,q,u)=>a+'='+q+prefix(u)+q);s=s.replace(/\bsrcset=(['"])(.*?)\1/g,(_,q,v)=>'srcset='+q+v.split(',').map(x=>{const m=x.trim().match(/^(\S+)(.*)$/);return m?prefix(m[1])+m[2]:x;}).join(', ')+q);await writeFile(p,s);}else if(p.endsWith('.css')){let s=await readFile(p,'utf8');s=s.replace(/url\((['"]?)(\/[^)'"\s]+)\1\)/g,(_,q,u)=>'url('+q+prefix(u)+q+')');await writeFile(p,s);}}
 // Normalize RSS plugin URLs when the plugin prepends base twice.

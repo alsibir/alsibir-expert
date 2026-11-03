@@ -9,16 +9,18 @@ draft: false
 
 - [AlSibir — технический писатель и системный аналитик](/alsibir-expert/)
 
-## База знаний и портфолио
+## Сведения о специалисте, портфолио и справка
 
-- [База знаний](/alsibir-expert/wiki/)
+- [Каталог публикаций](/alsibir-expert/publications/)
+- [Путеводитель](/alsibir-expert/wiki/)
+- [Все теги статей](/alsibir-expert/blog/tags/)
 - [Досье ПО для реестра Минцифры — PDF](/alsibir-expert/dosies/mincifry_dossier.pdf)
 - [Досье промышленного изделия — PDF](/alsibir-expert/dosies/minpromtorg_dossier.pdf)
 - [Навигация по разделам](/alsibir-expert/wiki/pages/)
 - [Страница не найдена](/alsibir-expert/wiki/pages/404/)
 - [О специалисте](/alsibir-expert/wiki/pages/about/)
 - [ИИ в документации](/alsibir-expert/wiki/pages/ai/)
-- [Блог](/alsibir-expert/wiki/pages/blog/)
+- [Публикации по дате](/alsibir-expert/blog/)
 - [Заказчики и сферы проектов](/alsibir-expert/wiki/pages/clients/)
 - [Контакты](/alsibir-expert/wiki/pages/contact/)
 - [Использование cookies](/alsibir-expert/wiki/pages/cookies/)

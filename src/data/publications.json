@@ -1,0 +1,292 @@
+[
+  {
+    "id": "documentation",
+    "title": "Техническая документация и ГОСТ",
+    "items": [
+      {
+        "label": "Стандарты",
+        "slug": "wiki/pages/standards"
+      },
+      {
+        "label": "Образцы документов",
+        "slug": "wiki/pages/worksamples"
+      },
+      {
+        "label": "Термины и сокращения",
+        "slug": "reference/example"
+      },
+      {
+        "label": "Подготовка комплекта",
+        "slug": "guides/example"
+      },
+      {
+        "label": "Воспроизводимый процесс выпуска документации",
+        "slug": "blog/automation/document-workflows"
+      },
+      {
+        "label": "Документация по ГОСТ 34: техническое задание, программа и методика испытаний, связь требований",
+        "slug": "blog/documentation/02_gost34_traceability"
+      },
+      {
+        "label": "Документация программного обеспечения: классификация, состав и стандарты",
+        "slug": "blog/documentation/software-documentation"
+      },
+      {
+        "label": "Как написать однозначное техническое задание",
+        "slug": "blog/documentation/clear-technical-specification"
+      },
+      {
+        "label": "Как применять ГОСТ к программной документации",
+        "slug": "blog/documentation/gost-documentation"
+      },
+      {
+        "label": "Контроль качества технической документации: таблица замечаний и регрессионная проверка",
+        "slug": "blog/documentation/05_document_quality"
+      },
+      {
+        "label": "Методика проектирования комплекта программной документации по ЕСПД (ГОСТ 19)",
+        "slug": "blog/documentation/01_gost19_documents"
+      },
+      {
+        "label": "Управление файлами, версиями и воспроизводимой сборкой технической документации",
+        "slug": "blog/documentation/10_document_release"
+      },
+      {
+        "label": "Как отслеживать изменения технических стандартов",
+        "slug": "blog/standards/gost-updates"
+      },
+      {
+        "label": "Как оформить документ по СПДС в Microsoft Word",
+        "slug": "blog/standards/spds-microsoft-word"
+      },
+      {
+        "label": "Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц",
+        "slug": "blog/standards/spds-shbv"
+      },
+      {
+        "label": "Оформление документов СПДС: комплект, тома, листы и согласованность по ГОСТ Р 21.101-2026",
+        "slug": "blog/standards/03_spds_gost21"
+      },
+      {
+        "label": "Как оформлять скриншоты для инструкций и технической документации",
+        "slug": "blog/oformlenie-skrinshotov"
+      }
+    ]
+  },
+  {
+    "id": "analysis",
+    "title": "Системный анализ и проектирование",
+    "items": [
+      {
+        "label": "Проектирование API: OpenAPI, модели данных, ошибки и управление версиями",
+        "slug": "blog/api/07_openapi_contracts"
+      },
+      {
+        "label": "UX-редактура: практическое руководство",
+        "slug": "blog/ux/ux-editing-guide"
+      },
+      {
+        "label": "UX-тексты для технических интерфейсов",
+        "slug": "blog/ux/ux-writing"
+      },
+      {
+        "label": "BPMN, UML и PlantUML: как системному аналитику выбирать и сопровождать диаграммы",
+        "slug": "blog/modeling/08_bpmn_uml_plantuml"
+      },
+      {
+        "label": "Линии и типы связей в UML: как правильно читать диаграммы",
+        "slug": "blog/modeling/uml-relationships"
+      },
+      {
+        "label": "Организационная встреча по новому ИТ-проекту: сбор исходных данных для разработки требований к ПО, датасетам и технической документации",
+        "slug": "blog/analytics/project-discovery-ai"
+      },
+      {
+        "label": "Трассируемость требований: от бизнес-процесса и архитектуры до испытаний",
+        "slug": "blog/analytics/06_requirements_to_tests"
+      },
+      {
+        "label": "Как документировать REST API: структура, примеры запросов и OpenAPI",
+        "slug": "blog/dokumentaciya-rest-api-primery"
+      },
+      {
+        "label": "Как организовать разработку ИТ-проекта: этапы, роли и документация",
+        "slug": "blog/kak-organizovat-razrabotku-it-proekta"
+      }
+    ]
+  },
+  {
+    "id": "registries",
+    "title": "Реестры и регистрационные досье",
+    "items": [
+      {
+        "label": "Досье ПО для реестра Минцифры — PDF",
+        "link": "/alsibir-expert/dosies/mincifry_dossier.pdf"
+      },
+      {
+        "label": "Досье промышленного изделия — PDF",
+        "link": "/alsibir-expert/dosies/minpromtorg_dossier.pdf"
+      },
+      {
+        "label": "Подготовка программного обеспечения к включению в реестр Минцифры России: от требований до регистрационного досье",
+        "slug": "blog/registries/01_mincifry_registry_software"
+      },
+      {
+        "label": "Подтверждение российского происхождения промышленной продукции: инженерное досье для Минпромторга и ГИСП",
+        "slug": "blog/registries/02_minpromtorg_registry_industry"
+      }
+    ]
+  },
+  {
+    "id": "ai-security",
+    "title": "ИИ и защита данных",
+    "items": [
+      {
+        "label": "Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки",
+        "slug": "blog/security/02_residual_disclosure_risks"
+      },
+      {
+        "label": "Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно",
+        "slug": "blog/security/01_anonymization_cycle"
+      },
+      {
+        "label": "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания",
+        "slug": "blog/security/03_anonimizer_engineering_article"
+      },
+      {
+        "label": "Применение искусственного интеллекта в техническом документировании: обезличивание и контроль утечек",
+        "slug": "blog/security/09_ai_document_privacy"
+      },
+      {
+        "label": "Как готовить документы к обработке ИИ",
+        "slug": "blog/ai/document-anonymization"
+      },
+      {
+        "label": "Косвенные признаки и повторная идентификация данных",
+        "slug": "blog/ai/deanonymization-risks"
+      }
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Инструменты и автоматизация",
+    "items": [
+      {
+        "label": "Автоматизация сбора, нумерации и трассировки требований в Microsoft Word",
+        "slug": "blog/automation/word-requirement-numbering"
+      },
+      {
+        "label": "Автоматизированная проверка документации Microsoft Word: стили, поля, нумерация и перекрестные ссылки",
+        "slug": "blog/automation/04_word_automation"
+      },
+      {
+        "label": "Автоматизированная систематизация базы знаний Obsidian: архитектура, метаданные, граф связей и безопасная миграция",
+        "slug": "blog/automation/obsidian-knowledge-base"
+      },
+      {
+        "label": "Имена файлов, совместимые с Windows и Linux",
+        "slug": "blog/automation/filename-portability"
+      },
+      {
+        "label": "Систематизация заметок Obsidian: план контролируемой миграции",
+        "slug": "blog/automation/obsidian-automation"
+      },
+      {
+        "label": "Neovim: настройка удобного редактора для кода и технической документации",
+        "slug": "blog/tools/neovim-guide"
+      },
+      {
+        "label": "PortableApps.com: каталог переносимых программ, сравнение аналогов и оптимальный набор для технического писателя",
+        "slug": "blog/portableapps-polnyy-obzor-programm"
+      },
+      {
+        "label": "Как развернуть собственный сервер LanguageTool на Windows и Linux: установка, настройка, использование и сравнение с Premium",
+        "slug": "blog/tools/local-languagetool"
+      },
+      {
+        "label": "Как улучшить дизайн сайта АПС в ChatGPT с плагином Figma",
+        "slug": "blog/tools/aps_chatgpt_figma_design_guide"
+      },
+      {
+        "label": "Плагины Total Commander: полный обзор каталога и примеры применения",
+        "slug": "blog/tools/total_commander_plugins_ru"
+      },
+      {
+        "label": "Локальная проверка русского текста с LanguageTool",
+        "slug": "blog/ai/local-languagetool"
+      },
+      {
+        "label": "Как извлечь картинки из файла DOCX без потери качества",
+        "slug": "blog/izvlech-kartinki-iz-docx"
+      },
+      {
+        "label": "Как перевести PDF в Word: 4 способа и что делать со сканами",
+        "slug": "blog/pdf-v-word-bez-poteri-formatirovaniya"
+      }
+    ]
+  },
+  {
+    "id": "environment",
+    "title": "Рабочая среда: Windows и Linux",
+    "items": [
+      {
+        "label": "Как сбросить, восстановить или удалить Microsoft Edge в Windows 10",
+        "slug": "blog/windows/microsoft-edge-reset-and-removal"
+      },
+      {
+        "label": "Настройка SSH-доступа по ключам в Linux и Windows: PuTTY, OpenSSH и журналирование подключений",
+        "slug": "blog/security/ssh-key-access"
+      },
+      {
+        "label": "Мои команды: графическое меню для повседневных задач в Linux Mint",
+        "slug": "blog/tools/my-commands-linux-mint"
+      },
+      {
+        "label": "Как запускать графические программы Linux в Windows 10 и 11 через WSL",
+        "slug": "blog/wsl-graficheskie-prilozheniya-windows"
+      },
+      {
+        "label": "Как создать SSH-ключ и подключиться к серверу без пароля",
+        "slug": "blog/ssh-kluchi-linux-windows"
+      },
+      {
+        "label": "Не работает Wi-Fi в Ubuntu: как найти причину и восстановить подключение",
+        "slug": "blog/wifi-ubuntu-ne-rabotaet"
+      },
+      {
+        "label": "Облачное хранилище: как выбрать сервис и не потерять файлы",
+        "slug": "blog/oblachnoe-hranenie-vybor-i-rezervnye-kopii"
+      }
+    ]
+  },
+  {
+    "id": "career",
+    "title": "Профессиональное развитие",
+    "items": [
+      {
+        "label": "К какому классу программ относятся Jira и Confluence",
+        "slug": "blog/career/05_jira_confluence"
+      },
+      {
+        "label": "Как стать Python-разработчиком: полное руководство по подготовке к первой работе",
+        "slug": "blog/career/06_python_career_full_guide"
+      },
+      {
+        "label": "Какие знания необходимы начинающему Python-разработчику",
+        "slug": "blog/career/01_python_junior_skills"
+      },
+      {
+        "label": "Практический опыт выпускника без коммерческого стажа",
+        "slug": "blog/career/04_practical_experience"
+      },
+      {
+        "label": "Пример резюме выпускника для первой работы Python-разработчиком",
+        "slug": "blog/career/02_junior_python_resume"
+      },
+      {
+        "label": "РАНХиГС: образование и ключевые дисциплины для резюме",
+        "slug": "blog/career/03_ranepa_education"
+      }
+    ]
+  }
+]

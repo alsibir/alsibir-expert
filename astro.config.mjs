@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 
+const publicationTopics = JSON.parse(readFileSync(new URL('./src/data/publications.json', import.meta.url), 'utf8'));
+
 export default defineConfig({
   site: "https://alsibir.github.io",
   base: "/alsibir-expert/",
@@ -21,38 +23,29 @@ export default defineConfig({
           langs: [JSON.parse(readFileSync(new URL('./src/plantuml.tmLanguage.json', import.meta.url), 'utf8'))],
         },
       },
-      plugins: [starlightBlog({ title: 'Блог', navigation: 'none' })],
+      plugins: [starlightBlog({ title: 'Публикации по дате', navigation: 'none' })],
       sidebar: [
-        { label: 'Публикации', slug: 'publications' },
-        { label: 'Знания', items: [
-        { label: 'Начало', items: [
-          { label: 'Обзор знаний', slug: 'wiki' },
+        { label: 'Публикации', items: [
+          { label: 'Каталог и маршруты чтения', slug: 'publications' },
+          ...publicationTopics.map(topic => ({ label: topic.title, collapsed: true, items: topic.items.map(item => item.link ? { ...item, link: new URL(item.link, 'https://alsibir.github.io').href } : item) })),
+          { label: 'Все публикации по дате', link: 'https://alsibir.github.io/alsibir-expert/blog/' },
+          { label: 'Все теги', link: 'https://alsibir.github.io/alsibir-expert/blog/tags/' },
+        ] },
+        { label: 'О специалисте', collapsed: true, items: [
           { label: 'О специалисте', slug: 'wiki/pages/about' },
-          { label: 'Услуги', slug: 'wiki/pages/services' },
-          { label: 'Портфолио', slug: 'wiki/pages/portfolio' },
-          { label: 'Контакты', slug: 'wiki/pages/contact' },
-        ] },
-        { label: 'Профессиональные материалы', items: [
           { label: 'Навыки и инструменты', slug: 'wiki/pages/skills' },
-          { label: 'Стандарты', slug: 'wiki/pages/standards' },
-          { label: 'Образцы документов', slug: 'wiki/pages/worksamples' },
-          { label: 'Термины и сокращения', slug: 'reference/example' },
-          { label: 'Подготовка комплекта', slug: 'guides/example' },
         ] },
-        { label: 'Учебное портфолио', items: [{ autogenerate: { directory: 'wiki/portfolio' } }] },
-        { label: 'Учебные комплекты реестров', items: [
-          { label: 'Досье ПО для реестра Минцифры (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/mincifry_dossier.pdf' },
-          { label: 'Досье промышленного изделия (PDF)', link: 'https://alsibir.github.io/alsibir-expert/dosies/minpromtorg_dossier.pdf' },
+        { label: 'Услуги', slug: 'wiki/pages/services' },
+        { label: 'Портфолио', collapsed: true, items: [
+          { label: 'Работы и учебные примеры', slug: 'wiki/pages/portfolio' },
+          { autogenerate: { directory: 'wiki/portfolio' } },
         ] },
-        { label: 'Дополнительные страницы', items: [
+        { label: 'Контакты', slug: 'wiki/pages/contact' },
+        { label: 'Справка и навигация', collapsed: true, items: [
           { label: 'Вопросы и ответы', slug: 'wiki/pages/faq' },
           { label: 'Карта сайта', slug: 'wiki/pages/sitemap' },
-          { label: 'Политика конфиденциальности', slug: 'wiki/pages/pp' },
-        ] },
-        ] },
-        { label: 'Блог', items: [
-          { label: 'Все статьи по дате', link: 'https://alsibir.github.io/alsibir-expert/blog/' },
-          { autogenerate: { directory: 'blog' } },
+          { label: 'Путеводитель по публикациям', slug: 'wiki' },
+          { label: 'О разделе публикаций', slug: 'blog/welcome' },
         ] },
       ],
     }),

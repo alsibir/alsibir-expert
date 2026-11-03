@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node node_modules/astro/bin/astro.mjs dev",
     "start": "node node_modules/astro/bin/astro.mjs dev",
-    "build": "node node_modules/astro/bin/astro.mjs build && node scripts/postbuild.mjs",
+    "build": "node scripts/generate-publications.mjs && node node_modules/astro/bin/astro.mjs build && node scripts/postbuild.mjs",
     "preview": "node node_modules/astro/bin/astro.mjs preview",
     "astro": "node node_modules/astro/bin/astro.mjs",
     "serve:static": "python3 scripts/preview-static.py"

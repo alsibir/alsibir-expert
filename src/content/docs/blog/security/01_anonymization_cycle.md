@@ -3,7 +3,8 @@ title: 'Как выглядит анонимизация секретных до
 date: 2026-10-09
 draft: false
 excerpt: "При работе с техническим заданием, договором, программой и методикой испытаний или эксплуатационной документацией возникает практическая задача: использовать возможности искусственного…"
-tags: ["Безопасность", "ИИ"]
+tags: ["ИИ", "Защита данных", "Обезличивание"]
+category: "ИИ и защита данных"
 ---
 
 
@@ -284,3 +285,9 @@ flowchart TD
 4. OWASP. *LLM02:2025 Sensitive Information Disclosure*. <https://owasp.github.io/www-project-top-10-for-large-language-model-applications/2_0_vulns/LLM02_SensitiveInformationDisclosure.html>.
 
 *Дата подготовки редакции — 09.10.2026. Ссылки на источники требуют обычной заключительной проверки перед размещением на публичном сайте.*
+
+
+## Связанные публикации
+
+- [Подготовка документов к обработке ИИ](/alsibir-expert/blog/ai/document-anonymization/)
+- [Разработка скрипта обезличивания](/alsibir-expert/blog/security/03_anonimizer_engineering_article/)

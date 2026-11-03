@@ -5,16 +5,10 @@ description: Проверка Wi-Fi в Ubuntu через настройки, rfk
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-category: Linux и безопасность
-tags:
-- Ubuntu
-- Wi-Fi
-- NetworkManager
-- nmcli
-- драйверы
-- Linux
+tags: ["Ubuntu", "Wi-Fi", "NetworkManager", "nmcli", "драйверы", "Linux"]
 draft: false
 excerpt: "Проверка Wi-Fi в Ubuntu через настройки, rfkill, NetworkManager и nmcli. Как определить адаптер, проверить драйвер и диагностировать отсутствие сетей."
+category: "Рабочая среда: Windows и Linux"
 ---
 
 После установки Ubuntu беспроводная сеть иногда не появляется в списке, подключение обрывается или система не видит адаптер. Причина может заключаться в выключенном радиомодуле, драйвере, прошивке устройства, настройках NetworkManager или самом маршрутизаторе.

@@ -5,16 +5,10 @@ description: Установка WSL 2, проверка поддержки WSLg,
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-category: Windows и Linux
-tags:
-- WSL
-- WSL 2
-- WSLg
-- Windows 10
-- Windows 11
-- Linux
+tags: ["WSL", "WSL 2", "WSLg", "Windows 10", "Windows 11", "Linux"]
 draft: false
 excerpt: "Установка WSL 2, проверка поддержки WSLg, запуск приложений Linux и устранение ошибок. Почему старые инструкции с VcXsrv устарели."
+category: "Рабочая среда: Windows и Linux"
 ---
 
 Подсистема Windows для Linux (WSL) позволяет запускать Linux-программы в Windows без отдельного сеанса полноценной виртуальной машины. В современных конфигурациях WSL 2 графические приложения Linux могут открываться в обычных окнах Windows благодаря WSLg.
