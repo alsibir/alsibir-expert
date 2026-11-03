@@ -3,7 +3,7 @@ title: 'Карта сайта'
 draft: false
 ---
 
-Все основные страницы, статьи и учебные материалы.
+Все основные страницы, статьи и демонстрационные материалы.
 
 ## Основные страницы
 
@@ -14,8 +14,8 @@ draft: false
 - [Каталог публикаций](/alsibir-expert/publications/)
 - [Путеводитель](/alsibir-expert/wiki/)
 - [Все теги статей](/alsibir-expert/tags/)
-- [Досье ПО для реестра Минцифры — PDF](/alsibir-expert/dosies/mincifry_dossier.pdf)
-- [Досье промышленного изделия — PDF](/alsibir-expert/dosies/minpromtorg_dossier.pdf)
+- [Досье программного продукта — демонстрационный комплект — PDF](/alsibir-expert/dosies/mincifry_dossier.pdf)
+- [Досье промышленного изделия — демонстрационный комплект, PDF](/alsibir-expert/dosies/minpromtorg_dossier.pdf)
 - [Навигация по разделам](/alsibir-expert/wiki/pages/)
 - [Страница не найдена](/alsibir-expert/wiki/pages/404/)
 - [О специалисте](/alsibir-expert/wiki/pages/about/)
@@ -42,10 +42,10 @@ draft: false
 - [Стандарты и нормативная база](/alsibir-expert/wiki/pages/standards/)
 - [Инструменты технического писателя](/alsibir-expert/wiki/pages/tools/)
 - [Образцы и шаблоны](/alsibir-expert/wiki/pages/worksamples/)
-- [Автоматизация технических документов: демонстрационный кейс](/alsibir-expert/wiki/portfolio/ai/document-automation/)
-- [Системный анализ: демонстрационный кейс](/alsibir-expert/wiki/portfolio/analytics/system-analysis/)
+- [Автоматизация технических документов: демонстрационный проект](/alsibir-expert/wiki/portfolio/ai/document-automation/)
+- [Системный анализ: демонстрационный проект](/alsibir-expert/wiki/portfolio/analytics/system-analysis/)
 - [Техническая документация: демонстрационный комплект](/alsibir-expert/wiki/portfolio/documentation/technical-documentation/)
-- [Регистрационные досье: демонстрационный кейс](/alsibir-expert/wiki/portfolio/registration/software-registration/)
+- [Регистрационные досье: демонстрационный проект](/alsibir-expert/wiki/portfolio/registration/software-registration/)
 
 ## Публикации
 

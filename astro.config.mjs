@@ -37,7 +37,7 @@ export default defineConfig({
         ] },
         { label: 'Услуги', slug: 'wiki/pages/services' },
         { label: 'Портфолио', collapsed: true, items: [
-          { label: 'Работы и учебные примеры', slug: 'wiki/pages/portfolio' },
+          { label: 'Демонстрационные проекты', slug: 'wiki/pages/portfolio' },
           { autogenerate: { directory: 'wiki/portfolio' } },
         ] },
         { label: 'Контакты', slug: 'wiki/pages/contact' },

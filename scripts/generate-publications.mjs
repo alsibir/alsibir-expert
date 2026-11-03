@@ -7,13 +7,13 @@ description: 'Тематический каталог практических �
 draft: false
 ---
 
-Методические материалы, практические статьи и учебные комплекты объединены по задачам читателя. Выберите тему или начните с одного из маршрутов.
+Методические материалы, практические статьи и авторские комплекты документации объединены по задачам читателя. Выберите тему или начните с одного из маршрутов.
 
 ## С чего начать
 
 - **Подготовить документацию:** [состав комплекта по ГОСТ 19](/alsibir-expert/blog/documentation/01_gost19_documents/) → [однозначное техническое задание](/alsibir-expert/blog/documentation/clear-technical-specification/) → [контроль качества](/alsibir-expert/blog/documentation/05_document_quality/).
 - **Разобраться в требованиях и диаграммах:** [сбор исходных данных](/alsibir-expert/blog/analytics/project-discovery-ai/) → [BPMN, UML и PlantUML](/alsibir-expert/blog/modeling/08_bpmn_uml_plantuml/) → [трассируемость до испытаний](/alsibir-expert/blog/analytics/06_requirements_to_tests/).
-- **Собрать регистрационное досье:** [реестр Минцифры](/alsibir-expert/blog/registries/01_mincifry_registry_software/) или [Минпромторг и ГИСП](/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/) → [учебные комплекты](/alsibir-expert/wiki/pages/portfolio/#учебные-комплекты).
+- **Собрать регистрационное досье:** [реестр Минцифры](/alsibir-expert/blog/registries/01_mincifry_registry_software/) или [Минпромторг и ГИСП](/alsibir-expert/blog/registries/02_minpromtorg_registry_industry/) → [авторские комплекты документации](/alsibir-expert/wiki/pages/portfolio/#авторские-комплекты-документации).
 
 ## Темы публикаций
 
@@ -28,7 +28,7 @@ const ending = `
 
 - [Все публикации по дате](/alsibir-expert/blog/).
 - [Все теги статей](/alsibir-expert/tags/) — сквозные признаки: технологии, стандарты, инструменты и виды материалов.
-- [Портфолио и учебные примеры](/alsibir-expert/wiki/pages/portfolio/).
+- [Демонстрационные проекты](/alsibir-expert/wiki/pages/portfolio/).
 - [О специалисте](/alsibir-expert/wiki/pages/about/), [услуги](/alsibir-expert/wiki/pages/services/) и [контакты](/alsibir-expert/wiki/pages/contact/).
 
 Каждый материал относится к одной основной теме; теги позволяют находить связанные статьи из разных тем. Адреса ранее опубликованных материалов сохранены.

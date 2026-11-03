@@ -5,7 +5,7 @@ draft: false
 
 ИИ может помочь сформировать первичную структуру, предложить варианты формулировок, найти терминологические расхождения или подготовить вопросы к эксперту. **Однако исходные данные, факты, требования и выводы должен проверять ответственный специалист.**
 
-- [Анонимизация документов: учебный разбор](/alsibir-expert/blog/security/01_anonymization_cycle/)
+- [Анонимизация документов: демонстрационный разбор](/alsibir-expert/blog/security/01_anonymization_cycle/)
 - [Риски косвенного раскрытия](/alsibir-expert/blog/security/02_residual_disclosure_risks/)
 - [ИИ и защита сведений](/alsibir-expert/blog/security/09_ai_document_privacy/)
 - [Автоматизация подготовки документов](/alsibir-expert/wiki/portfolio/ai/document-automation/)
