@@ -5,7 +5,7 @@ description: Проверка Wi-Fi в Ubuntu через настройки, rfk
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-tags: ["Ubuntu", "Wi-Fi", "NetworkManager", "nmcli", "драйверы", "Linux"]
+tags: ["Linux", "Системное администрирование"]
 draft: false
 excerpt: "Проверка Wi-Fi в Ubuntu через настройки, rfkill, NetworkManager и nmcli. Как определить адаптер, проверить драйвер и диагностировать отсутствие сетей."
 category: "Рабочая среда: Windows и Linux"

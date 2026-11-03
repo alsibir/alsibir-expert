@@ -1,9 +1,15 @@
 import { getCollection } from 'astro:content';
 import { slug } from 'github-slugger';
+import vocabulary from '../data/tag-vocabulary.json';
 
 /** Same source and URL normalization as the blog's individual tag pages. */
 export async function getPublicationTags() {
   const entries = await getCollection('docs', entry => !entry.data.draft && !!entry.filePath?.replaceAll('\\', '/').includes('/docs/blog/') && !!entry.data.date);
+  for (const entry of entries) {
+    for (const tag of entry.data.tags ?? []) {
+      if (!vocabulary.includes(tag)) throw new Error(`Unknown publication tag: ${tag} (${entry.id})`);
+    }
+  }
   const counts = new Map<string, { label: string; count: number }>();
   for (const entry of entries) {
     for (const key of new Set((entry.data.tags ?? []).map(tag => slug(tag)))) {

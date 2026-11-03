@@ -4,7 +4,7 @@ description: 'Практический проект систематизации
 date: 2025-10-03 # SYNTHETIC_DATE_FOR_DEMO
 draft: false
 excerpt: "Хранилище Obsidian, содержащее около 1000 заметок, со временем превращается в неоднородный массив Markdown-файлов: темы пересекаются, заголовки повторяются, ссылки ведут к неоднозначным…"
-tags: ["Obsidian", "База знаний", "Миграция данных"]
+tags: ["Базы знаний", "Управление файлами"]
 category: "Инструменты и автоматизация"
 ---
 
@@ -112,9 +112,7 @@ status: active
 topics:
   - documentation
   - artificial-intelligence
-tags:
-  - topic/docs
-  - topic/ai
+tags: ["Базы знаний", "Управление файлами"]
 created: 2025-01-20
 updated: 2026-10-10
 parent:

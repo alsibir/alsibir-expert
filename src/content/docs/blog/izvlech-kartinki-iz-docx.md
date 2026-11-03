@@ -5,7 +5,7 @@ description: Как открыть документ Word как ZIP-архив �
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-tags: ["Word", "DOCX", "ZIP", "7-Zip", "изображения"]
+tags: ["Microsoft Word", "Управление файлами"]
 draft: false
 excerpt: "Как открыть документ Word как ZIP-архив и достать исходные изображения из word/media. Способы через 7-Zip, Windows и Linux."
 category: "Инструменты и автоматизация"

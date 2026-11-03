@@ -5,7 +5,7 @@ description: Как преобразовать PDF в редактируемый
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-tags: ["PDF", "Word", "DOCX", "OCR", "конвертация"]
+tags: ["Microsoft Word", "Управление файлами"]
 draft: false
 excerpt: "Как преобразовать PDF в редактируемый DOCX через Word, Acrobat, Google Документы и OCR. Ограничения форматирования и защита конфиденциальных файлов."
 category: "Инструменты и автоматизация"

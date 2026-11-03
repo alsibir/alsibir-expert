@@ -5,7 +5,7 @@ date: 2026-10-26
 pubDate: 2026-10-26
 updatedDate: 2026-10-26
 author: "АПС"
-tags: ["PortableApps", "portable", "технический писатель", "системный аналитик", "Windows", "инструменты", "Markdown", "PDF", "USB"]
+tags: ["Рабочие инструменты", "Windows"]
 draft: false
 slug: "blog/portableapps-polnyy-obzor-programm"
 category: "Инструменты и автоматизация"

@@ -5,7 +5,7 @@ description: Как описать методы REST API, параметры, а
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-tags: ["REST API", "OpenAPI", "HTTP", "JSON", "Техническая документация"]
+tags: ["API и интеграции", "Техническая документация"]
 draft: false
 category: "Системный анализ и проектирование"
 ---

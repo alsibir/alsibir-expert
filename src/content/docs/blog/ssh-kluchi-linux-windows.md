@@ -5,7 +5,7 @@ description: Пошаговая настройка SSH-ключей Ed25519 в L
 date: 2026-10-26
 pubDate: '2026-10-26'
 updatedDate: '2026-10-26'
-tags: ["SSH", "OpenSSH", "Ed25519", "Linux", "Windows", "Защита данных"]
+tags: ["Системное администрирование", "Информационная безопасность", "Linux", "Windows"]
 draft: false
 excerpt: "Пошаговая настройка SSH-ключей Ed25519 в Linux и Windows, добавление открытого ключа на сервер и безопасное отключение входа по паролю."
 category: "Рабочая среда: Windows и Linux"

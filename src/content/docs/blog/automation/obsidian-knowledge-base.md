@@ -4,7 +4,7 @@ description: 'Практический проект систематизации
 date: 2025-11-03 # SYNTHETIC_DATE_FOR_DEMO
 draft: false
 excerpt: "Хранилище Obsidian, содержащее около 1000 заметок, со временем превращается в неоднородный массив Markdown-файлов: темы пересекаются, заголовки повторяются, ссылки ведут к неоднозначным…"
-tags: ["Obsidian", "База знаний", "Автоматизация", "Миграция данных"]
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 category: "Инструменты и автоматизация"
 ---
 
@@ -112,9 +112,7 @@ status: active
 topics:
   - documentation
   - artificial-intelligence
-tags:
-  - topic/docs
-  - topic/ai
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created: 2025-01-20
 updated: 2026-10-10
 parent:
@@ -334,9 +332,7 @@ status: active
 topics:
   - documentation
   - artificial-intelligence
-tags:
-  - topic/docs
-  - topic/ai
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created: 2025-01-20
 updated: 2026-10-10
 parent:
@@ -510,7 +506,7 @@ id:
 type: knowledge
 status: inbox
 topics: []
-tags: []
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created:
 updated:
 parent: []
@@ -536,7 +532,7 @@ id:
 type: project
 status: planned
 topics: []
-tags: []
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created:
 updated:
 parent: []
@@ -569,8 +565,7 @@ id:
 type: article
 status: idea
 topics: []
-tags:
-  - topic/writing
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created:
 updated:
 parent: []
@@ -604,7 +599,7 @@ id:
 type: source
 status: unread
 topics: []
-tags: []
+tags: ["Базы знаний", "Автоматизация", "Управление файлами"]
 created:
 updated:
 author:

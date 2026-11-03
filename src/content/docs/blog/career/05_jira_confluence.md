@@ -3,7 +3,7 @@ title: 'К какому классу программ относятся Jira и
 date: 2025-04-30 # SYNTHETIC_DATE_FOR_DEMO
 draft: false
 excerpt: "Jira и Confluence — средства управления проектами, задачами и совместной работой (Project Management and Collaboration Tools), разрабатываемые Atlassian. Их функциональное назначение…"
-tags: ["Jira", "Confluence", "Управление проектами"]
+tags: ["Управление ИТ-проектами", "Базы знаний", "Рабочие инструменты"]
 category: "Профессиональное развитие"
 ---
 

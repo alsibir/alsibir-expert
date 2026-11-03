@@ -3,7 +3,7 @@ title: 'Имена файлов, совместимые с Windows и Linux'
 date: 2024-11-25 # SYNTHETIC_DATE_FOR_DEMO
 draft: false
 excerpt: "В проектах, которые перемещаются между Windows, Linux и USB-носителями, имена файлов влияют на надёжность сборки и ссылок."
-tags: ["Имена файлов", "Windows", "Linux"]
+tags: ["Управление файлами", "Windows", "Linux"]
 category: "Инструменты и автоматизация"
 ---
 
