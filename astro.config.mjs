@@ -21,7 +21,7 @@ export default defineConfig({
           langs: [JSON.parse(readFileSync(new URL('./src/plantuml.tmLanguage.json', import.meta.url), 'utf8'))],
         },
       },
-      plugins: [starlightBlog({ title: 'Блог' })],
+      plugins: [starlightBlog({ title: 'Блог', navigation: 'none' })],
       sidebar: [
         { label: 'Начало', items: [
           { label: 'База знаний', slug: 'wiki' },
