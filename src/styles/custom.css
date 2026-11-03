@@ -260,3 +260,13 @@ a:hover { text-decoration-thickness: 2px; }
   white-space: nowrap;
   text-overflow: clip;
 }
+
+/* Название сайта занимает собственную сжимаемую колонку. */
+.aps-header > .header {
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr) auto;
+}
+.aps-header .title-wrapper { min-width: 0; }
+@media (max-width: 1100px) {
+  .aps-header > .header { grid-template-columns: minmax(0, 1fr) auto; }
+  .aps-header > .header > .right-group { display: none; }
+}
