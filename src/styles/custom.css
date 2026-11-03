@@ -252,11 +252,33 @@ a:hover { text-decoration-thickness: 2px; }
   .theme-light { display: block !important; }
 }
 
-/* Полные названия тем: ширина увеличена в 2,5 раза. */
-.aps-header starlight-theme-select { flex-shrink: 0; }
+/* Переключатель тем ограничен шириной контейнера, включая мобильное меню. */
+.aps-header starlight-theme-select {
+  display: block;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
+}
+.aps-header starlight-theme-select label {
+  display: block;
+  width: 10em;
+  max-width: 100%;
+}
 .aps-header starlight-theme-select select {
-  width: calc(15.625em + 1rem);
-  min-width: calc(15.625em + 1rem);
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   white-space: nowrap;
-  text-overflow: clip;
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
+}
+.aps-header starlight-theme-select option {
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
+}
+@media (max-width: 1100px) {
+  .aps-menu .aps-mobile-theme { min-width: 0; }
+  .aps-mobile-theme starlight-theme-select,
+  .aps-mobile-theme starlight-theme-select label { width: 100%; }
 }
