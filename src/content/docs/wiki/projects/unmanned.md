@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Робототехника и системы управления.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/unmanned.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/unmanned.webp)
 
 ## О проекте
 
