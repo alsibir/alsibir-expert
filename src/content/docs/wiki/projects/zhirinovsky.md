@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Цифровой персонаж и генеративный ИИ.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/zhirinovsky.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/zhirinovsky.webp)
 
 ## О проекте
 
