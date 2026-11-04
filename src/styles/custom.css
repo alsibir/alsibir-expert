@@ -84,7 +84,8 @@
 }
 body { font-family: var(--sl-font); background: var(--aps-bg); color: var(--aps-ink); }
 h1, h2, h3, h4, h5, h6 { font-family: 'Manrope Variable', 'Segoe UI', Arial, sans-serif; font-weight: 650; letter-spacing: -.025em; text-wrap: balance; }
-a { text-underline-offset: .2em; }
+a { color: var(--aps-accent); text-underline-offset: .2em; }
+a:visited { color: var(--aps-accent); }
 a:hover { text-decoration-thickness: 2px; }
 :where(a, button, select, summary, input):focus-visible { outline: 3px solid var(--aps-accent); outline-offset: 4px; }
 ::selection { background: var(--aps-accent-soft); color: var(--aps-ink); }
@@ -100,7 +101,7 @@ a:hover { text-decoration-thickness: 2px; }
 .aps-menu > summary { display: none; }
 .aps-top-nav { display: flex; gap: clamp(14px, 2vw, 28px); align-items: center; padding: 3px 0 5px; }
 .aps-top-nav a, .aps-footer a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
-.aps-top-nav a { color: var(--aps-muted); font-size: 14px; white-space: nowrap; }
+.aps-top-nav a { color: var(--aps-accent); font-size: 14px; white-space: nowrap; }
 .aps-top-nav a:hover, .aps-top-nav a[aria-current='page'] { color: var(--aps-accent); }
 .aps-top-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 7px; }
 .nav-icon { display: inline-flex; flex-shrink: 0; color: var(--aps-muted); }
@@ -109,7 +110,8 @@ a:hover { text-decoration-thickness: 2px; }
 .aps-footer { border-top: 1px solid var(--aps-line); margin-top: 48px; padding: 30px 0 12px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 26px; }
 .aps-footer p { color: var(--aps-muted); font-size: 13px; }
 .aps-footer nav, .aps-footer-links { display: flex; flex-direction: column; gap: 13px; }
-.aps-footer a { font-size: 14px; }
+.aps-footer a, .aps-footer a:visited { color: var(--aps-accent); font-size: 14px; }
+.aps-top-nav a:hover, .aps-footer a:hover { color: var(--sl-color-accent-high); text-decoration: underline; }
 .aps-footer .aps-brand { max-width: 270px; }
 
 /* Типографика статей, таблицы, схемы и элементы Starlight. */
@@ -263,9 +265,9 @@ a:hover { text-decoration-thickness: 2px; }
   display: block;
   width: 10em;
   max-width: 100%;
-  color-scheme: only light;
-  background-color: #ffffff;
-  color: #172536;
+  color-scheme: inherit;
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
   border: 1px solid var(--aps-line);
   border-radius: 6px;
 }
@@ -275,20 +277,20 @@ a:hover { text-decoration-thickness: 2px; }
   min-width: 0;
   max-width: 100%;
   white-space: nowrap;
-  /* Android может игнорировать фон option: поле и системный список используют одну светлую схему. */
-  color-scheme: only light;
-  background-color: #ffffff;
-  color: #172536;
-  -webkit-text-fill-color: #172536;
+  /* Поле и системный список наследуют активную цветовую схему. */
+  color-scheme: inherit;
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
+  -webkit-text-fill-color: var(--aps-ink);
   margin-inline: 0;
 }
 .aps-header starlight-theme-select option {
-  color-scheme: only light;
-  background-color: #ffffff;
-  color: #172536;
-  -webkit-text-fill-color: #172536;
+  color-scheme: inherit;
+  background-color: var(--aps-surface);
+  color: var(--aps-ink);
+  -webkit-text-fill-color: var(--aps-ink);
 }
-.aps-header starlight-theme-select label:hover { color: #172536; }
+.aps-header starlight-theme-select label:hover { color: var(--aps-ink); }
 @media (max-width: 1100px) {
   .aps-menu .aps-mobile-theme { min-width: 0; }
   .aps-mobile-theme starlight-theme-select,
