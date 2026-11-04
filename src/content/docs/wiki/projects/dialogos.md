@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Платформа разговорного искусственного интеллекта.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/dialogos.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/dialogos.webp)
 
 ## О проекте
 
