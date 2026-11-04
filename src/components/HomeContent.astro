@@ -30,7 +30,8 @@ const projects = [
     <p class="aps-showcase-more"><a href="/alsibir-expert/wiki/pages/projects/">Все проекты →</a></p>
     <p class="aps-home-source">Технологии и проекты разработаны компанией «Наносемантика» и её партнёрами. Описано профессиональное участие в подготовке документации; авторство разработок не заявляется.</p>
   </section>
-\n  <section id="real-work" aria-labelledby="real-work-title">
+
+  <section id="real-work" aria-labelledby="real-work-title">
     <div class="aps-home-section-heading"><div><p class="aps-home-eyebrow">Профессиональное портфолио</p><h2 id="real-work-title">Реальные работы</h2></div><a href="/alsibir-expert/wiki/pages/portfolio/">Все примеры →</a></div>
     <p class="aps-home-section-lead">Фрагменты подготовленных документов. Каждый пример можно открыть целиком в PDF.</p>
     <div class="aps-home-projects">
@@ -39,8 +40,8 @@ const projects = [
           <a href={`/alsibir-expert/examples/${project.pdf}`} aria-label={`${project.title} — открыть документ PDF`}><img src={`/alsibir-expert/images/evidence/${project.image}`} alt={`${project.title}: титульный лист и фрагмент документа`} width="1600" height="1100" loading="lazy" decoding="async"/></a>
           <div class="aps-home-project-body"><p class="aps-home-document-type">{project.type}</p><h3>{project.title}</h3><p>{project.task}</p><p class="aps-home-project-detail">{project.detail}</p>
             <div class="aps-home-project-links"><a href={`/alsibir-expert/examples/${project.pdf}`}>Открыть PDF →</a><a href={`/alsibir-expert/wiki/pages/portfolio/#${project.id}`}>Подробнее</a></div>
-            {project.id === 'assistant' && <p class="aps-home-source">О проекте: <a href="https://nanosemantics.ai/customers/21">«Наносемантика»</a></p>}
-            {project.id === 'snezhinka' && <p class="aps-home-source">О проекте: <a href="https://nanosemantics.ai/customers/20">«Наносемантика»</a></p>}
+            {project.id === 'assistant' && <p class="aps-home-source">О проекте: <a href="/alsibir-expert/wiki/projects/zhirinovsky/">Описание на сайте АПС</a></p>}
+            {project.id === 'snezhinka' && <p class="aps-home-source">О проекте: <a href="/alsibir-expert/wiki/projects/snezhinka/">Описание на сайте АПС</a></p>}
           </div>
         </article>
       ))}
