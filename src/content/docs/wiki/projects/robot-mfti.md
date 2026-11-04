@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Робототехника и речевое взаимодействие.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/robot-mfti.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/robot-mfti.webp)
 
 ## О проекте
 
