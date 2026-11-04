@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Интерактивная система с цифровым аватаром.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/snezhinka.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/snezhinka.webp)
 
 ## О проекте
 
