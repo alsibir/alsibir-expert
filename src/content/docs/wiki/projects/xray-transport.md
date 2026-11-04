@@ -6,7 +6,7 @@ draft: false
 
 **Направление:** Компьютерное зрение и анализ изображений.
 
-![Иллюстрация проекта](/alsibir-expert/images/projects/xray-transport.svg)
+![Иллюстрация проекта](/alsibir-expert/images/projects/xray-transport.webp)
 
 ## О проекте
 
