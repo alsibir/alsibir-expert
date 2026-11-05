@@ -87,6 +87,29 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope Variable', 'Segoe UI', Arial, san
 a { color: var(--aps-accent); text-underline-offset: .2em; }
 a:visited { color: var(--aps-accent); }
 a:hover { text-decoration-thickness: 2px; }
+/* Левое меню: явные пары цветов, включая посещённую и текущую ссылки. */
+.sidebar-content a,
+.sidebar-content a:visited {
+  color: var(--aps-ink);
+}
+.sidebar-content a[aria-current='page'] {
+  color: var(--aps-button-ink);
+  background-color: var(--aps-accent);
+}
+.sidebar-content a:hover,
+.sidebar-content a:focus-visible,
+.sidebar-content summary:hover,
+.sidebar-content summary:focus-visible {
+  color: var(--aps-surface);
+  background-color: var(--aps-ink);
+  border-radius: 0.25rem;
+}
+.sidebar-content summary:hover .group-label,
+.sidebar-content summary:focus-visible .group-label,
+.sidebar-content summary:hover .large,
+.sidebar-content summary:focus-visible .large {
+  color: inherit;
+}
 :where(a, button, select, summary, input):focus-visible { outline: 3px solid var(--aps-accent); outline-offset: 4px; }
 ::selection { background: var(--aps-accent-soft); color: var(--aps-ink); }
 .theme-dark { display: none !important; }
