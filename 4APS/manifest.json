@@ -1,0 +1,17 @@
+[
+  {
+    "source": "blog/tools/APS_ChatGPT_Figma_Design_Guide.md",
+    "slug": "blog/tools/aps_chatgpt_figma_design_guide",
+    "title": "Как улучшить дизайн сайта АПС в ChatGPT с плагином Figma"
+  },
+  {
+    "source": "blog/tools/my-commands-linux-mint.md",
+    "slug": "blog/tools/my-commands-linux-mint",
+    "title": "Мои команды: графическое меню для повседневных задач в Linux Mint"
+  },
+  {
+    "source": "blog/security/03_anonimizer_engineering_article.md",
+    "slug": "blog/security/03_anonimizer_engineering_article",
+    "title": "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания"
+  }
+]

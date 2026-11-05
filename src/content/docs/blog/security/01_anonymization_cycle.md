@@ -290,4 +290,3 @@ flowchart TD
 ## Связанные публикации
 
 - [Подготовка документов к обработке ИИ](/alsibir-expert/blog/ai/document-anonymization/)
-- [Разработка скрипта обезличивания](/alsibir-expert/blog/security/03_anonimizer_engineering_article/)

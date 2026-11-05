@@ -158,10 +158,6 @@
         "slug": "blog/security/01_anonymization_cycle"
       },
       {
-        "label": "Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания",
-        "slug": "blog/security/03_anonimizer_engineering_article"
-      },
-      {
         "label": "Применение искусственного интеллекта в техническом документировании: обезличивание и контроль утечек",
         "slug": "blog/security/09_ai_document_privacy"
       },
@@ -212,10 +208,6 @@
         "slug": "blog/tools/local-languagetool"
       },
       {
-        "label": "Как улучшить дизайн сайта АПС в ChatGPT с плагином Figma",
-        "slug": "blog/tools/aps_chatgpt_figma_design_guide"
-      },
-      {
         "label": "Плагины Total Commander: полный обзор каталога и примеры применения",
         "slug": "blog/tools/total_commander_plugins_ru"
       },
@@ -252,10 +244,6 @@
       {
         "label": "Настройка SSH-доступа по ключам в Linux и Windows: PuTTY, OpenSSH и журналирование подключений",
         "slug": "blog/security/ssh-key-access"
-      },
-      {
-        "label": "Мои команды: графическое меню для повседневных задач в Linux Mint",
-        "slug": "blog/tools/my-commands-linux-mint"
       },
       {
         "label": "Как запускать графические программы Linux в Windows 10 и 11 через WSL",

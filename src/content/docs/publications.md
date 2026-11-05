@@ -19,9 +19,9 @@ draft: false
 | [Техническая документация и ГОСТ](#documentation) | 18 |
 | [Системный анализ и проектирование](#analysis) | 10 |
 | [Реестры и регистрационные досье](#registries) | 4 |
-| [ИИ и защита данных](#ai-security) | 6 |
-| [Инструменты и автоматизация](#tools) | 15 |
-| [Рабочая среда: Windows и Linux](#environment) | 7 |
+| [ИИ и защита данных](#ai-security) | 5 |
+| [Инструменты и автоматизация](#tools) | 14 |
+| [Рабочая среда: Windows и Linux](#environment) | 6 |
 | [Профессиональное развитие](#career) | 7 |
 
 <span id="documentation"></span>
@@ -81,11 +81,10 @@ draft: false
 
 ## ИИ и защита данных
 
-Материалов: 6.
+Материалов: 5.
 
 - [Как ИИ восстанавливает секретные сведения из анонимизированных документов: косвенные признаки](/alsibir-expert/blog/security/02_residual_disclosure_risks/)
 - [Как выглядит анонимизация секретных документов: от оригинала к ИИ и обратно](/alsibir-expert/blog/security/01_anonymization_cycle/)
-- [Как разрабатывался мой скрипт анонимизации документов: решения, реализация и испытания](/alsibir-expert/blog/security/03_anonimizer_engineering_article/)
 - [Применение искусственного интеллекта в техническом документировании: обезличивание и контроль утечек](/alsibir-expert/blog/security/09_ai_document_privacy/)
 - [Как готовить документы к обработке ИИ](/alsibir-expert/blog/ai/document-anonymization/)
 - [Косвенные признаки и повторная идентификация данных](/alsibir-expert/blog/ai/deanonymization-risks/)
@@ -94,7 +93,7 @@ draft: false
 
 ## Инструменты и автоматизация
 
-Материалов: 15.
+Материалов: 14.
 
 - [Автоматизация сбора, нумерации и трассировки требований в Microsoft Word](/alsibir-expert/blog/automation/word-requirement-numbering/)
 - [Автоматизированная проверка документации Microsoft Word: стили, поля, нумерация и перекрестные ссылки](/alsibir-expert/blog/automation/04_word_automation/)
@@ -104,7 +103,6 @@ draft: false
 - [Neovim: настройка удобного редактора для кода и технической документации](/alsibir-expert/blog/tools/neovim-guide/)
 - [PortableApps.com: каталог переносимых программ, сравнение аналогов и оптимальный набор для технического писателя](/alsibir-expert/blog/portableapps-polnyy-obzor-programm/)
 - [Как развернуть собственный сервер LanguageTool на Windows и Linux: установка, настройка, использование и сравнение с Premium](/alsibir-expert/blog/tools/local-languagetool/)
-- [Как улучшить дизайн сайта АПС в ChatGPT с плагином Figma](/alsibir-expert/blog/tools/aps_chatgpt_figma_design_guide/)
 - [Плагины Total Commander: полный обзор каталога и примеры применения](/alsibir-expert/blog/tools/total_commander_plugins_ru/)
 - [Локальная проверка русского текста с LanguageTool](/alsibir-expert/blog/ai/local-languagetool/)
 - [Как извлечь картинки из файла DOCX без потери качества](/alsibir-expert/blog/izvlech-kartinki-iz-docx/)
@@ -116,11 +114,10 @@ draft: false
 
 ## Рабочая среда: Windows и Linux
 
-Материалов: 7.
+Материалов: 6.
 
 - [Как сбросить, восстановить или удалить Microsoft Edge в Windows 10](/alsibir-expert/blog/windows/microsoft-edge-reset-and-removal/)
 - [Настройка SSH-доступа по ключам в Linux и Windows: PuTTY, OpenSSH и журналирование подключений](/alsibir-expert/blog/security/ssh-key-access/)
-- [Мои команды: графическое меню для повседневных задач в Linux Mint](/alsibir-expert/blog/tools/my-commands-linux-mint/)
 - [Как запускать графические программы Linux в Windows 10 и 11 через WSL](/alsibir-expert/blog/wsl-graficheskie-prilozheniya-windows/)
 - [Как создать SSH-ключ и подключиться к серверу без пароля](/alsibir-expert/blog/ssh-kluchi-linux-windows/)
 - [Не работает Wi-Fi в Ubuntu: как найти причину и восстановить подключение](/alsibir-expert/blog/wifi-ubuntu-ne-rabotaet/)

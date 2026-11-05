@@ -23,4 +23,3 @@ category: "ИИ и защита данных"
 ## Связанные публикации
 
 - [Цикл обезличивания документов](/alsibir-expert/blog/security/01_anonymization_cycle/)
-- [Разработка скрипта обезличивания](/alsibir-expert/blog/security/03_anonimizer_engineering_article/)
