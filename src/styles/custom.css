@@ -87,28 +87,61 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope Variable', 'Segoe UI', Arial, san
 a { color: var(--aps-accent); text-underline-offset: .2em; }
 a:visited { color: var(--aps-accent); }
 a:hover { text-decoration-thickness: 2px; }
-/* Левое меню: явные пары цветов, включая посещённую и текущую ссылки. */
+/* Левое меню: наведение, текущая страница и фокус — независимые состояния. */
+.sidebar-content {
+  --aps-menu-heading: #172536;
+  --aps-menu-hover: #f0f4fc;
+  --aps-menu-current: #e8effc;
+  --aps-menu-current-hover: #dce7fa;
+}
+:root[data-theme='dark'] .sidebar-content {
+  --aps-menu-heading: #ffffff;
+  --aps-menu-hover: #243449;
+  --aps-menu-current: #223653;
+  --aps-menu-current-hover: #2b4264;
+}
 .sidebar-content a,
 .sidebar-content a:visited {
-  color: var(--aps-ink);
+  --aps-menu-text: var(--aps-accent);
+  color: var(--aps-menu-text);
+  background-color: transparent;
+  border-radius: 4px;
+}
+.sidebar-content .top-level > li > a,
+.sidebar-content .top-level > li > details > ul > li > a,
+.sidebar-content summary {
+  --aps-menu-text: var(--aps-menu-heading);
+  color: var(--aps-menu-text);
+  border-radius: 4px;
+}
+.sidebar-content summary .group-label,
+.sidebar-content summary .large,
+.sidebar-content .caret {
+  color: inherit;
 }
 .sidebar-content a[aria-current='page'] {
-  color: var(--aps-button-ink);
-  background-color: var(--aps-accent);
+  color: var(--aps-menu-text);
+  background-color: var(--aps-menu-current);
+  box-shadow: inset 3px 0 var(--aps-accent);
 }
-.sidebar-content a:hover,
+/* На сенсорных экранах нет сохраняющейся подсветки наведения. */
+@media (hover: hover) {
+  .sidebar-content a:hover,
+  .sidebar-content summary:hover {
+    color: var(--aps-menu-text);
+    background-color: var(--aps-menu-hover);
+  }
+  .sidebar-content a[aria-current='page']:hover {
+    background-color: var(--aps-menu-current-hover);
+  }
+}
 .sidebar-content a:focus-visible,
-.sidebar-content summary:hover,
 .sidebar-content summary:focus-visible {
-  color: var(--aps-surface);
-  background-color: var(--aps-ink);
-  border-radius: 0.25rem;
+  color: var(--aps-menu-text);
+  background-color: var(--aps-menu-hover);
 }
-.sidebar-content summary:hover .group-label,
-.sidebar-content summary:focus-visible .group-label,
-.sidebar-content summary:hover .large,
-.sidebar-content summary:focus-visible .large {
-  color: inherit;
+.sidebar-content a[aria-current='page']:focus-visible {
+  background-color: var(--aps-menu-current-hover);
 }
 :where(a, button, select, summary, input):focus-visible { outline: 3px solid var(--aps-accent); outline-offset: 4px; }
 ::selection { background: var(--aps-accent-soft); color: var(--aps-ink); }
