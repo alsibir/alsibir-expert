@@ -20,6 +20,13 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+      - name: Render Mermaid diagrams as SVG
+        run: npm run diagrams:render
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+          MERMAID_NO_SANDBOX: "1"
       - run: npm run build
       - name: Validate output and local links
         run: |
