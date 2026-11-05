@@ -20,7 +20,7 @@ const { slug: tagSlug } = await import('github-slugger');
 const tagAliases = JSON.parse(await readFile('src/data/tag-aliases.json', 'utf8'));
 const vocabulary = JSON.parse(await readFile('src/data/tag-vocabulary.json', 'utf8'));
 const escapeHtml = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
-const activeSlugs = new Set(vocabulary.map(tagSlug));
+const activeSlugs = new Set(vocabulary.map(tag => tagSlug(tag)));
 const aliasesBySlug = new Map();
 for (const [label, topics] of Object.entries(tagAliases)) {
   const key = tagSlug(label);
@@ -33,12 +33,27 @@ for (const [key, targets] of aliasesBySlug) {
   const target = path.join(root, 'blog/tags', key);
   const topics = [...targets];
   const urlFor = topic => base + '/blog/tags/' + tagSlug(topic) + '/';
-  const redirect = topics.length === 1 ? `<meta http-equiv="refresh" content="0;url=${urlFor(topics[0])}"><link rel="canonical" href="${origin}${urlFor(topics[0])}">` : '';
-  const links = topics.map(topic => `<li><a href="${urlFor(topic)}">${escapeHtml(topic)}</a></li>`).join('');
+  const destination = topics.length === 1 ? urlFor(topics[0]) : base + '/tags/';
   await mkdir(target, { recursive: true });
-  await writeFile(path.join(target, 'index.html'), `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">${redirect}<meta name="robots" content="noindex"><title>Обновлённые темы публикаций</title><style>body{font:1.1rem/1.6 system-ui;max-width:50rem;margin:3rem auto;padding:0 1rem;color-scheme:light dark}li{margin:.8rem 0}</style></head><body><h1>Обновлённые темы публикаций</h1><p>Теги укрупнены. Материалы доступны в следующих тематических подборках:</p><ul>${links}</ul><p><a href="${base}/tags/">Все темы публикаций</a></p></body></html>`);
+  await writeFile(path.join(target, 'index.html'), `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="${origin}${destination}"><meta name="robots" content="noindex"><title>Темы публикаций</title></head><body><a href="${destination}">Открыть темы публикаций</a></body></html>`);
+
 }
 const all=await walk(root);const files=all.filter(p=>p.endsWith('.html'));
+// Internal navigation must point to active tag pages, never alias stubs.
+const aliasDestinations = new Map([...aliasesBySlug].map(([key, targets]) => [key,
+  targets.size === 1 ? base + '/blog/tags/' + tagSlug([...targets][0]) + '/' : base + '/tags/']));
+for (const file of files) {
+  let html = await readFile(file, 'utf8');
+  html = html.replace(/href=(["'])([^"']+)\1/g, (match, quote, href) => {
+    const url = new URL(href, origin);
+    if (url.origin !== origin) return match;
+    const tag = decodeURIComponent(url.pathname).match(/^\/alsibir-expert\/blog\/tags\/([^/]+)\/$/);
+    const destination = tag && aliasDestinations.get(tag[1]);
+    return destination ? 'href=' + quote + destination + quote : match;
+  });
+  await writeFile(file, html);
+}
+
 for(const p of all){if(p.endsWith('.html')){let s=await readFile(p,'utf8');s=s.replace(/\b(href|src|action|poster)=(['"])(\/[^'"<>]*?)\2/g,(_,a,q,u)=>a+'='+q+prefix(u)+q);s=s.replace(/\bsrcset=(['"])(.*?)\1/g,(_,q,v)=>'srcset='+q+v.split(',').map(x=>{const m=x.trim().match(/^(\S+)(.*)$/);return m?prefix(m[1])+m[2]:x;}).join(', ')+q);await writeFile(p,s);}else if(p.endsWith('.css')){let s=await readFile(p,'utf8');s=s.replace(/url\((['"]?)(\/[^)'"\s]+)\1\)/g,(_,q,u)=>'url('+q+prefix(u)+q+')');await writeFile(p,s);}}
 // Normalize RSS plugin URLs when the plugin prepends base twice.
 for(const p of all.filter(p=>p.endsWith('.html')||p.endsWith('.xml'))){let s=await readFile(p,'utf8');while(s.includes(origin+base+base+'/'))s=s.replaceAll(origin+base+base+'/',origin+base+'/');if(p.endsWith('/rss.xml'))s=s.replaceAll('<link>'+origin+'/</link>','<link>'+origin+base+'/</link>');await writeFile(p,s);}

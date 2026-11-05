@@ -90,15 +90,15 @@ a:hover { text-decoration-thickness: 2px; }
 /* Левое меню: наведение, текущая страница и фокус — независимые состояния. */
 .sidebar-content {
   --aps-menu-heading: #172536;
-  --aps-menu-hover: #f0f4fc;
-  --aps-menu-current: #e8effc;
-  --aps-menu-current-hover: #dce7fa;
+  --aps-menu-hover: #235ac6;
+  --aps-menu-current: #d5e2fb;
+  --aps-menu-current-hover: #194594;
 }
 :root[data-theme='dark'] .sidebar-content {
   --aps-menu-heading: #ffffff;
-  --aps-menu-hover: #243449;
-  --aps-menu-current: #223653;
-  --aps-menu-current-hover: #2b4264;
+  --aps-menu-hover: #235fa6;
+  --aps-menu-current: #29466c;
+  --aps-menu-current-hover: #1c4e8b;
 }
 .sidebar-content a,
 .sidebar-content a:visited {
@@ -114,6 +114,10 @@ a:hover { text-decoration-thickness: 2px; }
   color: var(--aps-menu-text);
   border-radius: 4px;
 }
+.sidebar-content .top-level > li > details > ul > li > a,
+.sidebar-content .top-level > li > details > ul > li > details > summary {
+  --aps-menu-text: var(--aps-muted);
+}
 .sidebar-content summary .group-label,
 .sidebar-content summary .large,
 .sidebar-content .caret {
@@ -128,7 +132,7 @@ a:hover { text-decoration-thickness: 2px; }
 @media (hover: hover) {
   .sidebar-content a:hover,
   .sidebar-content summary:hover {
-    color: var(--aps-menu-text);
+    color: #ffffff;
     background-color: var(--aps-menu-hover);
   }
   .sidebar-content a[aria-current='page']:hover {
@@ -137,7 +141,7 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .sidebar-content a:focus-visible,
 .sidebar-content summary:focus-visible {
-  color: var(--aps-menu-text);
+  color: #ffffff;
   background-color: var(--aps-menu-hover);
 }
 .sidebar-content a[aria-current='page']:focus-visible {
