@@ -1,4 +1,10 @@
 {
-  "checked_urls": 40958,
-  "errors": []
+  "checked_urls": 15517,
+  "errors": [
+    [
+      "blog/security/01_anonymization_cycle/index.html",
+      "/alsibir-expert/images/diagrams/anonymization-processing-sequence.svg",
+      "missing"
+    ]
+  ]
 }
