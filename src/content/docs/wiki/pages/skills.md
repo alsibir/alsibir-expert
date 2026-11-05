@@ -13,7 +13,9 @@ draft: false
 
 ## Инструменты
 
-Microsoft Word и PowerShell, Markdown и Astro, PlantUML и draw.io, Obsidian, Git, Jira, Confluence, Swagger/OpenAPI и Postman. Состав инструментов выбирается по задаче, а не по моде.
+Microsoft Word и PowerShell, Markdown и Astro, PlantUML, Mermaid и draw.io, Obsidian, Git, Jira, Confluence, Swagger/OpenAPI и Postman. Состав инструментов выбирается по задаче, а не по моде.
+
+Mermaid используется для описания схем текстом и преобразования их в изображения SVG для публикаций и технической документации.
 
 ## Принцип работы
 
