@@ -16,19 +16,19 @@ draft: false
 
 | Тема | Материалов |
 | --- | ---: |
-| [Техническая документация и ГОСТ](#documentation) | 17 |
-| [Системный анализ и проектирование](#analysis) | 9 |
+| [Техническая документация и ГОСТ](#documentation) | 18 |
+| [Системный анализ и проектирование](#analysis) | 10 |
 | [Реестры и регистрационные досье](#registries) | 4 |
 | [ИИ и защита данных](#ai-security) | 6 |
-| [Инструменты и автоматизация](#tools) | 13 |
+| [Инструменты и автоматизация](#tools) | 15 |
 | [Рабочая среда: Windows и Linux](#environment) | 7 |
-| [Профессиональное развитие](#career) | 6 |
+| [Профессиональное развитие](#career) | 7 |
 
 <span id="documentation"></span>
 
 ## Техническая документация и ГОСТ
 
-Материалов: 17.
+Материалов: 18.
 
 - [Стандарты](/alsibir-expert/wiki/pages/standards/)
 - [Образцы документов](/alsibir-expert/wiki/pages/worksamples/)
@@ -47,12 +47,13 @@ draft: false
 - [Как оформить документ по СПДС в Word: рамки, основные надписи, тома и двойная нумерация страниц](/alsibir-expert/blog/standards/spds-shbv/)
 - [Оформление документов СПДС: комплект, тома, листы и согласованность по ГОСТ Р 21.101-2026](/alsibir-expert/blog/standards/03_spds_gost21/)
 - [Как оформлять скриншоты для инструкций и технической документации](/alsibir-expert/blog/oformlenie-skrinshotov/)
+- [Исходные данные и результаты работы аналитика и технического писателя: ПО, АС и ПАК](/alsibir-expert/blog/documentation/analysis-documentation-deliverables/)
 
 <span id="analysis"></span>
 
 ## Системный анализ и проектирование
 
-Материалов: 9.
+Материалов: 10.
 
 - [Проектирование API: OpenAPI, модели данных, ошибки и управление версиями](/alsibir-expert/blog/api/07_openapi_contracts/)
 - [UX-редактура: практическое руководство](/alsibir-expert/blog/ux/ux-editing-guide/)
@@ -63,6 +64,7 @@ draft: false
 - [Трассируемость требований: от бизнес-процесса и архитектуры до испытаний](/alsibir-expert/blog/analytics/06_requirements_to_tests/)
 - [Как документировать REST API: структура, примеры запросов и OpenAPI](/alsibir-expert/blog/dokumentaciya-rest-api-primery/)
 - [Как организовать разработку ИТ-проекта: этапы, роли и документация](/alsibir-expert/blog/kak-organizovat-razrabotku-it-proekta/)
+- [Профессия «системный аналитик»: функции и обязанности](/alsibir-expert/blog/analytics/system-analyst/)
 
 <span id="registries"></span>
 
@@ -92,7 +94,7 @@ draft: false
 
 ## Инструменты и автоматизация
 
-Материалов: 13.
+Материалов: 15.
 
 - [Автоматизация сбора, нумерации и трассировки требований в Microsoft Word](/alsibir-expert/blog/automation/word-requirement-numbering/)
 - [Автоматизированная проверка документации Microsoft Word: стили, поля, нумерация и перекрестные ссылки](/alsibir-expert/blog/automation/04_word_automation/)
@@ -107,6 +109,8 @@ draft: false
 - [Локальная проверка русского текста с LanguageTool](/alsibir-expert/blog/ai/local-languagetool/)
 - [Как извлечь картинки из файла DOCX без потери качества](/alsibir-expert/blog/izvlech-kartinki-iz-docx/)
 - [Как перевести PDF в Word: 4 способа и что делать со сканами](/alsibir-expert/blog/pdf-v-word-bez-poteri-formatirovaniya/)
+- [Office Tab: как добавить вкладки в Word, Excel и PowerPoint](/alsibir-expert/blog/tools/office-tab/)
+- [Расширения Confluence для технического писателя: Markdown, диаграммы, код и контроль ссылок](/alsibir-expert/blog/tools/confluence-tools/)
 
 <span id="environment"></span>
 
@@ -126,7 +130,7 @@ draft: false
 
 ## Профессиональное развитие
 
-Материалов: 6.
+Материалов: 7.
 
 - [К какому классу программ относятся Jira и Confluence](/alsibir-expert/blog/career/05_jira_confluence/)
 - [Как стать Python-разработчиком: полное руководство по подготовке к первой работе](/alsibir-expert/blog/career/06_python_career_full_guide/)
@@ -134,6 +138,7 @@ draft: false
 - [Практический опыт выпускника без коммерческого стажа](/alsibir-expert/blog/career/04_practical_experience/)
 - [Пример резюме выпускника для первой работы Python-разработчиком](/alsibir-expert/blog/career/02_junior_python_resume/)
 - [РАНХиГС: образование и ключевые дисциплины для резюме](/alsibir-expert/blog/career/03_ranepa_education/)
+- [Чем системный аналитик отличается от технического писателя](/alsibir-expert/blog/career/analyst-vs-writer/)
 
 ## Другие способы поиска
 

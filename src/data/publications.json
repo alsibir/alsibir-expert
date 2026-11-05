@@ -70,6 +70,10 @@
       {
         "label": "Как оформлять скриншоты для инструкций и технической документации",
         "slug": "blog/oformlenie-skrinshotov"
+      },
+      {
+        "label": "Исходные данные и результаты работы аналитика и технического писателя: ПО, АС и ПАК",
+        "slug": "blog/documentation/analysis-documentation-deliverables"
       }
     ]
   },
@@ -112,6 +116,10 @@
       {
         "label": "Как организовать разработку ИТ-проекта: этапы, роли и документация",
         "slug": "blog/kak-organizovat-razrabotku-it-proekta"
+      },
+      {
+        "label": "Профессия «системный аналитик»: функции и обязанности",
+        "slug": "blog/analytics/system-analyst"
       }
     ]
   },
@@ -222,6 +230,14 @@
       {
         "label": "Как перевести PDF в Word: 4 способа и что делать со сканами",
         "slug": "blog/pdf-v-word-bez-poteri-formatirovaniya"
+      },
+      {
+        "label": "Office Tab: как добавить вкладки в Word, Excel и PowerPoint",
+        "slug": "blog/tools/office-tab"
+      },
+      {
+        "label": "Расширения Confluence для технического писателя: Markdown, диаграммы, код и контроль ссылок",
+        "slug": "blog/tools/confluence-tools"
       }
     ]
   },
@@ -286,6 +302,10 @@
       {
         "label": "РАНХиГС: образование и ключевые дисциплины для резюме",
         "slug": "blog/career/03_ranepa_education"
+      },
+      {
+        "label": "Чем системный аналитик отличается от технического писателя",
+        "slug": "blog/career/analyst-vs-writer"
       }
     ]
   }
