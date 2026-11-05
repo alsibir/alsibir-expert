@@ -1,16 +1,15 @@
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 // Optional executable override for environments with a system Chromium.
 const temporary = mkdtempSync(join(tmpdir(), 'aps-mermaid-'));
 try {
-  mkdirSync('public/images/diagrams', { recursive: true });
   const config = join(temporary, 'puppeteer.json');
   writeFileSync(config, JSON.stringify({
     ...(process.env.PUPPETEER_EXECUTABLE_PATH ? { executablePath: process.env.PUPPETEER_EXECUTABLE_PATH } : {}),
-    ...(process.env.MERMAID_NO_SANDBOX === '1' ? { args: ['--no-sandbox', '--no-zygote', '--single-process', '--disable-dev-shm-usage'] } : {}),
+    ...(process.env.MERMAID_NO_SANDBOX === '1' ? { args: ['--no-sandbox', '--disable-dev-shm-usage'] } : {}),
   }));
   const result = spawnSync(process.execPath, [
     'node_modules/@mermaid-js/mermaid-cli/src/cli.js',
