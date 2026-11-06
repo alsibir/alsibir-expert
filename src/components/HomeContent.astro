@@ -1,6 +1,7 @@
 ---
 import ClientsPartners from './ClientsPartners.astro';
 const projects = [
+  { id: 'alpha', title: 'АС «АЛЬФА» — комплект документации', type: 'Авторский демонстрационный комплект · 16 PDF и TXT', task: 'Требования, архитектура, данные, API, руководства, испытания и эксплуатационные регламенты.', detail: 'Состав комплекта и навыки аналитика и технического писателя — в таблице на странице проекта. Архив ZIP: 5,24 МБ.', image: 'alpha-project-collage.webp', href: '/alsibir-expert/wiki/portfolio/documentation/alpha/' },
   { id: 'assistant', title: 'Цифровой аватар «Жириновский»', type: 'Руководство оператора · 30 страниц', task: 'Установка, настройка и работа с цифровым аватаром.', detail: 'Пример описания эксплуатации системы и действий оператора.', image: 'assistant-project-card.png', pdf: 'assistant.pdf' },
   { id: 'snezhinka', title: 'Снежинка', type: 'Техническое задание · 21 страница', task: 'Требования к виртуальному ассистенту мультимедийного стенда.', detail: 'Пример описания функциональности и взаимодействия с пользователем.', image: 'snezhinka-project-card.png', pdf: 'snezhinka.pdf' },
   { id: 'api', title: 'OK Service API', type: 'Описание API · 30 страниц', task: 'Подключение и взаимодействие с программным интерфейсом.', detail: 'Пример документации для разработчиков и интеграторов.', image: 'api-project-card.png', pdf: 'api.pdf' },
@@ -33,13 +34,13 @@ const projects = [
 
   <section id="real-work" aria-labelledby="real-work-title">
     <div class="aps-home-section-heading"><div><p class="aps-home-eyebrow">Профессиональное портфолио</p><h2 id="real-work-title">Реальные работы</h2></div><a href="/alsibir-expert/wiki/pages/portfolio/">Все примеры →</a></div>
-    <p class="aps-home-section-lead">Фрагменты подготовленных документов. Каждый пример можно открыть целиком в PDF.</p>
+    <p class="aps-home-section-lead">Примеры документации и авторский демонстрационный комплект АС «АЛЬФА». Документы открываются в PDF, комплект — на отдельной странице с составом и описанием навыков.</p>
     <div class="aps-home-projects">
       {projects.map(project => (
         <article class="aps-home-project">
-          <a href={`/alsibir-expert/examples/${project.pdf}`} aria-label={`${project.title} — открыть документ PDF`}><img src={`/alsibir-expert/images/evidence/${project.image}`} alt={`${project.title}: титульный лист и фрагмент документа`} width="1600" height="1100" loading="lazy" decoding="async"/></a>
+          <a href={project.href ?? `/alsibir-expert/examples/${project.pdf}`} aria-label={`${project.title} — ${project.href ? 'открыть состав комплекта' : 'открыть документ PDF'}`}><img src={`/alsibir-expert/images/evidence/${project.image}`} alt={project.id === 'alpha' ? 'АС «АЛЬФА»: буква альфа в окружении ярких элементов разработки' : `${project.title}: титульный лист и фрагмент документа`} width="1600" height="1100" loading="lazy" decoding="async"/></a>
           <div class="aps-home-project-body"><p class="aps-home-document-type">{project.type}</p><h3>{project.title}</h3><p>{project.task}</p><p class="aps-home-project-detail">{project.detail}</p>
-            <div class="aps-home-project-links"><a href={`/alsibir-expert/examples/${project.pdf}`}>Открыть PDF →</a><a href={`/alsibir-expert/wiki/pages/portfolio/#${project.id}`}>Подробнее</a></div>
+            <div class="aps-home-project-links"><a href={project.href ?? `/alsibir-expert/examples/${project.pdf}`}>{project.href ? 'Состав и навыки →' : 'Открыть PDF →'}</a>{!project.href && <a href={`/alsibir-expert/wiki/pages/portfolio/#${project.id}`}>Подробнее</a>}</div>
             {project.id === 'assistant' && <p class="aps-home-source">О проекте: <a href="/alsibir-expert/wiki/projects/zhirinovsky/">Описание на сайте АПС</a></p>}
             {project.id === 'snezhinka' && <p class="aps-home-source">О проекте: <a href="/alsibir-expert/wiki/projects/snezhinka/">Описание на сайте АПС</a></p>}
           </div>
