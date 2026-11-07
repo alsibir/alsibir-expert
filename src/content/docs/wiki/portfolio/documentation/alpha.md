@@ -44,7 +44,7 @@ draft: false
 
 В сопроводительном TXT-файле сохранилось обозначение «16 документов DOCX»; фактический состав данной публикации — 16 PDF, как указано в таблице.
 
-<a href="/alsibir-expert/examples/ALPHA/ALPHA_documents_v11.zip" download="ALPHA_documents_v11.zip" onclick="return window.confirm('Скачать все 17 файлов комплекта АС «АЛЬФА» архивом ZIP (5,24 МБ)?')">Скачать комплект (5,24 МБ)</a> После повторной загрузки корректного ZIP ссылка будет активирована.
+<a href="/alsibir-expert/examples/ALPHA/ALPHA_documents_v11.zip" download="ALPHA_documents_v11.zip" onclick="return window.confirm('Скачать все 17 файлов комплекта АС «АЛЬФА» архивом ZIP (5,24 МБ)?')">Скачать комплект (5,24 МБ)</a>
 
 <style>
 .aps-alpha-filename { overflow-wrap: anywhere; }
