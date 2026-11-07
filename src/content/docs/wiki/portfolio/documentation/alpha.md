@@ -14,6 +14,8 @@ draft: false
 
 В архив включены **17 файлов: 16 документов PDF и один сопроводительный файл TXT**. Имена ниже точно соответствуют содержимому предоставленного архива. Перечисленные навыки отражают содержание материалов.
 
+<p class="aps-alpha-archive-download"><a href="/alsibir-expert/examples/ALPHA/ALPHA_documents_v11.zip" download="ALPHA_documents_v11.zip" onclick="return window.confirm('Скачать все 17 файлов комплекта АС «АЛЬФА» архивом ZIP (5,24 МБ)?')">Скачать все 17 файлов архивом (5,24 МБ)</a></p>
+
 | Файл в архиве | Навыки аналитика | Навыки технического писателя |
 | --- | --- | --- |
 | <span class="aps-alpha-filename">00_Паспорт_демонстрационного_комплекта.pdf</span> — <a href="/alsibir-expert/examples/ALPHA/00_%D0%9F%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%82_%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0.pdf" target="_blank" rel="noopener">Открыть PDF</a> · <a href="/alsibir-expert/examples/ALPHA/00_%D0%9F%D0%B0%D1%81%D0%BF%D0%BE%D1%80%D1%82_%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0.pdf" download="00_Паспорт_демонстрационного_комплекта.pdf" onclick="return window.confirm('Скачать файл «00_Паспорт_демонстрационного_комплекта.pdf» (0,32 МБ)?')">Скачать (0,32 МБ)</a> | Определение границ системы, участников и состава проектных артефактов; управление редакциями. | Организация комплекта: назначение документов, навигация, идентификаторы и перекрёстные ссылки. |
@@ -34,13 +36,15 @@ draft: false
 | <span class="aps-alpha-filename">15_Лист_утверждения_комплекта.pdf</span> — <a href="/alsibir-expert/examples/ALPHA/15_%D0%9B%D0%B8%D1%81%D1%82_%D1%83%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0.pdf" target="_blank" rel="noopener">Открыть PDF</a> · <a href="/alsibir-expert/examples/ALPHA/15_%D0%9B%D0%B8%D1%81%D1%82_%D1%83%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B0.pdf" download="15_Лист_утверждения_комплекта.pdf" onclick="return window.confirm('Скачать файл «15_Лист_утверждения_комплекта.pdf» (0,14 МБ)?')">Скачать (0,14 МБ)</a> | Определение состава комплекта, передаваемого на согласование и утверждение. | Оформление общего листа утверждения, перечня документов и реквизитов согласования. |
 | <span class="aps-alpha-filename">Об_авторе_и_комплекте.txt</span> — <a href="/alsibir-expert/examples/ALPHA/%D0%9E%D0%B1_%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B5_%D0%B8_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D0%B5.txt" download="Об_авторе_и_комплекте.txt" onclick="return window.confirm('Скачать файл «Об_авторе_и_комплекте.txt» (0,00 МБ)?')">Скачать (0,00 МБ)</a> | Представление профессиональной специализации и назначения демонстрационного проекта. | Подготовка сопроводительного текста: сведения об авторе, ограничения применения и контакты. |
 
+<p class="aps-alpha-archive-download"><a href="/alsibir-expert/examples/ALPHA/ALPHA_documents_v11.zip" download="ALPHA_documents_v11.zip" onclick="return window.confirm('Скачать все 17 файлов комплекта АС «АЛЬФА» архивом ZIP (5,24 МБ)?')">Скачать все 17 файлов архивом (5,24 МБ)</a></p>
+
 ## Скачать комплект
 
 Архив **ALPHA_documents_v11.zip** — **5,24 МБ (5 243 486 байт; 5,00 МиБ)**. Скачивается исходный предоставленный архив без изменения содержимого. Документы представлены в PDF; исходные файлы DOCX в этот архив не входят.
 
 В сопроводительном TXT-файле сохранилось обозначение «16 документов DOCX»; фактический состав данной публикации — 16 PDF, как указано в таблице.
 
-**Скачивание архива временно недоступно:** загруженный файл содержит 2 байта вместо 5 243 486 байт. После повторной загрузки корректного ZIP ссылка будет активирована.
+<a href="/alsibir-expert/examples/ALPHA/ALPHA_documents_v11.zip" download="ALPHA_documents_v11.zip" onclick="return window.confirm('Скачать все 17 файлов комплекта АС «АЛЬФА» архивом ZIP (5,24 МБ)?')">Скачать комплект (5,24 МБ)</a> После повторной загрузки корректного ZIP ссылка будет активирована.
 
 <style>
 .aps-alpha-filename { overflow-wrap: anywhere; }
