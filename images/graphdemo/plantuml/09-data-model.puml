@@ -1,0 +1,56 @@
+@startuml
+!include theme.puml
+hide circle
+hide methods
+entity "Role" as Role {
+ * code : varchar <<PK>>
+ --
+ name : varchar
+}
+entity "User" as User {
+ * id : UUID <<PK>>
+ --
+ * role_code : varchar <<FK>>
+ * login : varchar <<UNIQUE>>
+ blocked : boolean
+}
+entity "Request" as Request {
+ * id : UUID <<PK>>
+ --
+ * number : varchar <<UNIQUE>>
+ * author_id : UUID <<FK>>
+ assignee_id : UUID <<FK, NULL>>
+ * status_code : varchar <<FK>>
+ * title : varchar(120)
+ * description : varchar(4000)
+ * version : integer
+}
+entity "RequestStatus" as Status {
+ * code : varchar <<PK>>
+ --
+ * name : varchar
+ * terminal : boolean
+}
+entity "Comment" as Comment {
+ * id : UUID <<PK>>
+ --
+ * request_id : UUID <<FK>>
+ * author_id : UUID <<FK>>
+ * text : varchar(2000)
+}
+entity "Attachment" as Attachment {
+ * id : UUID <<PK>>
+ --
+ * request_id : UUID <<FK>>
+ * storage_key : text <<UNIQUE>>
+ * sha256 : char(64)
+ * scan_status : varchar
+}
+Role ||--o{ User : роль
+User ||--o{ Request : автор
+User |o--o{ Request : ответственный
+Status ||--o{ Request : статус
+Request ||--o{ Comment : комментарии
+User ||--o{ Comment : автор
+Request ||--o{ Attachment : вложения
+@enduml

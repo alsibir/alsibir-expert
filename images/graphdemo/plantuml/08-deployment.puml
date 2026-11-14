@@ -1,0 +1,33 @@
+@startuml
+!include theme.puml
+top to bottom direction
+node "Рабочее место" as Client {
+ artifact "Браузер" as Browser
+}
+node "Веб-узел" as Web {
+ artifact "Обратный прокси\nTLS / маршрутизация" as Proxy
+}
+node "Узел приложения" as App {
+ artifact "REST API" as API
+ artifact "Обработчик outbox" as Worker
+}
+node "Узел данных" as Data {
+ database "PostgreSQL" as DB
+ folder "Вложения" as Files
+}
+node "Резервный контур" as Reserve {
+ artifact "Согласованные копии\nБД и вложений" as Backup
+}
+cloud "Почтовый сервис" as Mail
+Browser --> Proxy : HTTPS
+Proxy --> API : Запросы приложения
+API --> DB : SQL
+API --> Files : Чтение / запись
+Worker --> DB : События outbox
+Worker --> Mail : Уведомления
+Data --> Backup : Резервное копирование
+note bottom of Reserve
+Цели из ТЗ: RPO 24 ч, RTO 4 ч.
+Достижение подтверждается испытаниями.
+end note
+@enduml

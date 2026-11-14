@@ -1,0 +1,24 @@
+@startdot
+digraph G {
+ graph [layout=neato, overlap=true, splines=line, bgcolor="white", pad="0.35", fontname="DejaVu Sans", fontsize=16, outputorder=nodesfirst];
+ node [shape=box, style="rounded,filled", fillcolor="#EDF4FF", color="#3465A4", fontname="DejaVu Sans", fontsize=14, margin="0.15,0.12", pin=true];
+ edge [color="#3465A4", fontname="DejaVu Sans", fontsize=13, arrowsize=0.8];
+ pool [pos="6.5,1.3!", shape=box, style=filled, fillcolor="white", color="#607D9C", width=14.8, height=8.0, fixedsize=true, labelloc=t, label="Обработка обращения · АС «АЛЬФА»"];
+ lane_user [pos="6.5,2.5!", shape=box, style=filled, fillcolor="#F3F7FC", color="#BACBDD", width=14.2, height=3.6, fixedsize=true, labelloc=t, label="Дорожка: Пользователь"];
+ lane_operator [pos="6.5,-0.8!", shape=box, style=filled, fillcolor="#F0F8F7", color="#BACBDD", width=14.2, height=3.0, fixedsize=true, labelloc=b, label="Дорожка: Оператор"];
+   start [pos="0,3!", shape=circle, label="", width=0.32, fixedsize=true, style=filled, fillcolor="white"];
+   submit [pos="2,3!", label="Подать\nобращение"];
+   check [pos="6,3!", label="Проверить\nрешение"];
+   accepted [pos="8.6,3!", shape=diamond, style=filled, fillcolor="#FFF6DC", label="×", xlabel="Решение принято?", width=0.55, height=0.55, fixedsize=true];
+   close [pos="11,3!", label="Закрыть\nзаявку"];
+   end [pos="13,3!", shape=circle, label="", width=0.32, fixedsize=true, style=filled, fillcolor="white", penwidth=3];
+   reopen [pos="8.6,1.5!", label="Вернуть\nв работу"];
+   take [pos="2,-0.5!", label="Принять\nв работу"];
+   resolve [pos="6,-0.5!", label="Выполнить работу\nи зафиксировать решение"];
+  start -> submit -> take -> resolve -> check -> accepted;
+  accepted -> close [label="Да"];
+  accepted -> reopen [label="Нет"];
+  reopen -> resolve;
+  close -> end;
+}
+@enddot

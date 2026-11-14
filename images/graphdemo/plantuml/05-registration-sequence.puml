@@ -1,0 +1,36 @@
+@startuml
+!include theme.puml
+autonumber
+actor "Пользователь" as User
+boundary "Веб-интерфейс" as UI
+control "REST API" as API
+database "PostgreSQL" as DB
+control "Обработчик outbox" as Worker
+participant "Почтовый сервис" as Mail
+User -> UI : Отправить обращение
+UI -> API : POST /requests\nIdempotency-Key, cookie, X-CSRF-Token
+API -> API : Сеанс, роль, ключ, поля
+alt Некорректные поля
+ API --> UI : 422 · ошибки полей
+ UI --> User : Исправить выделенные поля
+else Новая корректная заявка
+ group Одна транзакция
+  API -> DB : BEGIN
+  API -> DB : INSERT Request (NEW, version=1)
+  API -> DB : INSERT AuditEvent, OutboxEvent
+  API -> DB : COMMIT
+ end
+ API --> UI : 201 · Location, number, status, version
+ UI --> User : Карточка ALF-000001
+ Worker -> DB : Получить событие outbox
+ DB --> Worker : Событие регистрации
+ Worker -> DB : Создать внутреннее уведомление\nUNIQUE(event_id, recipient_id)
+ Worker -> Mail : Отправить письмо
+ Mail --> Worker : Результат отправки
+ Worker -> DB : Отметить обработку / назначить повтор
+end
+note over API, DB
+Ошибка транзакции: откат всех записей.
+Успешный ответ выдаётся после COMMIT.
+end note
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+!include theme.puml
+allowmixing
+left to right direction
+class "FR-002\nРегистрация заявки" as R2 <<requirement>>
+class "FR-004\nИзменение статуса" as R4 <<requirement>>
+component "Регистрация\nPOST /requests" as Registration
+component "Статусная модель\nPOST /requests/{id}/status" as Status
+class "T-002\nКорректные и ошибочные поля" as T2 <<testCase>>
+class "T-004\nДопустимые переходы и роли" as T4 <<testCase>>
+Registration ..> R2 : <<satisfy>>
+Status ..> R4 : <<satisfy>>
+T2 ..> R2 : <<verify>>
+T4 ..> R4 : <<verify>>
+note bottom of R2
+Тема 5–120, описание 10–4000.
+Успех: 201 и номер ALF-000001.
+Ошибка полей: 422.
+end note
+note bottom of R4
+Переход, роль и версия проверяются.
+Запрещённая роль: 403.
+Конфликт состояния/версии: 409.
+end note
+@enduml

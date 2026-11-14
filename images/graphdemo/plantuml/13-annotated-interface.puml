@@ -1,0 +1,33 @@
+@startuml
+!include theme.puml
+top to bottom direction
+rectangle "Карточка заявки" {
+ rectangle "ALF-000001\nНет доступа к порталу" as Number
+ rectangle "RESOLVED · Решена\nВерсия 4" as Status
+ rectangle "Решение\nДоступ восстановлен" as Result
+ rectangle "Подтвердить и закрыть\nили Вернуть в работу" as Actions #E7F2F1
+ Number -[hidden]down-> Status
+ Status -[hidden]down-> Result
+ Result -[hidden]down-> Actions
+}
+note right of Number
+<b>1. Идентификатор</b>
+Используется при поиске
+и обращении в поддержку.
+end note
+note right of Status
+<b>2. Состояние</b>
+Определяет доступные действия.
+Версия защищает от конфликта.
+end note
+note right of Result
+<b>3. Результат</b>
+Проверить решение
+до закрытия заявки.
+end note
+note right of Actions
+<b>4. Действие автора</b>
+Закрыть при подтверждении
+или вернуть в работу.
+end note
+@enduml

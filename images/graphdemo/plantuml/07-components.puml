@@ -1,0 +1,24 @@
+@startuml
+!include theme.puml
+top to bottom direction
+component "Веб-интерфейс" as UI
+package "Сервер приложения" {
+ component "REST API\nмаршрутизация и валидация" as API
+ component "Проверка сеанса\nи прав доступа" as Auth
+ component "Обработка заявок\nи статусная модель" as Requests
+ component "Аудит" as Audit
+ component "Обработчик outbox\nи уведомления" as Worker
+}
+database "PostgreSQL" as DB
+folder "Файловое хранилище" as Files
+cloud "Почтовый сервис" as Mail
+UI --> API : HTTPS / JSON
+API --> Auth : Проверка доступа
+API --> Requests : Операции над заявкой
+Requests --> Audit : Событие операции
+Requests --> DB : Заявки + outbox
+Audit --> DB : AuditEvent
+Requests --> Files : Вложения
+Worker --> DB : Outbox / Notification
+Worker --> Mail : Доставка письма
+@enduml

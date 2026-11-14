@@ -1,0 +1,21 @@
+@startuml
+!include theme.puml
+left to right direction
+actor "Пользователь" as User
+actor "Оператор" as Operator
+actor "Администратор" as Admin
+actor "Аудитор" as Auditor
+rectangle "АС «АЛЬФА» 1.0.0\nВнутренние обращения" as Alpha #E7F2F1
+cloud "Почтовый сервис" as Mail
+database "Хранилище\nрезервных копий" as Backup
+User --> Alpha : Создание и просмотр\nсвоих заявок
+Operator --> Alpha : Обработка\nвсех заявок
+Admin --> Alpha : Учётные записи\nи конфигурация
+Auditor --> Alpha : Чтение аудита
+Alpha --> Mail : Уведомления
+Alpha --> Backup : Резервные копии
+note bottom of Alpha
+Вне границ: биллинг, учёт активов,
+публичная регистрация пользователей.
+end note
+@enduml

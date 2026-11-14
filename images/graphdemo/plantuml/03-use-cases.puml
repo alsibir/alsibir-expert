@@ -1,0 +1,27 @@
+@startuml
+!include theme.puml
+left to right direction
+actor "Пользователь" as U
+actor "Оператор" as O
+actor "Администратор" as A
+actor "Аудитор" as R
+rectangle "АС «АЛЬФА»" {
+ usecase "Зарегистрировать заявку\nFR-002" as Create
+ usecase "Просмотреть свои заявки\nFR-003" as Own
+ usecase "Просмотреть все заявки\nFR-003" as All
+ usecase "Обработать заявку\nFR-004" as Work
+ usecase "Добавить комментарий\nили вложение · FR-005" as Comment
+ usecase "Закрыть, вернуть в работу\nили отменить свою заявку" as Finish
+ usecase "Управлять учётными\nзаписями · ADM-001" as Accounts
+ usecase "Читать журнал аудита\nFR-007" as Audit
+}
+U --> Create
+U --> Own
+U --> Comment
+U --> Finish
+O --> All
+O --> Work
+O --> Comment
+A --> Accounts
+R --> Audit
+@enduml

@@ -1,0 +1,7 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://alsibir.github.io/aps-expert/blog/automation/04_word_automation/"><title>Сайт АПС — новый адрес</title></head><body><p>Сайт АПС переехал. <a id="destination" href="https://alsibir.github.io/aps-expert/blog/automation/04_word_automation/">Открыть страницу по новому адресу</a>.</p><script>const oldBase="/alsibir-expert",newBase="/aps-expert";
+const target=new URL("https://alsibir.github.io/aps-expert/blog/automation/04_word_automation/");
+if(location.pathname.endsWith('/404.html')||!true) target.pathname=location.pathname.replace(/^\/alsibir-expert(?=\/|$)/,newBase);
+const params=new URLSearchParams(location.search);
+for(const [key,value] of params) params.set(key,value.replaceAll(oldBase+'/',newBase+'/'));
+target.search=params.toString();target.hash=location.hash;
+document.getElementById('destination').href=target.href;location.replace(target.href);</script></body></html>

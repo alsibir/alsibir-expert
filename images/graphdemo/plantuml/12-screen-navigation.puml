@@ -1,0 +1,22 @@
+@startuml
+!include theme.puml
+top to bottom direction
+rectangle "Список своих заявок" as List
+rectangle "Форма новой заявки" as Form
+rectangle "Ошибки полей\nЗначения сохранены" as Errors #FFF6DC
+rectangle "Карточка заявки\nNEW" as Card
+rectangle "Карточка заявки\nRESOLVED" as Resolved
+rectangle "Карточка заявки\nCLOSED" as Closed #E7F2F1
+List --> Form : Создать
+Form --> Errors : 422
+Errors --> Form : Исправить
+Form --> Card : 201
+Card --> List : Вернуться
+List --> Resolved : Открыть после решения
+Resolved --> Closed : Подтвердить результат
+Resolved --> List : Вернуться
+note bottom of Card
+Обработка Оператором происходит
+между созданием и решением заявки.
+end note
+@enduml
